@@ -1,0 +1,129 @@
+# main links links
+main:
+  en:
+    #- title: <a href = "javascript:location.assign(myVar)" class="btn" style="color:blue;">Deutsche Version</a>
+      # <a><button type="button" onclick="window.location.href='de'">Deutsche Version</button></a>
+      # url: /de/
+    # - title: "Publications"
+    #   url: /publications/
+    #   description: "ohhhh my publications, how nice!"
+    # - title: "Talks"
+    #   url: /talks/ 
+    #   description: "I don't talk too much"   
+    #- title: "Themes"
+    #  url: /themes/     
+    - title: "Portfolio"
+      url: /en/      
+    #- title: "Blog Posts"
+    #  url: /posts/posts/
+    #- title: "Projects"
+    #  url: /projects/
+    #- title: Blog
+    #  url: /posts-grid/
+    #- title: "Archive"
+    #  url: /posts/
+    #- title: "Pages"
+    #  url: /pages/
+    # - title: "Quick-Start Guide"
+    #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+    #- title: "About"
+    #  url: /about/
+    #- title: "Work"
+   #   url: /works/
+    #- title: "de"
+    #  url: /de/
+    # - title: "Sample Posts"
+    #   url: /year-archive/
+    # - title: "Sample Collections"
+    #   url: /collection-archive/
+   # - title: "Sitemap"
+    #  url: /sitemap/
+  de:
+   # - title: <a href = "javascript:location.assign(myVar)" class="btn" style="color:blue;">English version</a>
+      # url: /de/
+    #- title: <div class="menu-btn"><a class="btn-open" style="cursor:pointer">Open &#x25BE;</a></div>
+    # <a id="open" onclick="openNav()" style="cursor:pointer">Open &#878;</a>
+    # <div class="menu"><div class="item">Choice 1</div><div class="item">Choice 2</div>/div>
+    # <div class="ui item"><div class="ui fluid selection dropdown"><div class="text">More</div><i class="dropdown icon"></i><div class="menu"><div class="item">Choice 1</div><div class="item">Choice 2</div><div class="item">Choice 3</div></div></div></div>
+    # <li><a href="">Services</a><ul><li><a href="">Design</a></li><li><a href="">Development</a></li><li><a href="">Custom Pizzas</a></li></ul></li>
+    # <select id = "myList" onchange = "window.open(this.value,'_self'); return false;"><option> w3schools </option><option> Javatpoint </option><option> tutorialspoint </option><option> geeksforgeeks </option></select>
+    # - title: "Publications"
+    #   url: /publications/
+    #   description: "ohhhh my publications, how nice!"
+    # - title: "Talks"
+    #   url: /talks/ 
+    #   description: "I don't talk too much"   
+    #- title: "Themen"
+    #  url: /themen/       
+    - title: "Portfolio"
+      url: /en/       
+    #- title: "Blogbeitrag"
+    #  url: /Blogbeitrag/  
+    #- title: "Projekte"
+    #  url: /projekte/
+    #- title: Blog
+    #  url: /posts-grid/
+    #- title: "Archive"
+    #  url: /posts/
+   # - title: "Seiten"
+    #  url: /seiten/
+    # - title: "Quick-Start Guide"
+    #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+    #- title: "Über mich"
+    #  url: /uebermich/
+    #- title: "Arbeit"
+    #  url: /works/
+    #- title: "en"
+    #  url: /en/
+    # - title: "Sample Posts"
+    #   url: /year-archive/
+    # - title: "Sample Collections"
+    #   url: /collection-archive/
+    #- title: "Sitemap"
+    #  url: /sitemap/
+
+
+# sidebar navigation list sample
+sidebar-sample:
+  - title: "Parent Page A"
+    children:
+      - title: "Child Page A1"
+        url: /child-page-a1/
+      - title: "Child Page A2"
+        url: /child-page-a2/
+      - title: "Child Page A3"
+        url: /child-page-a3/
+      - title: "Child Page A4"
+        url: /child-page-a4/
+  - title: "Parent Page B"
+    children:
+      - title: "Child Page B1"
+        url: /child-page-b1/
+      - title: "Child Page B2"
+        url: /child-page-b2/
+      - title: "Child Page B3"
+        url: /child-page-b3/
+      - title: "Child Page B4"
+        url: /child-page-b4/
+      - title: "Child Page B5"
+        url: /child-page-b5/
+  - title: "Parent Page C"
+    children:
+      - title: "Child Page C1"
+        url: /child-page-c1/
+      - title: "Child Page C2"
+        url: /child-page-c2/
+      - title: "Child Page C3"
+        url: /child-page-c3/
+      - title: "Child Page C4"
+        url: /child-page-c4/
+      - title: "Child Page C5"
+        url: /child-page-c5/
+  - title: "Parent Page D"
+    children:
+      - title: "Child Page D1"
+        url: /child-page-d1/
+      - title: "Child Page D2"
+        url: /child-page-d2/
+      - title: "Child Page D3 (External)"
+        url: https://your-domain.com

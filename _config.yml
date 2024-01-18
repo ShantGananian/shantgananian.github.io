@@ -1,0 +1,411 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your entire site, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# `jekyll serve`. If you change this file, please restart the server process.
+
+# Theme Settings
+#
+# Review documentation to determine if you should use `theme` or `remote_theme`
+# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+
+# theme                  : "minimal-mistakes-jekyll"
+# remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# Site Settings
+locale                   : "en" #"de" "en-US"
+title                    : "Shant Gananian"
+title_separator          : "-"
+subtitle                 : "Enthusiast für intelligente mikromechatronische Systeme" # site tagline that appears below site title in masthead
+name                     : "Shant Gananian"
+description              : "Portfolio"
+url                      : "https://shantgananian.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+# baseurl                  : "/" # the subpath of your site, e.g. "/blog"
+repository               : "shantgananian/shantgananian" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+teaser                   : "" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : "/assets/img/sg-CB3131-dillario-font.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : "Maschinenbauingenieur"  # overrides the website title displayed in the masthead, use " " for no title
+breadcrumbs              : true # true, false (default)
+words_per_minute         : 160
+comments:
+  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
+  disqus:
+    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+  discourse:
+    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
+  facebook:
+    # https://developers.facebook.com/docs/plugins/comments
+    appid                :
+    num_posts            : # 5 (default)
+    colorscheme          : # "light" (default), "dark"
+  utterances:
+    theme                : # "github-light" (default), "github-dark"
+    issue_term           : # "pathname" (default)
+  giscus:
+    repo_id              : # Shown during giscus setup at https://giscus.app
+    category_name        : # Full text name of the category
+    category_id          : # Shown during giscus setup at https://giscus.app
+    discussion_term      : # "pathname" (default), "url", "title", "og:title"
+    reactions_enabled    : # '1' for enabled (default), '0' for disabled
+    theme                : # "light" (default), "dark", "dark_dimmed", "transparent_dark", "preferred_color_scheme"
+  staticman:
+    branch               : # "master"
+    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
+reCaptcha:
+  siteKey                :
+  secret                 :
+atom_feed:
+  path                   : # blank (default) uses feed.xml
+  hide                   : # true, false (default)
+search                   : true # true, false (default)
+search_full_content      : true # true, false (default)
+search_provider          : "lunr" # lunr (default), algolia, google
+lunr:
+  search_within_pages    : true # true, false (default)
+algolia:
+  application_id         : "P2298UV39V" # YOUR_APPLICATION_ID
+  index_name             : "my_jekyll" # YOUR_INDEX_NAME
+  search_only_api_key    : "05941a9c1d8d6854f90503c993afa714" # YOUR_SEARCH_ONLY_API_KEY
+  powered_by             :  true # (default), false
+google:
+  search_engine_id       : # YOUR_SEARCH_ENGINE_ID
+  instant_search         : # false (default), true
+# SEO Related
+google_site_verification :
+bing_site_verification   :
+naver_site_verification  :
+yandex_site_verification :
+baidu_site_verification  :
+
+# Social Sharing
+twitter:
+  username               :
+facebook:
+  username               :
+  app_id                 :
+  publisher              :
+og_image                 : "/assets/img/2-2.png" # Open Graph/Twitter default site image
+# For specifying social profiles
+# - https://developers.google.com/structured-data/customize/social-profiles
+social:
+  type                   : # Person or Organization (defaults to Person)
+  name                   : # If the user or organization name differs from the site's name
+  links: # An array of links to social media profiles
+
+# Analytics
+analytics:
+  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  google:
+    tracking_id          :
+    anonymize_ip         : # true, false (default)
+
+
+# Site Author
+author:
+  name   : #<a href = "javascript:id="demo""></a> # <h1 id="demo"></h1> #<p "javascript:document.write(myVarAuthorName)"></p>
+  avatar : "/assets/img/2-2.png"
+  bio    : 
+            #<div title="This is a mouseover text!"> </div>
+            # <address><p style="font-family:'Herr Von Muellerhoff'">Gerechtes Handeln im Dienste anderer Menschen, ehrfürchtig Zufriedenheit mit allem was nicht von mir abhängt, Denken aufrichtig und wahrhaftig.</p></address>
+            
+             <p style="margin-bottom:0; font-size:13px">multidisziplinäres technisches Wissen; BioMEMS, Robotik, Systemintegration und Informatik, sowie mehrjährige Industrieerfahrung im Produktions- u. QHSE-Management</p>
+            # <p style="margin:0; padding-top:0;">You can read more about me in the <a href= "/about/" style="color:#0000EE;">About me</a> section.</p>
+  location: "Karlsruhe, Germany"
+  email:
+  links:
+    - #label: "Website"
+      #icon: "fas fa-fw fa-link"
+      # url: "https://your-website.com"
+    - #label: "Twitter"
+      #icon: "fab fa-fw fa-twitter-square"
+      # url: "https://twitter.com/"
+    - #label: "Facebook"
+      #icon: "fab fa-fw fa-facebook-square"
+      # url: "https://facebook.com/"
+    - label: "LinkedIn" #"LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/shant-gananian-8a935230"
+    - #label: "Xing" #"Xing"
+      #icon: "fab fa-fw fa-xing-square"
+      #url: "https://www.xing.com"
+    - label: "Github" #"GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/shantgananian"
+    - #label: "Instagram"
+      #icon: "fab fa-fw fa-instagram"
+      #url:  "https://instagram.com/"
+    - label: "Email" #"Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:shant.gananian@web.de"
+    - #label: ""
+      #icon: "fas fa-fw fa-rss-square" #fas fa-rss
+      #url: /        
+
+# Site Footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/shantgananian"
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://linkedin.com/in/shant-gananian-8a935230"
+    - #label: "Twitter"
+      #icon: "fab fa-fw fa-twitter-square"
+      #url: "https://twitter.com/Kralizek"
+    - #label: "Stack Overflow"
+      #icon: "fab fa-fw fa-stack-overflow"
+      #url: "https://stackoverflow.com/users/82540"
+    - #label: "Xing"
+      #icon: "fab fa-xing"
+      #url: "https://www.xing.com"
+    - label: "" #Creative Commons:
+      icon: fab fa-creative-commons
+      url: https://creativecommons.org/
+    - label: "" #Attribution 4.0 International:
+      icon: fab fa-creative-commons-by
+      url: https://creativecommons.org/licenses/by/4.0/
+    
+
+
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+ 
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - vendor
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - assets/js/plugins
+  - assets/js/_main.js
+  - assets/js/vendor
+  - Capfile
+  - CHANGELOG
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - gulpfile.js
+  - LICENSE
+  - log
+  - node_modules
+  - package.json
+  - package-lock.json
+  - Rakefile
+  - README
+  - tmp
+  - /docs # ignore Minimal Mistakes /docs
+  - /test # ignore Minimal Mistakes /test
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Liquid
+#strict_front_matter: true
+#liquid:
+#  error_mode: strict
+
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: <!--more--> # or use "\n\n" to get an excerpt at the first new line.
+incremental: false
+
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+
+# Sass/SCSS
+sass:
+  sass_dir: _sass
+  style: compressed #expanded; compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+
+
+# Outputting
+permalink: /:categories/:title/
+paginate: 5 # amount of posts to show
+paginate_path: /page:num/
+#paginate_path: /recent/page:num/    # To use pagination in a subfolder
+timezone: Europe/Berlin # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+
+# Plugins (previously gems:)
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-seo-tag
+
+
+# mimic GitHub Pages with --safe
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  - jekyll-seo-tag
+
+
+# Archives
+#  Type
+#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
+#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
+#  Path (examples)
+#  - Archive page should exist at path when using Liquid method or you can
+#    expect broken links (especially with breadcrumbs enabled)
+#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
+#  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
+#  - <base_path>/my-awesome-category/index.html ~> path: /
+category_archive:
+  type: liquid #jekyll-archives
+  path: /categories/
+tag_archive:
+  type: liquid #jekyll-archives
+  path: /tags/
+# https://github.com/jekyll/jekyll-archives
+# jekyll-archives:
+#    enabled:
+#      - categories
+#      - tags
+#    layouts:
+#      category: archive-taxonomy
+#      tag: archive-taxonomy
+#    permalinks:
+#      category: /categories/:name/
+#      tag: /tags/:name/
+
+
+# HTML Compression
+# - https://jch.penibelst.de/
+compress_html:
+  clippings: all
+  ignore:
+    envs: development # disable compression in dev environment
+
+# Collections
+collections:
+  # recipes:
+  #   output: true
+  #   permalink: /:collection/:path/
+  # pets:
+  #   output: true
+  #   permalink: /:collection/:path/
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+  works:
+    output: true # Set to render files in _pages folder for example: example.com/works/
+    permalink: /:collection/:path/ # Set the format of the permalink by default
+  de:
+    output: true
+    permalink: /:collection/:path/
+  en:
+    output: true
+    permalink: /:collection/:path/
+  sub-de:
+    output: true
+    permalink: /:collection/:path/
+  sub-en:
+    output: true
+    permalink: /:collection/:path/
+  categories1:
+    output: true
+
+# Front Matter Defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""  # an empty string here means that the 'values' apply all files in the project (in the website)
+      type: posts # the 'values' apply all files of 'posts' type in the project (in the website)
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+      show_date: true
+      lang: en
+      mathjax: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      lang: en
+  # _en
+  - scope:
+      path: '_en'
+    values:
+      # permalink: 'custom/:title'
+      lang: en
+  # _de
+  - scope:
+      path: '_de'
+    values:
+      # permalink: 'maatwerk/:title'
+      lang: de
+  # _works
+  - scope:
+      path: '_works'
+    values:
+      # permalink: 'maatwerk/:title'
+      lang: en
+  # sub-de:
+  - scope:
+      path: '_de/sub-de/'
+    values:
+      lang: de
+  # sub-en:
+  - scope:
+      path: '_en/sub-en/'
+    values:
+      lang: en
+  # categories
+  - scope:
+      path: "_categories1"
+    values:
+      layout: "category"
+
+
+  # tag archives and category archives
+  - scope:
+      path: ""
+      type: tag
+    values:
+      author_profile: true
+      lang: en
+  - scope:
+      path: ""
+      type: category
+    values:
+      comments: false
+      lang: en
+  # I added this section to define the language of the homepage
+  - scope:
+      path: ""
+    values:
+      lang: de
