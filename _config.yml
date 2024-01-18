@@ -70,7 +70,7 @@ algolia:
   search_only_api_key    : "05941a9c1d8d6854f90503c993afa714" # YOUR_SEARCH_ONLY_API_KEY
   powered_by             :  true # (default), false
 google:
-  search_engine_id       : b71ef5c90f8604db0 # YOUR_SEARCH_ENGINE_ID
+  search_engine_id       : "b71ef5c90f8604db0" # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
 google_site_verification :
