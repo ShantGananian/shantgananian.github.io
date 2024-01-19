@@ -5,7 +5,8 @@ title: Lane Lines Detection using Real-Time Machine Vision for Seeing Vehicles
 excerpt: "Python pipeline for identifying road lane boundaries, first in an image, then applying the pipeline to a video stream."
 #myLink: /de/geschichte/ # Custom Variable
 # author_profile: true
-last_modified_at: 2023-12-20
+last_modified_at: 2023-11-01
+date: 2023-11-01
 published: true
 tags:
   - Machine Vision
