@@ -14,6 +14,7 @@ tags:
   - Image Processing
   - Autonomous Vehicles
   - Edge Detection
+  - Edge Tracking
   - Python
 
 toc: true
