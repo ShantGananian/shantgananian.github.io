@@ -262,7 +262,7 @@ function onOrientationChange(event){
 }
 ```
 
-To the distance to the object as user-input in the app, a slider, with range between $20$ centimeters and $50$ meters, and default value of $20$ meters, is added to the app by coding it into the <code>index.html</code>. Then an info field is added to the slider by using the <code>&lt;div&gt;</code> tag.
+To the distance to the object as user-input in the app, a slider, with range between $1$ meter and $50$ meters, and default value of $20$ meters, is added to the app by coding it into the <code>index.html</code>. Then an info field is added to the slider by using the <code>&lt;div&gt;</code> tag.
 
 ```html
 <!-- index.html -->
@@ -274,7 +274,7 @@ To the distance to the object as user-input in the app, a slider, with range bet
         <script src="script.js"></script>
     </head>
     <body onload="main()">
-        <input id="mySlider" type="range" min="0.2" max="50" value="20">
+        <input id="mySlider" type="range" min="1" max="50" value="20">
         <div id="myLabel"></div>
         <div id="heightInfo"></div>
     </body>
