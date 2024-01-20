@@ -189,7 +189,7 @@
   hyphens: auto; // I added this to enable hyphenation
 
   font-family: $minion; /* $sans-serif; */
-  font-size: 14px; // $type-size-5; default author bio font size 
+  font-size: 1em; // $type-size-5; default author bio font size 
 
   @include breakpoint($large) {
     margin-top: 10px;  // gap between the author bio and the author name
