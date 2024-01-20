@@ -2,7 +2,7 @@
 layout: single # archive
 
 title: JavaScript Web App to Measure Height of an Object by using Triangulation and the Orientation Sensor of the Device
-excerpt: "Mobile web app in JavaScript, for measuring the approximate height of an object by using the triangulation principle, the orientation sensor of the device and the stream of its rear-facing camera."
+excerpt: "Mobile app in JavaScript, for measuring the approximate height of an object by using the triangulation principle, the orientation sensor of the device and the stream of its rear-facing camera."
 # myLink: /de/geschichte/ # Custom Variable
 # author_profile: true
 last_modified_at: 2023-12-20
