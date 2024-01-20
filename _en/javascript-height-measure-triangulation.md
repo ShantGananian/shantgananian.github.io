@@ -2,7 +2,7 @@
 layout: single # archive
 
 title: JavaScript Web App to Measure Height of an Object by using Triangulation and the Orientation Sensor of the Device
-excerpt: "Mobile app in JavaScript, for measuring the approximate height of an object by using the triangulation principle, the orientation sensor of the device and the stream of its rear-facing camera."
+excerpt: "Mobile web app in JavaScript, for measuring the approximate height of an object by using the triangulation principle, the orientation sensor of the device and the stream of its rear-facing camera."
 # myLink: /de/geschichte/ # Custom Variable
 # author_profile: true
 last_modified_at: 2023-12-20
@@ -67,8 +67,8 @@ Building a mobile web app by using JavaScript programming language to measure th
 <!-- no toc -->
 - Programming a mobile web app in JavaScript, debugging and styling it.
 - Interpreting and using the input data from the orientation sensor in a device.
-- Accessing the stream of the rear-facing camera of a device
-- Applying triangulation principle for measurement 
+- Accessing the stream of the rear-facing camera of a device.
+- Applying triangulation principle for measurement.
 
 <br>
 <a id="coding"></a>
@@ -76,7 +76,7 @@ Building a mobile web app by using JavaScript programming language to measure th
 
 First a new HTML document, named <code>index.html</code>, is created and a title is given to the page (here: 'Height Measuring Tool'). An empty CSS file <code>style.css</code>, for the styles, and an empty JavaScript file <code>script.js</code>, for the logic, are linked to the document <code>index.html</code>.
 
-In the document's <code>&lt;body&gt;</code> element a new division is added with the <code>id="heightInfo"</code>, which is currently empty, but eventually it will show the height of the object the device is being pointed at.
+In the document's <code>&lt;body&gt;</code> element a new division is added with the <code>id="heightInfo"</code>, which is currently empty, but eventually it will show the height of the object it is being pointed at.
 
 An <code>onload</code> event is added within the <code>&lt;body&gt;</code> element to execute a JavaScript function <code>main()</code> once the document has loaded.
 
