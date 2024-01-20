@@ -109,7 +109,7 @@ function onOrientationChange(event){
 }
 ```
 
-The <code>console.log()</code> static method, which outputs a message to the console, is used to log the information associated with the event. However, the laptop is not equipped with an orientation sensor to measures the orientation of a device relative to an orthogonal coordinate frame $X$, $Y$ and $Z$, so, tilting the laptop won't trigger the event. How to debug a device, which doesn't have an orientation sensor is explained in the next section.
+The <code>console.log()</code> static method, which outputs a message to the console, is used to log the information associated with the event. However, a laptop or a PC are not equipped with an orientation sensor to measures the orientation of a device relative to an orthogonal coordinate frame $X$, $Y$ and $Z$, so, tilting the laptop or the PC won't trigger the event. How to debug a device, which doesn't have an orientation sensor is explained in the next section.
 
 <br>
 <a id="debugging"></a>
