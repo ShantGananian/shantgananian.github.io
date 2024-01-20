@@ -19,7 +19,10 @@
     </h3>
     {% if author.bio %}
       <div class="author__bio p-note" itemprop="description">
-        {{ author.bio | markdownify }}
+        <!-- {{ author.bio | markdownify }} -->
+        <!-- I commented the above line and added the next line to include my own multilingual bio-->
+        {{ site.data.ui-text[page.lang].author_bio | markdownify }}
+        
       </div>
     {% endif %}
   </div>

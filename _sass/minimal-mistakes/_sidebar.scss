@@ -1,21 +1,21 @@
 
 /* ==========================================================================
-   SIDEBAR
-   ========================================================================== */
+  SIDEBAR
+  ========================================================================== */
 
 /*
-   Default
-   ========================================================================== */
+  Default
+  ========================================================================== */
 
-.sidebar {
+  .sidebar {
   @include clearfix();
   /* @include breakpoint(max-width $large) { */
-     /* fix z-index order of follow links */
+      /* fix z-index order of follow links */
   /*   position: relative;
-     z-index: 10;
-     -webkit-transform: translate3d(0, 0, 0);
-     transform: translate3d(0, 0, 0);
-   } */
+      z-index: 10;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    } */
   background-color: #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 10px rgba(0,0,0,0.1);
 
@@ -33,7 +33,7 @@
     &.sticky {
       overflow-y: auto;
       /* calculate height of nav list
-         viewport height - nav height - masthead x-padding
+          viewport height - nav height - masthead x-padding
       */
       max-height: calc(100vh - #{$nav-height} - 2em);
     }
@@ -121,8 +121,8 @@
 }
 
 /*
-   Author profile and links
-   ========================================================================== */
+    Author profile and links
+    ========================================================================== */
 
 .author__avatar {
   display: table-cell;
@@ -186,6 +186,7 @@
 .author__bio {
   margin: 10px; //10px; 0; default
   text-align: left; //center;
+  hyphens: auto; // I added this to enable hyphenation
 
   font-family: $minion; /* $sans-serif; */
   font-size: $type-size-6; // $type-size-5; default author bio font size 
@@ -356,8 +357,8 @@
 
 
 /*
-   Wide Pages
-   ========================================================================== */
+    Wide Pages
+    ========================================================================== */
 
 .wide .sidebar__right {
   margin-bottom: 1em;
