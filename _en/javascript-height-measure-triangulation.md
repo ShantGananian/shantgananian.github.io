@@ -126,7 +126,7 @@ To debug a device, which doesn't have an orientation sensor, the Developer Tools
     </p>
 </center>
 
-A window will open inside the browser as shown in <a href="#figure4">Figure 4</a>. Then, the 'More Tools', the three vertical dots at the far left of the tabs bar of the bottom section, is pressed followed by choosing the 'Sensors' tool from the displayed list, <a href="#figure5">Figure 5</a>. The 'Sensors' panel opens, <a href="#figure6">Figure </a>, which is used to override geolocation, simulate device orientation, force touch, and emulate idle state. For this project only the 'Orientation' section is used.
+A window will open inside the browser as shown in <a href="#figure4">Figure 4</a>. Then, the 'More Tools', the three vertical dots at the far left of the tabs bar of the bottom section, is pressed followed by choosing the 'Sensors' tool from the displayed list, <a href="#figure5">Figure 5</a>. The 'Sensors' panel opens, <a href="#figure6">Figure 6</a>, which is used to override geolocation, simulate device orientation, force touch, and emulate idle state. For this project only the 'Orientation' section is used.
 
 <center>
     <p>
