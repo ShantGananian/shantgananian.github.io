@@ -395,6 +395,7 @@ body{
     overflow:hidden;
 }
 ```
+
 Next, the <code>video</code> object is aligned to the center of the <code>body</code> by making it absolutely positioned, i.e. removing it from the normal document flow, moving it's top-left corner to the center by setting left and top to $50\%$ of the nearest parent container, the body, and then translating the object $50\%$ of its size to the left and $50\%$ of its size up, effectively centering it within the body. The z-index is set to $-1$ so that overlapping elements with larger z-index cover this one, i.e. so that other elements appear on top of this one.
 
 The same is done for the <code>heightInfo</code> object. But here the text color is set to red and the font-weight to bold, and unlike <code>video</code> object, this one is translated $100\%$ of its size upward so that its bottom is in the middle of the screen. Then, $3px$ thick white bottom-border is added to it, with $100\%$ the width of the <code>body</code>. The user of this app should align this border with the top of the object to be measured.
