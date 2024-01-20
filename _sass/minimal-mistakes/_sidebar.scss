@@ -180,7 +180,7 @@
 }
 .sidebar .author__name {
   font-family: $minion; /* $sans-serif; */
-  font-size: $type-size-5; // $type-size-5;  Author name font size
+  font-size: $type-size-6; // $type-size-5;  Author name font size
 }
 
 .author__bio {
@@ -189,7 +189,7 @@
   hyphens: auto; // I added this to enable hyphenation
 
   font-family: $minion; /* $sans-serif; */
-  font-size: $type-size-4; // $type-size-5; default author bio font size 
+  font-size: $type-size-5; // $type-size-5; default author bio font size 
 
   @include breakpoint($large) {
     margin-top: 10px;  // gap between the author bio and the author name
