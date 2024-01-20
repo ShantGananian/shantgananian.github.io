@@ -238,7 +238,7 @@ To convert this angle $\beta$ into height, the distance to the object is require
 
 <code>const heightOfObject = Math.tan(angle*Math.PI/180)*distToObject;</code>
 
-The angle $\beta$ is converted into radians by muliplying it with $\frac{\pi}{180}$.
+The angle $\beta$ is converted into radians by multiplying it with $\frac{\pi}{180}$.
 
 The <code>script.js</code> file looks now like this, considering a distance of $20$ meters to the object:
 
