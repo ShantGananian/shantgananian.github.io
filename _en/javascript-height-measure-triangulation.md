@@ -12,7 +12,7 @@ tags:
   - triangulation
   - orientation sensor
   - web app
-  - Javascript
+  - JavaScript
   - camera
 
 toc: true
