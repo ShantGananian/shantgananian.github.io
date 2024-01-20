@@ -216,7 +216,7 @@ By setting a custom orientation for the virtual device in the Developer Tools se
 
 However, in this project, only the changes in the value of $\beta$ is required. For that reason, in the file <code>script.js</code> the <code>console.log(event)</code> could be changed to <code>console.log(event.beta)</code> to focus on the value of $\beta$.
 
-$\beta = 0$ degrees when the device is flat on a level surface, like a table and the screen facing up, and when the device is in a vertical position and the screen facing the user, then $\beta = 90$ degrees. However, for this project, it is necessary to have $\beta = 0$ degrees when the device is in a vertical position and the screen facing the user, and $\beta = -270$ degrees when the device is flat on a level surface and the screen facing down; range of $\beta$: $[-270°, 90°)$. To achieve this, $90$ degrees is subtracted from the $\beta$. To discard the negative degrees within the range, an <code>if</code> is added, which tests whether $\beta$ is smaller than zero, in which case it assigns the value zero to $\beta$. In this way the range of $\beta$ becomes: $[0°, 90°)$, as shown in the following code:
+$\beta = 0$ degrees when the device is flat on a level surface, like a table and the screen facing up, and when the device is in a vertical position and the screen facing the user, then $\beta = 90$ degrees. However, for this project, it is necessary to have $\beta = 0$ degrees when the device is in a vertical position and the screen facing the user, and $\beta = -270$ degrees when the device is flat on a level surface and the screen facing down; range of $\beta$: $[-270°, 90°)$. To achieve this, $90$ degrees is substracted from the $\beta$. To change the negative degrees to positive ones within the range, an <code>if</code> is added, which tests whether $\beta$ is smaller than zero, in which case it multiplies $\beta$ with $-1$. In this way the range of $\beta$ becomes: $[0°, 90°)$, as shown in the following code:
 
 ```js
 /* script.js */
@@ -228,7 +228,7 @@ function main(){
 function onOrientationChange(event){
     let angle = event.beta-90;
     if(angle<0){
-        angle = 0;
+        angle = -angle;
     }
     console.log(angle);
 }
@@ -252,7 +252,7 @@ function main(){
 function onOrientationChange(event){
     let angle = event.beta-90;
     if(angle<0){
-        angle = 0;
+        angle = -angle;
     }
 
     const distToObject = 20;
