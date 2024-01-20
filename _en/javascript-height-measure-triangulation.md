@@ -35,7 +35,7 @@ Triangulation principle is used in forestry to measure the height of a tree with
 <center>
     <p>
     <figure id="figure1" style='display: table; width: 30%; heighth: 50%;'>
-        <img src="/assets/img/javascript-height-measure-triangulation/Figure1.jpg" alt="Figure 0">
+        <img src="/assets/img/javascript-height-measure-triangulation/Figure1.jpg" alt="Figure 1">
         <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 1: Clinometer</figcaption>
     </figure>
     </p>
