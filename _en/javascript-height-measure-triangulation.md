@@ -512,7 +512,7 @@ to:
         facingMode: 'environment'
     }})</code>
 
-the <code>facingMode</code> is set to the string value <code>environment</code>, which means that the video source is facing away from the user, thereby viewing their environment. This is the rear-facing camera of the device.
+The <code>facingMode</code> is set to the string value <code>environment</code>, which means that the video source is facing away from the user, thereby viewing their environment. This is the rear-facing camera of the device.
 
 The final JavaScript code in the (<code>script.js</code>) is as follows:
 
