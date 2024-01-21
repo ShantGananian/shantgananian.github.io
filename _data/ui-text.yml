@@ -55,7 +55,9 @@ en: &DEFAULT_EN
   back_to_top                : "Back to top"
   author_location            : "Karlsruhe, Germany"
   author_name                : "Shant Gananian, M.Sc."
-  author_bio                 : "multidisciplinary technical knowledge; BioMEMS, robotics, system integration and computer science, as well as several years of industrial experience in production and QHSE management"
+  author_bio                 : "Multidisciplinary technical competence; BioMEMS & robotics design, system integration & computer science skills along with several years of industrial experience in production and QHSE management"
+  author_title               : "Mechanical Engineer"
+  author_subtitle            : "Enthusiast for smart micro-mechatronic systems"
 en-US:
   <<: *DEFAULT_EN
 en-CA:
@@ -540,7 +542,9 @@ de: &DEFAULT_DE
   back_to_top                : "Zurück nach oben"
   author_location            : "Karlsruhe, Deutschland"
   author_name                : "Shant Gananian, M.Sc."
-  author_bio                 : "multidisziplinäres technisches Wissen; BioMEMS, Robotik, Systemintegration und Informatik, sowie mehrjährige Industrieerfahrung im Produktions- u. QHSE-Management"
+  author_bio                 : "Multidisziplinäre technische Kompetenz; BioMEMS- & Robotik-Design, Systemintegration & Informatikkenntnisse sowie mehrjährige industrielle Erfahrung in Produktions- & QHSE-Management"
+  author_title               : "Maschinenbauingenieur"
+  author_subtitle            : "Enthusiast für intelligente mikromechatronische Systeme"
 de-DE:
   <<: *DEFAULT_DE
 de-AT:

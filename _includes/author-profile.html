@@ -18,9 +18,7 @@
       <a class="u-url" rel="me" href="{{ author.home | default: '/' | absolute_url }}" itemprop="url">{{ site.data.ui-text[page.lang].author_name }}</a>
     </h3>
     {% if author.bio %}
-      <div class="author__bio p-note" itemprop="description">
-        <!-- {{ author.bio | markdownify }} -->
-        <!-- I commented the above line and added the next line to include my own multilingual bio-->
+      <div class="author__bio p-note" itemprop="description" style="font-size:18px;">
         {{ site.data.ui-text[page.lang].author_bio | markdownify }}
         
       </div>
