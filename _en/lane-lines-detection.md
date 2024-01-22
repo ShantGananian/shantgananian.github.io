@@ -340,7 +340,7 @@ A region of interest (often abbreviated ROI) is a sample within a data set ident
 
 In the previous section's final image, <a href="#figure7">Figure 7</a>, it could be noticed that after applying the Canny edge detector, there are identified edges in the image that don't belong to the lane lines. To isolate only the region where lane lines should be identified, a completely-black mask is created, with the same dimensions as the original image, and part of its area is filled with a polygon.
 
-In this project the region of interest is the lane where the vehicle is moving. This region could be specified as a triangle. To accomplish this, first a new function is defined, named <code>canny()</code>, and the previous code is wrapped within it. This function takes as input an image and applys the Canny algorithm to this image and returns the result image as output.
+In this project the region of interest is the lane where the vehicle is moving. This region could be specified as a triangle. To accomplish this, first a new function is defined, named <code>canny()</code>, and the previous code is wrapped within it. This function takes as input an image and applies the Canny algorithm to this image and returns the result image as output.
 
 To clarify how the region of interest, the dimensions of the triangle, is isolated,  the <code>pyplot</code> subpackage of the Matplotlib package is used, instead of OpenCV, which shows the axes of the figure, as shown in <a href="#figure8">Figure 8</a>.
 
