@@ -41,11 +41,11 @@ Building a program in Python to identify road or path lanes in an image, then ap
 ## AQUIRED SKILLS
 
 - Computer Vision techniques via Python used to identify lane boundaries in both images and video streams.
-- Using the OpenCV,NumPy and Matplotlib libraries.
+- Using the OpenCV, NumPy and Matplotlib libraries.
 - Image processing by using image arithmetic.
 - Filtering out image noise and smoothing with Gaussian filter.
 - Using edge detection algorithms to identify boundaries of objects, in particular, the Canny edge detector.
-- Canny edge detection Creating an edge detection algorithm.
+- Creating an edge detection algorithm.
 - Feature extraction by using the Hough transform technique.
 - Optimization of extracted features by averaging.
 
