@@ -104,7 +104,7 @@ Thinking of an image as a grid, each square in the grid contains a *pixel* (shor
 
 A digital color image can be represented as an array of pixels (grid of pixels) where each pixel has three channels and is represented as a $1\times3$ vector, usually of integer values, representing an RGB data value (Red, Green, Blue), which is considered to give the color, the RGB intensities (the amount of light) that appears in a given location in the image. The minimum intensity value for a basic color is $0$. The maximum intensity is $255$. This means that Each pixel's color sample has three numerical RGB components (Red, Green, Blue) to represent the color of that tiny pixel area. These three RGB components are three $8$-bit numbers for each pixel. There are actually $256$ (i.e. $8$-bit format; $2^8=256$) different amounts of intensity for each basic color. Since the three colors have integer values from $0$ to $255$, there are a total of $256\times256\times256 = 16,777,216$ combinations or color choices. Black is an RGB value of $(0, 0, 0)$ and White is $(255, 255, 255)$. Gray, however, has equal RGB values. Thus, $(220, 220, 220)$ is a light gray (near white), and $(40,40,40)$ is a dark gray (near black).
 
-Since gray has equal values in RGB, black-and-white grayscale images only use one byte of $8$-bit data per pixel instead of three. Each pixel has a value between $0$ and $255$, where zero represents 'no intensity' or 'black' and $255$ represents 'maximum intensity' or 'white'. The values progress gradually from $0$ to $255$ represnting $256$ shades of gray; darker to lighter. This is why in image processing, color images are converted into grayscale to perform edge detection as this helps in simplifying algorithms and eliminates the complexities related to computational requirements.
+Since gray has equal values in RGB, black-and-white grayscale images only use one byte of $8$-bit data per pixel instead of three. Each pixel has a value between $0$ and $255$, where zero represents 'no intensity' or 'black' and $255$ represents 'maximum intensity' or 'white'. The values progress gradually from $0$ to $255$ representing $256$ shades of gray; darker to lighter. This is why in image processing, color images are converted into grayscale to perform edge detection as this helps in simplifying algorithms and eliminates the complexities related to computational requirements.
 
 <a href="#figure2">Figure 2</a> shows a grayscale image, divided into a matrix of square shapes, where each square consists of pixels in some intensity value. The intensity values are displayed in red. To generate this, the following Python code was used:
 
@@ -125,7 +125,7 @@ plt.axis("off")
 plt.show()
 ```
 
-Here, after defining an array of values, the array was plotted to display a grayscale image, where the colormapping was set up by using the <code>matplotlib</code> parameter <code>cmap='gray'</code>.
+Here, after defining an array of values, the array was plotted to display a grayscale image, where the colormap was set up by using the <code>matplotlib</code> parameter <code>cmap='gray'</code>.
 
 
 <center>
@@ -137,9 +137,9 @@ Here, after defining an array of values, the array was plotted to display a gray
     </p>
 </center>
 
-Edge detection methods rely on the computation of image gradients, which is the directional change in image intensity. Regions in an image that look like edges are detected by measuring the gradient, i.e. the change in intensity values, at each pixel of the input image, in a given direction. After applying an edge detector on the original image, sharp changes in image brightness are detected. In the resulting gradient image the discontinuities in image brightness are represented by set of conected curves and lines that indicate the boundaries of objects. Discontinuitiesin image brightness correspond to discontinuities in depth, in surface orientation, changes in material properties and variations in scene illumination.
+Edge detection methods rely on the computation of image gradients, which is the directional change in image intensity. Regions in an image that look like edges are detected by measuring the gradient, i.e. the change in intensity values, at each pixel of the input image, in a given direction. After applying an edge detector on the original image, sharp changes in image brightness are detected. In the resulting gradient image the discontinuities in image brightness are represented by set of connected curves and lines that indicate the boundaries of objects. Discontinuities in image brightness correspond to discontinuities in depth, in surface orientation, changes in material properties and variations in scene illumination.
 
-There are many edge-detection methods, including Canny, Sobel, Laplacian, and Prewitt. These can be grouped into two categories, *gradient* and *Laplacian*. The gradient method (Canny, Sobel) detects the edges by looking for the maximum and minimum in the first derivative of the image. The Laplacian method (Laplacian, Prewitt) searches for zerocrossings in the second derivative of the image to find edges. However, the *Canny edge detector* is arguably the most commonly used edge detector in the field as its algorithm is one of the most strictly defined methods that provides good and reliable detection.
+There are many edge-detection methods, including Canny, Sobel, Laplacian, and Prewitt. These can be grouped into two categories, *gradient* and *Laplacian*. The gradient method (Canny, Sobel) detects the edges by looking for the maximum and minimum in the first derivative of the image. The Laplacian method (Laplacian, Prewitt) searches for zero-crossings in the second derivative of the image to find edges. However, the *Canny edge detector* is arguably the most commonly used edge detector in the field as its algorithm is one of the most strictly defined methods that provides good and reliable detection.
 
 <br>
 <a id="subsubsection-a"></a>
@@ -161,6 +161,7 @@ gray_image = cv2.cvtColor(lane_image, cv2.COLOR_BGR2GRAY)
 cv2.imshow("result", gray_image)
 cv2.waitKey(0)
 ```
+
 The result is shown in <a href="#figure3">Figure 3</a>.
 
 <center>
@@ -208,7 +209,7 @@ plt.show()
     </p>
 </center>
 
-The reason for the difference in colors between the two displayments is that OpenCV reads and displays the image in BGR rather than RGB order. Matplotlib, on the other hand, uses the RGB color format and thus, requires that the BGR image is converted to RGB first, to display it correctly.
+The reason for the difference in colors between the two displays is that OpenCV reads and displays the image in BGR rather than RGB order. Matplotlib, on the other hand, uses the RGB color format and thus, requires that the BGR image is converted to RGB first, to display it correctly.
 
 However, back to the grayscale conversion in OpenCV, converting an RGB image to grayscale is not straightforward. This is realized through the method of color mode expression. $R_{i}$, $G_{i}$, and $B_{i}$ represent the three primary color values of each pixel, respectively, and the gray data $C_{i}$ of each pixel are obtained by calculating the mean value of its RGB data.
 
