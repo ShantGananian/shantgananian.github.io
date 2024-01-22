@@ -306,7 +306,7 @@ After application of non-maximum suppression, the remaining edge pixels provide 
 
 The last step of the Canny edge detection algorithm is edge tracking by hysteresis. This algorithm uses the idea that weak edge pixels from true edges will (usually) be connected to a strong edge pixel while noise responses are unconnected. Starting from each weak edge pixel, the algorithm traces the edge by considering its 8-connected neighborhood pixels. If at least one strong edge pixel is connected to a weak edge pixel, that weak edge pixel is identified as one that should be preserved. This process continues until no more weak edges are connected. These weak edge pixels become strong edges that can then cause their neighboring weak edge pixels to be preserved. This ensures that the edges are continuous and well-defined.
 
-The Python code for implementing the above described six steps of the Canny edge detector is as follows:
+The Python code for implementing the above described five steps of the Canny edge detector is as follows:
 
 ```python
 import cv2
