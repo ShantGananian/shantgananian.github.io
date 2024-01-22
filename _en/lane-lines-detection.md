@@ -213,7 +213,7 @@ The reason for the difference in colors between the two displays is that OpenCV 
 
 However, back to the grayscale conversion in OpenCV, converting an RGB image to grayscale is not straightforward. This is realized through the method of color mode expression. $R_{i}$, $G_{i}$, and $B_{i}$ represent the three primary color values of each pixel, respectively, and the gray data $C_{i}$ of each pixel are obtained by calculating the mean value of its RGB data.
 
-In human vision, however, eyes are more sensitive and thus perceive more green, less sensitive to red and the least sensitive to blue. Therefore, weights of the linear weighted average are defined to compensate nonuniformity of the sensitivity and following this, different weights are assigned to the three colors. The weight values of the general R, G, and B components are 0.299, 0.587, and 0.114, respectively.
+In human vision, however, eyes are more sensitive and thus perceive more green, less sensitive to red and the least sensitive to blue. Therefore, weights of the linear weighted average are defined to compensate nonuniformity of the sensitivity and following this, different weights are assigned to the three colors. The weight values of the general R, G, and B components are $0.299$, $0.587$, and $0.114$, respectively.
 
 Thus, when converting to grayscale, each of the RGB channels is not weighted uniformly, like this:
 
@@ -239,7 +239,7 @@ The process of Canny edge-detection algorithm can be broken down to five differe
 <a id="subsubsubsection-a"></a>
 ##### Step 1: Smoothing with Gaussian filter
 
-There are two main types of image processing: image filtering and image warping. Image filtering changes the pixel values of an image, altering the color itensities, without changing the pixel positions, while image warping changes the pixel positions of an image without changing the colors.
+There are two main types of image processing: image filtering and image warping. Image filtering changes the pixel values of an image, altering the color intensities, without changing the pixel positions, while image warping changes the pixel positions of an image without changing the colors.
 
 After reading in the image, the next step is to blur it, using the <code>GaussianBlur()</code> function. This is done to reduce the noise in the image, as most edge-detection algorithms are sensitive to noise, and to smoothen the intensity variation near the edges, making it easier to identify the predominant edge structure within the image.
 
@@ -247,9 +247,9 @@ Mathematically, applying a Gaussian blur to an image is the same as convolving t
 
 In edge detection, noise can cause false edges to appear in the result. Using a Gaussian blur filter before edge detection aims to reduce this level of noise in the image, which improves the result of the used edge-detection algorithm.
 
-The following line of code <code>blur = cv2.GaussianBlur(gray,(5,5),0)</code> applys a Gaussian blur on the grayscale image <code>gray_image</code> with a $5\times5$ kernel and zero devitation, and returns a new image called <code>blur_image</code>. The size of the kernel varies depending on specific situations. The larger the size is, the lower the detector's sensitivity to noise. Additionally, the localization error to detect the edge will slightly increase with the increase of the Gaussian filter kernel size. A $5\times5$ is a good size for most cases.
+The following line of code <code>blur = cv2.GaussianBlur(gray,(5,5),0)</code> applys a Gaussian blur on the grayscale image <code>gray_image</code> with a $5\times5$ kernel and zero deviation, and returns a new image called <code>blur_image</code>. The size of the kernel varies depending on specific situations. The larger the size is, the lower the detector's sensitivity to noise. Additionally, the localization error to detect the edge will slightly increase with the increase of the Gaussian filter kernel size. A $5\times5$ is a good size for most cases.
 
-The following Python code applies Gaussian blur to the grayscale path or road image and displays the output <a href="#figure6">Figure 6</a>.
+The following Python code applies Gaussian blur to the grayscale path or road image and displays the output (<a href="#figure6">Figure 6</a>).
 
 ```python
 import cv2
