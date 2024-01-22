@@ -321,7 +321,7 @@ cv2.imshow("result", canny_image)
 cv2.waitKey(0)
 ```
 
-After importing the required Python packages, the image is loaded and preprocessed. Then, the Canny edge detector is applied, the <code>cv2.Canny()</code> funtion, to the single channel, grayscale image to ensure that there is less noise during the process. The first parameter for the <code>cv2.Canny()</code> funtion is the grayscale blurred image. The second and third parameters are the lower and higher thresholds respectively. Finally, the resulting image with detected edges, <a href="#figure7">Figure 7</a>, is displayed on the screen. It clearly traces the outline of the edges that correspond to the pixels with most sharp changes in intensity. Gradients that exceed the high threshold are traced as bright pixels. Small changes in brightness are not traced at all and accordingly, they are black as they fall below the lower threshold.
+After importing the required Python packages, the image is loaded and preprocessed. Then, the Canny edge detector is applied, the <code>cv2.Canny()</code> function, to the single channel, grayscale image to ensure that there is less noise during the process. The first parameter for the <code>cv2.Canny()</code> function is the grayscale blurred image. The second and third parameters are the lower and higher thresholds respectively. Finally, the resulting image with detected edges, <a href="#figure7">Figure 7</a>, is displayed on the screen. It clearly traces the outline of the edges that correspond to the pixels with most sharp changes in intensity. Gradients that exceed the high threshold are traced as bright pixels. Small changes in brightness are not traced at all and accordingly, they are black as they fall below the lower threshold.
 
 <center>
     <p>
