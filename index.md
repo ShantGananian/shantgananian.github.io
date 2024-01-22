@@ -1,8 +1,9 @@
 ---
-layout: en
+layout: de
 author_profile: true
+title: "Portfolio"
 myLink: /en/
 
 ---
 
-<div display= "block" Style="font-size: 14px; line-height: 20px; margin: 0 0 50px;" ><p>The projects listed here were created to develop my skills trhough practical applications in subjects that require not only a basic understanding of the application areas - often several at the same time - but also a good knowledge of the software used, programming experience and mathematical background knowledge.</p></div>
+<div display= "block" Style="font-size: 14px; line-height: 20px; margin: 0 0 50px;" ><p>Die hier aufgeführten Projekte sind entstanden, um meine Fähigkeiten durch praktische Anwendungen in Fächern zu entwickeln, in denen neben einem grundlegenden Verständnis für die Anwendungsbereiche - oft mehrere gleichzeitig - auch gute Kenntnisse der verwendeten Software, Programmiererfahrung und mathematisches Hintergrundwissen erforderlich sind.</p></div>

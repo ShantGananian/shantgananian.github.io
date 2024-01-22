@@ -3,17 +3,20 @@ layout: single # archive
 
 title: JavaScript Web App to Measure Height of an Object by using Triangulation and the Orientation Sensor of the Device
 excerpt: "Mobile web app in JavaScript, for measuring the approximate height of an object by using the triangulation principle, the orientation sensor of the device and the stream of its rear-facing camera."
-# myLink: /de/geschichte/ # Custom Variable
+myLink: /de/javascript-height-measure-triangulation-de/ # Custom Variable
 # author_profile: true
 last_modified_at: 2023-12-20
 date: 2023-12-20
 published: true
-tags:
-  - triangulation
-  - orientation sensor
-  - web app
+tagsen:
+  - Triangulation
+  - Orientation Sensor
+  - Web-App
   - JavaScript
-  - camera
+  - Camera
+categories:
+  - JavaScript programming
+  - Sensors
 
 toc: true
 toc_label: "Table of contents"
@@ -311,7 +314,7 @@ In the next section, the camera input from the rear-facing camera of the device 
 
 A new feature is added; the camera input from the rear-facing camera of the device, which allows the user to align the device to the top (or bottom) of the object. This is done by accessing the <code>navigator.mediaDevices</code> property that offers various methods for accessing the camera, microphone as well as screen sharing, and invoking the <code>getUserMedia()</code> method with <code>video</code> property set to <code>true</code>.
 
-When <code>getUserMedia()</code> is invoked, it returns a Promise object <code>video:true</code>. This Promise object has two instance methods; <code>then()</code> and <code>catch()</code>. The <code>then()</code> method takes two arguments: callback functions for the fulfilled (success) and rejected (error) cases of the Promise. In this case only one callback function is used, <code>function(signal)</code>, which is for the fulfilled case of the Promise. The browser prompts the User for permission to access the available device's camera, <a href="#figure13">Figure 13</a>. If the User gives the permission, then this allows the fulfilled (success) callback function that has access to the video signal (**MediaStream**) to retun the Promise. This signal (**MediaStream**) is passed to a newly-created <code>video</code> element, with **id** <code>myVideo</code>, which is added in the <code>index.html</code> too: <code>&lt;video id="myVideo"&gt;</video></code>. The <code>srcObject</code> property returns the **MediaStream** object and <code>play</code> the video.
+When <code>getUserMedia()</code> is invoked, which returns a Promise object <code>video:true</code>. The Promise object has two instance methods; <code>then()</code> and <code>catch()</code>. The <code>then()</code> method takes two arguments: callback functions for the fulfilled (success) and rejected (error) cases of the Promise. In this case only one callback function is used, <code>function(signal)</code>, which is for the fulfilled case of the Promise. The browser prompts the User for permission to access the available device's camera, <a href="#figure13">Figure 13</a>. If the User gives the permission, then this allows the fulfilled (success) callback function that has access to the video signal (**MediaStream**) to retun the Promise. This signal (**MediaStream**) is passed to a newly-created <code>video</code> element, with **id** <code>myVideo</code>, which is added in the <code>index.html</code> too: <code>&lt;video id="myVideo"&gt;</video></code>. The <code>srcObject</code> property returns the **MediaStream** object and <code>play</code> the video.
 
 The <code>catch()</code> method of Promise instance schedules a function to be called when the Promise is rejected, here: the access to the returned error information, <a href="#figure14">Figure 14</a>.
 
@@ -395,7 +398,6 @@ body{
     overflow:hidden;
 }
 ```
-
 Next, the <code>video</code> object is aligned to the center of the <code>body</code> by making it absolutely positioned, i.e. removing it from the normal document flow, moving it's top-left corner to the center by setting left and top to $50\%$ of the nearest parent container, the body, and then translating the object $50\%$ of its size to the left and $50\%$ of its size up, effectively centering it within the body. The z-index is set to $-1$ so that overlapping elements with larger z-index cover this one, i.e. so that other elements appear on top of this one.
 
 The same is done for the <code>heightInfo</code> object. But here the text color is set to red and the font-weight to bold, and unlike <code>video</code> object, this one is translated $100\%$ of its size upward so that its bottom is in the middle of the screen. Then, $3px$ thick white bottom-border is added to it, with $100\%$ the width of the <code>body</code>. The user of this app should align this border with the top of the object to be measured.

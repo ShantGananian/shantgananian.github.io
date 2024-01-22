@@ -1,24 +1,24 @@
 ---
 layout: single # archive
 
-title: Lane Lines Detection using Real-Time Machine Vision for Seeing Vehicles
-excerpt: "Python pipeline for identifying road lane boundaries, first in an image, then applying the pipeline to a video stream."
-#myLink: /de/geschichte/ # Custom Variable
+title: Erkennung von Fahrspurlinien mit Hilfe von Echtzeit-Machine-Vision für das Fahrzeugsehen
+excerpt: "Python-Pipeline zur Identifizierung von Fahrbahnbegrenzungen, zunächst in einem Bild, dann Anwendung der Pipeline auf einen Videostream."
+myLink: /en/lane-lines-detection/ # Custom Variable
 # author_profile: true
 last_modified_at: 2023-11-01
 date: 2023-11-01
 published: true
 tagsen:
-  - Machine Vision
+  - Maschinelles Sehen
   - Computer Vision
-  - Image Processing
-  - Autonomous Vehicles
-  - Edge Detection
-  - Edge Tracking
+  - Bildverarbeitung
+  - Autonome Fahrzeuge
+  - Kantenerkennung
+  - Kantenverfolgung
   - Python
 
 toc: true
-toc_label: "Table of contents"
+toc_label: "Inhaltsübersicht"
 toc_icon: "cog"
 toc_sticky: true
 

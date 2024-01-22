@@ -2,6 +2,10 @@
   {% include tag-list.html %}
 {% endif %}
 
+{% if site.tagen_archive.type and page.tagsen[0] %}
+  {% include tag-list1.html %}
+{% endif %}
+
 {% if site.category_archive.type and page.categories[0] %}
   {% include category-list.html %}
 {% endif %}
