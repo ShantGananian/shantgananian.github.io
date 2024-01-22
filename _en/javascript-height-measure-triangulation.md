@@ -555,7 +555,7 @@ In the next GIF animation, <a href="#figure16">Figure 16</a>, the resulting app 
 <center>
     <p>
     <figure id="figure16" style='display: table'>
-        <img src="/assets/img/javascript-height-measure-triangulation/Figure16.gif" alt="Figure 16">
+        <img src="/assets/img/javascript-height-measure-triangulation/Figure16.gif" alt="Figure 16" style="border: 1px solid #555;">
         <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 16: The app in action, measuring the height of a door</figcaption>
     </figure>
     </p>
