@@ -74,7 +74,7 @@ The lane detection pipeline described here has the following structure:
 <a id="subsection-a"></a>
 ### 1. Loading the Image
 
-In this step a test image is loaded into the project by importing the OpenCV library and accessing its function <code>imread()</code>, which reads the test image from a folder and returns it as a multidimensional NumPy array containing the relative intensities of each pixel in the image. Then the test image is rendered with the <code>imshow()</code> function, which takes two arguments; the first one is the name of the window (here: "<code>result</code>") in which the <code>image1</code>, the second argument, will be displayed. This is followed by the <code>waitKey()</code> function, which specifies a duration of milliseconds to display the image; with $0$ value indicating a infinite display until any keyboard button is pressed. See the section on <a href="#figure1">Figure 1</a>.
+In this step a test image is loaded into the project by importing the OpenCV library and accessing its function <code>imread()</code>, which reads the test image from a folder and returns it as a multidimensional NumPy array containing the relative intensities of each pixel in the image. Then the test image is rendered with the <code>imshow()</code> function, which takes two arguments; the first one is the name of the window (here: "<code>result</code>") in which the <code>image1</code> (<a href="#figure1">Figure 1</a>), the second argument, will be displayed. This is followed by the <code>waitKey()</code> function, which specifies a duration of milliseconds to display the image; with $0$ value indicating a infinite display until any keyboard button is pressed.
 
 ```python
 import cv2
