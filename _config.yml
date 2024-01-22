@@ -283,6 +283,9 @@ category_archive:
 tag_archive:
   type: liquid #jekyll-archives
   path: /tags/
+tagen_archive:
+  type: liquid #jekyll-archives
+  path: /tagsdir/
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #    enabled:
@@ -323,14 +326,9 @@ collections:
   en:
     output: true
     permalink: /:collection/:path/
-  sub-de:
+  tagsdir:
     output: true
     permalink: /:collection/:path/
-  sub-en:
-    output: true
-    permalink: /:collection/:path/
-  categories1:
-    output: true
 
 # Front Matter Defaults
 defaults:
@@ -368,6 +366,12 @@ defaults:
     values:
       # permalink: 'maatwerk/:title'
       lang: de
+  # _tagsdir
+  - scope:
+      path: '_tagsdir'
+    values:
+      # permalink:
+      lang: en
   # _works
   - scope:
       path: '_works'
