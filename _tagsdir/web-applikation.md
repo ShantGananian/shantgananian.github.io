@@ -1,6 +1,6 @@
 ---
 layout: archive-tags2
-tagen: Python
+tagen: Web-Applikation
 search: false
 lang: de
 ---
@@ -9,7 +9,7 @@ lang: de
 <p>&nbsp;</p>
 
 <h5 style='font-size:16px; margin:5px; padding:5px;'>
-{% assign pages = site.documents | where: 'tagsen', 'Python' %}
+{% assign pages = site.documents | where: 'tagsen', 'Web-Applikation' %}
 {% for page in pages %}
   <ul>
     <li>

@@ -1,6 +1,6 @@
 ---
 layout: archive-tags2
-tagen: Python
+tagen: Kantenverfolgung
 search: false
 lang: de
 ---
@@ -9,7 +9,7 @@ lang: de
 <p>&nbsp;</p>
 
 <h5 style='font-size:16px; margin:5px; padding:5px;'>
-{% assign pages = site.documents | where: 'tagsen', 'Python' %}
+{% assign pages = site.documents | where: 'tagsen', 'Kantenverfolgung' %}
 {% for page in pages %}
   <ul>
     <li>
@@ -18,3 +18,4 @@ lang: de
   </ul>
 {% endfor %}
 </h5>
+

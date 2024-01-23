@@ -2,7 +2,7 @@
 layout: archive-tags2
 tagen: JavaScript
 search: false
-lang: en
+lang: de
 ---
 
 <h1>#{{ page.tagen | replace: " ", "-" }}</h1>

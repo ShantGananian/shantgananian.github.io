@@ -14,9 +14,9 @@ tagsen:
   - Web-App
   - JavaScript
   - Camera
-categories:
-  - JavaScript programming
-  - Sensors
+#categories:
+  #- JavaScript programming
+  #- Sensors
 
 toc: true
 toc_label: "Table of contents"

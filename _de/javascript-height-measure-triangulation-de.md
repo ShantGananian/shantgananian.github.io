@@ -14,9 +14,9 @@ tagsen:
   - Web-Applikation
   - JavaScript
   - Kamera
-categories:
-  - JavaScript-Programmierung
-  - Sensoren
+#categories:
+  #- JavaScript-Programmierung
+  #- Sensoren
 
 toc: true
 toc_label: "Inhaltsübersicht"
@@ -26,7 +26,7 @@ toc_sticky: true
 header:
   #image: /assets/img/javascript-height-measure-triangulation/Figure16A.gif
   teaser: /assets/img/javascript-height-measure-triangulation/Figure16A.gif
----
+---  
 
 <br>
 In der Trigonometrie und Geometrie ist die Triangulation der Prozess der Bestimmung der Lage eines Punktes durch Bildung eines Dreiecks zu diesem Punkt von einem bekannten Punkt aus.

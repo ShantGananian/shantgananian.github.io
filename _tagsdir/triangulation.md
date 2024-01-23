@@ -2,7 +2,7 @@
 layout: archive-tags2
 tagen: Triangulation
 search: false
-lang:
+lang: de
 ---
 
 <h1>#{{ page.tagen | replace: " ", "-" }}</h1>
