@@ -333,7 +333,7 @@ After importing the required Python packages, the image is loaded and preprocess
 </center>
 
 <br>
-<a id="subsection-c"></a>
+<a id="subsubsection-c"></a>
 ### 3. Region of Interest
 
 A region of interest (often abbreviated ROI) is a sample within a data set identified for a particular purpose. In computer vision, the ROI defines the borders of an object under consideration. 
@@ -479,7 +479,7 @@ This displays <a href="#figure10">Figure 10</a> representing the isolated region
 The final step of lane lines detection will be to apply the Hough transform algorithm to detect straight lines in the region of interest and thus identify the lane lines.
 
 <br>
-<a id="subsection-d"></a>
+<a id="subsubsection-d"></a>
 ### 4. Hough Transform
 
 In computer vision and image processing an edge detector can be used as a preprocessing stage to obtain image pixels that are on the desired curve, such as straight lines, circles or ellipses, in the image space. Due to imperfections in either the image data or the edge detector, however, there may be missing points or pixels on the desired curves as well as spatial deviations between the ideal line/circle/ellipse and the noisy edge points as they are obtained from the edge detector.
@@ -680,7 +680,7 @@ cv2.waitKey(0)
 </center>
 
 <br>
-<a id="subsection-e"></a>
+<a id="subsubsection-e"></a>
 ### 5. Optimization
 
 The multiple lines displayed on each lane in the original image could be further optimized by averaging the slope and $y$-intercept of these multiple lines into a single line that traces both of the lane lines.
@@ -809,7 +809,7 @@ cv2.waitKey(0)
 ```
 
 <br>
-<a id="subsection-f"></a>
+<a id="subsubsection-f"></a>
 ### 6. Identifying Lane Lines in a Video
 
 In the previous sections, the lane lines detection algorithm was designed and implemented successfully in identifying lane lines in an image. In this section, the same algorithm will be used to identify lane lines in a video.
@@ -826,7 +826,7 @@ The <code>waitKey()</code> function's parameter is also changed from $0$ to $1$ 
 
 The <code>waitKey()</code> returns a $32$-bit integer value of the pressed key. This value is compared to the numeric encoding of the keyboard's <code>q</code> Unicode character, which corresponds to the key to be pressed to <code>break</code> the loop. The integer value of the Unicode character <code>q</code> is obtained from the built-in function <code>ord()</code>. The bitwise AND operation <code>& 0xFF</code> is added to effectively mask the integer value returned by <code>waitKey()</code>.
 
-In hexadecimal, <code>FF</code> represents the decimal value $255$. <code>0xFF</code> has eight ones in the last $8$ bits, thus, it is an identity element for the bitwise AND operation. So, if bytes are longer than $8$ bits it takes only the last $8$ bits from the returned value of <code>waitKey()</code> and compared it with the integer value of the Unicode character <code>q</code>. If this returned value is less than $255$, It won't be changed. Otherwise, it will be the lowest $8$ bits of the returned value. This is done to insure cross-platform compatibility when doing the comparison.
+In hexadecimal (base $16$), <code>F</code> is equivalent to $1111$ in the binary numeral system. Python uses the prefix $0x$ for numeric constants represented in hexadecimal. So, <code>0xFF</code> is $11111111$ in binary, which represents the decimal value $255$. Thus, <code>0xFF</code> is an identity element for the bitwise AND operation. So, if the pressed key's decimal value is larger than $255$, i.e. its binary representation is longer than $8$-bits it takes only the last $8$ bits from the returned value of <code>waitKey()</code> and compares it with the integer value of the Unicode character <code>q</code>. In other words, if this returned value is less than $255$, it won't be changed. Otherwise, it will be the last $8$ bits of the returned value. This is done to insure cross-platform compatibility when doing the comparison.
 
 After the loop is broken, the video file is closed by calling <code>cap.release()</code> and all windows that were created while running this program are destroyed by calling <code>cv2.destroyAllWindows()</code>.
 
