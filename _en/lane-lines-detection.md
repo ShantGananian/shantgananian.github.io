@@ -482,7 +482,9 @@ The final step of lane lines detection will be to apply the Hough transform algo
 <a id="subsection-d"></a>
 ### 4. Hough Transform
 
-In computer vision and image processing an edge detector can be used as a preprocessing stage to obtain image pixels that are on the desired curve, such as straight lines, circles or ellipses, in the image space. Due to imperfections in either the image data or the edge detector, however, there may be missing points or pixels on the desired curves as well as spatial deviations between the ideal line/circle/ellipse and the noisy edge points as they are obtained from the edge detector. For example, given points that belong to a line, what is the line? How many lines are there? Which points belong to which lines?
+In computer vision and image processing an edge detector can be used as a preprocessing stage to obtain image pixels that are on the desired curve, such as straight lines, circles or ellipses, in the image space. Due to imperfections in either the image data or the edge detector, however, there may be missing points or pixels on the desired curves as well as spatial deviations between the ideal line/circle/ellipse and the noisy edge points as they are obtained from the edge detector.
+
+For example, given points that belong to a line, what is the line? How many lines are there? Which points belong to which lines?
 
 To address these questions, Hough transform is used to group the extracted edge points to an appropriate set of lines, circles or ellipses by performing an explicit voting procedure over a set of parameterized image objects.
 
@@ -505,7 +507,7 @@ $$
 b = -x_0m + y_0
 $$
 
-However, considering two points, $A(x_0,y_0)$ and $B(x_1,y_1)$, in the two-dimensional space, there are many possible lines that can cross each point, each having different values for $b$ and $m$. But, there is one line that crosses both points. This line is represented in the parameter space by a single point $(b, m)$. In other words, this point in the parameter space represents the $(b, m)$ values of a line in two-dimensional space that crosses both points $A(x_0,y_0)$ and $B(x_1,y_1)$. It is the intersection of two lines in the hough space:
+However, considering two points, $A(x_0,y_0)$ and $B(x_1,y_1)$, in the two-dimensional space, there are many possible lines that can cross each point, each having different values for $b$ and $m$. But, there is one line that crosses both points. This line is represented in the parameter space by a single point $(b, m)$. In other words, this point in the parameter space represents the $(b, m)$ values of a line in two-dimensional space that crosses both points $A(x_0,y_0)$ and $B(x_1,y_1)$. It is the intersection of two lines in the Hough space:
 
 $$
 b = –x_0m + y_0
@@ -528,7 +530,7 @@ $r=x\cos \theta +y\sin \theta$
 
 where $r$ is the distance from the origin to the closest point on the straight line, i.e. the perpendicular distance, and $\theta$ is the angle between the $x$ axis and the line connecting the origin with that closest point, increasing in clockwise orientation.
 
-For example, for a vertical line in the two-dimensional space, $\theta = 0$ &#8658; $r=x\cos 0 +y\sin 0 = x$. For a horizonatl line in the two-dimensional space, $\theta = 90°$ &#8658; $r=x\cos \frac{\pi}{2} +y\sin \frac{\pi}{2} = y$.
+For example, for a vertical line in the two-dimensional space, $\theta = 0$ &#8658; $r=x\cos 0 +y\sin 0 = x$. For a horizontal line in the two-dimensional space, $\theta = 90°$ &#8658; $r=x\cos \frac{\pi}{2} +y\sin \frac{\pi}{2} = y$.
 
 With polar coordinate system representation of a line, for each point $(x,y)$ in the image space, multiple lines can cross this point, each can be represented in the polar coordinate system (here: Hough space) with a point $(\theta,r)$. The set of all straight lines going through the point $(x,y)$ corresponds to a sinusoidal curve in the $(\theta,r)$ plane, which is unique to that point. A set of two or more points that form a straight line will produce sinusoids crossing at the $(\theta,r)$ for that line. Thus, the problem of detecting collinear points in the Hough space can be converted to the problem of finding concurrent curves in the Hough space.
 
