@@ -363,6 +363,7 @@ canny_image = canny(lane_image)
 plt.imshow(canny_image)
 plt.show()
 ```
+
 Then the region of interest, where the lane lines are to be identified, is traced as a triangle with the following three vertices $(x,y)$: $(200px,700px)$, $(1100px,700px)$ and $(550px,250px)$.
 
 <center>
@@ -420,7 +421,7 @@ cv2.waitKey(0)
 
 The <code>mask</code> image is going to be used now to mask the <code>canny_image</code> image, the result of the Canny edge detector, to show only a specific region of this image, traced by the triangle polygon, and masking the other sections.
 
-This is accomplished by applying the *bitwise AND operator (&)* between the result image of the Canny operator and the mask image. This operator compairs pare of binary numbers and results in zero unless both numbers are ones, as shown in the following table:
+This is accomplished by applying the *bitwise AND operator (&)* between the result image of the Canny operator and the mask image. This operator compares pare of binary numbers and results in zero unless both numbers are ones, as shown in the following table:
 
 | A     | B      | A & B |
 | :---: | :---:  | :---: |
