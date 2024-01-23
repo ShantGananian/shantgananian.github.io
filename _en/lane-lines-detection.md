@@ -482,8 +482,7 @@ The final step of lane lines detection will be to apply the Hough transform algo
 <a id="subsection-d"></a>
 ### 4. Hough Transform
 
-In computer vision and image processing an edge detector can be used as a preprocessing stage to obtain image pixels that are on the desired curve, such as straight lines, circles or ellipses, in the image space. Due to imperfections in either the image data or the edge detector, however, there may be missing points or pixels on the desired curves as well as spatial deviations between the ideal line/circle/ellipse and the noisy edge points as they are obtained from the edge detector. For example, given points that belong to a line, what
-is the line? How many lines are there? Which points belong to which lines?
+In computer vision and image processing an edge detector can be used as a preprocessing stage to obtain image pixels that are on the desired curve, such as straight lines, circles or ellipses, in the image space. Due to imperfections in either the image data or the edge detector, however, there may be missing points or pixels on the desired curves as well as spatial deviations between the ideal line/circle/ellipse and the noisy edge points as they are obtained from the edge detector. For example, given points that belong to a line, what is the line? How many lines are there? Which points belong to which lines?
 
 To address these questions, Hough transform is used to group the extracted edge points to an appropriate set of lines, circles or ellipses by performing an explicit voting procedure over a set of parameterized image objects.
 
