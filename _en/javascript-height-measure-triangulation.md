@@ -57,13 +57,13 @@ The clinometer measures the angle between a horizontal line and the line of sigh
 
 The web app described in this article uses the same triangulation principle described above, but instead of a clinometer, a smartphone is used for measurement and calculation.
 
-<br>
+
 <a id="objectives"></a>
 ## OBJECTIVES
 
 Building a mobile web app by using JavaScript programming language to measure the approximate height of an object by using the triangulation principle, the orientation sensor of the device and the stream of its rear-facing camera.
 
-<br>
+
 <a id="aquired-skills"></a>
 ## AQUIRED SKILLS
 
@@ -73,7 +73,7 @@ Building a mobile web app by using JavaScript programming language to measure th
 - Accessing the stream of the rear-facing camera of a device.
 - Applying triangulation principle for measurement.
 
-<br>
+
 <a id="coding"></a>
 ## CODING
 
@@ -114,7 +114,7 @@ function onOrientationChange(event){
 
 The <code>console.log()</code> static method, which outputs a message to the console, is used to log the information associated with the event. However, a laptop or a PC are not equipped with an orientation sensor to measures the orientation of a device relative to an orthogonal coordinate frame $X$, $Y$ and $Z$, so, tilting the laptop or the PC won't trigger the event. How to debug a device, which doesn't have an orientation sensor is explained in the next section.
 
-<br>
+
 <a id="debugging"></a>
 ## DEBUGGING
 
@@ -308,7 +308,7 @@ Moving the slider in its current situation won't update the value under it, it r
 
 In the next section, the camera input from the rear-facing camera of the device is added, which allows the user to align the device to the top (or bottom) of the object properly.
 
-<br>
+
 <a id="camerastream"></a>
 ## CAMERA STREAM
 
@@ -383,7 +383,7 @@ function onOrientationChange(event){
 
 The next step is to style the app in the <code>style.css</code> file.
 
-<br>
+
 <a id="styling"></a>
 ## STYLING
 
