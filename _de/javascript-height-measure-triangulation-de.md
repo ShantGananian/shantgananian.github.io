@@ -310,7 +310,7 @@ Im nächsten Abschnitt wird die Kameraeingabe von der Rückseitenkamera des Ger�
 
 
 <a id="kamerastream"></a>
-## Kamera-Stream
+## KAMERA-STREAM
 
 Eine neue Funktion wurde hinzugefügt: die Kameraeingabe von der Rückseitenkamera des Geräts, die es dem Benutzer ermöglicht, das Gerät an der Oberseite (oder Unterseite) des Objekts auszurichten. Dazu wird auf die Eigenschaft <code>navigator.mediaDevices</code> zugegriffen, die verschiedene Methoden für den Zugriff auf die Kamera, das Mikrofon und die Bildschirmfreigabe bietet, und die Methode <code>getUserMedia()</code> mit der auf <code>true</code> gesetzten Eigenschaft <code>video</code> aufgerufen.
 
