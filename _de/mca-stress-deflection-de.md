@@ -19,7 +19,7 @@ toc_icon: "cog"
 toc_sticky: true
 
 header:
-  image: /assets/img/mca-stress-deflection/Figure4.png
+  #image: /assets/img/mca-stress-deflection/Figure4.png
   teaser: assets/img/mca-stress-deflection/Figure4.png
 ---
 
