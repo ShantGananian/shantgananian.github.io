@@ -19,8 +19,8 @@ toc_icon: "cog"
 toc_sticky: true
 
 header:
-  #image: /assets/img/mca-stress-deflection/Figure1.gif
-  #teaser: assets/img/mca-stress-deflection/Figure1.gif
+  image: /assets/img/mca-stress-deflection/Figure3.png
+  teaser: assets/img/mca-stress-deflection/Figure3.png
 ---
 
 <img align="right" width="25%" heighth="auto" src="/assets/img/work_in_progress.png" alt="Figure">
