@@ -1,0 +1,20 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB 2023b"><title>Untitled</title><style type="text/css">.rtcContent { padding: 0px; } .CodeBlock { background-color: #F5F5F5; margin: 10px 0 10px 0; }
+.S0 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 1px solid rgb(217, 217, 217); border-bottom: 0px none rgb(33, 33, 33); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S1 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 0px none rgb(33, 33, 33); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S2 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 1px solid rgb(217, 217, 217); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }</style><div class = rtcContent><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre"><span >delta_12=T_13*l_D/(A_D*E);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >delta_23=T_13*l_C/(A_C*E);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >delta_13=delta_12+delta_23;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >delta_34=T_34*l_A/(A_A*E);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >delta_14=delta_13+delta_34;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'delta_12 = %s \n'</span><span >,char(delta_12))</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'delta_23 = %s \n'</span><span >,char(delta_23))</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'delta_13 = %s \n'</span><span >,char(delta_13))</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'delta_34 = %s \n'</span><span >,char(delta_34))</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'delta_41 = %s \n\n'</span><span >,char(delta_14))</span></span></div></div></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+delta_12=T_13*l_D/(A_D*E);
+delta_23=T_13*l_C/(A_C*E);
+delta_13=delta_12+delta_23;
+delta_34=T_34*l_A/(A_A*E);
+delta_14=delta_13+delta_34;
+fprintf('delta_12 = %s \n',char(delta_12))
+fprintf('delta_23 = %s \n',char(delta_23))
+fprintf('delta_13 = %s \n',char(delta_13))
+fprintf('delta_34 = %s \n',char(delta_34))
+fprintf('delta_41 = %s \n\n',char(delta_14))
+##### SOURCE END #####
+-->
+</div>
