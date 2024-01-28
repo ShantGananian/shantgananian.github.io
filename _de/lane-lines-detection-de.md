@@ -5,8 +5,8 @@ title: Erkennung von Fahrspurlinien mit Hilfe von Echtzeit-Machine-Vision für d
 excerpt: "Python-Pipeline zur Identifizierung von Fahrbahnbegrenzungen, zunächst in einem Bild, dann Anwendung der Pipeline auf einen Videostream."
 myLink: /en/lane-lines-detection/ # Custom Variable
 # author_profile: true
-last_modified_at: 2023-11-01
-date: 2023-11-01
+last_modified_at: 2023-12-20
+date: 2023-12-20
 published: true
 tagsen:
   - Maschinelles Sehen

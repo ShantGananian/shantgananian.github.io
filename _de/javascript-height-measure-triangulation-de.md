@@ -5,8 +5,8 @@ title: JavaScript-Webanwendung zur Messung der Höhe eines Objekts mit Hilfe der
 excerpt: "Mobile App in JavaScript, um die ungefähre Höhe eines Objekts mit Hilfe des Triangulationsprinzips, des Orientierungssensors des Geräts und des Streams seiner Rückseitenkamera zu messen."
 myLink: /en/javascript-height-measure-triangulation/ # Custom Variable
 # author_profile: true
-last_modified_at: 2023-12-20
-date: 2023-12-20
+last_modified_at: 2023-11-01
+date: 2023-11-01
 published: true
 tagsen:
   - Triangulation
