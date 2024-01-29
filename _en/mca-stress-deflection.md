@@ -6,7 +6,7 @@ excerpt: " "
 myLink: /de/mca-stress-deflection-de/ # Custom Variable
 # author_profile: true
 last_modified_at: 2024-01-01
-date: 2024-01-28
+date: 2024-01-01
 published: true
 tagsen:
   - MATLAB
