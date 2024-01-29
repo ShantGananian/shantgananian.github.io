@@ -1,0 +1,27 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB 2023b"><title>Untitled</title><style type="text/css">.rtcContent { padding: 0px; } .CodeBlock { background-color: #F5F5F5; margin: 10px 0 10px 0; }
+.S0 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 1px solid rgb(217, 217, 217); border-bottom: 0px none rgb(33, 33, 33); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S1 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 0px none rgb(33, 33, 33); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S2 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 1px solid rgb(217, 217, 217); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }</style><div class = rtcContent><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre"><span style="color: #008013;">%Mohr's circle</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >sigma_x=0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >sigma_y=eval(subs(sigma_y,lists,listn));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >tau=eval(subs(tau,lists,listn));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >sigma_max=eval(subs(sigma_max,lists,listn));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >sigma_min=eval(subs(sigma_min,lists,listn));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >radius=eval(subs(radius,lists,listn));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >center_circle=eval(subs(center_circle,lists,listn));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >phi=eval(subs(phi,lists,listn));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >phi_p=eval(subs(phi_p,lists,listn));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'The principal stress orientation is \n'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'tan(2*phi) = %s \n'</span><span >, phi_p)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'or equivalently, \n'</span><span >)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'phi = %s degrees\n\n'</span><span >, phi)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'The principal stresses are \n'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'sigma_max = %f (MPa)\n'</span><span >, sigma_max*10^(-6))</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'sigma_min = %f (MPa)\n'</span><span >, sigma_min*10^(-6))</span></span></div></div></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+%Mohr's circle
+sigma_x=0;
+sigma_y=eval(subs(sigma_y,lists,listn));
+tau=eval(subs(tau,lists,listn));
+sigma_max=eval(subs(sigma_max,lists,listn));
+sigma_min=eval(subs(sigma_min,lists,listn));
+radius=eval(subs(radius,lists,listn));
+center_circle=eval(subs(center_circle,lists,listn));
+phi=eval(subs(phi,lists,listn));
+phi_p=eval(subs(phi_p,lists,listn));
+fprintf('The principal stress orientation is \n');
+fprintf('tan(2*phi) = %s \n', phi_p)
+fprintf('or equivalently, \n')
+fprintf('phi = %s degrees\n\n', phi)
+fprintf('The principal stresses are \n');
+fprintf('sigma_max = %f (MPa)\n', sigma_max*10^(-6))
+fprintf('sigma_min = %f (MPa)\n', sigma_min*10^(-6))
+##### SOURCE END #####
+-->
+</div>

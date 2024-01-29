@@ -21,14 +21,11 @@ toc_icon: "cog"
 toc_sticky: true
 
 header:
-  #image: /assets/img/mca-stress-deflection/Figure1.gif
-  teaser: assets/img/mca-stress-deflection/ffff.png
+  image: /assets/img/mca-stress-deflection/Figure6.jpg
+  teaser: assets/img/mca-stress-deflection/Figure6.jpg
 ---
 
-<img align="right" width="25%" heighth="auto" src="/assets/img/work_in_progress.png" alt="Figure">
-
 <br>
-
 
 <a id="problem1"></a>
 ## PROBLEM 1: Axial Stresses and Deformations
@@ -225,6 +222,16 @@ Three MATLAB functions are used to obtain the diagrams, namely: <code>ForceDdraw
 
 A Lever $(1)$ with length $AC = l$ is fit on a tapered lever bar $(2)$ denoted by $AB$. The lever is subjected at its end to a horizontal force $F$, as shown in <a href="#figure4">Figure 4</a>. The lever bar has radius $r$ and length $d$.
 
+For the numerical application the following values could be used:
+
+<ul style='list-style-type: none'>
+  <li>$F = 250 \hspace{1pt} N$</li>
+  <li>$d = 200 \hspace{1pt} mm$</li>
+  <li>$l = 250 \hspace{1pt} mm$</li>
+  <li>$h = 50 \hspace{1pt} mm$</li>
+  <li>$r = 9 \hspace{1pt} mm$</li>
+</ul>
+
 <center>
     <p>
     <figure id="figure4" style='display: table; width: 75%; heighth: auto;'>
@@ -376,7 +383,7 @@ For this, the user created function <code>mohr2D(sigma_x,sigma_y,tau,phi)</code>
   <li>the maximum normal stress $\sigma_{1}$ (<code>sigma_max</code>) and minimum normal stress $\sigma_{2}$ (<code>sigma_min</code>). Mohr's circle crosses the horizontal axis at these two locations, as the shear stress is zero. These two values can also be calculated by taking the $x$ coordinate of the circle's center, and adding or subtracting the circle radius</li>
   <li>the radius (<code>radius</code>) of the Mohr's circle, which equals to $\sqrt{({\frac{\sigma_{x}-\sigma_{y}}{2})^{2}}+\tau_{xy}^{2}}$, which is also the value of the maximum shear stress</li>
   <li>the center (<code>center_circle</code>) of the Mohr's circle, which is at $(\frac{\sigma_{x}+\sigma_{y}}{2},0)$</li>
-  <li>the angle <code>phi</code> between the original stress element and the principal planes</li>
+  <li>the angle $\phi$, named <code>phi</code> in the code, between the original stress element and the principal planes. $tan(2\phi)$ is named <code>phi_p</code> in the code.</li>
 </ul>
 
 This function is created by the following code:
@@ -402,4 +409,31 @@ resulting in:
 
 {% include codes/mca-stress-deflection/m25.html %}
 
+The numerical values for the stress orientation and principal stresses are calculated and displayed in MATLAB with:
+
+{% include codes/mca-stress-deflection/m26.html %}
+
+resulting in:
+
+{% include codes/mca-stress-deflection/m27.html %}
+
+<a id="subsubsection-c"></a>
+#### Graphical representation
+
+The graphical representation of the Mohr's circle (<a href="#figure5">Figure 5</a>) is obtained in MATLAB by calling the user created function <code>mohr2Ddraw</code>:
+
+{% include codes/mca-stress-deflection/m28.html %}
+
+<center>
+    <p>
+    <figure id="figure5" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/mca-stress-deflection/Figure5.png" alt="Figure 5">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 5: Mohr's circle</figcaption>
+    </figure>
+    </p>
+</center>
+
+The code for the <code>mohr2Ddraw</code> function is:
+
+{% include codes/mca-stress-deflection/m29.html %}
 
