@@ -25,8 +25,6 @@ header:
 
 <img align="right" width="25%" heighth="auto" src="/assets/img/laufende-arbeiten.png" alt="Figure">
 
-
-
 <br>
 
 
