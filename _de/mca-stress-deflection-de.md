@@ -20,7 +20,7 @@ toc_sticky: true
 
 header:
   #image: /assets/img/mca-stress-deflection/Figure4.png
-  teaser: assets/img/mca-stress-deflection/Figure4.png
+  teaser: assets/img/mca-stress-deflection/ffff.png
 ---
 
 <img align="right" width="25%" heighth="auto" src="/assets/img/laufende-arbeiten.png" alt="Figure">
@@ -399,5 +399,3 @@ The numerical values for the equivalent force system; torque $T_{y}$, force $F$ 
 resulting in:
 
 {% include codes/mca-stress-deflection/m25.html %}
-
-
