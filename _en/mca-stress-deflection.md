@@ -215,7 +215,7 @@ Three MATLAB functions are used to obtain the diagrams, namely: <code>ForceDdraw
 
 
 <a id="problem2"></a>
-## PROBLEM 2: Normal and Shear stresses
+## PROBLEM 2: Bending and Shear Stresses
 
 <a id="subsection-a"></a>
 ### Problem Description
@@ -290,7 +290,7 @@ $$
 
 Torsion is the twisting of an object, caused by a moment acting about the object's longitudinal axis. A moment which tends to cause twisting is called torque.
 
-Torsion generates stresses and strains within the bar. Both shear strains and shear stresses increase linearly with the distance from the centre of the cross-section, with the maximum shear stress and shear strain occurring on the outer surface.
+Torsion generates shear stresses and strains within the bar. Both shear strains and shear stresses increase linearly with the distance from the centre of the cross-section, with the maximum shear stress and shear strain occurring on the outer surface.
 
 The maximum shear stress due to torsion for a circular cross-section is given by the equation:
 
