@@ -2,7 +2,7 @@
 layout: single # archive
 
 title: Analytische und numerische Analyse und Lösung von Spannungs- und Durchbiegungsaufgaben mithilfe von MATLAB
-excerpt: "Einsatz von MATLAB als symbolisches und numerisches Werkzeug zur Analyse und Lösung von Spannungs- und Durchbiegungsaufgaben bei der Konstruktion von Maschinenkomponenten."
+excerpt: "Einsatz von MATLAB als symbolisches und numerisches Werkzeug zur Analyse und Lösung von Spannungs- und Durchbiegungsaufgaben durch Erstellung spezifischer Funktionen für die Konstruktion von Maschinenkomponenten."
 myLink: /en/mca-stress-deflection/ # Custom Variable
 # author_profile: true
 last_modified_at: 2024-01-01
