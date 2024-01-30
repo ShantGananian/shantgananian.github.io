@@ -25,36 +25,31 @@ header:
   teaser: assets/img/mca-stress-deflection/Figure6.jpg
 ---
 
-<img align="right" width="25%" heighth="auto" src="/assets/img/laufende-arbeiten.png" alt="Figure">
-
-
-
 <br>
 
-
-<a id="problem1"></a>
-## PROBLEM 1: Axial Stresses and Deformations
+<a id="aufgabe1"></a>
+## AUFGABE 1: Axiale Spannungen und Verformungen
 
 <a id="subsection-a"></a>
-### Problem Description
+### Aufgabe Beschreibung
 
-A rigid plate $\mathit{B}$ is fastened to both bars $\mathit{A}$ and $\mathit{C}$, as shown is <a href="#figure1">Figure 1</a>. Bar $\mathit{C}$ is fastened to bar $\mathit{D}$, which has its end fastened to a rigid support. The end of bar $\mathit{A}$ is free. $l_{A}$, $l_{C}$, $l_{D}$ are the lengths of the bars $\mathit{A}$, $\mathit{C}$, and $\mathit{D}$ respectively, and their diameters are $d_{A}=d$, $d_{C}=d$, and $d_{D}=1.5d$. Load $F_{1}$ is applied to the rigid plate $\mathit{B}$ $($distributed uniformly around the circumference of the rigid plate $\mathit{B})$, and load $F_{2}$ is applied at the centroid of the end cross-section of bar $\mathit{B}$.
+Eine starre Platte $\mathit{B}$ ist an den beiden Stäben $\mathit{A}$ und $\mathit{C}$ befestigt, wie in <a href="#figure1">Abbildung 1</a> dargestellt. Der Stab $\mathit{C}$ ist an dem Stab $\mathit{D}$ befestigt, dessen Ende an einem starren Träger befestigt ist. Das Ende des Stabes $\mathit{A}$ ist frei. $l_{A}$, $l_{C}$, $l_{D}$ sind die Längen der Stäbe $\mathit{A}$, $\mathit{C}$ bzw. $\mathit{D}$, und ihre Durchmesser sind $d_{A}=d$, $d_{C}=d$ und $d_{D}=1,5d$. Die Last $F_{1}$ wird auf die starre Platte $\mathit{B}$ $($gleichmäßig um den Umfang der starren Platte $\mathit{B})$ verteilt, und die Last $F_{2}$ wird im Schwerpunkt des Endquerschnitts des Stabs $\mathit{B}$ aufgebracht.
 
 <center>
     <p>
     <figure id="figure1" style='display: table; width: 60%; heighth: auto;'>
         <img src="/assets/img/mca-stress-deflection/Figure1.jpg" alt="Figure 1">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 1: Axial bar under loading</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 1: Axialer Stab unter Belastung</figcaption>
     </figure>
     </p>
 </center>
 
 <a id="subsection-b"></a>
-### Objectives
+### Projektziele
 
-Determinining the **axial stresses** in bars $\mathit{A}$, $\mathit{C}$, and $\mathit{D}$, **deformations** of the bars and **total deformation** of the system.
+Bestimmung der **Axialspannungen** in den Stäben $\mathit{A}$, $\mathit{C}$ und $\mathit{D}$, **Verformungen** der Stäbe und **Gesamtverformung** des Systems.
 
-For the numerical application the following values could be used:
+Für die numerische Anwendung könnten die folgenden Werte verwendet werden:
 
 <ul style='list-style-type: none'>
   <li>$F_{1} = 64000 \hspace{1pt} N$</li>
@@ -63,53 +58,53 @@ For the numerical application the following values could be used:
   <li>$l_{A} = 170 \hspace{1pt} mm$</li>
   <li>$l_{C} = 144.5 \hspace{1pt} mm$</li>
   <li>$l_{D} = 255 \hspace{1pt} mm$</li>
-  <li>Young’s modulus $E = 21\cdot10^4 \hspace{1pt} MPa$</li>
+  <li>Elastizitätsmodul $E = 21\cdot10^4 \hspace{1pt} MPa$</li>
 </ul>
 
 <a id="subsection-c"></a>
-### Solution
+### Lösung
 
 <a id="subsubsection-a"></a>
-#### Analytical solution
+#### Analytische Lösung
 
-The bar is divided into components, and the internal forces are calculated, passing sections through each component. Free-body diagrams are developed for portions of the bar, as shown in <a href="#figure2">Figure 2A</a>.
+Der Stab wird in Komponenten unterteilt, und die Schnittgrößen werden berechnet, indem Abschnitte durch jede Komponente geführt werden. Für Teile des Stabs werden Freikörperdiagramme erstellt, wie in <a href="#figure2">Abbildung 2A</a> dargestellt.
 
 <center>
     <p>
     <figure id="figure2" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/mca-stress-deflection/Figure2.jpg" alt="Figure 2">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 2: Free-body diagrams</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 2: Freikörper-Diagramme</figcaption>
     </figure>
     </p>
 </center>
 
-The free-body diagram of the system, namely bar $\mathit{D}$, bar $\mathit{C}$, plate $\mathit{B}$, and bar $\mathit{A}$, contains only one unknown force; the reaction force $\mathit{R}$ at the rigid support. From the equilibrium equation of the system, reaction $\mathit{R}$, or the reaction force of the rigid support on bar D, is:
+Das Freikörperdiagramm des Systems, nämlich Stab $\mathit{D}$, Stab $\mathit{C}$, Platte $\mathit{B}$ und Stab $\mathit{A}$, enthält nur eine unbekannte Kraft, nämlich die Reaktionskraft $\mathit{R}$ an der starren Auflage. Aus der Gleichgewichtsgleichung des Systems ergibt sich die Reaktionskraft $\mathit{R}$, also die Reaktionskraft der starren Lagerung auf den Stab D:
 
 $$
 \sum_{}^{}\mathrm{F}_{x}^{A,B,C,D}=0 \Leftrightarrow R+F_{1}-F_{2}=0\Leftrightarrow R = F_{2}-F_{1}
 $$
 
-The MATLAB program starts with the declaration of variables as symbolic scalar variables by using <code>syms</code> function:
+Das MATLAB-Programm beginnt mit der Deklaration von Variablen als symbolische skalare Variablen mit Hilfe der <code>syms</code>-Funktion:
 
 {% include codes/mca-stress-deflection/m1.html %}
 
-Then, the internal forces are calculated for each portion of the bar. The equilibrium equation of the free-body diagram for bar $A$, in the interval $3–4$, <a href="#figure2">Figure 2B</a>,  gives the internal force $T_{34}$:
+Dann werden die Schnittgrößen für jeden Teil des Stabes berechnet. Die Gleichgewichtsgleichung des Freikörperdiagramms für den Stab $A$, im Intervall $3-4$, <a href="#figure2">Abbildung 2B</a>, ergibt die Schnittkraft $T_{34}$:
 
 $$
 \sum_{}^{}\mathrm{F}_{x}^{}=0 \Leftrightarrow T_{34}-F_{2}=0\Leftrightarrow T_{34}=F_{2}
 $$
 
-For the interval 1–3, <a href="#figure2">Figure 2C</a>, the equilibrium equation of the free-body diagram gives the internal force $T_{13}$:
+Für den Bereich 1-3, <a href="#figure2">Abbildung 2C</a>, ergibt die Gleichgewichtsgleichung des Freikörperdiagramms die innere Kraft $T_{13}$:
 
 $$
 \sum_{}^{}\mathrm{F}_{x}^{}=0 \Leftrightarrow T_{13}+F_{1}-F_{2}=0\Leftrightarrow T_{13}=F_{2}-F_{1}
 $$
 
-The above obtained equilibrium equations are written in MATLAB as follows: 
+Die oben ermittelten Gleichgewichtsgleichungen werden in MATLAB wie folgt geschrieben:
 
 {% include codes/mca-stress-deflection/m2.html %}
 
-The cross-section areas of each bar $A$, $C$, and $D$ are calculated as follows:
+Die Querschnittsflächen der einzelnen Stäbe $A$, $C$ und $D$ werden wie folgt berechnet:
 
 <ul style='list-style-type: none'>
   <li>$A_{A}=\frac{\pi d_{A}^{2}}{4}$</li>
@@ -117,11 +112,11 @@ The cross-section areas of each bar $A$, $C$, and $D$ are calculated as follows:
   <li>$A_{D}=\frac{\pi d_{D}^{2}}{4}$</li>
 </ul>
 
-In MATLAB, the cross-section areas are calculated and the results are printed with:
+In MATLAB werden die Querschnittsflächen berechnet und die Ergebnisse ausgedruckt:
 
 {% include codes/mca-stress-deflection/m3.html %}
 
-The axial stresses on bars $A$, $C$, $D$, namely $\sigma_{A}$, $\sigma_{C}$, and $\sigma_{D}$, are calculated using:
+Die Axialspannungen an den Stäben $A$, $C$, $D$, nämlich $\sigma_{A}$, $\sigma_{C}$ und $\sigma_{D}$, werden berechnet unter Verwendung:
 
 <ul style='list-style-type: none'>
   <li>$\sigma_{A}=\sigma_{34}=\frac{T_{34}}{A_{A}}=\frac{F_{2}}{A_{A}}=\frac{4F_{2}}{\pi d_{A}^{2}}$</li>
@@ -129,66 +124,66 @@ The axial stresses on bars $A$, $C$, $D$, namely $\sigma_{A}$, $\sigma_{C}$, and
   <li>$\sigma_{D}=\sigma_{12}=\frac{T_{13}}{A_{D}}=\frac{F_{2}-F_{1}}{A_{D}}=\frac{4(F_{2}-F_{1})}{\pi d_{D}^{2}}$</li>
 </ul>
 
-In MATLAB, the axial stresses are calculated with:
+In MATLAB werden die Axialspannungen berechnet durch:
 
 {% include codes/mca-stress-deflection/m4.html %}
 
-Considering the followings:
+Unter Berücksichtigung der folgenden Punkte:
 
 <ul style='list-style-type: none'>
-  <li><b>Hooke's law of elasticity</b>: $\sigma=E\epsilon$, that is, for small deformations, the stress is directly proportional to the strain (that produced it),</li>
-  <li>and the <b>elastic strain</b> expression: $\epsilon=\frac{\delta}{l}$, where $l$ is the bar length, $\epsilon$ is the Greek symbol used to designate strain (dimensionless), $\delta$ is the total strain (or bar elongation),</li>
+  <li><b>Hookesches Gesetz der Elastizität</b>: $\sigma=E\epsilon$, d. h. für kleine Verformungen ist die Spannung direkt proportional zur Dehnung (die sie hervorgerufen hat),</li>
+  <li> und der Ausdruck für die <b>elastische Dehnung</b>: $\epsilon=\frac{\delta}{l}$, wobei $l$ die Länge des Stabes, $\epsilon$ das griechische Symbol für die Dehnung (dimensionslos) und $\delta$ die Gesamtdehnung (oder die Dehnung des Stabes) ist,</li>
 </ul>
 
-  the axial displacements (i.e. the amount of elongation obtained by applying tensile load to a straight bar) of bars $C$, $D$ and the system are calculated from:
+werden die axialen Verschiebungen (d. h. die Dehnung, die sich bei Zugbelastung eines geraden Stabes ergibt) der Stäbe $C$, $D$ und des Systems berechnet:
 
 <ul style='list-style-type: none'>
-  <li>$\delta_{12}=\frac{T_{13}l_{D}}{A_{D}E}=\frac{(F_{2}-F_{1})l_{D}}{A_{D}E}$; the axial displacement of bar $D$.</li> 
-  <li>$\delta_{23}=\frac{T_{13}l_{C}}{A_{C}E}=\frac{(F_{2}-F_{1})l_{C}}{A_{C}E}$; the axial displacement of bar $C$.</li>
-  <li>$\delta_{13}=\delta_{12}+\delta_{23}=\frac{T_{13}l_{D}}{A_{D}E}=\frac{(F_{2}-F_{1})l_{D}}{A_{D}E}+\frac{(F_{2}-F_{1})l_{C}}{A_{C}E}=\frac{(F_{2}-F_{1})}{E}\left( \frac{l_{D}}{A_{D}}+\frac{l_{C}}{A_{C}} \right)$; the axial displacement of bars $D$ and $C$.</li>
-  <li>$\delta_{34}=\frac{T_{34}l_{A}}{A_{A}E}=\frac{F_{2}l_{A}}{A_{A}E}$; the axial displacement of bar $A$.</li>
-  <li>$\delta_{14}=\delta_{13}+\delta_{34}=\frac{(F_{2}-F_{1})}{E}\left( \frac{l_{D}}{A_{D}}+\frac{l_{C}}{A_{C}} \right) +\frac{F_{2}l_{A}}{A_{A}E}$; the total axial displacement of the system.</li>
+  <li>$\delta_{12}=\frac{T_{13}l_{D}}{A_{D}E}=\frac{(F_{2}-F_{1})l_{D}}{A_{D}E}$; die axiale Verschiebung des Stabes $D$.</li> 
+  <li>$\delta_{23}=\frac{T_{13}l_{C}}{A_{C}E}=\frac{(F_{2}-F_{1})l_{C}}{A_{C}E}$; die axiale Verschiebung des Stabes $C$.</li>
+  <li>$\delta_{13}=\delta_{12}+\delta_{23}=\frac{T_{13}l_{D}}{A_{D}E}=\frac{(F_{2}-F_{1})l_{D}}{A_{D}E}+\frac{(F_{2}-F_{1})l_{C}}{A_{C}E}=\frac{(F_{2}-F_{1})}{E}\left( \frac{l_{D}}{A_{D}}+\frac{l_{C}}{A_{C}} \right)$; die axiale Verschiebung der Stäbe $D$ und $C$.</li>
+  <li>$\delta_{34}=\frac{T_{34}l_{A}}{A_{A}E}=\frac{F_{2}l_{A}}{A_{A}E}$; die axiale Verschiebung des Stabes $A$.</li>
+  <li>$\delta_{14}=\delta_{13}+\delta_{34}=\frac{(F_{2}-F_{1})}{E}\left( \frac{l_{D}}{A_{D}}+\frac{l_{C}}{A_{C}} \right) +\frac{F_{2}l_{A}}{A_{A}E}$; die gesamte axiale Verschiebung des Systems.</li>
 </ul>
 
-In MATLAB, the axial displacement of the bars and system are calculated with:
+In MATLAB wird die axiale Verschiebung der Stäbe und des Systems berechnet:
 
 {% include codes/mca-stress-deflection/m5.html %}
 
 <a id="subsubsection-b"></a>
-#### Numerical solution
+#### Numerische Lösung
 
-To numerically calculate the axial stress and displacements, first the numerical data, given in the problem description, is introduced into the MATLAB code and then the symbolic variables are substituted with the numerical data. For the first part, two *cell arrays* are introduced. The string values (the symbolic variables) of the numerical data are put into cell array <code>lists</code> and their numerical values in cell array <code>listn</code>. For the second part, MATLAB's symbolic substitution function <code>subs</code> is used to replace the symbolic variables in <code>lists</code> with their respective values from the <code>listn</code>, then they are displayed on the screen.
+Zur numerischen Berechnung der Axialspannungen und -verschiebungen werden zunächst die in der Aufgabenstellung angegebenen numerischen Daten in den MATLAB-Code eingegeben und dann die symbolischen Variablen durch die numerischen Daten ersetzt. Für den ersten Teil werden zwei *Zell-Arrays* eingeführt. Die String-Werte (die symbolischen Variablen) der numerischen Daten werden in Cell Array <code>lists</code> und ihre numerischen Werte in Cell Array <code>listn</code> eingetragen. Im zweiten Teil wird die symbolische Substitutionsfunktion <code>subs</code> von MATLAB verwendet, um die symbolischen Variablen in <code>lists</code> durch die entsprechenden Werte aus <code>listn</code> zu ersetzen, die dann auf dem Bildschirm angezeigt werden.
 
 {% include codes/mca-stress-deflection/m6.html %}
 
-In a similar way the numerical values of each bar diameter are displayed and values of cross-section are calculated by using MATLAB's <code>eval</code> function then displayed: MATLAB with:
+In ähnlicher Weise werden die numerischen Werte jedes Stabdurchmessers angezeigt und die Querschnittswerte mit Hilfe der MATLAB-Funktion <code>eval</code> berechnet und angezeigt:
 
 {% include codes/mca-stress-deflection/m7.html %}
 
-The numerical values of each bar length are expressed in MATLAB by:
+Die numerischen Werte der einzelnen Stäbe werden in MATLAB durch ausgedrückt:
 
 {% include codes/mca-stress-deflection/m8.html %}
 
-Finally, the numerical values of the axial stresses are calculated and displayed in MATLAB with:
+Schließlich werden die numerischen Werte der Axialspannungen berechnet und in MATLAB dargestellt:
 
 {% include codes/mca-stress-deflection/m9.html %}
 
-and the results are:
+und die Ergebnisse sind:
 
 {% include codes/mca-stress-deflection/m10.html %}
 
-The numerical values of the axial displacement of the bars and the system are calculated in MATLAB with:
+Die numerischen Werte für die axiale Verschiebung der Stäbe und des Systems werden in MATLAB berechnet:
 
 {% include codes/mca-stress-deflection/m11.html %}
 
-and the results are:
+und die Ergebnisse sind:
 
 {% include codes/mca-stress-deflection/m12.html %}
 
 <a id="subsubsection-c"></a>
-#### Diagrams
+#### Diagramme
 
-The force, stress and displacement diagrams (<a href="#figure3">Figure 3</a>) are obtained using the following MATLAB code:
+Die Kraft-, Spannungs- und Verschiebungsdiagramme (<a href="#figure3">Abbildung 3</a>) werden mithilfe des folgenden MATLAB-Codes erstellt:
 
 {% include codes/mca-stress-deflection/m13.html %}
 
@@ -196,38 +191,38 @@ The force, stress and displacement diagrams (<a href="#figure3">Figure 3</a>) ar
     <p>
     <figure id="figure3" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/mca-stress-deflection/Figure3.png" alt="Figure 3">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 3: Force, stress and displacement diagrams</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 3: Kraft-, Spannungs- und Verschiebungsdiagramme</figcaption>
     </figure>
     </p>
 </center>
 
-Three MATLAB functions are used to obtain the diagrams, namely: <code>ForceDdraw</code>, <code>StressDdraw</code> and <code>DisplacementDdraw</code>, by using the <code>line</code> function, which takes two input arguments. This function plots lines in the current axes by connecting the data in both input vectors (or matrices). In this case, both input arguments are vectors, where the first vector is the $x$-coordinates and the second vector the $y$-coordinates. Because both input vectors are of equal length, the <code>line</code> function plots a single line each time it is used. The codes for the three MATLAB functions are as follows:
+Zur Erstellung der Diagramme werden drei MATLAB-Funktionen verwendet, und zwar: <code>ForceDdraw</code>, <code>StressDdraw</code> und <code>DisplacementDdraw</code>, unter Verwendung der <code>line</code>-Funktion, die zwei Eingangsargumente benötigt. Diese Funktion zeichnet Linien in den aktuellen Achsen, indem sie die Daten in beiden Eingangsvektoren (oder Matrizen) verbindet. In diesem Fall sind beide Eingangsargumente Vektoren, wobei der erste Vektor die $x$-Koordinaten und der zweite Vektor die $y$-Koordinaten sind. Da beide Eingangsvektoren gleich lang sind, zeichnet die <code>line</code>-Funktion bei jeder Anwendung eine einzige Linie. Die Codes für die drei MATLAB-Funktionen sind wie folgt:
 
 <ul style='list-style-type: none'>
-  <li>The MATLAB function <code>ForceDdraw</code> is:</li>
+  <li>Die MATLAB-Funktion <code>ForceDdraw</code>:</li>
 
   {% include codes/mca-stress-deflection/m14.html %}
 
-  <li>The MATLAB function <code>StressDdraw</code> is:</li>
+  <li>Die MATLAB-Funktion <code>StressDdraw</code>:</li>
 
   {% include codes/mca-stress-deflection/m15.html %}
 
-  <li>The MATLAB function <code>DisplacementDdraw</code> is:</li>
+  <li>Die MATLAB-Funktion <code>DisplacementDdraw</code>:</li>
 
   {% include codes/mca-stress-deflection/m16.html %}
 
 </ul>
 
 
-<a id="problem2"></a>
-## PROBLEM 2: Bending and Shear Stresses
+<a id="aufgabe2"></a>
+## AUFGABE 2: Biege- und Schubspannungen
 
 <a id="subsection-a"></a>
-### Problem Description
+### Aufgabe Beschreibung
 
-A Lever $(1)$ with length $AC = l$ is fit on a tapered lever bar $(2)$ denoted by $AB$. The lever is subjected at its end to a horizontal force $F$, as shown in <a href="#figure4">Figure 4</a>. The lever bar has radius $r$ and length $d$.
+Ein Hebel $(1)$ der Länge $AC = l$ sitzt auf einem verjüngten Hebelstab $(2)$, bezeichnet mit $AB$. Der Hebel wird an seinem Ende mit einer horizontalen Kraft $F$ belastet, wie in <a href="#figure4">Abbildung 4</a> dargestellt. Der Hebelstab hat den Radius $r$ und die Länge $d$.
 
-For the numerical application the following values could be used:
+Für die numerische Berechnung können die folgenden Werte verwendet werden:
 
 <ul style='list-style-type: none'>
   <li>$F = 250 \hspace{1pt} N$</li>
@@ -241,88 +236,88 @@ For the numerical application the following values could be used:
     <p>
     <figure id="figure4" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/mca-stress-deflection/Figure4.png" alt="Figure 4">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 4: Lever under loading</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 4: Hebel unter Belastung</figcaption>
     </figure>
     </p>
 </center>
 
 <a id="subsection-b"></a>
-### Objectives
+### Projektziele
 
-- Determining the normal and shear stresses of an element located on the free surface of lever bar $(2)$ at a distance $h$ from the hexagonal base (the element is parallel to the plane determined by the axes $x$, $y$).
-- Constructing the Mohr's circle and determining the principal planes and stresses.
+- Bestimmung der Normal- und Schubspannungen eines Elements, das sich auf der freien Oberfläche des Hebelstabs $(2)$ im Abstand $h$ von der sechseckigen Basis befindet (das Element liegt parallel zu der durch die Achsen $x$, $y$ bestimmten Ebene).
+- Konstruktion des Mohrschen Spannungskreises und Bestimmung der Hauptebenen und Spannungen.
 
 <a id="subsection-c"></a>
-### Solution
+### Lösung
 
-The force $F$ causes bending moment (pure bending) and a torque (twisting moment) on the bar. Thus, bending induces bending stresses, which are normal stresses, and shear stresses distributed over the cross section.
+Die Kraft $F$ bewirkt ein Biegemoment (reine Biegung) und ein Drehmoment (Torsionsmoment) auf den Stab. Durch die Biegung werden also Biegespannungen, die Normalspannungen sind, und über den Querschnitt verteilte Schubspannungen erzeugt.
 
-The normal and shear stresses of a general element parallel to the plane determined by the axes $x$, $y$ located at a distance $h$ from the hexagonal base are $\sigma_{y}$ and $\tau_{yz}$ respectively.
+Die Normal- und Schubspannungen eines allgemeinen Elements parallel zur Ebene, die durch die Achsen $x$, $y$ im Abstand $h$ von der hexagonalen Basis bestimmt wird, sind $\sigma_{y}$ bzw. $\tau_{yz}$.
 
-**Bending Stresses**
+**Biegespannungen**
 
-$\sigma_{y}$ is the bending stress distribution over the bending height, for the case of pure bending:
+$\sigma_{y}$ ist die Biegespannungsverteilung über die Biegehöhe, für den Fall der reinen Biegung:
 
 $$
 \sigma_{y}(z)=\frac{M_{b,x}}{I_{x}}\cdot z
 $$
 
-The different subscripts express that the bending stress in $y$ direction is distributed over the bending height defined here by the $z$ coordinate, and $x$ is the neutral axis.
+Die verschiedenen tiefgestellten Buchstaben drücken aus, dass die Biegespannung in $y$-Richtung über die hier durch die $z$-Koordinate definierte Biegehöhe verteilt wird, und $x$ ist die neutrale Achse.
 
-- $M_{b,x}$ is the bending moment, it equals to:
+- $M_{b,x}$ ist das Biegemoment, es entspricht:
 
 $$
 M_{b,x}=F\cdot (d-h)
 $$
 
-- $I_{x}$ is the area moment of inertia (also referred to as second moment of area). It is a geometrical property of a shape describing the distribution of points around an axis. In classical mechanics it is used as a measure of a body's resistance against bending. For a circular cross-section it equals to:
+- $I_{x}$ ist das Flächenträgheitsmoment. Es ist eine geometrische Eigenschaft einer Form, die die Verteilung von Punkten um eine Achse beschreibt. In der klassischen Mechanik wird es als Maß für den Widerstand eines Körpers gegen Biegung verwendet. Für einen kreisförmigen Querschnitt ist es gleich:
 
 $$
 I_{x} = \frac{\pi D^{4}}{64} = \frac{\pi r^{4}}{4}
 $$
 
-- The bending height $z$ is the perpendicular distance of a point along the cross-section of the bar from its neutral axis, and when calculating the maximum bending stress then $z$ equals to $r$, because it is where the bending stress is at its maximum value along the cross-section.
+- Die Biegehöhe $z$ ist der senkrechte Abstand eines Punktes entlang des Querschnittes des Stabes von seiner neutralen Achse, und bei der Berechnung der maximalen Biegespannung ist $z$ gleich $r$, weil dort die Biegespannung entlang des Querschnittes ihren Höchstwert erreicht.
 
-The bending stress equation shows that the bending stress increases linearly as the bending moment and the distance from the neutral axis increase, and it decreases as the area moment of inertia increases. The maximum stress occurs at the fibers furthest from the neutral axis. The term $\frac{z}{I_{x}}$ depends only on the geometry of the cross-section.
+Die Gleichung für die Biegespannung zeigt, dass die Biegespannung linear zunimmt, wenn das Biegemoment und der Abstand von der neutralen Achse zunehmen, und dass sie abnimmt, wenn das Flächenträgheitsmoment zunimmt. Die maximale Spannung tritt an den am weitesten von der neutralen Achse entfernten Fasern auf. Der Term $\frac{z}{I_{x}}$ hängt nur von der Geometrie des Querschnitts ab.
 
-Thus, the maximum bending stress equals to:
+Die maximale Biegespannung ist somit gleich:
 
 $$
 \sigma_{y}=\frac{M_{b,x}}{I_{x}}\cdot r
 $$
 
-**Shear Stresses**
+**Schubspannungen**
 
-Torsion is the twisting of an object, caused by a moment acting about the object's longitudinal axis. A moment which tends to cause twisting is called torque.
+Torsion ist die Verdrehung eines Objekts, die durch ein um die Längsachse des Objekts wirkendes Moment verursacht wird. Ein Moment, das die Tendenz hat, eine Verdrehung zu verursachen, wird als Drehmoment bezeichnet.
 
-Torsion generates shear stresses and strains within the bar. Both shear strains and shear stresses increase linearly with the distance from the centre of the cross-section, with the maximum shear stress and shear strain occurring on the outer surface.
+Die Torsion erzeugt Schubspannungen und -verformungen innerhalb des Stabes. Sowohl die Schubspannungen als auch die Schubverformungen nehmen linear mit dem Abstand von der Mitte des Querschnitts zu, wobei die maximale Schubspannung und Schubverformung an der Außenfläche auftritt.
 
-The maximum shear stress due to torsion for a circular cross-section is given by the equation:
+Die maximale Schubspannung aufgrund von Torsion für einen kreisförmigen Querschnitt ist gegeben durch die Gleichung:
 
 $$
 \tau = \frac{T_{y}\cdot r}{J_{p}}
 $$
 
-This means, shear stress is a function of
-- the torque $T_{y}$,here: around the $y$ axis,
-- the distance from the centre of the cross-section, here: equal to $r$; the distance to the edge, 
-- and the polar moment of inertia $J_{p}$.
+Das heißt, die Schubspannung ist eine Funktion von
+- dem Drehmoment $T_{y}$, hier: um die $y$-Achse,
+- dem Abstand von der Mitte des Querschnitts, hier: gleich $r$; dem Abstand zum Rand, 
+- und dem polaren Trägheitsmoment $J_{p}$.
 
-For a circular cross section, the polar moment of inertia is:
+Für einen kreisförmigen Querschnitt beträgt das polare Trägheitsmoment:
 
 $$
 J_{p} = \frac{\pi \cdot r^{4}}{2}
 $$
 
-The torque $T_{y}= F \cdot l$.
+Das Drehmoment $T_{y}= F \cdot l$.
 
 $$
 \Rightarrow \tau = \frac{2F \cdot l}{\pi \cdot r^{3}}
 $$
 
-**Stress Transformation and Mohr's Circle**
+** Spannungstransformation und Mohrscher Spannungskreis**
 
-Considering a 2D stress element, corresponding to a state of plane stress (for example the $xy$-plane), the four faces of the element are under normal stresses and shear stresses. Supposing that this element is cut by an oblique plane with a normal at an arbitrary angle $\phi$ counterclockwise from the $x$ axis, then the values of the normal and shear stresses could be calculated by using the *stress transformation equations*:
+Betrachtet man ein 2D-Spannungselement, das einem ebenen Spannungszustand (z.B. der $xy$-Ebene) entspricht, so werden die vier Flächen des Elements durch Normal- und Schubspannungen beansprucht. Angenommen, dieses Element wird von einer schrägen Ebene mit einer Normalen in einem beliebigen Winkel $\phi$ gegen den Uhrzeigersinn von der $x$-Achse geschnitten, dann könnten die Werte der Normal- und Schubspannungen mit Hilfe der *Spannungstransformationsgleichungen* berechnet werden:
 
 $$
 \sigma = \frac{\sigma_{x}+\sigma_{y}}{2}+\frac{\sigma_{x}-\sigma_{y}}{2}\cdot cos(2\phi)+\tau_{xy}\cdot sin(2\phi)
@@ -332,31 +327,31 @@ $$
 \tau = \frac{\sigma_{x}-\sigma_{y}}{2}\cdot sin(2\phi)+\tau_{xy}\cdot cos(2\phi)
 $$
 
-Differentiating the first equation with respect to $\phi$ and setting the result equal to zero maximizes $\sigma$ and gives:
+Durch Differenzieren der ersten Gleichung nach $\phi$ und Gleichsetzen des Ergebnisses mit Null wird $\sigma$ maximiert und ergibt sich:
 
 $$
 tan(2\phi)=\frac{2\tau_{xy}}{\sigma_{x}-\sigma_{y}}
 $$
 
-This equation defines two particular values for the angle $2\phi$, one of which defines the *maximum normal stress* $\sigma_{1}$ and the other, the *minimum normal stress* $\sigma_{2}$. These two stresses are called the *principal stresses*, and their corresponding directions, the *principal directions*. The angle between the two principal directions is $90°$. This equation can be obtained from the seond equation of the stress transformation equations by seeting $\tau =0$, meaning that the perpendicular surfaces containing principal stresses have zero shear stresses.
+Diese Gleichung definiert zwei bestimmte Werte für den Winkel $2\phi$, von denen einer die *maximale Normalspannung* $\sigma_{1}$ und der andere die *minimale Normalspannung* $\sigma_{2}$ definiert. Diese beiden Spannungen werden als *Hauptspannungen* bezeichnet, und ihre entsprechenden Richtungen als *Hauptrichtungen*. Der Winkel zwischen den beiden Hauptrichtungen ist $90°$. Diese Gleichung lässt sich aus der zweiten Gleichung der Spannungstransformationsgleichungen ableiten, indem $\tau =0$ gesetzt wird, was bedeutet, dass die senkrechten Flächen mit den Hauptspannungen keine Schubspannungen aufweisen.
 
-An important thing to note is that angles in Mohr's circle are doubled compared to the stress element's rotation angle. For example, by observing Mohr's circle, there is a $180$ degree angle between the minimum and maximum principal stresses, whereas on the stress element the angle is $90$ degrees. This is why $2\phi$ notation is used on Mohr's circle. $\phi$ is the angle of rotation of the stress element, and $2\phi$ is the corresponding angle on Mohr's circle.
+Wichtig ist, dass die Winkel im Mohrschen Spannungskreis im Vergleich zum Drehwinkel des Spannungselements verdoppelt werden. Bei Betrachtung des Mohrschen Spannungskreises ergibt sich zum Beispiel ein Winkel von $180$ Grad zwischen der minimalen und der maximalen Hauptspannung, während der Winkel beim Spannungselement $90$ Grad beträgt. Aus diesem Grund wird auf dem Mohrschen Spannungskreis die Notation $2\phi$ verwendet. $\phi$ ist der Drehwinkel des Spannungselements, und $2\phi$ ist der entsprechende Winkel auf dem Mohrschen Spannungskreis.
 
-Formulas for the two principal stresses can be obtained by substituting the angle $2\phi$ in the first stress transformation equation:
+Die Formeln für die beiden Hauptspannungen lassen sich durch Einsetzen des Winkels $2\phi$ in die erste Spannungstransformationsgleichung ermitteln:
 
 $$
 \sigma_{1}, \sigma_{2} =\frac{\sigma_{x}+\sigma_{y}}{2}\pm \sqrt{({\frac{\sigma_{x}-\sigma_{y}}{2})^{2}}+\tau_{xy}^{2}}
 $$
 
-In a similar manner, by differentiating the second stress transformation equation with respect to $\phi$ and setting the result equal to zero gives:
+In ähnlicher Weise erhält man durch Differenzieren der zweiten Spannungstransformationsgleichung nach $\phi$ und Gleichsetzen des Ergebnisses mit Null:
 
 $$
 tan(2\phi)=-\frac{\sigma_{x}-\sigma_{y}}{2\tau_{xy}}
 $$
 
-This defines the two values of $2\phi$ at which the *shear stress* $\tau$ reaches an *extreme value* (not maximum). The angle between the two surfaces containing the maximum shear stresses is $90°$.
+Damit sind die beiden Werte von $2\phi$ definiert, bei denen die *Schubspannung* $\tau$ einen *extremen Wert* (nicht das Maximum) erreicht. Der Winkel zwischen den beiden Flächen mit den maximalen Schubspannungen beträgt $90°$.
 
-Formulas for the two extreme-value shear stresses are obtained by substituting the angle $2\phi$ in the second stress transformation equation:
+Die Formeln für die beiden extremen Schubspannungen werden durch den Einsatz des Winkels $2\phi$ in der zweiten Spannungstransformationsgleichung ermittelt:
 
 $$
 \tau_{1}, \tau_{2} =\pm \sqrt{({\frac{\sigma_{x}-\sigma_{y}}{2})^{2}}+\tau_{xy}^{2}}
@@ -364,68 +359,68 @@ $$
 
 
 <a id="subsubsection-a"></a>
-#### Analytical solution
+#### Analytische Lösung
 
-The MATLAB program starts with the declaration of variables as symbolic scalar variables by using <code>syms</code> function:
+Das MATLAB-Programm beginnt mit der Deklaration von Variablen als symbolische skalare Variablen mit Hilfe der <code>syms</code>-Funktion:
 
 {% include codes/mca-stress-deflection/m17.html %}
 
-Then, the normal and shear stresses are calculated in MATLAB with:
+Anschließend werden die Normal- und Schubspannungen in MATLAB berechnet:
 
 {% include codes/mca-stress-deflection/m18.html %}
 
-This results in the following output:
+Dies führt zu der folgenden Ausgabe:
 
 {% include codes/mca-stress-deflection/m19.html %}
 
-Then the element orientation and principal stresses are calculated in MATLAB with:
+Anschließend werden die Elementorientierung und die Hauptspannungen in MATLAB berechnet:
 
 {% include codes/mca-stress-deflection/m20.html %}
 
-For this, the user created function <code>mohr2D(sigma_x,sigma_y,tau,phi)</code> is required, to calculate:
+Dazu wird die vom Benutzer erstellte Funktion <code>mohr2D(sigma_x,sigma_y,tau,phi)</code> benötigt, um zu berechnen:
 
 <ul>
-  <li>the maximum normal stress $\sigma_{1}$ (<code>sigma_max</code>) and minimum normal stress $\sigma_{2}$ (<code>sigma_min</code>). Mohr's circle crosses the horizontal axis at these two locations, as the shear stress is zero. These two values can also be calculated by taking the $x$ coordinate of the circle's center, and adding or subtracting the circle radius</li>
-  <li>the radius (<code>radius</code>) of the Mohr's circle, which equals to $\sqrt{({\frac{\sigma_{x}-\sigma_{y}}{2})^{2}}+\tau_{xy}^{2}}$, which is also the value of the maximum shear stress</li>
-  <li>the center (<code>center_circle</code>) of the Mohr's circle, which is at $(\frac{\sigma_{x}+\sigma_{y}}{2},0)$</li>
-  <li>the angle $\phi$, named <code>phi</code> in the code, between the original stress element and the principal planes. $tan(2\phi)$ is named <code>phi_p</code> in the code.</li>
+  <li>die maximale Normalspannung $\sigma_{1}$ (<code>sigma_max</code>) und die minimale Normalspannung $\sigma_{2}$ (<code>sigma_min</code>). Der Mohrsche Spannungskreis kreuzt die horizontale Achse an diesen beiden Stellen, da die Schubspannung Null ist. Diese beiden Werte können auch berechnet werden, indem man die $x$-Koordinate des Kreismittelpunkts nimmt und den Kreisradius addiert oder subtrahiert</li>
+  <li> der Radius (<code>Radius</code>) des Mohrschen Spannungskreises, der gleich $\sqrt{({\frac{\sigma_{x}-\sigma_{y}}{2})^{2}}+\tau_{xy}^{2}}$ ist, was auch der Wert der maximalen Schubspannung ist </li>
+  <li> der Mittelpunkt (<code>Zentralkreis</code>) des Mohrschen Spannungskreises, der bei $(\frac{\sigma_{x}+\sigma_{y}}{2},0)$ liegt</li>
+  <li> der Winkel $\phi$, im Code <code>phi</code> genannt, zwischen dem ursprünglichen Spannungselement und den Hauptebenen. $tan(2\phi)$ wird im Code als <code>phi_p</code> bezeichnet.</li>
 </ul>
 
-This function is created by the following code:
+Diese Funktion wird durch den folgenden Code erzeugt:
 
 {% include codes/mca-stress-deflection/m21.html %}
 
-And the output of this code is:
+Und die Ausgabe dieses Codes ist:
 
 {% include codes/mca-stress-deflection/m22.html %}
 
 <a id="subsubsection-b"></a>
-#### Numerical solution
+#### Numerische Lösung
 
-For numerical calculations, the numerical data for the applied force $F$, the length of the lever $l$, the lever bar's radius $r$ and length $d$, and the distance $h$ of the element on the lever bar are introduced in MATLAB as input with the code:
+Für die numerischen Berechnungen werden die numerischen Daten für die aufgebrachte Kraft $F$, die Länge des Hebels $l$, den Radius $r$ und die Länge $d$ des Hebelstabs sowie den Abstand $h$ des Elements auf dem Hebelstab in MATLAB als Eingabe eingegeben:
 
 {% include codes/mca-stress-deflection/m23.html %}
 
-The numerical values for the equivalent force system; torque $T_{y}$, force $F$ and bending moment $M_{b,x}$, is calculated and printed in MATLAB with:
+Die numerischen Werte für das äquivalente Kräftesystem; Drehmoment $T_{y}$, Kraft $F$ und Biegemoment $M_{b,x}$, werden in MATLAB berechnet und ausgedruckt:
 
 {% include codes/mca-stress-deflection/m24.html %}
 
-resulting in:
+was zur Folge hatte:
 
 {% include codes/mca-stress-deflection/m25.html %}
 
-The numerical values for the stress orientation and principal stresses are calculated and displayed in MATLAB with:
+Die numerischen Werte für die Spannungsausrichtung und die Hauptspannungen werden in MATLAB berechnet und angezeigt:
 
 {% include codes/mca-stress-deflection/m26.html %}
 
-resulting in:
+was zur Folge hatte:
 
 {% include codes/mca-stress-deflection/m27.html %}
 
 <a id="subsubsection-c"></a>
-#### Graphical representation
+#### Grafische Darstellung
 
-The graphical representation of the Mohr's circle (<a href="#figure5">Figure 5</a>) is obtained in MATLAB by calling the user created function <code>mohr2Ddraw</code>:
+Die grafische Darstellung des Mohrschen Spannungskreises (<a href="#figure5">Abbildung 5</a>) wird in MATLAB durch Aufruf der benutzerdefinierten Funktion <code>mohr2Ddraw</code> erstellt:
 
 {% include codes/mca-stress-deflection/m28.html %}
 
@@ -433,12 +428,12 @@ The graphical representation of the Mohr's circle (<a href="#figure5">Figure 5</
     <p>
     <figure id="figure5" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/mca-stress-deflection/Figure5.png" alt="Figure 5">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 5: Mohr's circle</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 5: Mohrscher Spannungskreis</figcaption>
     </figure>
     </p>
 </center>
 
-The code for the <code>mohr2Ddraw</code> function is:
+Der Code für die <code>mohr2Ddraw</code> Funktion ist:
 
 {% include codes/mca-stress-deflection/m29.html %}
 

@@ -88,7 +88,7 @@ The MATLAB program starts with the declaration of variables as symbolic scalar v
 
 {% include codes/mca-stress-deflection/m1.html %}
 
-Then, the internal forces are calculated for each portion of the bar. The equilibrium equation of the free-body diagram for bar $A$, in the interval $3–4$, <a href="#figure2">Figure 2B</a>,  gives the internal force $T_{34}$:
+Then, the internal forces are calculated for each portion of the bar. The equilibrium equation of the free-body diagram for bar $A$, in the interval $3–4$, <a href="#figure2">Figure 2B</a>, gives the internal force $T_{34}$:
 
 $$
 \sum_{}^{}\mathrm{F}_{x}^{}=0 \Leftrightarrow T_{34}-F_{2}=0\Leftrightarrow T_{34}=F_{2}
@@ -135,7 +135,7 @@ Considering the followings:
   <li>and the <b>elastic strain</b> expression: $\epsilon=\frac{\delta}{l}$, where $l$ is the bar length, $\epsilon$ is the Greek symbol used to designate strain (dimensionless), $\delta$ is the total strain (or bar elongation),</li>
 </ul>
 
-  the axial displacements (i.e. the amount of elongation obtained by applying tensile load to a straight bar) of bars $C$, $D$ and the system are calculated from:
+the axial displacements (i.e. the amount of elongation obtained by applying tensile load to a straight bar) of bars $C$, $D$ and the system are calculated from:
 
 <ul style='list-style-type: none'>
   <li>$\delta_{12}=\frac{T_{13}l_{D}}{A_{D}E}=\frac{(F_{2}-F_{1})l_{D}}{A_{D}E}$; the axial displacement of bar $D$.</li> 
@@ -156,7 +156,7 @@ To numerically calculate the axial stress and displacements, first the numerical
 
 {% include codes/mca-stress-deflection/m6.html %}
 
-In a similar way the numerical values of each bar diameter are displayed and values of cross-section are calculated by using MATLAB's <code>eval</code> function then displayed: MATLAB with:
+In a similar way the numerical values of each bar diameter are displayed and values of cross-section are calculated by using MATLAB's <code>eval</code> function then displayed:
 
 {% include codes/mca-stress-deflection/m7.html %}
 
@@ -290,7 +290,7 @@ $$
 
 Torsion is the twisting of an object, caused by a moment acting about the object's longitudinal axis. A moment which tends to cause twisting is called torque.
 
-Torsion generates shear stresses and strains within the bar. Both shear strains and shear stresses increase linearly with the distance from the centre of the cross-section, with the maximum shear stress and shear strain occurring on the outer surface.
+Torsion generates shear stresses and strains within the bar. Both shear strains and shear stresses increase linearly with the distance from the center of the cross-section, with the maximum shear stress and shear strain occurring on the outer surface.
 
 The maximum shear stress due to torsion for a circular cross-section is given by the equation:
 
@@ -299,8 +299,8 @@ $$
 $$
 
 This means, shear stress is a function of
-- the torque $T_{y}$,here: around the $y$ axis,
-- the distance from the centre of the cross-section, here: equal to $r$; the distance to the edge, 
+- the torque $T_{y}$, here: around the $y$ axis,
+- the distance from the center of the cross-section, here: equal to $r$; the distance to the edge, 
 - and the polar moment of inertia $J_{p}$.
 
 For a circular cross section, the polar moment of inertia is:
@@ -333,7 +333,7 @@ $$
 tan(2\phi)=\frac{2\tau_{xy}}{\sigma_{x}-\sigma_{y}}
 $$
 
-This equation defines two particular values for the angle $2\phi$, one of which defines the *maximum normal stress* $\sigma_{1}$ and the other, the *minimum normal stress* $\sigma_{2}$. These two stresses are called the *principal stresses*, and their corresponding directions, the *principal directions*. The angle between the two principal directions is $90°$. This equation can be obtained from the seond equation of the stress transformation equations by seeting $\tau =0$, meaning that the perpendicular surfaces containing principal stresses have zero shear stresses.
+This equation defines two particular values for the angle $2\phi$, one of which defines the *maximum normal stress* $\sigma_{1}$ and the other, the *minimum normal stress* $\sigma_{2}$. These two stresses are called the *principal stresses*, and their corresponding directions, the *principal directions*. The angle between the two principal directions is $90°$. This equation can be obtained from the second equation of the stress transformation equations by setting $\tau =0$, meaning that the perpendicular surfaces containing principal stresses have zero shear stresses.
 
 An important thing to note is that angles in Mohr's circle are doubled compared to the stress element's rotation angle. For example, by observing Mohr's circle, there is a $180$ degree angle between the minimum and maximum principal stresses, whereas on the stress element the angle is $90$ degrees. This is why $2\phi$ notation is used on Mohr's circle. $\phi$ is the angle of rotation of the stress element, and $2\phi$ is the corresponding angle on Mohr's circle.
 
@@ -418,7 +418,7 @@ resulting in:
 {% include codes/mca-stress-deflection/m27.html %}
 
 <a id="subsubsection-c"></a>
-#### Graphical representation
+#### Graphical Representation
 
 The graphical representation of the Mohr's circle (<a href="#figure5">Figure 5</a>) is obtained in MATLAB by calling the user created function <code>mohr2Ddraw</code>:
 
