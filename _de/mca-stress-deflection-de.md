@@ -10,7 +10,7 @@ date: 2024-01-01
 published: true
 tagsen:
   - MATLAB
-  - Maschinenbauteil-Analyse
+  - Maschinenkomponentenanalyse
   - Festigkeitsberechnung
   - Bauteildimensionierung
   - Festigkeitslehre
