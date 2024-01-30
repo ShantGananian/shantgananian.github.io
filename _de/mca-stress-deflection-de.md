@@ -2,7 +2,7 @@
 layout: single # archive
 
 title: Analytische und numerische Analyse und Lösung von Spannungs- und Biegungsproblemen mithilfe von MATLAB
-excerpt: " "
+excerpt: "Einsatz von MATLAB als symbolisches und numerisches Werkzeug zur Analyse und Lösung von Spannungs- und Verformungsproblemen bei der Konstruktion von Maschinenkomponenten."
 myLink: /en/mca-stress-deflection/ # Custom Variable
 # author_profile: true
 last_modified_at: 2024-01-01
