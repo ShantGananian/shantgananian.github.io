@@ -19,7 +19,7 @@ tagsen:
   #- Sensoren
 
 toc: true
-toc_label: "Inhaltsübersicht"
+toc_label: "Inhaltsverzeichnis"
 toc_icon: "cog"
 toc_sticky: true
 
