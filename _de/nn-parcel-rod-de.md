@@ -76,7 +76,7 @@ Die exponentielle Übertragungsfunktion ist normalisiert und von Null abgehoben,
 
 Die hyperbolische Tangens-Sigmoid-Übertragungsfunktion (<code>tansig</code> oder <code>tanh</code>) und die Exponentialübertragungsfunktion sind sehr ähnlich. Sie setzen der Ausgabe Grenzen. In diesem Fall innerhalb des Bereichs $-3 ≤ n < 1$, in dem sie die Funktion der Eingabe zurückgeben. Außerhalb dieser Grenzen geben sie $-1$ oder $1$ zurück.
 
-Die hard-limit Übertragungsfunktion (<code>hardlim<code>) gibt $0$ zurück, wenn der Wert kleiner als ein Schwellenwert ist, und $1$, wenn er größer oder gleich dem Schwellenwert ist, hier $-1,5$.
+Die hard-limit Übertragungsfunktion (<code>hardlim</code>) gibt $0$ zurück, wenn der Wert kleiner als ein Schwellenwert ist, und $1$, wenn er größer oder gleich dem Schwellenwert ist, hier $-1,5$.
 
 Die lineare Übertragungsfunktion berechnet einfach die Ausgabe des Neurons, indem sie einfach den Wert $n$ zurückgibt, der ihr übergeben wurde.
 
