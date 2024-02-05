@@ -31,7 +31,7 @@ header:
 ## AUFGABE 1: Axiale Spannungen und Verformungen
 
 <a id="subsection-a"></a>
-### Aufgabe Beschreibung
+### Problembeschreibung
 
 Eine starre Platte $\mathit{B}$ ist an den beiden Stäben $\mathit{A}$ und $\mathit{C}$ befestigt, wie in <a href="#figure1">Abbildung 1</a> dargestellt. Der Stab $\mathit{C}$ ist an dem Stab $\mathit{D}$ befestigt, dessen Ende an einem starren Träger befestigt ist. Das Ende des Stabes $\mathit{A}$ ist frei. $l_{A}$, $l_{C}$, $l_{D}$ sind die Längen der Stäbe $\mathit{A}$, $\mathit{C}$ bzw. $\mathit{D}$, und ihre Durchmesser sind $d_{A}=d$, $d_{C}=d$ und $d_{D}=1,5d$. Die Last $F_{1}$ wird auf die starre Platte $\mathit{B}$ $($gleichmäßig um den Umfang der starren Platte $\mathit{B})$ verteilt, und die Last $F_{2}$ wird im Schwerpunkt des Endquerschnitts des Stabs $\mathit{B}$ aufgebracht.
 
@@ -218,7 +218,7 @@ Zur Erstellung der Diagramme werden drei MATLAB-Funktionen verwendet, und zwar: 
 ## AUFGABE 2: Biege- und Schubspannungen
 
 <a id="subsection-a"></a>
-### Aufgabe Beschreibung
+### Problembeschreibung
 
 Ein Hebel $(1)$ der Länge $AC = l$ sitzt auf einem verjüngten Hebelstab $(2)$, bezeichnet mit $AB$. Der Hebel wird an seinem Ende mit einer horizontalen Kraft $F$ belastet, wie in <a href="#figure4">Abbildung 4</a> dargestellt. Der Hebelstab hat den Radius $r$ und die Länge $d$.
 
