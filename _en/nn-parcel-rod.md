@@ -1,8 +1,8 @@
 ---
 layout: single # archive
 
-title: 'Artificial Neural Networks and its Application for Industrial Fault Diagnosis of Connecting Rods of Compressors: Introduction and Applications'
-excerpt: "Creating neural networks by using MATLAB and applying it to solve technical problems like pattern recognition for correct sorting of parcels and classification for fault diagnosis of compressor connecting rods."
+title: 'Artificial Neural Networks and its Application to Industrial Fault Diagnosis of Connecting Rods in Compressors: Introduction and Applications'
+excerpt: "Creating neural networks by using MATLAB and applying it to solve technical problems such as pattern recognition for correct sorting of parcels and classification for fault diagnosis of compressor connecting rods."
 myLink: /de/nn-parcel-rod-de/ # Custom Variable
 # author_profile: true
 last_modified_at: 2024-01-15
