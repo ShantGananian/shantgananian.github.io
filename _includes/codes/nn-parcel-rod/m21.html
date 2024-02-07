@@ -1,0 +1,15 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB 2023b"><title>Untitled</title><style type="text/css">.rtcContent { padding: 0px; } .CodeBlock { background-color: #F5F5F5; margin: 10px 0 10px 0; }
+.S0 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 1px solid rgb(217, 217, 217); border-bottom: 0px none rgb(33, 33, 33); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S1 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 0px none rgb(33, 33, 33); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S2 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 1px solid rgb(217, 217, 217); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }</style><div class = rtcContent><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre"><span style="color: #008013;">% number of neurons in the hidden layer</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >net.layers{1}.size = 5; </span><span style="color: #008013;">% the numer of neurons in the i-th layer (here: 5 neurons in the 1st layer)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: #008013;">% hidden layer transfer function</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >net.layers{1}.transferFcn = </span><span style="color: #a709f5;">'logsig'</span><span >;</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre"><span >view(net);</span></span></div></div></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+% number of neurons in the hidden layer
+net.layers{1}.size = 5; % the numer of neurons in the i-th layer (here: 5 neurons in the 1st layer)
+% hidden layer transfer function
+net.layers{1}.transferFcn = 'logsig';
+view(net);
+##### SOURCE END #####
+-->
+</div>

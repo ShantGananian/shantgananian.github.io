@@ -269,7 +269,7 @@ Although the perceptron learning rule is simple, it is quite powerful. It will a
 <a id="section-e"></a>
 ## An Illustrative Example 
 
-The following example is to show how the architectures described in the previous sections can be used to solve a simple practical problem,- a pattern recognition problem, by using three different neural network architectures; a single-layer perceptron (feedforward network) with a symmetric hard limit transfer function <code>hardlims</code>, a Hamming network (competitive network) and a Hopfield network (recurrent associative memory network).
+The following example is to show how the architectures described in the previous sections can be used to solve a simple practical problem,- a pattern recognition problem, by using three different neural network architectures; a single-layer perceptron (feedforward network) with a symmetric hard-limit transfer function <code>hardlims</code>, a Hamming network (competitive network) and a Hopfield network (recurrent associative memory network).
 
 <a id="subsection-a"></a>
 ### Problem Description
@@ -636,7 +636,6 @@ which results in the following output:
 
 {% include codes/nn-parcel-rod/m13.html %}
 
-
 <a id="subsubsection-i"></a>
 **5. Hopfield Network**
 
@@ -705,10 +704,231 @@ which results in the following output:
 <a id="section-f"></a>
 ## Classification of Linearly Separable Data with a Perceptron
 
+<a id="subsection-a"></a>
+### Problem Description
+
+In this example, there are two clusters of data, each with $20$ samples, that belong to two classes. These clusters are defined in a two-dimensional input space. The classes are linearly separable.
+
+<a id="subsection-b"></a>
+### Objective
+
+To construct a perceptron for the classification of randomly defined two clusters of data.
+
+<a id="subsection-a"></a>
+### Steps
+
+<ol>
+  <li><a href="#subsubsection-j">Defineing input and output data</a></li>
+  <li><a href="#subsubsection-k">Creating and training the perceptron</a></li>
+  <li><a href="#subsubsection-l">Plotting the decision boundary</a></li>
+</ol>
+
+<a id="subsubsection-j"></a>
+**1. Defining input and output data**
+
+At first, $20$ sample vectors of two different classes are defined randomly by using the MATLAB function <code>randn</code>, which generates normally distributed random numbers. An offset of $5$ is added to the samples of the second class, to have them on distinguishable distance from the samples of the first class. Each class is set as $2$-by-$20$ matrix. and combined together to generate the $2$-by-$40$ matrix $p$. Thus, matrix $p$ represent the inputs to the perceptron; normally distributed random numbers, $2$-by-$40$ ($R$-by-$Q$) matrix of $40$ input vectors of two elements each.
+
+To assign the vectors in the matrix $p$ to one of the two classes, a second matrix, $t$, is defined to be a $1$-by-$40$ ($S$-by-$Q$) output matrix. The elements of this matrix are marked with markers, zero and one.The first $20$ elements of the $t$ matrix are assigned to zero value and the other $20$ elements are assigned to one. Thus, the output matrix $t$ consists of $40$ target vectors, each made of a single element (either zero or one).
+
+To plot the input and target vectors of the perceptron, the perceptron vector plot <code>plotpv</code> function is used, which takes two arguments, the first is the input matrix and the second is the target matrix. This plots column vectors in the input matrix with markers based on the output matrix.
+
+{% include codes/nn-parcel-rod/m16.html %}
+
+The above code plots the samples:
+
+<center>
+    <p>
+    <figure id="figure10" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure10.png" alt="Figure 10">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 10: The input vectors, $(p_{1,i}, p_{2,i})$, marked as two classes</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-k"></a>
+**2. Creating and training the perceptron**
+
+In MATLAB, a single layer perceptron is created by the command: <code>net = perceptron;</code>.
+
+The perceptron uses a hard-limit transfer function, <code>hardlim</code>, by default.
+
+The training function for perceptron is set to <code>trainc</code> by default, which is cyclical order weight/bias training, and it is called by <code>train</code>. <code>trainc</code> trains a network with weight and bias learning rules with incremental updates after each presentation of an input. Inputs are presented in cyclic order. Training stops when any of these conditions is met:
+
+- The maximum number of epochs (repetitions) is reached.
+- Performance is minimized to the goal.
+- The maximum amount of time is exceeded.
+
+To measure the network performance, mean absolute error performance function, <code>mae</code>, is used by default. The error is calculated by subtracting the output from target. Then the mean absolute error is calculated. The goal is to minimize the performance, i.e. the error.
+
+{% include codes/nn-parcel-rod/m17.html %}
+
+Resulting from the above code, the training record is displayed, showing training and performance functions and parameters, and the value of the best performance (the minimum error reached).
+
+<center>
+    <p>
+    <figure id="figure11" style='display: table; width: 40%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure11.png" alt="Figure 11">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 11: The training record of the trained neural network</figcaption>
+    </figure>
+    </p>
+</center>
+
+<code>view(net)</code> opens a window that shows the neural network (specified by <code>net</code>) as a graphical diagram. The numbers indicate that there are two elements in the input vectors, the network consists of one layer with a single neuron and using a hard-limit transfer function, and the output is a single element vector.
+
+<center>
+    <p>
+    <figure id="figure12" style='display: table; width: 40%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure12.png" alt="Figure 12">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 12: The graphical diagram of the created neural network</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-l"></a>
+**3. Plotting the decision boundary**
+
+After the network is trained, the next step is to plot the classification line on the previously plotted perceptron vector plot. This is done by <code>plotpc</code> function, which takes two arguments as input:
+
+- The first one is $S$-by-$R$ weight matrix, <code>net.iw{1,1}</code>, which is the final weight matrix after training. $$\left\{ 1,1 \right\}$$ indicates to the weights for the connection from the first input to the first layer, 
+- and the second argument is $S$-by-$1$ bias vector, <code>net.b{1}</code>, which is the final bias vector after training, for the first layer. 
+
+Here, $S$ is the number of neurons in layer and $R$ is the number of elements in input vector.
+
+Finally, the linear decision boundary is plotted, separateing data points belonging to the two class lables:
+
+<code>plotpc(net.iw{1,1},net.b{1});</code>
+
+<center>
+    <p>
+    <figure id="figure13" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure13.png" alt="Figure 13">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 13: The linear decision boundary separating the two classes</figcaption>
+    </figure>
+    </p>
+</center>
 
 <a id="section-g"></a>
 ## Custom Neural Networks
 
+<a id="subsection-a"></a>
+### Problem Description and Objective
+
+This example shows how to create and view a custom shallow neural network in MATLAB by using the network function. The network to be created is a feedforward network, consisting of two layers. It has a single input vector of six elements and an output vector (target output) of two elements. Only the first layer has a bias. An input weight connects to the first layer from the input. A layer weight connects to the second layer from the first layer. The second layer is the network output.
+
+<a id="subsection-b"></a>
+### Steps
+
+<ol>
+  <li><a href="#subsubsection-m">Defining the inputs and outputs</a></li>
+  <li><a href="#subsubsection-n">Defining and customizing the network (number of network subobjects)</a></li>
+  <li><a href="#subsubsection-o">Defining the topology (network subobject properties) and the transfer function</a></li>
+  <li><a href="#subsubsection-p">Configuring the network with configure</a></li>
+  <li><a href="#subsubsection-q">Training the network and calculating neuron output</a></li>
+</ol>
+
+<a id="subsubsection-m"></a>
+**1. Defining the inputs and outputs**
+
+{% include codes/nn-parcel-rod/m19.html %}
+
+The above code creates the input and output (target) vectors.
+
+{% include codes/nn-parcel-rod/m25.html %}
+
+<a id="subsubsection-n"></a>
+**2. Defining and customizing the network (number of network subobjects)**
+
+To create a custom shallow neural network with one input and two layers, the next code snippet is used. The number of inputs defines how many sets of vectors the network receives as input. The size of each input (i.e., the number of elements in each input vector) is determined by the input size (in this example there is one input vector, so <code>net.numInputs = 1</code> and the input size is <code>net.inputs{1}.size = 6</code>).
+
+**Syntax:**
+
+<code>net = network(numInputs,numLayers,biasConnect,inputConnect,layerConnect,outputConnect)</code>
+
+- <code>numInputs</code>: Number of inputs the network receives (how many sets of vectors the network receives as input)
+- <code>numLayers</code>: Number of layers the network has (here: two layers)
+- <code>biasConnect</code>: <code>numLayers</code>-by-$1$ Boolean vector; this property defines which layers have biases (1 is presence and 0 is absence) (here: the first layer has one)
+- <code>inputConnect</code>: <code>numLayers</code>-by-<code>numInputs</code> Boolean matrix; this property defines which layers have weights coming from inputs (here: the first layer has one)
+- <code>layerConnect</code>: <code>numLayers</code>-by-<code>numLayers</code> Boolean matrix; this property defines which layers have weights coming from other layers (here: second layer has a weight coming from first layer to second layer)
+- <code>outputConnect</code>: $1$-by-<code>numLayers</code> Boolean vector; this property defines which layers generate network outputs (here: the second layer does)
+
+{% include codes/nn-parcel-rod/m20.html %}
+
+This results in a graphical diagram of the structure of the defined custom neural network:
+
+<center>
+    <p>
+    <figure id="figure14" style='display: table; width: 40%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure14.png" alt="Figure 14">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 14: The graphical diagram of the structure of the custom neural network</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-o"></a>
+**3. Defining the topology (network subobject properties) and the transfer function**
+
+The next step is to define the number of neurons in each layer. In this case, $5$ neurons are assigned to the first layer, and none to the second layer. Then, logistic sigmoid transfer function, <code>logsig</code>, is assigned to the first layer. To the second layer, linear transfer function, <code>purelin</code>, is assigned by default.
+
+{% include codes/nn-parcel-rod/m21.html %}
+
+<center>
+    <p>
+    <figure id="figure15" style='display: table; width: 40%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure15.png" alt="Figure 15">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 15: The graphical diagram of the defined custom neural network</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-p"></a>
+**4. Configuring the network with configure**
+
+Configuration is the process of setting network input and output sizes and ranges, input preprocessing settings and output postprocessing settings, and weight initialization settings to match input and target data.
+
+The <code>configure</code> function configures network inputs and outputs to best match input and target data. It takes input data (here: <code>inputs</code>) and target data (here: <code>outputs</code>), and configures the network's inputs and outputs to match. in this example, the network is configured so that the outputs of the second layer learn to match the associated target vectors.
+
+Configuration must happen before a network's weights and biases can be initialized. Unconfigured networks are automatically configured and initialized the first time train is called.
+
+{% include codes/nn-parcel-rod/m22.html %}
+
+<center>
+    <p>
+    <figure id="figure16" style='display: table; width: 40%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure16.png" alt="Figure 16">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 16: The graphical diagram of the configured custom neural network</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-q"></a>
+**5. Training the network and calculating neuron output**
+
+After configuration, and before training, the network's weights and biases are initialized by calculating the network's output for the given input vector.
+
+{% include codes/nn-parcel-rod/m23.html %}
+
+The following is the network output before training:
+
+{% include codes/nn-parcel-rod/m26.html %}
+
+Initialization is followed by the training of the network with a suitable training function. In this case, Levenberg-Marquardt backpropagation (<code>trainlm</code>) is used as training function so that, given example input vector, the outputs of the second layer learn to match the associated target vector with minimal mean squared error (<code>mse</code>).
+
+{% include codes/nn-parcel-rod/m24.html %}
+
+The training record is displayed:
+
+<center>
+    <p>
+    <figure id="figure17" style='display: table; width: 40%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure17.png" alt="Figure 17">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 17: The training record of a custom neural network</figcaption>
+    </figure>
+    </p>
+</center>
+
+and the output of the trained network is the desired (target) vector:
+
+{% include codes/nn-parcel-rod/m27.html %}
 
 <a id="section-h"></a>
 ## Industrial Fault Diagnosis of Connecting Rods in Compressors
