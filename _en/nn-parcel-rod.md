@@ -23,8 +23,8 @@ toc_icon: "cog"
 toc_sticky: true
 
 header:
-  #image: /assets/img/mca-stress-deflection/Figure6.jpg
-  #teaser: assets/img/mca-stress-deflection/Figure6.jpg
+  image: /assets/img/nn-parcel-rod/Figure28.jpg
+  teaser: assets/img/nn-parcel-rod/Figure28.jpg
 ---
 
 <br>
