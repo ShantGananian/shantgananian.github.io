@@ -27,8 +27,6 @@ header:
   #teaser: assets/img/mca-stress-deflection/Figure6.jpg
 ---
 
-<img align="right" width="25%" heighth="auto" src="/assets/img/work_in_progress.png" alt="Figure">
-
 <br>
 Creating neural networks by using MATLAB and applying it to solve technical problems like pattern recognition for correct sorting of parcels and classification for fault diagnosis of compressor connecting rods.
 
@@ -933,3 +931,200 @@ and the output of the trained network is the desired (target) vector:
 <a id="section-h"></a>
 ## Industrial Fault Diagnosis of Connecting Rods in Compressors
 
+<a id="subsection-a"></a>
+### Problem Description
+
+A connecting rod in a compressor is an important factor to guarantee the reliability of a compressor. It connects the crankshaft to the piston and moves in a linear reciprocating motion along the center of the piston inside of the cylinder. It is subjected to the periodical changing load during the operation of the compressor.
+
+In this example, cast connecting rods are considered. A common cause of failure in these rods is structural overloading, due to enormous tensile loads caused by greater inertial forces exerted on the rods. Another cause of rod failure is the generation of microcracks in the metal due to conentrated stresses because of imperfections on the rod, which ultimately leads to a fracture that causes the rod to break.
+
+A data set from $2000$ connecting rod samples is prepared that includes the recorded periodical values, along $100$ intervals, of the changing load on a connecting rod and the respective quality condition of the rod, which in turn is divided into three classes: The first class includes the rods that remained undamaged ("OK" cases), second class includes rod failure cases due to "overload" and the third class includes rod failure cases due to "crack".
+
+<a id="subsection-b"></a>
+### Objective
+
+The task is to detect, for any tested connecting rod, whether it is a defected rod (due to crack or overload) or not, from the collected data of measured periodical load values the tested rod has been carrying.
+
+<a id="subsection-c"></a>
+### Steps
+
+To accomplish this task a multilayer perceptron is used and the following steps are implemented to preprocess and postprocess the data and to create and configure the network:
+
+<ol>
+  <li><a href="#subsubsection-r">Loading and plotting the data</a></li>
+  <li><a href="#subsubsection-s">Preparing inputs: Data resampling</a></li>
+  <li><a href="#subsubsection-t">Defining binary output coding: 0=OK, 1=Error</a></li>
+  <li><a href="#subsubsection-u">Creating and training a multilayer perceptron</a></li>
+  <li><a href="#subsubsection-v">Post-training analysis and evaluating network performance</a></li>
+  <li><a href="#subsubsection-w">Application</a></li>
+</ol>
+
+<a id="subsubsection-r"></a>
+**1. Loading and plotting the data**
+
+First, all variables from the data set "data.mat" are loaded into the MATLAB workspace. To check the contents of the workspace; the names, sizes, and type of all the variables in the data set, the <code>whos</code> function is used. Then, the data is plotted in three separate graphs, <a href="#figure18">Figure 18</a>, <a href="#figure19">Figure 19</a> and <a href="#figure20">Figure 20</a>, in each one of them the data points belonging to only one of the three classes ("OK", "Overload", or "Crack") is highlighted in some specific color, while the other points are represented in cyan color.
+
+{% include codes/nn-parcel-rod/m28.html %}
+
+<center>
+    <p>
+    <figure id="figure18" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure18.png" alt="Figure 18">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 18: Data labeled "OK" are highlighted</figcaption>
+    </figure>
+    </p>
+</center>
+
+<center>
+    <p>
+    <figure id="figure19" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure19.png" alt="Figure 19">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 19: Data labeled "Overload" are highlighted</figcaption>
+    </figure>
+    </p>
+</center>
+
+<center>
+    <p>
+    <figure id="figure20" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure20.png" alt="Figure 20">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 20: Data labeled "Crack" are highlighted</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-s"></a>
+**2. Preparing inputs: Data resampling**
+
+In this case, using the full resolution of the time series data, is not necessary. Thus, to reduce the computational resources required for model training, downsampling of the input data is carried out, which allows training on a disproportionately low subset of the majority class examples. To do this, decimation, i.e. reducing the sampling frequency by a factor of $10$, is performed on the input data, which means, keeping only every tenth sample. <a href="#figure21">Figure 21</a>, <a href="#figure22">Figure 22</a> and <a href="#figure23">Figure 23</a> show the graphs of the resampled data points.
+
+{% include codes/nn-parcel-rod/m29.html %}
+
+<center>
+    <p>
+    <figure id="figure21" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure21.png" alt="Figure 21">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 21: Resampled data labeled "OK"</figcaption>
+    </figure>
+    </p>
+</center>
+
+<center>
+    <p>
+    <figure id="figure22" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure22.png" alt="Figure 22">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 22: Resampled data labeled "Overload"</figcaption>
+    </figure>
+    </p>
+</center>
+
+<center>
+    <p>
+    <figure id="figure23" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure23.png" alt="Figure 23">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 23: Resampled data labeled "Crack"</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-t"></a>
+**3. Defining binary output coding: 0=OK, 1=Error**
+
+After resampling the input data, the target data is changed to two classes, "OK" and "Error", by using a conditional statement, which loops through all the values of the cells inside the target data sheet one by one and returns a true or false state represented by the numbers $1$ or $0$, when the checked cell value is laregr than one ("Error" class) or not ("OK" class), respectively.
+
+{% include codes/nn-parcel-rod/m30.html %}
+
+<a id="subsubsection-u"></a>
+**4. Creating and training a multilayer perceptron**
+
+A feedforward network is created, by using MATLAB's feedforwardnet function, to map the input and output data. The <code>feedforwardnet</code> function generates a feedforward network consisting of a series of layers. The first layer has a connection from the network input. Each subsequent layer has a connection from the previous layer. The final layer produces the network's output. Size (number of neurons) of the hidden layers in the network is specified as a row vector. The length of the vector determines the number of hidden layers in the network. The input and output sizes are set to zero. The software adjusts the sizes of these during training according to the training data.
+
+In this case, the created feedforward network consists of a single hidden layer of size $4$ (four neurons in the layer).
+
+Then, the total data set is divided into three parts: training, validation and testing.
+
+1. The training set is used to calculate gradients and to determine weight updates.
+2. The validation set is used to stop training before overfitting occurs. The error on the validation set is monitored during the training process. The validation error normally decreases during the initial phase of training, as does the training set error. However, when the network begins to overfit the data, the error on the validation set typically begins to rise. The network weights and biases are saved at the minimum of the validation set error.
+3. The test set is used to predict future performance of the network. The test set performance is the measure of network quality. If, after a network has been trained, the test set performance is not adequate, then there are usually four possible causes:
+- the network has reached a local minimum,
+- the network does not have enough neurons to fit the data,
+- the network is overfitting, or
+- the network is extrapolating.
+
+The test set error is not used during training, but it is used to compare different models. It is also useful to plot the test set error during the training process. If the error on the test set reaches a minimum at a significantly different iteration number than the validation set error, this might indicate a poor division of the data set.
+
+Typically, when dividing the data, approximately $70%$ is used for training, $15%$ for validation, and $15%$ for testing.
+
+When the network weights and biases are initialized, the network is ready for training. MATLAB's <code>train</code> function is used for training the network. This function uses batch training (updating the weights after the presentation of the complete data set), to differentiate it from the incremental training (updating the weights after the presentation of each single training sample), which could be carried out by MATLAB's <code>adapt</code> function. The default training algorithm called by <code>train</code> is Levenberg-Marquardt <code>trainlm</code>. The training process requires a set of examples of proper network behavior,- network inputs <code>force</code> and target outputs <code>target</code>. The process of training involves tuning the values of the weights and biases of the network to optimize network performance, as defined by the network performance function. Typically one epoch of training is defined as a single presentation of all input vectors to the network. The network is then updated according to the results of all those presentations. The default performance function for feedforward networks is mean square error <code>mse</code>,- the average squared error between the network outputs $Y$ and the target outputs <code>target</code>.
+
+During training, the progress is constantly updated in the training window. Of most interest are the performance, the magnitude of the gradient of performance and the number of validation checks. The magnitude of the gradient and the number of validation checks are used to terminate the training. The gradient will become very small as the training reaches a minimum of the performance. If the magnitude of the gradient is less than $1e-5$, the training will stop. The number of validation checks represents the number of successive iterations that the validation performance fails to decrease. If this number reaches $6$ (the default value), the training will stop.
+
+{% include codes/nn-parcel-rod/m31.html %}
+
+As a result, the training record is displayed, showing training and performance functions and parameters, and the value of the best performance (the minimum error reached). In this case, the number of validation checks reached $6$ (the default value), and as a result the training stopped.
+
+<center>
+    <p>
+    <figure id="figure24" style='display: table; width: 50%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure24.png" alt="Figure 24">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 24: The training record</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-v"></a>
+**5. Post-training analysis and evaluating network performance**
+
+Before using a trained neural network, it should be analyzed to determine if the training was successful. There are many techniques for post-training analysis. Common ones could be obtained from the training window, where four plots are accessible: performance, training state, error histogram, and regression. The performance plot shows the value of the performance function versus the iteration number. It plots training, validation, and test performances. If there is no major problems with the training, then the error profiles for validation and test would be very similar. If the validation curve increases significantly, then it is possible that some overfitting might have occurred. The training state plot shows the progress of other training variables, such as the gradient magnitude, the number of validation checks, etc. The error histogram plot shows the distribution of the network errors. The regression plot shows a regression between network outputs and network targets. In a perfect training case, the network outputs and the targets would be exactly equal, but that is rarely the case in practice.
+
+From the training record, performance graph, <a href="#figure25">Figure 25</a>, and error histogram, <a href="#figure26">Figure 26</a>, could be displayed. The performance graph shows that at epoch $10$ the best performance for the validation data set was reached and the training has stopped as the number of validation checks, where the validation performance fails to decrease reached $6$, and because continuing training beyond this point leads to overfitting. The performance value for the validation data set is the average of the squares of errors, and the error is the difference between the output of the network (the observed output) and the target output (the predicted output). Smaller error indicates that the outputs are very close to the target values. The error histogram shows the errors between the target values and output values after training a neural network. The more the error values are distributed closer to zero (the orange vertical line) the better is the model's performance.
+
+<center>
+    <p>
+    <figure id="figure25" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure25.png" alt="Figure 25">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 25: The performance graph</figcaption>
+    </figure>
+    </p>
+</center>
+
+<center>
+    <p>
+    <figure id="figure26" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure26.png" alt="Figure 26">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 26: The error histogram</figcaption>
+    </figure>
+    </p>
+</center>
+
+After training, the obtained network outputs are divided into two classes by using a threshold value and a conditional statement. $0.5$ is the natural threshold that ensures that the given probability of having $1$ is greater than the probability of having $0$. That's why it's the default threshold value. Output values above the threshold are labeled $1$ and values below or equal to the threshold are labeled $0$.
+
+{% include codes/nn-parcel-rod/m32.html %}
+
+Finally the percentage of correct classifications could be calculated.
+
+{% include codes/nn-parcel-rod/m33.html %}
+
+and it equals to $99.7\%$:
+
+{% include codes/nn-parcel-rod/m34.html %}
+
+<a id="subsubsection-w"></a>
+**6. Application**
+
+After the network is trained and validated, the network object can be used to calculate the network response to any input; new data or from the loaded data set.
+
+In the next code snippet a random connecting rod is selected from the data set (here:with index number $408$) and its quality is predicted correctly by the trained network (here: quality 0="OK"), as shown in <a href="#figure27">Figure 27</a>:
+
+{% include codes/nn-parcel-rod/m35.html %}
+
+{% include codes/nn-parcel-rod/m36.html %}
+
+<center>
+    <p>
+    <figure id="figure27" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/nn-parcel-rod/Figure27.png" alt="Figure 27">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 27: </figcaption>
+    </figure>
+    </p>
+</center>
