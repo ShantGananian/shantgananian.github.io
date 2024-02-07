@@ -766,7 +766,7 @@ Resulting from the above code, the training record is displayed, showing trainin
 
 <center>
     <p>
-    <figure id="figure11" style='display: table; width: 40%; heighth: auto;'>
+    <figure id="figure11" style='display: table; width: 50%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure11.png" alt="Figure 11">
         <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 11: The training record of the trained neural network</figcaption>
     </figure>
@@ -777,7 +777,7 @@ Resulting from the above code, the training record is displayed, showing trainin
 
 <center>
     <p>
-    <figure id="figure12" style='display: table; width: 40%; heighth: auto;'>
+    <figure id="figure12" style='display: table; width: 50%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure12.png" alt="Figure 12">
         <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 12: The graphical diagram of the created neural network</figcaption>
     </figure>
@@ -857,7 +857,7 @@ This results in a graphical diagram of the structure of the defined custom neura
 
 <center>
     <p>
-    <figure id="figure14" style='display: table; width: 40%; heighth: auto;'>
+    <figure id="figure14" style='display: table; width: 50%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure14.png" alt="Figure 14">
         <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 14: The graphical diagram of the structure of the custom neural network</figcaption>
     </figure>
@@ -873,7 +873,7 @@ The next step is to define the number of neurons in each layer. In this case, $5
 
 <center>
     <p>
-    <figure id="figure15" style='display: table; width: 40%; heighth: auto;'>
+    <figure id="figure15" style='display: table; width: 50%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure15.png" alt="Figure 15">
         <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 15: The graphical diagram of the defined custom neural network</figcaption>
     </figure>
@@ -893,7 +893,7 @@ Configuration must happen before a network's weights and biases can be initializ
 
 <center>
     <p>
-    <figure id="figure16" style='display: table; width: 40%; heighth: auto;'>
+    <figure id="figure16" style='display: table; width: 50%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure16.png" alt="Figure 16">
         <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 16: The graphical diagram of the configured custom neural network</figcaption>
     </figure>
@@ -919,7 +919,7 @@ The training record is displayed:
 
 <center>
     <p>
-    <figure id="figure17" style='display: table; width: 40%; heighth: auto;'>
+    <figure id="figure17" style='display: table; width: 50%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure17.png" alt="Figure 17">
         <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 17: The training record of a custom neural network</figcaption>
     </figure>
