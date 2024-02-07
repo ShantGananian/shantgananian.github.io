@@ -1124,7 +1124,7 @@ In the next code snippet a random connecting rod is selected from the data set (
     <p>
     <figure id="figure27" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure27.png" alt="Figure 27">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 27: </figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 27: Randomly selected connecting rod data and its correctly predicted quality</figcaption>
     </figure>
     </p>
 </center>
