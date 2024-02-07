@@ -794,7 +794,7 @@ Here, $S$ is the number of neurons in layer and $R$ is the number of elements in
 
 Finally, the linear decision boundary is plotted, separateing data points belonging to the two class lables:
 
-<code>plotpc(net.iw{1,1},net.b{1});</code>
+{% include codes/nn-parcel-rod/m18.html %}
 
 <center>
     <p>
