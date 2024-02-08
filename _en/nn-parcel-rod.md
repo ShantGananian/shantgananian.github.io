@@ -716,7 +716,7 @@ To construct a perceptron for the classification of randomly defined two cluster
 ### Steps
 
 <ol>
-  <li><a href="#subsubsection-j">Defineing input and output data</a></li>
+  <li><a href="#subsubsection-j">Defining input and output data</a></li>
   <li><a href="#subsubsection-k">Creating and training the perceptron</a></li>
   <li><a href="#subsubsection-l">Plotting the decision boundary</a></li>
 </ol>
