@@ -852,7 +852,7 @@ To create a custom shallow neural network with one input and two layers, the nex
 
 - <code>numInputs</code>: Number of inputs the network receives (how many sets of vectors the network receives as input)
 - <code>numLayers</code>: Number of layers the network has (here: two layers)
-- <code>biasConnect</code>: <code>numLayers</code>-by-$1$ Boolean vector; this property defines which layers have biases (1 is presence and 0 is absence) (here: the first layer has one)
+- <code>biasConnect</code>: <code>numLayers</code>-by-$1$ Boolean vector; this property defines which layers have biases ($1$ is presence and $0$ is absence) (here: the first layer has one)
 - <code>inputConnect</code>: <code>numLayers</code>-by-<code>numInputs</code> Boolean matrix; this property defines which layers have weights coming from inputs (here: the first layer has one)
 - <code>layerConnect</code>: <code>numLayers</code>-by-<code>numLayers</code> Boolean matrix; this property defines which layers have weights coming from other layers (here: second layer has a weight coming from first layer to second layer)
 - <code>outputConnect</code>: $1$-by-<code>numLayers</code> Boolean vector; this property defines which layers generate network outputs (here: the second layer does)
