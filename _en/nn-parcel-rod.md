@@ -331,7 +331,7 @@ $$
 <a id="subsubsection-f"></a>
 **2. Finding and sketching a decision boundary**
 
-The bias and the elements of the weight matrix are chosen so that the perceptron will be able to distinguish between parcles of Type A and of Type B. For example, the perceptron is configured so that the output wil be $1$ when a Type A parcel is input and $-1$ when a Type B parcel is input. Using the concept illustrated earlier in <a href="#figure4">Figure 4</a>, there is a linear boundary that can separate Type A parcels and Type B parcels. The two prototype vectors are shown in the next two graphs, <a href="#figure8">Figure 8</a> and <a href="#figure9">Figure 9</a>. The figures show the linear boundary that divides these two vectors symmetrically, which is the $p_2, p_3$ plane.
+The bias and the elements of the weight matrix are chosen so that the perceptron will be able to distinguish between parcels of Type A and of Type B. For example, the perceptron is configured so that the output will be $1$ when a Type A parcel is input and $-1$ when a Type B parcel is input. Using the concept illustrated earlier in <a href="#figure4">Figure 4</a>, there is a linear boundary that can separate Type A parcels and Type B parcels. The two prototype vectors are shown in the next two graphs, <a href="#figure8">Figure 8</a> and <a href="#figure9">Figure 9</a>. The figures show the linear boundary that divides these two vectors symmetrically, which is the $p_2, p_3$ plane.
 
 In MATLAB:
 
@@ -421,7 +421,7 @@ which results in the following output:
 <a id="subsubsection-h"></a>
 **4. Hamming Network**
 
-The Hamming network was designed explicitly to solve binary pattern recognition problems; where each element of the input vector has only two possible values $1$ or $0$, as well as to solve a bipolar pttern recognition problem, as in this example, where the elements of the input vector have values of $1$ or $-1$. Hamming network is a clustering network. It is based on the use of fixed prototype (exemplar) vectors and a recurrent layer.
+The Hamming network was designed explicitly to solve binary pattern recognition problems; where each element of the input vector has only two possible values $1$ or $0$, as well as to solve a bipolar pattern recognition problem, as in this example, where the elements of the input vector have values of $1$ or $-1$. Hamming network is a clustering network. It is based on the use of fixed prototype (exemplar) vectors and a recurrent layer.
 
 The Hamming network has two types of layers:
 
@@ -436,7 +436,7 @@ Whenever an input is presented, the feedforward layer finds out the distance bet
 
 In this way, the objective of the Hamming network is to decide which prototype vector is closest to the input vector. This decision is indicated by the output of the recurrent layer. There is one neuron in the recurrent layer for each prototype pattern. When the recurrent layer converges, there will be only one neuron with nonzero output. This neuron indicates the prototype pattern that is closest to the input vector.
 
-The **feedforward** layer performs a **correlation**, or inner product, between each of the prototype patterns and the input pattern. For this, the rows of the weight matrix in the feedforward layer, represented by the connection matrix ${\mathbf{W}}^1$ of size $S\times R$ (here $2\times 3$), are set to the prototype patterns $$\textbf{p}_{\textbf{1}}$$ and $$\textbf{p}_{\textbf{1}}$$. $R$ is the number of elements in the input vector (here $R = 3$).
+The **feedforward** layer performs a **correlation**, or inner product, between each of the prototype patterns and the input pattern. For this, the rows of the weight matrix in the feedforward layer, represented by the connection matrix ${\mathbf{W}}^1$ of size $S\times R$ (here $2\times 3$), are set to the prototype patterns $$\textbf{p}_{\textbf{1}}$$ and $$\textbf{p}_{\textbf{2}}$$. $R$ is the number of elements in the input vector (here $R = 3$).
 
 For this illustrative example this would mean:
 
