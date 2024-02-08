@@ -487,7 +487,7 @@ thus, the outputs of the feedforward layer are equal to $2R$ minus twice the Ham
 
 The **recurrent** layer of the Hamming network is what is known as a **competitive** layer. The neurons in this layer are initialized with the outputs of the feedforward layer, which indicate the correlation between the prototype patterns and the input vector. Then the neurons compete with each other to determine a winner. After the competition is completed, only one neuron (the winner) in the group will have a nonzero output. This most extreme form of competition among a group of neurons is called Winner-Take-All. The winning neuron indicates which category of input was presented to the network.
 
-The recurrent lyer has $S$ neurons that are fully interconnected, each neuron is connected to every other neuron in the layer, including itself. The transfer function used by the neurons is the <code>poslin</code> transfer function, a positive-linear function, which is linear for positive values and zero for negative values.
+The recurrent layer has $S$ neurons that are fully interconnected, each neuron is connected to every other neuron in the layer, including itself. The transfer function used by the neurons is the <code>poslin</code> transfer function, a positive-linear function, which is linear for positive values and zero for negative values.
 
 The weights of the recurrent layer are symmetrical, fixed and are given by:
 
@@ -522,7 +522,7 @@ $$
 \textbf{a}^{2}(t+1) = \textbf{poslin}(\textbf{W}^{2}\textbf{a}^{2}(t))
 $$
 
-where $$\textbf{a}^{2}(t)$$, $S\times 1$ column vector matrix, is the output of the recurrent layer at time (or iteration) $t = 1, 2, 3...$
+where $$\textbf{a}^{2}(t)$$, $S\times 1$ column vector matrix, is the output of the recurrent layer at time (or iteration) $t = 1, 2, 3...$.
 
 $$
 \Rightarrow \textbf{a}^{2}(t+1) =  \textbf{poslin}\left(\textbf{n}^{2}(t+1)\right)
@@ -541,7 +541,7 @@ $$
  a_{2}^{2}(t)-\epsilon \ast a_{1}^{2}(t)} \right]\right)
 $$
 
-This means that with each iteration in the recurrent layer and for a given neuron $i = 1,...,S$, each ouput element $$a_{i}^{2}(t)$$ is reduced by the same fraction of the other neuron $j$; i.e. $$-\epsilon \ast a_{j}^{2}(t)$$.
+This means that with each iteration in the recurrent layer and for a given neuron $i = 1,...,S$, each output element $$a_{i}^{2}(t)$$ is reduced by the same fraction of the other neuron $j$; i.e. $$-\epsilon \ast a_{j}^{2}(t)$$.
 
 In general, the net input $$\text{n}_{i}^{2}(t)$$ the neuron receives into its activation function at time $t$:
 
@@ -561,7 +561,7 @@ The question is how large a value can be used for $$\epsilon$$ for fast converge
  - $\epsilon$ too small: takes too long to converge (more iterations required)
  - $\epsilon$ too big: may suppress the entire network (no winner can be found since all the activations are driven to zero in one single step)
 
-The fastest convergence can be achieved if an $\epsilon$ can be chosen such that the activations of all neurons except the winning one are driven to zero in one iteration. *If* it was *known* that, for example, the neuron $k$ has the largest final output $$a_{k}^{2}$$, then by choosing $\epsilon$ to be slightly less than $$\epsilon_{max} $$:
+The fastest convergence can be achieved if an $\epsilon$ can be chosen such that the activations of all neurons except the winning one are driven to zero in one iteration. *If* it was *known* that, for example, the neuron $k$ has the largest final output $$a_{k}^{2}$$, then by choosing $\epsilon$ to be slightly less than $$\epsilon_{max}$$:
 
 $$
 \epsilon_{max} = \frac{a_{k}^{2}(t)}{\sum_{j\neq k}^{S}a_{j}^{2}(t)} = \frac{1}{\sum_{j\neq k}^{S}\frac{a_{j}^{2}(t)}{a_{k}^{2}(t)}}
@@ -681,7 +681,7 @@ $$
 \text{a}_{3}(t+1) = \textbf{satlins}(1.2\text{a}_{3}(t))
 $$
 
-This means that regardless of the initial values, $\text{a}_{i}(0)$, the first and third elements are multiplied by a number larger than $1$. Therefore, if the initial value of this element is negative, it will eventually saturate at $-1$; otherwise it will saturates at $1$. The second element will be dereased until it saturates at $-1$.
+This means that regardless of the initial values, $\text{a}_{i}(0)$, the first and third elements are multiplied by a number larger than $1$. Therefore, if the initial value of this element is negative, it will eventually saturate at $-1$; otherwise it will saturates at $1$. The second element will be decreased until it saturates at $-1$.
 
 Like before, considering the input pattern of the not-so-perfect Type B parcel, $\textbf{p} = \left[\matrix{ -1\cr 1\cr -1} \right]$, to test the Hopfield network, the outputs for the first three iterations would be:
 
