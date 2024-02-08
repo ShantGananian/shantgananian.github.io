@@ -796,11 +796,11 @@ Resulting from the above code, the training record is displayed, showing trainin
 After the network is trained, the next step is to plot the classification line on the previously plotted perceptron vector plot. This is done by <code>plotpc</code> function, which takes two arguments as input:
 
 - The first one is $S$-by-$R$ weight matrix, <code>net.iw{1,1}</code>, which is the final weight matrix after training. $$\left\{ 1,1 \right\}$$ indicates to the weights for the connection from the first input to the first layer, 
-- and the second argument is $S$-by-$1$ bias vector, <code>net.b{1}</code>, which is the final bias vector after training, for the first layer. 
+- and the second argument is $S$-by-$1$ bias vector, <code>net.b{1}</code>, which is the final bias vector after training, for the first layer.
 
 Here, $S$ is the number of neurons in layer and $R$ is the number of elements in input vector.
 
-Finally, the linear decision boundary is plotted, separateing data points belonging to the two class lables:
+Finally, the linear decision boundary is plotted, separating data points belonging to the two class labels:
 
 {% include codes/nn-parcel-rod/m18.html %}
 
@@ -828,7 +828,7 @@ This example shows how to create and view a custom shallow neural network in MAT
   <li><a href="#subsubsection-m">Defining the inputs and outputs</a></li>
   <li><a href="#subsubsection-n">Defining and customizing the network (number of network subobjects)</a></li>
   <li><a href="#subsubsection-o">Defining the topology (network subobject properties) and the transfer function</a></li>
-  <li><a href="#subsubsection-p">Configuring the network with configure</a></li>
+  <li><a href="#subsubsection-p">Configuring the network with <code>configure</code></a></li>
   <li><a href="#subsubsection-q">Training the network and calculating neuron output</a></li>
 </ol>
 
@@ -887,7 +887,7 @@ The next step is to define the number of neurons in each layer. In this case, $5
 </center>
 
 <a id="subsubsection-p"></a>
-**4. Configuring the network with configure**
+**4. Configuring the network with <code>configure</code>**
 
 Configuration is the process of setting network input and output sizes and ranges, input preprocessing settings and output postprocessing settings, and weight initialization settings to match input and target data.
 
