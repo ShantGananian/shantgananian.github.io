@@ -613,15 +613,23 @@ so, any number for $$\epsilon$$ smaller than $1$ will lead to faster convergence
 The first iteration $(t=1)$ of the recurrent layer produces:
 
 $$
-\textbf{a}^{2}(1) =  \textbf{poslin}\left(\textbf{W}^{2}\textbf{a}^{2}(0)\right)= \textbf{poslin}\left(\left[ \matrix{
-1 &  -0.5 \cr -0.5& 1} \right] \cdot \left[ \matrix{0 \cr 4} \right]\right) = \textbf{poslin}\left(\left[ \matrix{-2 \cr 4} \right] \right)= \left[ \matrix{0 \cr 4} \right]
+\textbf{a}^{2}(1) =  \textbf{poslin}\left(\textbf{W}^{2}\textbf{a}^{2}(0)\right)
+\\
+= \textbf{poslin}\left(\left[ \matrix{
+1 &  -0.5 \cr -0.5& 1} \right] \cdot \left[ \matrix{0 \cr 4} \right]\right)
+\\
+= \textbf{poslin}\left(\left[ \matrix{-2 \cr 4} \right] \right)= \left[ \matrix{0 \cr 4} \right]
 $$
 
 The second iteration $(t=2)$ produces:
 
 $$
-\textbf{a}^{2}(2) =  \textbf{poslin}\left(\textbf{W}^{2}\textbf{a}^{2}(1)\right)= \textbf{poslin}\left(\left[ \matrix{
-1 &  -0.5 \cr -0.5& 1} \right] \cdot \left[ \matrix{0 \cr 4} \right]\right) = \textbf{poslin}\left(\left[ \matrix{-2 \cr 4} \right] \right)= \left[ \matrix{0 \cr 4} \right]
+\textbf{a}^{2}(2) =  \textbf{poslin}\left(\textbf{W}^{2}\textbf{a}^{2}(1)\right)
+\\
+= \textbf{poslin}\left(\left[ \matrix{
+1 &  -0.5 \cr -0.5& 1} \right] \cdot \left[ \matrix{0 \cr 4} \right]\right)
+\\
+= \textbf{poslin}\left(\left[ \matrix{-2 \cr 4} \right] \right)= \left[ \matrix{0 \cr 4} \right]
 $$
 
 Since the outputs of successive iterations produce the same result, the network has converged. Prototype pattern number two, the **Type B** parcel, is chosen as the correct match, since neuron number two has the only nonzero output. This is the correct choice, since the Hamming distance from the Type A prototype to the input pattern is $3$, and the Hamming distance from the Type B prototype to the input pattern is $1$.
