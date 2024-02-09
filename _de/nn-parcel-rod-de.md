@@ -407,13 +407,13 @@ Die Prüfung der Funktionsweise des Perzeptron-Musterklassifikators zeigt, dass 
 - Pakete des Typs A (mittelgroß, rechteckig, schwerer als 10 Kilogramm):
 
 $$
-a = hardlims\left[ \left[\matrix{ 1 & 0 & 0} \right] \cdot \left[\matrix{ 1\cr -1\cr 1} \right]+0\right] = 1 \quad (Typ A),
+a = hardlims\left[ \left[\matrix{ 1 & 0 & 0} \right] \cdot \left[\matrix{ 1\cr -1\cr 1} \right]+0\right] = 1
 $$
 
 - Paket des Typs B (Paket, rechteckig, bis 10 Kilogramm):
 
 $$
-a = hardlims\left[ \left[\matrix{ 1 & 0 & 0} \right] \cdot \left[\matrix{ -1\cr -1\cr -1} \right]+0\right] = -1 \quad (Typ B).
+a = hardlims\left[ \left[\matrix{ 1 & 0 & 0} \right] \cdot \left[\matrix{ -1\cr -1\cr -1} \right]+0\right] = -1
 $$
 
 Wenn jedoch ein nicht so perfektes Paket des Typs B in den Klassifikator eingegeben wird, wird beispielsweise ein Paket des Typs B, das eher rund ist, durch die Sensoren geleitet. Der Eingabevektor würde dann sein:
@@ -422,10 +422,10 @@ $$
 \textbf{p} = \left[\matrix{ -1\cr 1\cr -1} \right]
 $$
 
-Die Antwort des Netzes wäre:
+Die Antwort des Netzes wäre vom Typ B:
 
 $$
-a = hardlims\left[ \left[\matrix{ 1 & 0 & 0} \right] \cdot \left[\matrix{ -1\cr 1\cr -1} \right]+0\right] = -1 \quad (Typ B).
+a = hardlims\left[ \left[\matrix{ 1 & 0 & 0} \right] \cdot \left[\matrix{ -1\cr 1\cr -1} \right]+0\right] = -1
 $$
 
 In der Tat wird jeder Eingangsvektor, der näher am Prototyp-Vektor vom Typ B als am Prototyp-Vektor vom Typ A (im euklidischen Abstand) liegt, als Typ B eingestuft (und umgekehrt).
@@ -491,7 +491,10 @@ Die Ausgabe der Feedforward-Schicht wäre:
 $$
 \text{a}^{1} =
 \left[
-\left[\matrix{ 1 &-1& 1\cr -1 &-1 &-1} \right] \cdot \left[\matrix{1 \cr 1 \cr 1}\right]+ \left[\matrix{ 3\cr 3} \right]  \right] = \left[\matrix{ 1\cr -3}\right] +\left[\matrix{ 3\cr 3}\right] = \left[\matrix{ 4\cr 0}
+\left[\matrix{ 1 &-1& 1\cr -1 &-1 &-1} \right] \cdot \left[\matrix{1 \cr 1 \cr 1}\right]+ \left[\matrix{ 3\cr 3} \right]  \right]
+$$
+$$
+= \left[\matrix{ 1\cr -3}\right] +\left[\matrix{ 3\cr 3}\right] = \left[\matrix{ 4\cr 0}
 \right]
 $$
 
@@ -499,7 +502,10 @@ könnte dies folgendermaßen geschrieben werden:
 
 $$
 \text{a}^{1} = \left[\matrix{ 4\cr 0} \right] = \left [\matrix{ 2*(3-1)\cr 2*(3-3)}
-\right]= 2 * \left [\matrix{ 3-1\cr 3-3}\right] = 2 * \left [\matrix{ R-1\cr R-3}
+\right]
+$$
+$$
+= 2 * \left [\matrix{ 3-1\cr 3-3}\right] = 2 * \left [\matrix{ R-1\cr R-3}
 \right]
 $$
 
@@ -616,7 +622,10 @@ Zur Veranschaulichung der Funktionsweise des Hamming-Netzes werden die beiden Pr
 $$
 \text{a}^{1} =
 \left[
-\left[\matrix{ 1 &-1& 1\cr -1 &-1 &-1} \right] \cdot \left[\matrix{-1 \cr 1 \cr -1}\right]+ \left[\matrix{ 3\cr 3} \right]  \right] = \left[\matrix{ -3\cr 1}\right] +\left[\matrix{ 3\cr 3}\right] = \left[\matrix{ 0\cr 4}
+\left[\matrix{ 1 &-1& 1\cr -1 &-1 &-1} \right] \cdot \left[\matrix{-1 \cr 1 \cr -1}\right]+ \left[\matrix{ 3\cr 3} \right]  \right]
+$$
+$$
+= \left[\matrix{ -3\cr 1}\right] +\left[\matrix{ 3\cr 3}\right] = \left[\matrix{ 0\cr 4}
 \right]
 $$
 
@@ -734,7 +743,10 @@ Das bedeutet, dass unabhängig von den Anfangswerten, $\text{a}_{i}(0)$, das ers
 Betrachtet man wie zuvor das Eingabemuster des nicht ganz perfekten Pakets vom Typ B, $\textbf{p} = \left[\matrix{ -1\cr 1\cr -1} \right]$, um das Hopfield-Netz zu testen, so würden die Ausgaben für die ersten drei Iterationen lauten:
 
 $$
-\textbf{a}(0) = \left[\matrix{ -1\cr 1\cr -1} \right], \ \textbf{a}(1) = \left[\matrix{ -1\cr -0.7\cr -1} \right], \ \textbf{a}(2) = \left[\matrix{ -1\cr -1\cr -1} \right], \ \textbf{a}(3) = \left[\matrix{ -1\cr -1\cr -1} \right]
+\textbf{a}(0) = \left[\matrix{ -1\cr 1\cr -1} \right], \ \textbf{a}(1) = \left[\matrix{ -1\cr -0.7\cr -1} \right],
+$$
+$$
+\textbf{a}(2) = \left[\matrix{ -1\cr -1\cr -1} \right], \ \textbf{a}(3) = \left[\matrix{ -1\cr -1\cr -1} \right]
 $$
 
 Das Netz konvergierte zum Parzellenmuster des Typs B, ebenso wie das Hamming-Netz und das Perzeptron, obwohl jedes Netz auf unterschiedliche Weise arbeitete. Das Perzeptron hatte einen einzigen Ausgang, der die Werte $-1$ (Typ B-Parzelle) oder $1$ (Typ A-Parzelle) annehmen konnte. Im Hamming-Netz zeigte das einzelne Neuron ungleich Null an, welches Prototyp-Muster die ähnlichste Übereinstimmung aufwies. Wenn das erste Neuron ungleich Null war, bedeutete dies eine Parzelle vom Typ A, und wenn das zweite Neuron ungleich Null war, bedeutete dies ein Muster vom Typ B. Im Hopfield-Netz erscheint das Prototyp-Muster selbst am Ausgang des Netzes.

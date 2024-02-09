@@ -403,13 +403,13 @@ Testing the operation of the perceptron pattern classifier shows that it classif
 - Type A (medium size, rectangular, heavier than 10 kilograms) parcel:
 
 $$
-a = hardlims\left[ \left[\matrix{ 1 & 0 & 0} \right] \cdot \left[\matrix{ 1\cr -1\cr 1} \right]+0\right] = 1 \quad (Type A),
+a = hardlims\left[ \left[\matrix{ 1 & 0 & 0} \right] \cdot \left[\matrix{ 1\cr -1\cr 1} \right]+0\right] = 1
 $$
 
 - Type B (packet, rectangular, equal or less than 10 kilograms) parcel:
 
 $$
-a = hardlims\left[ \left[\matrix{ 1 & 0 & 0} \right] \cdot \left[\matrix{ -1\cr -1\cr -1} \right]+0\right] = -1 \quad (Type B).
+a = hardlims\left[ \left[\matrix{ 1 & 0 & 0} \right] \cdot \left[\matrix{ -1\cr -1\cr -1} \right]+0\right] = -1
 $$
 
 However, if a not-so-perfect Type B parcel was put into the classifier, for example a Type B  parcel, which is rather round shaped, is passed through the sensors. The input vector would then be
@@ -418,10 +418,10 @@ $$
 \textbf{p} = \left[\matrix{ -1\cr 1\cr -1} \right]
 $$
 
-The response of the network would be
+The response of the network would be Type B:
 
 $$
-a = hardlims\left[ \left[\matrix{ 1 & 0 & 0} \right] \cdot \left[\matrix{ -1\cr 1\cr -1} \right]+0\right] = -1 \quad (Type B).
+a = hardlims\left[ \left[\matrix{ 1 & 0 & 0} \right] \cdot \left[\matrix{ -1\cr 1\cr -1} \right]+0\right] = -1
 $$
 
 In fact, any input vector that is closer to the Type B prototype vector, rather than to the Type A prototype vector (in Euclidean distance), will be classified as an Type B (and vice versa).
@@ -487,7 +487,10 @@ The output of the feedforward layer would be:
 $$
 \text{a}^{1} =
 \left[
-\left[\matrix{ 1 &-1& 1\cr -1 &-1 &-1} \right] \cdot \left[\matrix{1 \cr 1 \cr 1}\right]+ \left[\matrix{ 3\cr 3} \right]  \right] = \left[\matrix{ 1\cr -3}\right] +\left[\matrix{ 3\cr 3}\right] = \left[\matrix{ 4\cr 0}
+\left[\matrix{ 1 &-1& 1\cr -1 &-1 &-1} \right] \cdot \left[\matrix{1 \cr 1 \cr 1}\right]+ \left[\matrix{ 3\cr 3} \right]  \right]
+$$
+$$
+= \left[\matrix{ 1\cr -3}\right] +\left[\matrix{ 3\cr 3}\right] = \left[\matrix{ 4\cr 0}
 \right]
 $$
 
@@ -495,7 +498,10 @@ this could be written in the following way:
 
 $$
 \text{a}^{1} = \left[\matrix{ 4\cr 0} \right] = \left [\matrix{ 2*(3-1)\cr 2*(3-3)}
-\right]= 2 * \left [\matrix{ 3-1\cr 3-3}\right] = 2 * \left [\matrix{ R-1\cr R-3}
+\right]
+$$
+$$
+= 2 * \left [\matrix{ 3-1\cr 3-3}\right] = 2 * \left [\matrix{ R-1\cr R-3}
 \right]
 $$
 
@@ -612,7 +618,10 @@ To illustrate the operation of the Hamming network, considering the two prototyp
 $$
 \text{a}^{1} =
 \left[
-\left[\matrix{ 1 &-1& 1\cr -1 &-1 &-1} \right] \cdot \left[\matrix{-1 \cr 1 \cr -1}\right]+ \left[\matrix{ 3\cr 3} \right]  \right] = \left[\matrix{ -3\cr 1}\right] +\left[\matrix{ 3\cr 3}\right] = \left[\matrix{ 0\cr 4}
+\left[\matrix{ 1 &-1& 1\cr -1 &-1 &-1} \right] \cdot \left[\matrix{-1 \cr 1 \cr -1}\right]+ \left[\matrix{ 3\cr 3} \right]  \right]
+$$
+$$
+= \left[\matrix{ -3\cr 1}\right] +\left[\matrix{ 3\cr 3}\right] = \left[\matrix{ 0\cr 4}
 \right]
 $$
 
@@ -730,7 +739,10 @@ This means that regardless of the initial values, $\text{a}_{i}(0)$, the first a
 Like before, considering the input pattern of the not-so-perfect Type B parcel, $\textbf{p} = \left[\matrix{ -1\cr 1\cr -1} \right]$, to test the Hopfield network, the outputs for the first three iterations would be:
 
 $$
-\textbf{a}(0) = \left[\matrix{ -1\cr 1\cr -1} \right], \ \textbf{a}(1) = \left[\matrix{ -1\cr -0.7\cr -1} \right], \ \textbf{a}(2) = \left[\matrix{ -1\cr -1\cr -1} \right], \ \textbf{a}(3) = \left[\matrix{ -1\cr -1\cr -1} \right]
+\textbf{a}(0) = \left[\matrix{ -1\cr 1\cr -1} \right], \ \textbf{a}(1) = \left[\matrix{ -1\cr -0.7\cr -1} \right],
+$$
+$$
+\textbf{a}(2) = \left[\matrix{ -1\cr -1\cr -1} \right], \ \textbf{a}(3) = \left[\matrix{ -1\cr -1\cr -1} \right]
 $$
 
 The network has converged to the Type B parcel pattern, as did both the Hamming network and the perceptron, although each network operated in a different way. The perceptron had a single output, which could take on values of $-1$ (Type B parcel) or $1$ (Type A parcel). In the Hamming network the single nonzero neuron indicated which prototype pattern had the closest match. If the first neuron was nonzero, that indicated Type A parcel, and if the second neuron was nonzero, that indicated Type B pattern. In the Hopfield network the prototype pattern itself appears at the output of the network.
