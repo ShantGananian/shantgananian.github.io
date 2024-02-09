@@ -530,17 +530,25 @@ wobei $$\textbf{a}^{2}(t)$$, $S\times 1$ Spaltenvektormatrix, die Ausgabe der re
 
 $$
 \Rightarrow \textbf{a}^{2}(t+1) =  \textbf{poslin}\left(\textbf{n}^{2}(t+1)\right)
-\\
+$$
+
+$$
 = \textbf{poslin}\left(\left[ \matrix{
 1 &  -\epsilon \cr
  -\epsilon& 1} \right]\textbf{a}^{2}(t)\right)
-\\
+$$
+
+$$
 = \textbf{poslin}\left(\left[ \matrix{
 1 &  -\epsilon \cr -\epsilon& 1} \right] \cdot \left[ \matrix{a_{1}^{2}(t) \cr a_{2}^{2}(t)} \right]\right)
-\\
+$$
+
+$$
 = \textbf{poslin}\left(\left[ \matrix{a_{1}^{2}(t)   -\epsilon \ast a_{2}^{2}(t) \cr
  -\epsilon \ast a_{1}^{2}(t)+ a_{2}^{2}(t)} \right]\right)
-\\
+$$
+
+$$
 = \textbf{poslin}\left(\left[ \matrix{a_{1}^{2}(t)   -\epsilon \ast a_{2}^{2}(t) \cr
  a_{2}^{2}(t)-\epsilon \ast a_{1}^{2}(t)} \right]\right)
 $$
@@ -618,10 +626,14 @@ Die erste Iteration $(t=1)$ der rekurrenten Schicht ergibt:
 
 $$
 \textbf{a}^{2}(1) =  \textbf{poslin}\left(\textbf{W}^{2}\textbf{a}^{2}(0)\right)
-\\
+$$
+
+$$
 = \textbf{poslin}\left(\left[ \matrix{
 1 &  -0.5 \cr -0.5& 1} \right] \cdot \left[ \matrix{0 \cr 4} \right]\right)
-\\
+$$
+
+$$
 = \textbf{poslin}\left(\left[ \matrix{-2 \cr 4} \right] \right)= \left[ \matrix{0 \cr 4} \right]
 $$
 
@@ -629,10 +641,14 @@ Die zweite Iteration $(t=2)$ ergibt:
 
 $$
 \textbf{a}^{2}(2) =  \textbf{poslin}\left(\textbf{W}^{2}\textbf{a}^{2}(1)\right)
-\\
+$$
+
+$$
 = \textbf{poslin}\left(\left[ \matrix{
 1 &  -0.5 \cr -0.5& 1} \right] \cdot \left[ \matrix{0 \cr 4} \right]\right)
-\\
+$$
+
+$$
 = \textbf{poslin}\left(\left[ \matrix{-2 \cr 4} \right] \right)= \left[ \matrix{0 \cr 4} \right]
 $$
 
@@ -687,9 +703,13 @@ Die Funktionsgleichungen des Hopfield-Netzes lauten unter Verwendung der oben ge
 
 $$
 \text{a}_{1}(t+1) = \textbf{satlins}(1.2\text{a}_{1}(t))
-\\
+$$
+
+$$
 \text{a}_{2}(t+1) = \textbf{satlins}(0.2\text{a}_{2}(t)-0.9)
-\\
+$$
+
+$$
 \text{a}_{3}(t+1) = \textbf{satlins}(1.2\text{a}_{3}(t))
 $$
 
