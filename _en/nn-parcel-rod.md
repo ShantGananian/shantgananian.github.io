@@ -171,11 +171,27 @@ Considering a two-input perceptron with one neuron as shown in Figure 2 above an
 
 In the case of single neuron, the scalar net input $n$ to the tranfer function $f$, which produces the scalar neuron output $a$, is given by:
 
-$$n=\ \mathit{\mathbf{p}}*\ {\mathit{\mathbf{W}}}^T +b={\left[\begin{array}{cc}
-p_1  & p_2 
-\end{array}\right]}\cdot {\left[\begin{array}{cc}
-4  & -2 
-\end{array}\right]^{T}} -3=4p_1 -2p_2 -3$$
+<ul style='list-style-type: none'>
+    <li>
+    $$
+    n=\ \mathit{\mathbf{p}}*\ {\mathit{\mathbf{W}}}^T +b
+    $$
+    </li>
+    <li>
+    $$
+    ={\left[\begin{array}{cc}
+    p_1  & p_2 
+    \end{array}\right]}\cdot {\left[\begin{array}{cc}
+    4  & -2 
+    \end{array}\right]^{T}} -3
+    $$
+    </li>
+    <li>
+    $$
+    =4p_1 -2p_2 -3
+    $$
+    </li>
+</ul>
 
 
 <a id="subsubsection-b"></a>

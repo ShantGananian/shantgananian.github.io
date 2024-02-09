@@ -174,11 +174,27 @@ Als Beispiel für ein Zwei-Eingabe-Perzeptron mit einem Neuron, wie in Abbildung
 
 Im Falle eines einzelnen Neurons ist die skalare Nettoeingabe $n$ für die Übertragungsfunktion $f$, die die skalare Neuronenausgabe $a$ erzeugt, gegeben durch:
 
-$$n=\ \mathit{\mathbf{p}}*\ {\mathit{\mathbf{W}}}^T +b={\left[\begin{array}{cc}
-p_1  & p_2 
-\end{array}\right]}\cdot {\left[\begin{array}{cc}
-4  & -2 
-\end{array}\right]^{T}} -3=4p_1 -2p_2 -3$$
+<ul style='list-style-type: none'>
+    <li>
+    $$
+    n=\ \mathit{\mathbf{p}}*\ {\mathit{\mathbf{W}}}^T +b
+    $$
+    </li>
+    <li>
+    $$
+    ={\left[\begin{array}{cc}
+    p_1  & p_2 
+    \end{array}\right]}\cdot {\left[\begin{array}{cc}
+    4  & -2 
+    \end{array}\right]^{T}} -3
+    $$
+    </li>
+    <li>
+    $$
+    =4p_1 -2p_2 -3
+    $$
+    </li>
+</ul>
 
 <a id="subsubsection-b"></a>
 **2. Festlegung des Eingangsvektors**
