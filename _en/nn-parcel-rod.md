@@ -526,17 +526,25 @@ where $$\textbf{a}^{2}(t)$$, $S\times 1$ column vector matrix, is the output of 
 
 $$
 \Rightarrow \textbf{a}^{2}(t+1) =  \textbf{poslin}\left(\textbf{n}^{2}(t+1)\right)
-\\
+$$
+
+$$
 = \textbf{poslin}\left(\left[ \matrix{
 1 &  -\epsilon \cr
  -\epsilon& 1} \right]\textbf{a}^{2}(t)\right)
-\\
+$$
+
+$$
 = \textbf{poslin}\left(\left[ \matrix{
 1 &  -\epsilon \cr -\epsilon& 1} \right] \cdot \left[ \matrix{a_{1}^{2}(t) \cr a_{2}^{2}(t)} \right]\right)
-\\
+$$
+
+$$
 = \textbf{poslin}\left(\left[ \matrix{a_{1}^{2}(t)   -\epsilon \ast a_{2}^{2}(t) \cr
  -\epsilon \ast a_{1}^{2}(t)+ a_{2}^{2}(t)} \right]\right)
-\\
+$$
+
+$$
 = \textbf{poslin}\left(\left[ \matrix{a_{1}^{2}(t)   -\epsilon \ast a_{2}^{2}(t) \cr
  a_{2}^{2}(t)-\epsilon \ast a_{1}^{2}(t)} \right]\right)
 $$
