@@ -79,7 +79,6 @@ The linear transfer function simply calculates the neuron's output by simply ret
 
 The following code computes and plots these four activation functions for a net input $n$:
 
-{% include codes/nn-parcel-rod/m1.html %}
 
 <center>
     <p>
@@ -167,7 +166,6 @@ Calculating the output of a simple neuron.
 
 Considering a two-input perceptron with one neuron as shown in Figure 2 above and assigning the following values for the weights and bias as follows: 
 
-{% include codes/nn-parcel-rod/m2.html %}
 
 In the case of single neuron, the scalar net input $n$ to the tranfer function $f$, which produces the scalar neuron output $a$, is given by:
 
@@ -197,7 +195,6 @@ In the case of single neuron, the scalar net input $n$ to the tranfer function $
 <a id="subsubsection-b"></a>
 **2. Defining the input vector**
 
-{% include codes/nn-parcel-rod/m3.html %}
 
 
 <a id="subsubsection-c"></a>
@@ -205,9 +202,7 @@ In the case of single neuron, the scalar net input $n$ to the tranfer function $
 
 The output of this network is determined by a transfer function, for example the hyperbolic tangent sigmoid transfer function <code>tansig</code>.
 
-{% include codes/nn-parcel-rod/m4.html %}
 
-{% include codes/nn-parcel-rod/m5.html %}
 
 <a id="subsubsection-d"></a>
 **4. Plotting neuron output over the range of inputs**
@@ -220,7 +215,6 @@ The types of the inputs and outputs depend on the function, in this case: the hy
 
 To plot the inputs and outputs in a 3-D plot by using MATLAB function <code>plot3</code>, the inputs and the output matrices must have at least one dimension that is same size. However, here the input and output matrices don't have a same size dimension, thus, <code>reshape</code> function is used to reshape the output column vector <code>a</code> and return a reshaped array <code>a</code> of the size: $length\left(p_{1} \right) \times length\left(p_{2} \right)$. 
 
-{% include codes/nn-parcel-rod/m6.html %}
 
 <center>
     <p>
@@ -233,7 +227,6 @@ To plot the inputs and outputs in a 3-D plot by using MATLAB function <code>plot
 
 The next lines of code shows the top view of the input-output space plot, <a href="#figure6">Figure 6</a>, which is the input-space, where the intersection of the decision boundary with the transfer function curves is a line, similar to the linear separator previously illustrated in <a href="#figure4">Figure 4</a>.
 
-{% include codes/nn-parcel-rod/m7.html %}
 
 <center>
     <p>
@@ -351,11 +344,9 @@ The bias and the elements of the weight matrix are chosen so that the perceptron
 
 In MATLAB:
 
-{% include codes/nn-parcel-rod/m8.html %}
 
 The MATLAB code for the user created function <code>viewProtypeVect</code>, used in the previous code to plot both views, is as follows:
 
-{% include codes/nn-parcel-rod/m9.html %}
 
 <center>
     <p>
@@ -428,11 +419,9 @@ In fact, any input vector that is closer to the Type B prototype vector, rather 
 
 In MATLAB, this perceptron design could be coded in the following way:
 
-{% include codes/nn-parcel-rod/m10.html %}
 
 which results in the following output:
 
-{% include codes/nn-parcel-rod/m11.html %}
 
 <a id="subsubsection-h"></a>
 **4. Hamming Network**
@@ -677,11 +666,9 @@ Since the outputs of successive iterations produce the same result, the network 
 
 This Hamming network design could be coded in MATLAB in the following way:
 
-{% include codes/nn-parcel-rod/m12.html %}
 
 which results in the following output:
 
-{% include codes/nn-parcel-rod/m13.html %}
 
 <a id="subsubsection-i"></a>
 **5. Hopfield Network**
@@ -749,11 +736,9 @@ The network has converged to the Type B parcel pattern, as did both the Hamming 
 
 This Hopfield network design could be coded in MATLAB in the following way:
 
-{% include codes/nn-parcel-rod/m14.html %}
 
 which results in the following output:
 
-{% include codes/nn-parcel-rod/m15.html %}
 
 <a id="section-f"></a>
 ## Classification of Linearly Separable Data with a Perceptron
@@ -786,7 +771,6 @@ To assign the vectors in the matrix $p$ to one of the two classes, a second matr
 
 To plot the input and target vectors of the perceptron, the perceptron vector plot <code>plotpv</code> function is used, which takes two arguments, the first is the input matrix and the second is the target matrix. This plots column vectors in the input matrix with markers based on the output matrix.
 
-{% include codes/nn-parcel-rod/m16.html %}
 
 The above code plots the samples:
 
@@ -814,7 +798,6 @@ The training function for perceptron is set to <code>trainc</code> by default, w
 
 To measure the network performance, mean absolute error performance function, <code>mae</code>, is used by default. The error is calculated by subtracting the output from target. Then the mean absolute error is calculated. The goal is to minimize the performance, i.e. the error.
 
-{% include codes/nn-parcel-rod/m17.html %}
 
 Resulting from the above code, the training record is displayed, showing training and performance functions and parameters, and the value of the best performance (the minimum error reached).
 
@@ -850,7 +833,6 @@ Here, $S$ is the number of neurons in layer and $R$ is the number of elements in
 
 Finally, the linear decision boundary is plotted, separating data points belonging to the two class labels:
 
-{% include codes/nn-parcel-rod/m18.html %}
 
 <center>
     <p>
@@ -883,11 +865,9 @@ This example shows how to create and view a custom shallow neural network in MAT
 <a id="subsubsection-m"></a>
 **1. Defining the inputs and outputs**
 
-{% include codes/nn-parcel-rod/m19.html %}
 
 The above code creates the input and output (target) vectors.
 
-{% include codes/nn-parcel-rod/m25.html %}
 
 <a id="subsubsection-n"></a>
 **2. Defining and customizing the network (number of network subobjects)**
@@ -905,7 +885,6 @@ To create a custom shallow neural network with one input and two layers, the nex
 - <code>layerConnect</code>: <code>numLayers</code>-by-<code>numLayers</code> Boolean matrix; this property defines which layers have weights coming from other layers (here: second layer has a weight coming from first layer to second layer)
 - <code>outputConnect</code>: $1$-by-<code>numLayers</code> Boolean vector; this property defines which layers generate network outputs (here: the second layer does)
 
-{% include codes/nn-parcel-rod/m20.html %}
 
 This results in a graphical diagram of the structure of the defined custom neural network:
 
@@ -923,7 +902,6 @@ This results in a graphical diagram of the structure of the defined custom neura
 
 The next step is to define the number of neurons in each layer. In this case, $5$ neurons are assigned to the first layer, and none to the second layer. Then, logistic sigmoid transfer function, <code>logsig</code>, is assigned to the first layer. To the second layer, linear transfer function, <code>purelin</code>, is assigned by default.
 
-{% include codes/nn-parcel-rod/m21.html %}
 
 <center>
     <p>
@@ -943,7 +921,6 @@ The <code>configure</code> function configures network inputs and outputs to bes
 
 Configuration must happen before a network's weights and biases can be initialized. Unconfigured networks are automatically configured and initialized the first time train is called.
 
-{% include codes/nn-parcel-rod/m22.html %}
 
 <center>
     <p>
@@ -959,15 +936,12 @@ Configuration must happen before a network's weights and biases can be initializ
 
 After configuration, and before training, the network's weights and biases are initialized by calculating the network's output for the given input vector.
 
-{% include codes/nn-parcel-rod/m23.html %}
 
 The following is the network output before training:
 
-{% include codes/nn-parcel-rod/m26.html %}
 
 Initialization is followed by the training of the network with a suitable training function. In this case, Levenberg-Marquardt backpropagation (<code>trainlm</code>) is used as training function so that, given example input vector, the outputs of the second layer learn to match the associated target vector with minimal mean squared error (<code>mse</code>).
 
-{% include codes/nn-parcel-rod/m24.html %}
 
 The training record is displayed:
 
@@ -982,7 +956,6 @@ The training record is displayed:
 
 and the output of the trained network is the desired (target) vector:
 
-{% include codes/nn-parcel-rod/m27.html %}
 
 <a id="section-h"></a>
 ## Industrial Fault Diagnosis of Connecting Rods in Compressors
@@ -1020,7 +993,6 @@ To accomplish this task a multilayer perceptron is used and the following steps 
 
 First, all variables from the data set "data.mat" are loaded into the MATLAB workspace. To check the contents of the workspace; the names, sizes, and type of all the variables in the data set, the <code>whos</code> function is used. Then, the data is plotted in three separate graphs, <a href="#figure18">Figure 18</a>, <a href="#figure19">Figure 19</a> and <a href="#figure20">Figure 20</a>, in each one of them the data points belonging to only one of the three classes ("OK", "Overload", or "Crack") is highlighted in some specific color, while the other points are represented in cyan color.
 
-{% include codes/nn-parcel-rod/m28.html %}
 
 <center>
     <p>
@@ -1054,7 +1026,6 @@ First, all variables from the data set "data.mat" are loaded into the MATLAB wor
 
 In this case, using the full resolution of the time series data, is not necessary. Thus, to reduce the computational resources required for model training, downsampling of the input data is carried out, which allows training on a disproportionately low subset of the majority class examples. To do this, decimation, i.e. reducing the sampling frequency by a factor of $10$, is performed on the input data, which means, keeping only every tenth sample. <a href="#figure21">Figure 21</a>, <a href="#figure22">Figure 22</a> and <a href="#figure23">Figure 23</a> show the graphs of the resampled data points.
 
-{% include codes/nn-parcel-rod/m29.html %}
 
 <center>
     <p>
@@ -1088,7 +1059,6 @@ In this case, using the full resolution of the time series data, is not necessar
 
 After resampling the input data, the target data is changed to two classes, "OK" and "Error", by using a conditional statement, which loops through all the values of the cells inside the target data sheet one by one and returns a true or false state represented by the numbers $1$ or $0$, when the checked cell value is laregr than one ("Error" class) or not ("OK" class), respectively.
 
-{% include codes/nn-parcel-rod/m30.html %}
 
 <a id="subsubsection-u"></a>
 **4. Creating and training a multilayer perceptron**
@@ -1115,7 +1085,6 @@ When the network weights and biases are initialized, the network is ready for tr
 
 During training, the progress is constantly updated in the training window. Of most interest are the performance, the magnitude of the gradient of performance and the number of validation checks. The magnitude of the gradient and the number of validation checks are used to terminate the training. The gradient will become very small as the training reaches a minimum of the performance. If the magnitude of the gradient is less than $1e-5$, the training will stop. The number of validation checks represents the number of successive iterations that the validation performance fails to decrease. If this number reaches $6$ (the default value), the training will stop.
 
-{% include codes/nn-parcel-rod/m31.html %}
 
 As a result, the training record is displayed, showing training and performance functions and parameters, and the value of the best performance (the minimum error reached). In this case, the number of validation checks reached $6$ (the default value), and as a result the training stopped.
 
@@ -1155,15 +1124,12 @@ From the training record, performance graph, <a href="#figure25">Figure 25</a>, 
 
 After training, the obtained network outputs are divided into two classes by using a threshold value and a conditional statement. $0.5$ is the natural threshold that ensures that the given probability of having $1$ is greater than the probability of having $0$. That's why it's the default threshold value. Output values above the threshold are labeled $1$ and values below or equal to the threshold are labeled $0$.
 
-{% include codes/nn-parcel-rod/m32.html %}
 
 Finally the percentage of correct classifications could be calculated.
 
-{% include codes/nn-parcel-rod/m33.html %}
 
 and it equals to $99.7\%$:
 
-{% include codes/nn-parcel-rod/m34.html %}
 
 <a id="subsubsection-w"></a>
 **6. Application**
@@ -1172,9 +1138,7 @@ After the network is trained and validated, the network object can be used to ca
 
 In the next code snippet a random connecting rod is selected from the data set (here:with index number $408$) and its quality is predicted correctly by the trained network (here: quality 0="OK"), as shown in <a href="#figure27">Figure 27</a>:
 
-{% include codes/nn-parcel-rod/m35.html %}
 
-{% include codes/nn-parcel-rod/m36.html %}
 
 <center>
     <p>
