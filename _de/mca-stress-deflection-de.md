@@ -155,9 +155,11 @@ werden die axialen Verschiebungen (d. h. die Dehnung, die sich bei Zugbelastung 
   <li>Axiale Verschiebung der Stäbe $D$ und $C$:</li>
     $$
     \delta_{13}=\delta_{12}+\delta_{23}=\frac{T_{13}l_{D}}{A_{D}E}
-    \\
+    $$
+    $$
     =\frac{(F_{2}-F_{1})l_{D}}{A_{D}E}+\frac{(F_{2}-F_{1})l_{C}}{A_{C}E}
-    \\
+    $$
+    $$
     =\frac{(F_{2}-F_{1})}{E}\left( \frac{l_{D}}{A_{D}}+\frac{l_{C}}{A_{C}} \right)
     $$
   <li>Axiale Verschiebung des Stabes $A$:</li>
@@ -165,8 +167,10 @@ werden die axialen Verschiebungen (d. h. die Dehnung, die sich bei Zugbelastung 
     \delta_{34}=\frac{T_{34}l_{A}}{A_{A}E}=\frac{F_{2}l_{A}}{A_{A}E}
     $$
   <li>Gesamte axiale Verschiebung des Systems:</li>
-    $$ \delta_{14}=\delta_{13}+\delta_{34}
-    \\
+    $$
+    \delta_{14}=\delta_{13}+\delta_{34}
+    $$
+    $$
     =\frac{(F_{2}-F_{1})}{E}\left( \frac{l_{D}}{A_{D}}+\frac{l_{C}}{A_{C}} \right) +\frac{F_{2}l_{A}}{A_{A}E}
     $$
 </ul>
