@@ -80,9 +80,11 @@ The bar is divided into components, and the internal forces are calculated, pass
 
 The free-body diagram of the system, namely bar $\mathit{D}$, bar $\mathit{C}$, plate $\mathit{B}$, and bar $\mathit{A}$, contains only one unknown force; the reaction force $\mathit{R}$ at the rigid support. From the equilibrium equation of the system, reaction $\mathit{R}$, or the reaction force of the rigid support on bar D, is:
 
-$$
-\sum_{}^{}\mathrm{F}_{x}^{A,B,C,D}=0 \Leftrightarrow R+F_{1}-F_{2}=0\Leftrightarrow R = F_{2}-F_{1}
-$$
+<ul style='list-style-type: none'>
+  <li>$\sum_{}^{}\mathrm{F}_{x}^{A,B,C,D}=0$</li>
+  <li>$\Leftrightarrow R+F_{1}-F_{2}=0$</li>
+  <li>$\Leftrightarrow R = F_{2}-F_{1}$</li>
+</ul>
 
 The MATLAB program starts with the declaration of variables as symbolic scalar variables by using <code>syms</code> function:
 
@@ -90,15 +92,19 @@ The MATLAB program starts with the declaration of variables as symbolic scalar v
 
 Then, the internal forces are calculated for each portion of the bar. The equilibrium equation of the free-body diagram for bar $A$, in the interval $3–4$, <a href="#figure2">Figure 2B</a>, gives the internal force $T_{34}$:
 
-$$
-\sum_{}^{}\mathrm{F}_{x}^{}=0 \Leftrightarrow T_{34}-F_{2}=0\Leftrightarrow T_{34}=F_{2}
-$$
+<ul style='list-style-type: none'>
+  <li>$\sum_{}^{}\mathrm{F}_{x}^{}=0$</li>
+  <li>$\Leftrightarrow T_{34}-F_{2}=0$</li>
+  <li>$\Leftrightarrow T_{34}=F_{2}$</li>
+</ul>
 
 For the interval 1–3, <a href="#figure2">Figure 2C</a>, the equilibrium equation of the free-body diagram gives the internal force $T_{13}$:
 
-$$
-\sum_{}^{}\mathrm{F}_{x}^{}=0 \Leftrightarrow T_{13}+F_{1}-F_{2}=0\Leftrightarrow T_{13}=F_{2}-F_{1}
-$$
+<ul style='list-style-type: none'>
+  <li>$\sum_{}^{}\mathrm{F}_{x}^{}=0$</li>
+  <li>$\Leftrightarrow T_{13}+F_{1}-F_{2}=0$</li>
+  <li>$\Leftrightarrow T_{13}=F_{2}-F_{1}$</li>
+</ul>
 
 The above obtained equilibrium equations are written in MATLAB as follows: 
 
@@ -137,12 +143,32 @@ Considering the followings:
 
 the axial displacements (i.e. the amount of elongation obtained by applying tensile load to a straight bar) of bars $C$, $D$ and the system are calculated from:
 
-<ul style='list-style-type: none'>
-  <li>$\delta_{12}=\frac{T_{13}l_{D}}{A_{D}E}=\frac{(F_{2}-F_{1})l_{D}}{A_{D}E}$; the axial displacement of bar $D$.</li> 
-  <li>$\delta_{23}=\frac{T_{13}l_{C}}{A_{C}E}=\frac{(F_{2}-F_{1})l_{C}}{A_{C}E}$; the axial displacement of bar $C$.</li>
-  <li>$\delta_{13}=\delta_{12}+\delta_{23}=\frac{T_{13}l_{D}}{A_{D}E}=\frac{(F_{2}-F_{1})l_{D}}{A_{D}E}+\frac{(F_{2}-F_{1})l_{C}}{A_{C}E}=\frac{(F_{2}-F_{1})}{E}\left( \frac{l_{D}}{A_{D}}+\frac{l_{C}}{A_{C}} \right)$; the axial displacement of bars $D$ and $C$.</li>
-  <li>$\delta_{34}=\frac{T_{34}l_{A}}{A_{A}E}=\frac{F_{2}l_{A}}{A_{A}E}$; the axial displacement of bar $A$.</li>
-  <li>$\delta_{14}=\delta_{13}+\delta_{34}=\frac{(F_{2}-F_{1})}{E}\left( \frac{l_{D}}{A_{D}}+\frac{l_{C}}{A_{C}} \right) +\frac{F_{2}l_{A}}{A_{A}E}$; the total axial displacement of the system.</li>
+<ul>
+  <li>Axial displacement of bar $D$:</li>
+    $$
+    \delta_{12}=\frac{T_{13}l_{D}}{A_{D}E}=\frac{(F_{2}-F_{1})l_{D}}{A_{D}E}
+    $$
+  <li>Axial displacement of bar $C$:</li>
+    $$
+    \delta_{23}=\frac{T_{13}l_{C}}{A_{C}E}=\frac{(F_{2}-F_{1})l_{C}}{A_{C}E}
+    $$
+  <li>Axial displacement of bars $D$ and $C$:</li>
+    $$
+    \delta_{13}=\delta_{12}+\delta_{23}=\frac{T_{13}l_{D}}{A_{D}E}
+    \\
+    =\frac{(F_{2}-F_{1})l_{D}}{A_{D}E}+\frac{(F_{2}-F_{1})l_{C}}{A_{C}E}
+    \\
+    =\frac{(F_{2}-F_{1})}{E}\left( \frac{l_{D}}{A_{D}}+\frac{l_{C}}{A_{C}} \right)
+    $$
+  <li>Axial displacement of bar $A$:</li>
+    $$
+    \delta_{34}=\frac{T_{34}l_{A}}{A_{A}E}=\frac{F_{2}l_{A}}{A_{A}E}
+    $$
+  <li>Total axial displacement of the system:</li>
+    $$ \delta_{14}=\delta_{13}+\delta_{34}
+    \\
+    =\frac{(F_{2}-F_{1})}{E}\left( \frac{l_{D}}{A_{D}}+\frac{l_{C}}{A_{C}} \right) +\frac{F_{2}l_{A}}{A_{A}E}
+    $$
 </ul>
 
 In MATLAB, the axial displacement of the bars and system are calculated with:
@@ -319,19 +345,16 @@ $$
 
 Considering a 2D stress element, corresponding to a state of plane stress (for example the $xy$-plane), the four faces of the element are under normal stresses and shear stresses. Supposing that this element is cut by an oblique plane with a normal at an arbitrary angle $\phi$ counterclockwise from the $x$ axis, then the values of the normal and shear stresses could be calculated by using the *stress transformation equations*:
 
-$$
-\sigma = \frac{\sigma_{x}+\sigma_{y}}{2}+\frac{\sigma_{x}-\sigma_{y}}{2}\cdot cos(2\phi)+\tau_{xy}\cdot sin(2\phi)
-$$
-
-$$
-\tau = \frac{\sigma_{x}-\sigma_{y}}{2}\cdot sin(2\phi)+\tau_{xy}\cdot cos(2\phi)
-$$
+<ul style='list-style-type: none'>
+  <li>$\sigma = \frac{\sigma_{x}+\sigma_{y}}{2}+\frac{\sigma_{x}-\sigma_{y}}{2}\cdot cos(2\phi)+\tau_{xy}\cdot sin(2\phi)$</li>
+  <li>$\tau = \frac{\sigma_{x}-\sigma_{y}}{2}\cdot sin(2\phi)+\tau_{xy}\cdot cos(2\phi)$</li>
+</ul>
 
 Differentiating the first equation with respect to $\phi$ and setting the result equal to zero maximizes $\sigma$ and gives:
 
-$$
-tan(2\phi)=\frac{2\tau_{xy}}{\sigma_{x}-\sigma_{y}}
-$$
+<ul style='list-style-type: none'>
+  <li>$tan(2\phi)=\frac{2\tau_{xy}}{\sigma_{x}-\sigma_{y}}$</li>
+</ul>
 
 This equation defines two particular values for the angle $2\phi$, one of which defines the *maximum normal stress* $\sigma_{1}$ and the other, the *minimum normal stress* $\sigma_{2}$. These two stresses are called the *principal stresses*, and their corresponding directions, the *principal directions*. The angle between the two principal directions is $90°$. This equation can be obtained from the second equation of the stress transformation equations by setting $\tau =0$, meaning that the perpendicular surfaces containing principal stresses have zero shear stresses.
 
@@ -339,24 +362,23 @@ An important thing to note is that angles in Mohr's circle are doubled compared 
 
 Formulas for the two principal stresses can be obtained by substituting the angle $2\phi$ in the first stress transformation equation:
 
-$$
-\sigma_{1}, \sigma_{2} =\frac{\sigma_{x}+\sigma_{y}}{2}\pm \sqrt{({\frac{\sigma_{x}-\sigma_{y}}{2})^{2}}+\tau_{xy}^{2}}
-$$
+<ul style='list-style-type: none'>
+  <li>$\sigma_{1}, \sigma_{2} =\frac{\sigma_{x}+\sigma_{y}}{2}\pm \sqrt{({\frac{\sigma_{x}-\sigma_{y}}{2})^{2}}+\tau_{xy}^{2}}$</li>
+</ul>
 
 In a similar manner, by differentiating the second stress transformation equation with respect to $\phi$ and setting the result equal to zero gives:
 
-$$
-tan(2\phi)=-\frac{\sigma_{x}-\sigma_{y}}{2\tau_{xy}}
-$$
+<ul style='list-style-type: none'>
+  <li>$tan(2\phi)=-\frac{\sigma_{x}-\sigma_{y}}{2\tau_{xy}}$</li>
+</ul>
 
 This defines the two values of $2\phi$ at which the *shear stress* $\tau$ reaches an *extreme value* (not maximum). The angle between the two surfaces containing the maximum shear stresses is $90°$.
 
 Formulas for the two extreme-value shear stresses are obtained by substituting the angle $2\phi$ in the second stress transformation equation:
 
-$$
-\tau_{1}, \tau_{2} =\pm \sqrt{({\frac{\sigma_{x}-\sigma_{y}}{2})^{2}}+\tau_{xy}^{2}}
-$$
-
+<ul style='list-style-type: none'>
+  <li>$\tau_{1}, \tau_{2} =\pm \sqrt{({\frac{\sigma_{x}-\sigma_{y}}{2})^{2}}+\tau_{xy}^{2}}$</li>
+</ul>
 
 <a id="subsubsection-a"></a>
 #### Analytical solution

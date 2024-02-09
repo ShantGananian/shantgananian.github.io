@@ -80,9 +80,11 @@ Der Stab wird in Komponenten unterteilt, und die Schnittgrößen werden berechne
 
 Das Freikörperdiagramm des Systems, nämlich Stab $\mathit{D}$, Stab $\mathit{C}$, Platte $\mathit{B}$ und Stab $\mathit{A}$, enthält nur eine unbekannte Kraft, nämlich die Reaktionskraft $\mathit{R}$ an der starren Auflage. Aus der Gleichgewichtsgleichung des Systems ergibt sich die Reaktionskraft $\mathit{R}$, also die Reaktionskraft der starren Lagerung auf den Stab D:
 
-$$
-\sum_{}^{}\mathrm{F}_{x}^{A,B,C,D}=0 \Leftrightarrow R+F_{1}-F_{2}=0\Leftrightarrow R = F_{2}-F_{1}
-$$
+<ul style='list-style-type: none'>
+  <li>$\sum_{}^{}\mathrm{F}_{x}^{A,B,C,D}=0$</li>
+  <li>$\Leftrightarrow R+F_{1}-F_{2}=0$</li>
+  <li>$\Leftrightarrow R = F_{2}-F_{1}$</li>
+</ul>
 
 Das MATLAB-Programm beginnt mit der Deklaration von Variablen als symbolische skalare Variablen mit Hilfe der <code>syms</code>-Funktion:
 
@@ -90,15 +92,19 @@ Das MATLAB-Programm beginnt mit der Deklaration von Variablen als symbolische sk
 
 Dann werden die Schnittgrößen für jeden Teil des Stabes berechnet. Die Gleichgewichtsgleichung des Freikörperdiagramms für den Stab $A$, im Intervall $3-4$, <a href="#figure2">Abbildung 2B</a>, ergibt die Schnittkraft $T_{34}$:
 
-$$
-\sum_{}^{}\mathrm{F}_{x}^{}=0 \Leftrightarrow T_{34}-F_{2}=0\Leftrightarrow T_{34}=F_{2}
-$$
+<ul style='list-style-type: none'>
+  <li>$\sum_{}^{}\mathrm{F}_{x}^{}=0$</li>
+  <li>$\Leftrightarrow T_{34}-F_{2}=0$</li>
+  <li>$\Leftrightarrow T_{34}=F_{2}$</li>
+</ul>
 
 Für den Bereich 1-3, <a href="#figure2">Abbildung 2C</a>, ergibt die Gleichgewichtsgleichung des Freikörperdiagramms die innere Kraft $T_{13}$:
 
-$$
-\sum_{}^{}\mathrm{F}_{x}^{}=0 \Leftrightarrow T_{13}+F_{1}-F_{2}=0\Leftrightarrow T_{13}=F_{2}-F_{1}
-$$
+<ul style='list-style-type: none'>
+  <li>$\sum_{}^{}\mathrm{F}_{x}^{}=0$</li>
+  <li>$\Leftrightarrow T_{13}+F_{1}-F_{2}=0$</li>
+  <li>$\Leftrightarrow T_{13}=F_{2}-F_{1}$</li>
+</ul>
 
 Die oben ermittelten Gleichgewichtsgleichungen werden in MATLAB wie folgt geschrieben:
 
@@ -137,12 +143,32 @@ Unter Berücksichtigung der folgenden Punkte:
 
 werden die axialen Verschiebungen (d. h. die Dehnung, die sich bei Zugbelastung eines geraden Stabes ergibt) der Stäbe $C$, $D$ und des Systems berechnet:
 
-<ul style='list-style-type: none'>
-  <li>$\delta_{12}=\frac{T_{13}l_{D}}{A_{D}E}=\frac{(F_{2}-F_{1})l_{D}}{A_{D}E}$; die axiale Verschiebung des Stabes $D$.</li> 
-  <li>$\delta_{23}=\frac{T_{13}l_{C}}{A_{C}E}=\frac{(F_{2}-F_{1})l_{C}}{A_{C}E}$; die axiale Verschiebung des Stabes $C$.</li>
-  <li>$\delta_{13}=\delta_{12}+\delta_{23}=\frac{T_{13}l_{D}}{A_{D}E}=\frac{(F_{2}-F_{1})l_{D}}{A_{D}E}+\frac{(F_{2}-F_{1})l_{C}}{A_{C}E}=\frac{(F_{2}-F_{1})}{E}\left( \frac{l_{D}}{A_{D}}+\frac{l_{C}}{A_{C}} \right)$; die axiale Verschiebung der Stäbe $D$ und $C$.</li>
-  <li>$\delta_{34}=\frac{T_{34}l_{A}}{A_{A}E}=\frac{F_{2}l_{A}}{A_{A}E}$; die axiale Verschiebung des Stabes $A$.</li>
-  <li>$\delta_{14}=\delta_{13}+\delta_{34}=\frac{(F_{2}-F_{1})}{E}\left( \frac{l_{D}}{A_{D}}+\frac{l_{C}}{A_{C}} \right) +\frac{F_{2}l_{A}}{A_{A}E}$; die gesamte axiale Verschiebung des Systems.</li>
+<ul>
+  <li>Axiale Verschiebung des Stabes $D$:</li>
+    $$
+    \delta_{12}=\frac{T_{13}l_{D}}{A_{D}E}=\frac{(F_{2}-F_{1})l_{D}}{A_{D}E}
+    $$
+  <li>Axiale Verschiebung des Stabes $C$:</li>
+    $$
+    \delta_{23}=\frac{T_{13}l_{C}}{A_{C}E}=\frac{(F_{2}-F_{1})l_{C}}{A_{C}E}
+    $$
+  <li>Axiale Verschiebung der Stäbe $D$ und $C$:</li>
+    $$
+    \delta_{13}=\delta_{12}+\delta_{23}=\frac{T_{13}l_{D}}{A_{D}E}
+    \\
+    =\frac{(F_{2}-F_{1})l_{D}}{A_{D}E}+\frac{(F_{2}-F_{1})l_{C}}{A_{C}E}
+    \\
+    =\frac{(F_{2}-F_{1})}{E}\left( \frac{l_{D}}{A_{D}}+\frac{l_{C}}{A_{C}} \right)
+    $$
+  <li>Axiale Verschiebung des Stabes $A$:</li>
+    $$
+    \delta_{34}=\frac{T_{34}l_{A}}{A_{A}E}=\frac{F_{2}l_{A}}{A_{A}E}
+    $$
+  <li>Gesamte axiale Verschiebung des Systems:</li>
+    $$ \delta_{14}=\delta_{13}+\delta_{34}
+    \\
+    =\frac{(F_{2}-F_{1})}{E}\left( \frac{l_{D}}{A_{D}}+\frac{l_{C}}{A_{C}} \right) +\frac{F_{2}l_{A}}{A_{A}E}
+    $$
 </ul>
 
 In MATLAB wird die axiale Verschiebung der Stäbe und des Systems berechnet:
@@ -319,19 +345,16 @@ $$
 
 Betrachtet man ein 2D-Spannungselement, das einem ebenen Spannungszustand (z.B. der $xy$-Ebene) entspricht, so werden die vier Flächen des Elements durch Normal- und Schubspannungen beansprucht. Angenommen, dieses Element wird von einer schrägen Ebene mit einer Normalen in einem beliebigen Winkel $\phi$ gegen den Uhrzeigersinn von der $x$-Achse geschnitten, dann könnten die Werte der Normal- und Schubspannungen mit Hilfe der *Spannungstransformationsgleichungen* berechnet werden:
 
-$$
-\sigma = \frac{\sigma_{x}+\sigma_{y}}{2}+\frac{\sigma_{x}-\sigma_{y}}{2}\cdot cos(2\phi)+\tau_{xy}\cdot sin(2\phi)
-$$
-
-$$
-\tau = \frac{\sigma_{x}-\sigma_{y}}{2}\cdot sin(2\phi)+\tau_{xy}\cdot cos(2\phi)
-$$
+<ul style='list-style-type: none'>
+  <li>$\sigma = \frac{\sigma_{x}+\sigma_{y}}{2}+\frac{\sigma_{x}-\sigma_{y}}{2}\cdot cos(2\phi)+\tau_{xy}\cdot sin(2\phi)$</li>
+  <li>$\tau = \frac{\sigma_{x}-\sigma_{y}}{2}\cdot sin(2\phi)+\tau_{xy}\cdot cos(2\phi)$</li>
+</ul>
 
 Durch Differenzieren der ersten Gleichung nach $\phi$ und Gleichsetzen des Ergebnisses mit Null wird $\sigma$ maximiert und ergibt sich:
 
-$$
-tan(2\phi)=\frac{2\tau_{xy}}{\sigma_{x}-\sigma_{y}}
-$$
+<ul style='list-style-type: none'>
+  <li>$tan(2\phi)=\frac{2\tau_{xy}}{\sigma_{x}-\sigma_{y}}$</li>
+</ul>
 
 Diese Gleichung definiert zwei bestimmte Werte für den Winkel $2\phi$, von denen einer die *maximale Normalspannung* $\sigma_{1}$ und der andere die *minimale Normalspannung* $\sigma_{2}$ definiert. Diese beiden Spannungen werden als *Hauptspannungen* bezeichnet, und ihre entsprechenden Richtungen als *Hauptrichtungen*. Der Winkel zwischen den beiden Hauptrichtungen ist $90°$. Diese Gleichung lässt sich aus der zweiten Gleichung der Spannungstransformationsgleichungen ableiten, indem $\tau =0$ gesetzt wird, was bedeutet, dass die senkrechten Flächen mit den Hauptspannungen keine Schubspannungen aufweisen.
 
@@ -339,24 +362,23 @@ Wichtig ist, dass die Winkel im Mohrschen Spannungskreis im Vergleich zum Drehwi
 
 Die Formeln für die beiden Hauptspannungen lassen sich durch Einsetzen des Winkels $2\phi$ in die erste Spannungstransformationsgleichung ermitteln:
 
-$$
-\sigma_{1}, \sigma_{2} =\frac{\sigma_{x}+\sigma_{y}}{2}\pm \sqrt{({\frac{\sigma_{x}-\sigma_{y}}{2})^{2}}+\tau_{xy}^{2}}
-$$
+<ul style='list-style-type: none'>
+  <li>$\sigma_{1}, \sigma_{2} =\frac{\sigma_{x}+\sigma_{y}}{2}\pm \sqrt{({\frac{\sigma_{x}-\sigma_{y}}{2})^{2}}+\tau_{xy}^{2}}$</li>
+</ul>
 
 In ähnlicher Weise erhält man durch Differenzieren der zweiten Spannungstransformationsgleichung nach $\phi$ und Gleichsetzen des Ergebnisses mit Null:
 
-$$
-tan(2\phi)=-\frac{\sigma_{x}-\sigma_{y}}{2\tau_{xy}}
-$$
+<ul style='list-style-type: none'>
+  <li>$tan(2\phi)=-\frac{\sigma_{x}-\sigma_{y}}{2\tau_{xy}}$</li>
+</ul>
 
 Damit sind die beiden Werte von $2\phi$ definiert, bei denen die *Schubspannung* $\tau$ einen *extremen Wert* (nicht das Maximum) erreicht. Der Winkel zwischen den beiden Flächen mit den maximalen Schubspannungen beträgt $90°$.
 
 Die Formeln für die beiden extremen Schubspannungen werden durch den Einsatz des Winkels $2\phi$ in der zweiten Spannungstransformationsgleichung ermittelt:
 
-$$
-\tau_{1}, \tau_{2} =\pm \sqrt{({\frac{\sigma_{x}-\sigma_{y}}{2})^{2}}+\tau_{xy}^{2}}
-$$
-
+<ul style='list-style-type: none'>
+  <li>$\tau_{1}, \tau_{2} =\pm \sqrt{({\frac{\sigma_{x}-\sigma_{y}}{2})^{2}}+\tau_{xy}^{2}}$</li>
+</ul>
 
 <a id="subsubsection-a"></a>
 #### Analytische Lösung
@@ -436,4 +458,3 @@ Die grafische Darstellung des Mohrschen Spannungskreises (<a href="#figure5">Abb
 Der Code für die <code>mohr2Ddraw</code> Funktion ist:
 
 {% include codes/mca-stress-deflection/m29.html %}
-
