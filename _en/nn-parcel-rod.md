@@ -622,10 +622,14 @@ The first iteration $(t=1)$ of the recurrent layer produces:
 
 $$
 \textbf{a}^{2}(1) =  \textbf{poslin}\left(\textbf{W}^{2}\textbf{a}^{2}(0)\right)
-\\
+$$
+
+$$
 = \textbf{poslin}\left(\left[ \matrix{
 1 &  -0.5 \cr -0.5& 1} \right] \cdot \left[ \matrix{0 \cr 4} \right]\right)
-\\
+$$
+
+$$
 = \textbf{poslin}\left(\left[ \matrix{-2 \cr 4} \right] \right)= \left[ \matrix{0 \cr 4} \right]
 $$
 
@@ -633,10 +637,14 @@ The second iteration $(t=2)$ produces:
 
 $$
 \textbf{a}^{2}(2) =  \textbf{poslin}\left(\textbf{W}^{2}\textbf{a}^{2}(1)\right)
-\\
+$$
+
+$$
 = \textbf{poslin}\left(\left[ \matrix{
 1 &  -0.5 \cr -0.5& 1} \right] \cdot \left[ \matrix{0 \cr 4} \right]\right)
-\\
+$$
+
+$$
 = \textbf{poslin}\left(\left[ \matrix{-2 \cr 4} \right] \right)= \left[ \matrix{0 \cr 4} \right]
 $$
 
@@ -691,9 +699,13 @@ The equations of operation of the Hopfield network, using the parameters given a
 
 $$
 \text{a}_{1}(t+1) = \textbf{satlins}(1.2\text{a}_{1}(t))
-\\
+$$
+
+$$
 \text{a}_{2}(t+1) = \textbf{satlins}(0.2\text{a}_{2}(t)-0.9)
-\\
+$$
+
+$$
 \text{a}_{3}(t+1) = \textbf{satlins}(1.2\text{a}_{3}(t))
 $$
 
