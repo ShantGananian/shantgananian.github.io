@@ -1093,7 +1093,7 @@ After resampling the input data, the target data is changed to two classes, "OK"
 <a id="subsubsection-u"></a>
 **4. Creating and training a multilayer perceptron**
 
-A feedforward network is created, by using MATLAB's feedforwardnet function, to map the input and output data. The <code>feedforwardnet</code> function generates a feedforward network consisting of a series of layers. The first layer has a connection from the network input. Each subsequent layer has a connection from the previous layer. The final layer produces the network's output. Size (number of neurons) of the hidden layers in the network is specified as a row vector. The length of the vector determines the number of hidden layers in the network. The input and output sizes are set to zero. The software adjusts the sizes of these during training according to the training data.
+A feedforward network is created, by using MATLAB's <code>feedforwardnet</code> function, to map the input and output data. It generates a feedforward network consisting of a series of layers. The first layer has a connection from the network input. Each subsequent layer has a connection from the previous layer. The final layer produces the network's output. Size (number of neurons) of the hidden layers in the network is specified as a row vector. The length of the vector determines the number of hidden layers in the network. The input and output sizes are set to zero. The software adjusts the sizes of these during training according to the training data.
 
 In this case, the created feedforward network consists of a single hidden layer of size $4$ (four neurons in the layer).
 
