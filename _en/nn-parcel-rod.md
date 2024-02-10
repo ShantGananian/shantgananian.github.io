@@ -937,11 +937,11 @@ The next step is to define the number of neurons in each layer. In this case, $5
 <a id="subsubsection-p"></a>
 **4. Configuring the network with <code>configure</code>**
 
-Configuration is the process of setting network input and output sizes and ranges, input preprocessing settings and output postprocessing settings, and weight initialization settings to match input and target data.
+Configuration is the process of setting network input and output sizes and ranges, input preprocessing settings and output post-processing settings, and weight initialization settings to match input and target data.
 
 The <code>configure</code> function configures network inputs and outputs to best match input and target data. It takes input data (here: <code>inputs</code>) and target data (here: <code>outputs</code>), and configures the network's inputs and outputs to match. in this example, the network is configured so that the outputs of the second layer learn to match the associated target vectors.
 
-Configuration must happen before a network's weights and biases can be initialized. Unconfigured networks are automatically configured and initialized the first time train is called.
+Configuration must happen before a network's weights and biases can be initialized. Unconfigured networks are automatically configured and initialized the first time <code>train</code> is called.
 
 {% include codes/nn-parcel-rod/m22.html %}
 
@@ -992,7 +992,7 @@ and the output of the trained network is the desired (target) vector:
 
 A connecting rod in a compressor is an important factor to guarantee the reliability of a compressor. It connects the crankshaft to the piston and moves in a linear reciprocating motion along the center of the piston inside of the cylinder. It is subjected to the periodical changing load during the operation of the compressor.
 
-In this example, cast connecting rods are considered. A common cause of failure in these rods is structural overloading, due to enormous tensile loads caused by greater inertial forces exerted on the rods. Another cause of rod failure is the generation of microcracks in the metal due to conentrated stresses because of imperfections on the rod, which ultimately leads to a fracture that causes the rod to break.
+In this example, cast connecting rods are considered. A common cause of failure in these rods is structural overloading, due to enormous tensile loads caused by greater inertial forces exerted on the rods. Another cause of rod failure is the generation of micro-cracks in the metal due to concentrated stresses because of imperfections on the rod, which ultimately leads to a fracture that causes the rod to break.
 
 A data set from $2000$ connecting rod samples is prepared that includes the recorded periodical values, along $100$ intervals, of the changing load on a connecting rod and the respective quality condition of the rod, which in turn is divided into three classes: The first class includes the rods that remained undamaged ("OK" cases), second class includes rod failure cases due to "overload" and the third class includes rod failure cases due to "crack".
 
@@ -1004,7 +1004,7 @@ The task is to detect, for any tested connecting rod, whether it is a defected r
 <a id="subsection-c"></a>
 ### Steps
 
-To accomplish this task a multilayer perceptron is used and the following steps are implemented to preprocess and postprocess the data and to create and configure the network:
+To accomplish this task a multilayer perceptron is used and the following steps are implemented to preprocess and post-process the data and to create and configure the network:
 
 <ol>
   <li><a href="#subsubsection-r">Loading and plotting the data</a></li>
