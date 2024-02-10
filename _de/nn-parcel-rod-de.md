@@ -27,8 +27,6 @@ header:
   teaser: assets/img/nn-parcel-rod/Figure28.jpg
 ---
 
-<img align="right" width="25%" heighth="auto" src="/assets/img/laufende-arbeiten.png" alt="Figure">
-
 <br>
 Erstellung neuronaler Netze mit MATLAB und Anwendung zur Lösung technischer Probleme wie Mustererkennung zur korrekten Sortierung von Paketen und Klassifizierung zur Fehlerdiagnose von Kompressorpleueln.
 
@@ -925,7 +923,7 @@ Das Ergebnis ist eine grafische Darstellung der Struktur des festgelegten benutz
 <a id="subsubsection-o"></a>
 **3. Festlegung der Topologie (Eigenschaften der Teilobjekte des Netzes) und der Übertragungsfunktion**
 
-The next step is to define the number of neurons in each layer. In this case, $5$ neurons are assigned to the first layer, and none to the second layer. Then, logistic sigmoid transfer function, <code>logsig</code>, is assigned to the first layer. To the second layer, linear transfer function, <code>purelin</code>, is assigned by default.
+Der nächste Schritt besteht darin, die Anzahl der Neuronen in jeder Schicht festzulegen. In diesem Fall werden der ersten Schicht $5$ Neuronen zugewiesen und der zweiten Schicht keine. Dann wird der ersten Schicht die logistische Sigmoid-Übertragungsfunktion, <code>logsig</code>, zugewiesen. Der zweiten Schicht wird standardmäßig eine lineare Übertragungsfunktion, <code>purelin</code>, zugewiesen.
 
 {% include codes/nn-parcel-rod/m21.html %}
 
@@ -933,19 +931,19 @@ The next step is to define the number of neurons in each layer. In this case, $5
     <p>
     <figure id="figure15" style='display: table; width: 50%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure15.png" alt="Figure 15">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 15: The graphical diagram of the defined custom neural network</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 15: Die grafische Darstellung des festgelegten benutzerdefinierten neuronalen Netzes</figcaption>
     </figure>
     </p>
 </center>
 
 <a id="subsubsection-p"></a>
-**4. Configuring the network with configure**
+**4. Konfigurieren des Netzwerks mit <code>configure</code>**
 
-Configuration is the process of setting network input and output sizes and ranges, input preprocessing settings and output postprocessing settings, and weight initialization settings to match input and target data.
+Bei der Konfiguration werden die Eingabe- und Ausgabegröße und -bereiche des Netzes, die Einstellungen für die Vorverarbeitung der Eingaben und die Nachverarbeitung der Ausgaben sowie die Einstellungen für die Initialisierung der Gewichte so festgelegt, dass sie den Eingabe- und Zieldaten entsprechen.
 
-The <code>configure</code> function configures network inputs and outputs to best match input and target data. It takes input data (here: <code>inputs</code>) and target data (here: <code>outputs</code>), and configures the network's inputs and outputs to match. in this example, the network is configured so that the outputs of the second layer learn to match the associated target vectors.
+Die Funktion <code>configure</code> konfiguriert die Eingaben und Ausgaben des Netzes so, dass sie den Eingabe- und Zieldaten am besten entsprechen. Sie nimmt Eingabedaten (hier: <code>inputs</code>) und Zieldaten (hier: <code>outputs</code>) und konfiguriert die Eingänge und Ausgänge des Netzes so, dass sie übereinstimmen. In diesem Beispiel ist das Netz so konfiguriert, dass die Ausgaben der zweiten Schicht lernen, mit den zugehörigen Zielvektoren übereinzustimmen.
 
-Configuration must happen before a network's weights and biases can be initialized. Unconfigured networks are automatically configured and initialized the first time train is called.
+Die Konfiguration muss erfolgen, bevor die Gewichte und Biases eines Netzes initialisiert werden können. Unkonfigurierte Netze werden automatisch konfiguriert und initialisiert, wenn <code>train</code> zum ersten Mal aufgerufen wird.
 
 {% include codes/nn-parcel-rod/m22.html %}
 
@@ -953,76 +951,76 @@ Configuration must happen before a network's weights and biases can be initializ
     <p>
     <figure id="figure16" style='display: table; width: 50%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure16.png" alt="Figure 16">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 16: The graphical diagram of the configured custom neural network</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 16: Das grafische Diagramm des konfigurierten benutzerdefinierten neuronalen Netzes</figcaption>
     </figure>
     </p>
 </center>
 
 <a id="subsubsection-q"></a>
-**5. Training the network and calculating neuron output**
+**5. Training des Netzes und Berechnung der Neuronenausgabe**
 
-After configuration, and before training, the network's weights and biases are initialized by calculating the network's output for the given input vector.
+Nach der Konfiguration und vor dem Training werden die Gewichte und Biases des Netzes initialisiert, indem die Ausgabe des Netzes für den gegebenen Eingabevektor berechnet wird.
 
 {% include codes/nn-parcel-rod/m23.html %}
 
-The following is the network output before training:
+Dies ist die Ausgabe des Netzwerks vor dem Training:
 
 {% include codes/nn-parcel-rod/m26.html %}
 
-Initialization is followed by the training of the network with a suitable training function. In this case, Levenberg-Marquardt backpropagation (<code>trainlm</code>) is used as training function so that, given example input vector, the outputs of the second layer learn to match the associated target vector with minimal mean squared error (<code>mse</code>).
+Auf die Initialisierung folgt das Training des Netzes mit einer geeigneten Trainingsfunktion. In diesem Fall wird die Levenberg-Marquardt-Backpropagation (<code>trainlm</code>) als Trainingsfunktion verwendet, so dass bei einem beispielhaften Eingabevektor die Ausgaben der zweiten Schicht lernen, dem zugehörigen Zielvektor mit minimalem mittleren quadratischen Fehler (<code>mse</code>) zu entsprechen.
 
 {% include codes/nn-parcel-rod/m24.html %}
 
-The training record is displayed:
+Die Trainingsaufzeichnung wird angezeigt:
 
 <center>
     <p>
     <figure id="figure17" style='display: table; width: 50%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure17.png" alt="Figure 17">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 17: The training record of a custom neural network</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 17: Die Trainingsaufzeichnung eines benutzerdefinierten neuronalen Netzes</figcaption>
     </figure>
     </p>
 </center>
 
-and the output of the trained network is the desired (target) vector:
+und die Ausgabe des trainierten Netzes ist der gewünschte (Ziel-)Vektor:
 
 {% include codes/nn-parcel-rod/m27.html %}
 
 <a id="section-h"></a>
-## Industrial Fault Diagnosis of Connecting Rods in Compressors
+## Industrielle Fehlerdiagnose von Pleuelstangen in Kompressoren
 
 <a id="subsection-a"></a>
-### Problem Description
+### Problembeschreibung
 
-A connecting rod in a compressor is an important factor to guarantee the reliability of a compressor. It connects the crankshaft to the piston and moves in a linear reciprocating motion along the center of the piston inside of the cylinder. It is subjected to the periodical changing load during the operation of the compressor.
+Die Pleuelstange in einem Kompressor ist ein wichtiger Faktor, um die Zuverlässigkeit eines Kompressors zu gewährleisten. Sie verbindet die Kurbelwelle mit dem Kolben und bewegt sich in einer linearen Hin- und Herbewegung entlang der Mitte des Kolbens im Inneren des Zylinders. Sie ist während des Betriebs des Kompressors einer periodisch wechselnden Belastung ausgesetzt.
 
-In this example, cast connecting rods are considered. A common cause of failure in these rods is structural overloading, due to enormous tensile loads caused by greater inertial forces exerted on the rods. Another cause of rod failure is the generation of microcracks in the metal due to conentrated stresses because of imperfections on the rod, which ultimately leads to a fracture that causes the rod to break.
+In diesem Beispiel werden gegossene Pleuelstangen betrachtet. Eine häufige Ursache für das Versagen dieser Stangen ist die strukturelle Überlastung aufgrund enormer Zugbelastungen durch größere Trägheitskräfte, die auf die Stangen ausgeübt werden. Eine weitere Ursache für das Versagen von Pleuelstangen ist die Entstehung von Mikrorissen im Metall durch konzentrierte Spannungen aufgrund von Unvollkommenheiten an der Stange, die schließlich zu einem Bruch führen, der die Stange zum Brechen bringt.
 
-A data set from $2000$ connecting rod samples is prepared that includes the recorded periodical values, along $100$ intervals, of the changing load on a connecting rod and the respective quality condition of the rod, which in turn is divided into three classes: The first class includes the rods that remained undamaged ("OK" cases), second class includes rod failure cases due to "overload" and the third class includes rod failure cases due to "crack".
+Es wird ein Datensatz aus $2000$ Stichproben von Pleuelstangen erstellt, der die aufgezeichneten periodischen Werte in $100$ Intervallen der sich ändernden Belastung auf jede Pleuelstange und den jeweiligen Qualitätszustand der Stange enthält, der wiederum in drei Klassen unterteilt wird: Die erste Klasse umfasst die unbeschädigt gebliebenen Pleuelstangen ("OK"-Fälle), die zweite Klasse umfasst Pleuelstangenversagen aufgrund von "Überlast" ("overload") und die dritte Klasse umfasst Pleuelstangenversagen aufgrund von "Riss" ("crack").
 
 <a id="subsection-b"></a>
-### Objective
+### Ziel
 
-The task is to detect, for any tested connecting rod, whether it is a defected rod (due to crack or overload) or not, from the collected data of measured periodical load values the tested rod has been carrying.
+Die Aufgabe besteht darin, für jedes geprüfte Pleuel zu erkennen, ob es sich um ein defektes Pleuel (aufgrund eines Risses oder einer Überlastung) handelt oder nicht, und zwar anhand der gesammelten Daten der gemessenen periodischen Belastungswerte, denen das geprüfte Pleuel ausgesetzt war.
 
 <a id="subsection-c"></a>
-### Steps
+### Schritte
 
-To accomplish this task a multilayer perceptron is used and the following steps are implemented to preprocess and postprocess the data and to create and configure the network:
+Zur Erfüllung dieser Aufgabe wird ein mehrschichtiges Perzeptron verwendet, und die folgenden Schritte werden zur Vor- und Nachbearbeitung der Daten sowie zur Erstellung und Konfiguration des Netzes durchgeführt:
 
 <ol>
-  <li><a href="#subsubsection-r">Loading and plotting the data</a></li>
-  <li><a href="#subsubsection-s">Preparing inputs: Data resampling</a></li>
-  <li><a href="#subsubsection-t">Defining binary output coding: 0=OK, 1=Error</a></li>
-  <li><a href="#subsubsection-u">Creating and training a multilayer perceptron</a></li>
-  <li><a href="#subsubsection-v">Post-training analysis and evaluating network performance</a></li>
-  <li><a href="#subsubsection-w">Application</a></li>
+  <li><a href="#subsubsection-r">Laden und Darstellen der Daten</a></li>
+  <li><a href="#subsubsection-s">Vorbereiten der Eingaben: Konvertierung der Datenabtastrate</a></li>
+  <li><a href="#subsubsection-t">Festlegung der binären Ausgabekodierung: 0=OK, 1=Error</a></li>
+  <li><a href="#subsubsection-u">Erstellung und Training eines mehrschichtigen Perzeptrons</a></li>
+  <li><a href="#subsubsection-v">Post-Training-Analyse und Bewertung der Netzwerkleistung</a></li>
+  <li><a href="#subsubsection-w">Anwendung</a></li>
 </ol>
 
 <a id="subsubsection-r"></a>
-**1. Loading and plotting the data**
+**1. Laden und Darstellen der Daten**
 
-First, all variables from the data set "data.mat" are loaded into the MATLAB workspace. To check the contents of the workspace; the names, sizes, and type of all the variables in the data set, the <code>whos</code> function is used. Then, the data is plotted in three separate graphs, <a href="#figure18">Figure 18</a>, <a href="#figure19">Figure 19</a> and <a href="#figure20">Figure 20</a>, in each one of them the data points belonging to only one of the three classes ("OK", "Overload", or "Crack") is highlighted in some specific color, while the other points are represented in cyan color.
+Zunächst werden alle Variablen aus dem Datensatz "data.mat" in den MATLAB-Arbeitsbereich geladen. Zur Überprüfung des Inhalts des Arbeitsbereichs, d. h. der Namen, Größen und Typen aller Variablen im Datensatz, wird die Funktion <code>whos</code> verwendet. Anschließend werden die Daten in drei separaten Diagrammen (<a href="#figure18">Abbildung 18</a>, <a href="#figure19">Abbildung 19</a> und <a href="#figure20">Abbildung 20</a>) dargestellt. In jedem dieser Diagramme sind die Datenpunkte, die nur zu einer der drei Klassen ("OK", "Überlast" ("Overload") oder "Riss" ("Crack")) gehören, in einer bestimmten Farbe hervorgehoben, während die anderen Punkte in Cyan dargestellt werden.
 
 {% include codes/nn-parcel-rod/m28.html %}
 
@@ -1030,7 +1028,7 @@ First, all variables from the data set "data.mat" are loaded into the MATLAB wor
     <p>
     <figure id="figure18" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure18.png" alt="Figure 18">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 18: Data labeled "OK" are highlighted</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 18: Die mit "OK" gekennzeichneten Daten sind hervorgehoben</figcaption>
     </figure>
     </p>
 </center>
@@ -1039,7 +1037,7 @@ First, all variables from the data set "data.mat" are loaded into the MATLAB wor
     <p>
     <figure id="figure19" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure19.png" alt="Figure 19">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 19: Data labeled "Overload" are highlighted</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 19: Die mit "Überlast" gekennzeichneten Daten sind hervorgehoben</figcaption>
     </figure>
     </p>
 </center>
@@ -1048,15 +1046,15 @@ First, all variables from the data set "data.mat" are loaded into the MATLAB wor
     <p>
     <figure id="figure20" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure20.png" alt="Figure 20">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 20: Data labeled "Crack" are highlighted</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 20: Die mit "Riss" beschrifteten Daten sind hervorgehoben</figcaption>
     </figure>
     </p>
 </center>
 
 <a id="subsubsection-s"></a>
-**2. Preparing inputs: Data resampling**
+**2. Vorbereiten der Eingaben: Konvertierung der Datenabtastrate**
 
-In this case, using the full resolution of the time series data, is not necessary. Thus, to reduce the computational resources required for model training, downsampling of the input data is carried out, which allows training on a disproportionately low subset of the majority class examples. To do this, decimation, i.e. reducing the sampling frequency by a factor of $10$, is performed on the input data, which means, keeping only every tenth sample. <a href="#figure21">Figure 21</a>, <a href="#figure22">Figure 22</a> and <a href="#figure23">Figure 23</a> show the graphs of the resampled data points.
+In diesem Fall ist es nicht notwendig, die volle Auflösung der Zeitreihendaten zu verwenden. Um die für das Modelltraining erforderlichen Rechenressourcen zu reduzieren, wird daher ein Downsampling der Eingabedaten durchgeführt, das das Training auf einer unverhältnismäßig kleinen Teilmenge der Beispiele der Mehrheitsklasse ermöglicht. Zu diesem Zweck werden die Eingabedaten dezimiert, d. h. die Stichprobenhäufigkeit wird um den Faktor $10$ reduziert, so dass nur jede zehnte Stichprobe erhalten bleibt. <a href="#figure21">Abbildung 21</a>, <a href="#figure22">Abbildung 22</a> und <a href="#figure23">Abbildung 23</a> zeigen die Graphen der neu abgetasteten Datenpunkte.
 
 {% include codes/nn-parcel-rod/m29.html %}
 
@@ -1064,7 +1062,7 @@ In this case, using the full resolution of the time series data, is not necessar
     <p>
     <figure id="figure21" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure21.png" alt="Figure 21">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 21: Resampled data labeled "OK"</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 21: Konvertierte Daten mit der Kennzeichnung "OK"</figcaption>
     </figure>
     </p>
 </center>
@@ -1073,7 +1071,7 @@ In this case, using the full resolution of the time series data, is not necessar
     <p>
     <figure id="figure22" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure22.png" alt="Figure 22">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 22: Resampled data labeled "Overload"</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 22: Konvertierte Daten mit der Kennzeichnung "Überlast"</figcaption>
     </figure>
     </p>
 </center>
@@ -1082,68 +1080,68 @@ In this case, using the full resolution of the time series data, is not necessar
     <p>
     <figure id="figure23" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure23.png" alt="Figure 23">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 23: Resampled data labeled "Crack"</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 23: Konvertierte Daten mit der Kennzeichnung "Riss"</figcaption>
     </figure>
     </p>
 </center>
 
 <a id="subsubsection-t"></a>
-**3. Defining binary output coding: 0=OK, 1=Error**
+**3. Festlegung der binären Ausgabekodierung: 0=OK, 1=Error**
 
-After resampling the input data, the target data is changed to two classes, "OK" and "Error", by using a conditional statement, which loops through all the values of the cells inside the target data sheet one by one and returns a true or false state represented by the numbers $1$ or $0$, when the checked cell value is laregr than one ("Error" class) or not ("OK" class), respectively.
+Nach der Abtastratenkonvertierung der Eingabedaten werden die Zieldaten mit Hilfe einer bedingten Anweisung in die beiden Klassen "OK" und "Error" umgewandelt. Diese Anweisung durchläuft alle Werte der Zellen innerhalb des Zieldatenblatts nacheinander und gibt einen wahren oder falschen Zustand zurück, der durch die Zahlen $1$ bzw. $0$ repräsentiert wird, wenn der Wert der geprüften Zelle größer als eins ist (Klasse "Error") bzw. nicht (Klasse "OK").
 
 {% include codes/nn-parcel-rod/m30.html %}
 
 <a id="subsubsection-u"></a>
-**4. Creating and training a multilayer perceptron**
+**4. Erstellung und Training eines mehrschichtigen Perzeptrons**
 
-A feedforward network is created, by using MATLAB's feedforwardnet function, to map the input and output data. The <code>feedforwardnet</code> function generates a feedforward network consisting of a series of layers. The first layer has a connection from the network input. Each subsequent layer has a connection from the previous layer. The final layer produces the network's output. Size (number of neurons) of the hidden layers in the network is specified as a row vector. The length of the vector determines the number of hidden layers in the network. The input and output sizes are set to zero. The software adjusts the sizes of these during training according to the training data.
+Mit der MATLAB-Funktion <code>feedforwardnet</code> wird ein Feedforward-Netz erstellt, um die Eingabe- und Ausgabedaten abzubilden. Sie erzeugt ein Feedforward-Netz, das aus einer Reihe von Schichten besteht. Die erste Schicht ist mit der Eingabe des Netzes verbunden. Jede nachfolgende Schicht hat eine Verbindung von der vorherigen Schicht. Die letzte Schicht erzeugt die Ausgabe des Netzes. Die Größe (Anzahl der Neuronen) der versteckten Schichten des Netzes wird als Zeilenvektor angegeben. Die Länge des Vektors bestimmt die Anzahl der versteckten Schichten im Netz. Die Eingabe- und Ausgabegrößen werden auf Null gesetzt. Die Software passt die Größen dieser Schichten während des Trainings entsprechend den Trainingsdaten an.
 
-In this case, the created feedforward network consists of a single hidden layer of size $4$ (four neurons in the layer).
+In diesem Fall besteht das erstellte Feedforward-Netzwerk aus einer einzigen versteckten Schicht der Größe $4$ (vier Neuronen in der Schicht).
 
-Then, the total data set is divided into three parts: training, validation and testing.
+Anschließend wird der gesamte Datensatz in drei Teile aufgeteilt: Training, Validierung und Test.
 
-1. The training set is used to calculate gradients and to determine weight updates.
-2. The validation set is used to stop training before overfitting occurs. The error on the validation set is monitored during the training process. The validation error normally decreases during the initial phase of training, as does the training set error. However, when the network begins to overfit the data, the error on the validation set typically begins to rise. The network weights and biases are saved at the minimum of the validation set error.
-3. The test set is used to predict future performance of the network. The test set performance is the measure of network quality. If, after a network has been trained, the test set performance is not adequate, then there are usually four possible causes:
-- the network has reached a local minimum,
-- the network does not have enough neurons to fit the data,
-- the network is overfitting, or
-- the network is extrapolating.
+1. Die Trainingsmenge wird zur Berechnung von Gradienten und zur Bestimmung von Gewichtsaktualisierungen verwendet.
+2. Der Validierungssatz wird verwendet, um das Training zu beenden, bevor es zu einer Überanpassung kommt. Der Fehler in der Validierungsmenge wird während des Trainings überwacht. Der Validierungsfehler nimmt normalerweise in der Anfangsphase des Trainings ab, ebenso wie der Fehler des Trainingssets. Wenn das Netz jedoch beginnt, die Daten zu überanpassen, steigt der Fehler in der Validierungsmenge normalerweise an. Die Netzgewichte und Biases werden auf dem Minimum des Validierungssatzfehlers gespeichert.
+3. Der Testsatz wird verwendet, um die zukünftige Leistung des Netzes vorherzusagen. Die Leistung des Testsatzes ist das Maß für die Qualität des Netzes. Wenn nach dem Training eines Netzes die Leistung des Testsatzes nicht ausreichend ist, gibt es in der Regel vier mögliche Ursachen:
+- Das Netz hat ein lokales Minimum erreicht,
+- das Netz hat nicht genügend Neuronen, um die Daten zu erfassen,
+- das Netz passt sich zu stark an, oder
+- das Netz extrapoliert.
 
-The test set error is not used during training, but it is used to compare different models. It is also useful to plot the test set error during the training process. If the error on the test set reaches a minimum at a significantly different iteration number than the validation set error, this might indicate a poor division of the data set.
+Der Testsatzfehler wird nicht während des Trainings verwendet, sondern dient zum Vergleich verschiedener Modelle. Es ist auch nützlich, den Fehler des Testsatzes während des Trainingsprozesses aufzuzeichnen. Erreicht der Fehler im Testsatz ein Minimum bei einer deutlich anderen Iterationszahl als der Fehler im Validierungssatz, könnte dies auf eine schlechte Aufteilung des Datensatzes hinweisen.
 
-Typically, when dividing the data, approximately $70%$ is used for training, $15%$ for validation, and $15%$ for testing.
+In der Regel werden bei der Aufteilung der Daten etwa $70\%$ für das Training, $15\%$ für die Validierung und $15\%$ für die Tests verwendet.
 
-When the network weights and biases are initialized, the network is ready for training. MATLAB's <code>train</code> function is used for training the network. This function uses batch training (updating the weights after the presentation of the complete data set), to differentiate it from the incremental training (updating the weights after the presentation of each single training sample), which could be carried out by MATLAB's <code>adapt</code> function. The default training algorithm called by <code>train</code> is Levenberg-Marquardt <code>trainlm</code>. The training process requires a set of examples of proper network behavior,- network inputs <code>force</code> and target outputs <code>target</code>. The process of training involves tuning the values of the weights and biases of the network to optimize network performance, as defined by the network performance function. Typically one epoch of training is defined as a single presentation of all input vectors to the network. The network is then updated according to the results of all those presentations. The default performance function for feedforward networks is mean square error <code>mse</code>,- the average squared error between the network outputs $Y$ and the target outputs <code>target</code>.
+Wenn die Netzgewichte und Biases initialisiert sind, ist das Netz bereit für das Training. Zum Trainieren des Netzes wird die MATLAB-Funktion <code>train</code> verwendet. Diese Funktion verwendet das Batch-Training (Aktualisierung der Gewichte nach der Präsentation des gesamten Datensatzes), um es vom inkrementellen Training (Aktualisierung der Gewichte nach der Präsentation jeder einzelnen Stichprobe) zu unterscheiden, das mit der MATLAB-Funktion <code>adapt</code> durchgeführt werden kann. Der Standard-Trainingsalgorithmus, der von <code>train</code> aufgerufen wird, ist Levenberg-Marquardt <code>trainlm</code>. Der Trainingsprozess erfordert eine Reihe von Beispielen für das richtige Verhalten des Netzes, d.h. die Netzeingänge <code>force</code> und die Zielausgänge <code>target</code>. Der Trainingsprozess beinhaltet die Abstimmung der Werte der Gewichte und Verzerrungen des Netzes, um die Leistung des Netzes zu optimieren, wie durch die Netzleistungsfunktion definiert. In der Regel wird eine Trainingsepoche als eine einzige Präsentation aller Eingabevektoren für das Netz definiert. Das Netz wird dann entsprechend den Ergebnissen all dieser Präsentationen aktualisiert. Die Standard-Leistungsfunktion für Feedforward-Netze ist der mittlere quadratische Fehler <code>mse</code>, d. h. der durchschnittliche quadratische Fehler zwischen den Netzausgaben $Y$ und den Zielausgaben <code>target</code>.
 
-During training, the progress is constantly updated in the training window. Of most interest are the performance, the magnitude of the gradient of performance and the number of validation checks. The magnitude of the gradient and the number of validation checks are used to terminate the training. The gradient will become very small as the training reaches a minimum of the performance. If the magnitude of the gradient is less than $1e-5$, the training will stop. The number of validation checks represents the number of successive iterations that the validation performance fails to decrease. If this number reaches $6$ (the default value), the training will stop.
+Während des Trainings wird der Fortschritt ständig im Trainingsfenster aktualisiert. Von größtem Interesse sind die Leistung, die Größe des Gradienten der Leistung und die Anzahl der Validierungsprüfungen. Die Größe des Gradienten und die Anzahl der Validierungsprüfungen werden verwendet, um das Training zu beenden. Der Gradient wird sehr klein, wenn das Training ein Minimum der Leistung erreicht. Wenn die Größe des Gradienten kleiner als $1e-5$ ist, wird das Training abgebrochen. Die Anzahl der Validierungsprüfungen gibt die Anzahl der aufeinanderfolgenden Iterationen an, bei denen die Validierungsleistung nicht abnimmt. Wenn diese Zahl $6$ (der Standardwert) erreicht, wird das Training abgebrochen.
 
 {% include codes/nn-parcel-rod/m31.html %}
 
-As a result, the training record is displayed, showing training and performance functions and parameters, and the value of the best performance (the minimum error reached). In this case, the number of validation checks reached $6$ (the default value), and as a result the training stopped.
+Als Ergebnis wird die Trainingsaufzeichnung mit den Trainings- und Leistungsfunktionen und -parametern sowie dem Wert der besten Leistung (dem erreichten Mindestfehler) angezeigt. In diesem Fall hat die Anzahl der Validierungsprüfungen $6$ erreicht (der Standardwert), und das Training wurde daraufhin abgebrochen.
 
 <center>
     <p>
     <figure id="figure24" style='display: table; width: 50%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure24.png" alt="Figure 24">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 24: The training record</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 24: Die Trainingsaufzeichnung</figcaption>
     </figure>
     </p>
 </center>
 
 <a id="subsubsection-v"></a>
-**5. Post-training analysis and evaluating network performance**
+**5. Post-Training-Analyse und Bewertung der Netzwerkleistung**
 
-Before using a trained neural network, it should be analyzed to determine if the training was successful. There are many techniques for post-training analysis. Common ones could be obtained from the training window, where four plots are accessible: performance, training state, error histogram, and regression. The performance plot shows the value of the performance function versus the iteration number. It plots training, validation, and test performances. If there is no major problems with the training, then the error profiles for validation and test would be very similar. If the validation curve increases significantly, then it is possible that some overfitting might have occurred. The training state plot shows the progress of other training variables, such as the gradient magnitude, the number of validation checks, etc. The error histogram plot shows the distribution of the network errors. The regression plot shows a regression between network outputs and network targets. In a perfect training case, the network outputs and the targets would be exactly equal, but that is rarely the case in practice.
+Bevor ein trainiertes neuronales Netz verwendet wird, sollte es analysiert werden, um festzustellen, ob das Training erfolgreich war. Es gibt viele Techniken für die Analyse nach dem Training. Die gebräuchlichsten sind im Trainingsfenster zu finden, wo vier Diagramme verfügbar sind: Leistung, Trainingszustand, Fehlerhistogramm und Regression. Das Leistungsdiagramm zeigt den Wert der Leistungsfunktion in Abhängigkeit von der Iterationszahl. Sie stellt die Trainings-, Validierungs- und Testleistung dar. Wenn es keine größeren Probleme mit dem Training gibt, dann sind die Fehlerprofile für Validierung und Test sehr ähnlich. Wenn die Validierungskurve deutlich ansteigt, ist es möglich, dass eine Überanpassung stattgefunden hat. Die Darstellung des Trainingszustands zeigt den Fortschritt anderer Trainingsvariablen, wie die Größe des Gradienten, die Anzahl der Validierungsprüfungen usw. Die Darstellung des Fehlerhistogramms zeigt die Verteilung der Netzwerkfehler. Das Regressionsdiagramm zeigt eine Regression zwischen den Netzausgaben und den Netzzielen. In einem perfekten Trainingsfall wären die Netzausgaben und die Ziele genau gleich, aber das ist in der Praxis selten der Fall.
 
-From the training record, performance graph, <a href="#figure25">Figure 25</a>, and error histogram, <a href="#figure26">Figure 26</a>, could be displayed. The performance graph shows that at epoch $10$ the best performance for the validation data set was reached and the training has stopped as the number of validation checks, where the validation performance fails to decrease reached $6$, and because continuing training beyond this point leads to overfitting. The performance value for the validation data set is the average of the squares of errors, and the error is the difference between the output of the network (the observed output) and the target output (the predicted output). Smaller error indicates that the outputs are very close to the target values. The error histogram shows the errors between the target values and output values after training a neural network. The more the error values are distributed closer to zero (the orange vertical line) the better is the model's performance.
+Aus der Trainingsaufzeichnung konnten das Leistungsdiagramm, <a href="#figure25">Abbildung 25</a>, und das Fehlerhistogramm, <a href="#figure26">Abbildung 26</a>, angezeigt werden. Das Leistungsdiagramm zeigt, dass bei Epoche $10$ die beste Leistung für den Validierungsdatensatz erreicht wurde und das Training gestoppt wurde, als die Anzahl der Validierungsprüfungen, bei denen die Validierungsleistung nicht abnimmt, $6$ erreichte, und weil die Fortsetzung des Trainings über diesen Punkt hinaus zu einer Überanpassung führt. Der Leistungswert für den Validierungsdatensatz ist der Durchschnitt der Fehlerquadrate, und der Fehler ist die Differenz zwischen der Ausgabe des Netzes (der beobachteten Ausgabe) und der Zielausgabe (der vorhergesagten Ausgabe). Ein kleinerer Fehler bedeutet, dass die Ausgaben sehr nahe an den Zielwerten liegen. Das Fehlerhistogramm zeigt die Fehler zwischen den Zielwerten und den Ausgabewerten nach dem Training eines neuronalen Netzes. Je näher die Fehlerwerte bei Null liegen (hier: die orangefarbene vertikale Linie), desto besser ist die Leistung des Modells.
 
 <center>
     <p>
     <figure id="figure25" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure25.png" alt="Figure 25">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 25: The performance graph</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 25: Das Leistungsdiagramm</figcaption>
     </figure>
     </p>
 </center>
@@ -1152,29 +1150,29 @@ From the training record, performance graph, <a href="#figure25">Figure 25</a>, 
     <p>
     <figure id="figure26" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure26.png" alt="Figure 26">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 26: The error histogram</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 26: Das Fehlerhistogramm</figcaption>
     </figure>
     </p>
 </center>
 
-After training, the obtained network outputs are divided into two classes by using a threshold value and a conditional statement. $0.5$ is the natural threshold that ensures that the given probability of having $1$ is greater than the probability of having $0$. That's why it's the default threshold value. Output values above the threshold are labeled $1$ and values below or equal to the threshold are labeled $0$.
+Nach dem Training werden die Ergebnisse des Netzes mit Hilfe eines Schwellenwerts und einer bedingten Aussage in zwei Klassen eingeteilt. $0.5$ ist der natürliche Schwellenwert, der sicherstellt, dass die gegebene Wahrscheinlichkeit, $1$ zu haben, größer ist als die Wahrscheinlichkeit, $0$ zu haben. Deshalb ist dies der Standard-Schwellenwert. Ausgabewerte oberhalb des Schwellenwerts werden mit $1$ und Werte unterhalb oder gleich dem Schwellenwert mit $0$ gekennzeichnet.
 
 {% include codes/nn-parcel-rod/m32.html %}
 
-Finally the percentage of correct classifications could be calculated.
+Schließlich konnte der Prozentsatz der richtigen Klassifizierungen berechnet werden.
 
 {% include codes/nn-parcel-rod/m33.html %}
 
-and it equals to $99.7\%$:
+und er entspricht $99.7\%$:
 
 {% include codes/nn-parcel-rod/m34.html %}
 
 <a id="subsubsection-w"></a>
-**6. Application**
+**6. Anwendung**
 
-After the network is trained and validated, the network object can be used to calculate the network response to any input; new data or from the loaded data set.
+Nachdem das Netz trainiert und validiert wurde, kann das Netzobjekt verwendet werden, um die Reaktion des Netzes auf eine beliebige Eingabe zu berechnen; neue Daten oder aus dem geladenen Datensatz.
 
-In the next code snippet a random connecting rod is selected from the data set (here:with index number $408$) and its quality is predicted correctly by the trained network (here: quality 0="OK"), as shown in <a href="#figure27">Figure 27</a>:
+Im nächsten Codeausschnitt wird eine zufällige Pleuelstange aus dem Datensatz ausgewählt (hier: mit der Indexnummer $408$) und ihre Qualität wird vom trainierten Netz korrekt vorhergesagt (hier: Qualität 0="OK"), wie in <a href="#figure27">Abbildung 27</a> gezeigt:
 
 {% include codes/nn-parcel-rod/m35.html %}
 
@@ -1184,7 +1182,7 @@ In the next code snippet a random connecting rod is selected from the data set (
     <p>
     <figure id="figure27" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/nn-parcel-rod/Figure27.png" alt="Figure 27">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 27: Randomly selected connecting rod data and its correctly predicted quality</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 27: Zufällig ausgewählte Pleueldaten und ihre korrekt vorhergesagte Qualität</figcaption>
     </figure>
     </p>
 </center>
