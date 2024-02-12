@@ -413,3 +413,10 @@ defaults:
       path: ""
     values:
       lang: de
+
+# Generating feeds for collections by using Jekyll Feed "/feed/<COLLECTION>.xml"
+feed:
+  collections:
+    - de
+    - en
+    - tagsdir
