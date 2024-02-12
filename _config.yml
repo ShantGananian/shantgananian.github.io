@@ -19,8 +19,8 @@ locale                   : "en" #"de" "en-US"
 title                    : "Shant Gananian"
 title_separator          : "-"
 subtitle                 : "" # site tagline that appears below site title in masthead
-name                     : "Shant Gananian"
-description              : "Portfolio"
+name                     : &name "Shant Gananian" # &name is a YAML anchor which can be *referenced later
+description              : &description "Portfolio"
 url                      : "https://shantgananian.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 # baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "shantgananian/shantgananian" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
