@@ -104,13 +104,13 @@ analytics:
 
 # Site Author
 author:
-  name   : #<a href = "javascript:id="demo""></a> # <h1 id="demo"></h1> #<p "javascript:document.write(myVarAuthorName)"></p>
+  name   : "Shant Gananian" #<a href = "javascript:id="demo""></a> # <h1 id="demo"></h1> #<p "javascript:document.write(myVarAuthorName)"></p>
   avatar : "/assets/img/2-2.png"
-  bio    : 
+  bio    : "Mechanical Engineer, Maschinenbau, Mechatronics, Mechatronik, BioMEMS, Robotik, Robotics, Mikrofluidik, Microfluidics"
             #<div title="This is a mouseover text!"> </div>
             # <address><p style="font-family:'Herr Von Muellerhoff'">Gerechtes Handeln im Dienste anderer Menschen, ehrfürchtig Zufriedenheit mit allem was nicht von mir abhängt, Denken aufrichtig und wahrhaftig.</p></address>
             
-             <p style="margin-bottom:0; font-size:13px">multidisziplinäres technisches Wissen; BioMEMS, Robotik, Systemintegration und Informatik, sowie mehrjährige Industrieerfahrung im Produktions- u. QHSE-Management</p>
+            # <p style="margin-bottom:0; font-size:13px">multidisziplinäres technisches Wissen; BioMEMS, Robotik, Systemintegration und Informatik, sowie mehrjährige Industrieerfahrung im Produktions- u. QHSE-Management</p>
             # <p style="margin:0; padding-top:0;">You can read more about me in the <a href= "/about/" style="color:#0000EE;">About me</a> section.</p>
   location: "Karlsruhe, Germany"
   email:
