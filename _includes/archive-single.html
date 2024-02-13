@@ -26,7 +26,6 @@
     </h2>
     {% include page__meta.html type=include.type %}
 
-    <!-- Adding teaser images to the “Recent posts” list -->
     {% if include.type == "list" and teaser %}
     <div class="thumbnail-container">
       <img src="{{ teaser | relative_url }}" alt="">

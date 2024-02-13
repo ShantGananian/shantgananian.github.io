@@ -1,6 +1,5 @@
 
 {% if post.id %}
-  <!-- {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" | prepend: "#" %} -->
   {% assign title = post.tagen | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
   {% assign title = post.tagen %}

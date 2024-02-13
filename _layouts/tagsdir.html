@@ -4,7 +4,6 @@ layout: splash
 
 {{ content }}
 
-<!-- This section creates the list of posts within 'tagsdir' collection grouped by the tag-->
 {% assign postsByTagsen = site.tagsdir | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.tagsen' %}
 {% for tag in postsByTagsen %}
   <section id="{{ tag.name }}">

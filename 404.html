@@ -9,7 +9,7 @@ permalink: /404.html
 <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
-    max-width: 800px; /* 600px; */
+    max-width: 800px; 
     text-align: center;
   }
   h1 {
@@ -21,12 +21,6 @@ permalink: /404.html
 </style>
 
 <div class="container">
-  <!-- <h1>404</h1> -->
-
-  <!-- <p><strong>Page not found :(</strong></p> -->
-  <!-- <p>The requested page could not be found.</p> -->
+  
   {{ site.data.ui-text[page.lang].comment_error_msg | default: 'Sorry, the page you are looking for could not be found. Please go to the home page and navigate to your desired topic.' }}
-  <!-- {{ site.data.ui-text.de.comment_error_msg | default: 'Sorry, the page you are looking for could not be found. Please go to the home page and navigate to your desired topic.' }} -->
 </div>
-
-<!-- Sorry, but the page you were trying to view does not exist. -->
