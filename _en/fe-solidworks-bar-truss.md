@@ -156,7 +156,7 @@ Then, six groups of lines are selected (without applying corner treatment). The 
 
 <center>
     <p>
-    <figure id="figure4" style='display: table; width: 75%; heighth: auto;'>
+    <figure id="figure4" style='display: table; width: 100%; heighth: auto;'>
         <img src="/assets/img/fe-solidworks-bar-truss/Figure4.png" alt="Figure 4">
         <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 4: Path segments for the weldment profiles</figcaption>
     </figure>
