@@ -32,41 +32,41 @@ header:
 
 <br>
 
-Application of truss structures in various forms are found all around. Typically, they are featured prominently in the design of cranes, truss booms, telecommunication towers, masts, electric pylons, roofs, bridges, and so on.
+Fachwerkkonstruktionen werden in verschiedenen Formen überall eingesetzt. Typischerweise werden sie bei der Konstruktion von Kränen, Fachwerkauslegern, Fernmeldetürmen, Masten, Strommasten, Dächern, Brücken usw. eingesetzt.
 
-From an engineering performance analysis point of view, static analyses of bars and trusses are conducted with the following objectives:
+Aus der Sicht der technischen Leistungsanalyse werden statische Analysen von Stäben und Fachwerken mit folgenden Zielen durchgeführt:
 
-- Determining the internal forces and consequently the stresses that developed in the members
-- Evaluating the axial deformation, the members experienced upon loading
+- Bestimmung der Schnittgrößen und damit der Spannungen, die sich in den Stäben entwickeln.
+- Bewertung der axialen Verformung, die die Stäbe bei Belastung erfahren.
 
-The following technical points are frequently considered for the computer analysis of trusses:
+Die folgenden technischen Punkte werden bei der Rechneranalyse von Fachwerkträgern häufig berücksichtigt:
 
-- The members of a truss are straight and have uniform cross-sections.
-- The ends of an individual member of the truss are connected to the ends of other members at joints via frictionless pins. In practical scenarios, such joints may be formed by rivets/bolts/ball and socket joints or via welding to a gusset plate.
-- Forces and supports are applied only at the joints of a truss.
+- Die Stäbe eines Fachwerks sind gerade und haben gleichmäßige Querschnitte.
+- Die Enden eines einzelnen Stabes des Fachwerks sind mit den Enden anderer Stäbe über reibungsfreie Stifte verbunden. In der Praxis können solche Verbindungen durch Nieten/Schrauben/Kugelgelenke oder durch Schweißen an ein Knotenblech hergestellt werden.
+- Kräfte und Stützen werden nur an den Verbindungsstellen eines Fachwerks eingeleitet.
 
 <a id="section-a"></a>
-## Strategies for the analysis of trusses
+## Strategien für die Analyse von Fachwerkträgern
 
-This section describes the *structural details* and the *modeling strategies* for the simulation of truss structures. It also highlights the major features of the ***truss element*** within the SOLIDWORKS Simulation library.
+In diesem Abschnitt werden die *strukturellen Details* und die *Modellierungsstrategien* für die Simulation von Fachwerkstrukturen beschrieben. Außerdem werden die wichtigsten Merkmale des ***Fachwerkelements*** innerhalb der SOLIDWORKS Simulation Bibliothek hervorgehoben.
 
 <a id="subsection-a"></a>
-### Structural details
+### Strukturelle Einzelheiten
 
-Irrespective of what form a truss may have, a consistent set of parameters is employed for its analyses. The following technical information are needed before venturing into the analysis:
+Unabhängig davon, welche Form ein Fachwerk hat, wird ein einheitlicher Satz von Parametern für seine Analysen verwendet. Die folgenden technischen Informationen werden benötigt, bevor man sich an die Analyse wagt:
 
-- The dimensions of the truss:
-    - The details of the cross-section
-    - The geometric length of each member
-    - The orientation angles of the members
-- The material properties of the truss members
-- The loads applied to specific joints of the truss
-- The support provided to the truss to prevent rigid body motion
+- Die Abmessungen des Fachwerks:
+    - Die Details des Querschnitts
+    - Die geometrische Länge der einzelnen Stäbe
+    - Die Orientierungswinkel der Stäbe
+- Die Materialeigenschaften der Fachwerkstäbe
+- die Lasten, die auf bestimmte Verbindungen des Fachwerks wirken
+- die Abstützung des Fachwerks zur Vermeidung von Starrkörperbewegungen
 
 <a id="subsection-b"></a>
-### Modeling strategy
+### Modellierungsstrategie
 
-When analyzing truss structures via the finite element simulation method, a basic strategy is to take a structure such as that in <a href="#figure1">Figure 1 (a)</a>, split it into its constituent members (<a href="#figure1">Figure 1 (b)</a>), and then treat each member as a truss element. Thus, in the end, a whole structure formed from the assembly of different members is represented by the collective behavior of individual truss elements.
+Bei der Analyse von Fachwerkstrukturen mit Hilfe der Finite-Elemente-Simulationsmethode besteht eine grundlegende Strategie darin, eine Struktur wie die in <a href="#figure1">Abbildung 1 (a)</a> dargestellte zu nehmen, sie in ihre einzelnen Elemente zu zerlegen (<a href="#figure1">Abbildung 1 (b)</a>) und dann jedes Element als Fachwerkelement zu behandeln. Auf diese Weise wird ein ganzes Tragwerk, das sich aus verschiedenen Stäben zusammensetzt, durch das kollektive Verhalten der einzelnen Fachwerkelemente dargestellt.
 
 <center>
     <p>
@@ -77,12 +77,11 @@ When analyzing truss structures via the finite element simulation method, a basi
     </p>
 </center>
 
-The major steps in the static analysis of trusses are:
+Die wichtigsten Schritte bei der statischen Analyse von Fachwerken sind:
 
-1. Modeling the ***skeletal model*** (skeletal arrangement) of the truss or a collection of bars within the ***SOLIDWORKS model environment***.
-2. Conversion of the skeletal model into a ***weldment profile*** within the ***SOLIDWORKS model environment***, transforming the weldment model into a finite element model (within the ***SOLIDWORKS Simulation window***).
-3. Running the analysis to obtain the results (within the ***SOLIDWORKS Simulation window***).
-
+1. Modellierung der ***Skelettstruktur*** (Skelettanordnung) des Fachwerks oder einer Sammlung von Stäben in der ***SOLIDWORKS Modellierungsumgebung***.
+2. Umwandlung der Skelettstruktur in ein ***Schweißkonstruktionsprofil*** in der ***SOLIDWORKS-Modellierungsumgebung***, wobei das Schweißkonstruktionsmodell in ein Finite-Elemente-Modell umgewandelt wird (im ***SOLIDWORKS-Simulations-Fenster***).
+3. Durchführung der Analyse, um die Ergebnisse zu erhalten (im ***SOLIDWORKS Simulation-Fenster***).
 
 <a id="section-b"></a>
 ## PROBLEM 1: Conducting static analysis on a crane

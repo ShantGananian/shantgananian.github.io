@@ -79,10 +79,9 @@ When analyzing truss structures via the finite element simulation method, a basi
 
 The major steps in the static analysis of trusses are:
 
-1. Modeling the ***skeletal model*** (skeletal arrangement) of the truss or a collection of bars within the ***SOLIDWORKS model environment***.
-2. Conversion of the skeletal model into a ***weldment profile*** within the ***SOLIDWORKS model environment***, transforming the weldment model into a finite element model (within the ***SOLIDWORKS Simulation window***).
+1. Modeling the ***skeletal structure*** (skeletal arrangement) of the truss or a collection of bars within the ***SOLIDWORKS modeling environment***.
+2. Conversion of the skeletal structure into a ***weldment profile*** within the ***SOLIDWORKS modeling environment***, transforming the weldment model into a finite element model (within the ***SOLIDWORKS Simulation window***).
 3. Running the analysis to obtain the results (within the ***SOLIDWORKS Simulation window***).
-
 
 <a id="section-b"></a>
 ## PROBLEM 1: Conducting static analysis on a crane
