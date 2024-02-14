@@ -2,7 +2,7 @@
 layout: single # archive
 
 title: 'Static Analyses of Bars and Trusses via the Finite Element Simulation Method with SOLIDWORKS'
-excerpt: "Creating neural networks by using MATLAB and applying it to solve technical problems such as pattern recognition for correct sorting of parcels and classification for fault diagnosis of compressor connecting rods."
+excerpt: ""
 myLink: /de/fe-solidworks-bar-truss-de/ # Custom Variable
 # author_profile: true
 last_modified_at: 2024-02-13
@@ -11,11 +11,10 @@ published: true
 tagsen:
   - SOLIDWORKS
   - Finite Element Analysis
-  - Finite Element Simulation
+  - Simulation
   - Computer-Aided Engineering
   - Computer-Aided Design
   - Stress Analysis
-  - Mechanics of Materials
   - Strength of materials
 
 toc: true
