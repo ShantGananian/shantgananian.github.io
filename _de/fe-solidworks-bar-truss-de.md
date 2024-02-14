@@ -83,8 +83,11 @@ Die wichtigsten Schritte bei der statischen Analyse von Fachwerken sind:
 2. Umwandlung der Skelettstruktur in ein ***Schweißkonstruktionsprofil*** in der ***SOLIDWORKS-Modellierungsumgebung***, wobei das Schweißkonstruktionsmodell in ein Finite-Elemente-Modell umgewandelt wird (im ***SOLIDWORKS-Simulations-Fenster***).
 3. Durchführung der Analyse, um die Ergebnisse zu erhalten (im ***SOLIDWORKS Simulation-Fenster***).
 
+<a id="section-b"></a>
+## PROBLEM 1: Durchführung einer statischen Analyse für einen Kran
+
 <a id="subsection-a"></a>
-### PROBLEM 1: Durchführung einer statischen Analyse für einen Kran
+### Problembeschreibung
 
 Analyse der strukturellen Leistung eines Krans, der für die räumliche Positionierung schwerer Objekte auf einer Mega-Baustelle verwendet wird. Eine 2D-Darstellung des zu untersuchenden Krans ist in <a href="#figure2">Abbildung 2</a> dargestellt. Der Kran wird an den Punkten $R$ und $W$ mit Gewichten von $1500 \ kN$ bzw. $2000 \ kN$ belastet.
 
