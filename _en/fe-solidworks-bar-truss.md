@@ -193,9 +193,9 @@ In this step, after activating the 'Simulation' tab, a new study is created, nam
 
 $\quad$ ***2. Adding a material property***
 
-It is assumed that each member of the crane is made of the same material. To apply the material to the members, the material database is launched and, in this case, 'alloy steel', located in the sub-folder 'Steel' is selected.
+It is assumed that each member of the crane is made of the same material. To apply the material to the members, the material database is launched and, in this case, 'alloy steel', located in the subfolder 'Steel' is selected.
 
-The left side of the 'Material Dialog Box', <a href="#figure7">Figure 7</a>, contains a tree of available material types and materials, i.e. material database, which is a multilevel directory. At the top of the tree is ***SOLIDWORKS Materials*** main folder, followed by sub-folders, each containing materials belonging to the same family. In the properties tab, the names of material properties are either in black, blue, or red font color. In general, the material property names in red are the ones that are necessary for static analyses. A material failure criterion (***Max von Mises Stress***) and ***Linear Elastic Isotropic*** material model are pre-defined for the selected material.
+The left side of the 'Material Dialog Box', <a href="#figure7">Figure 7</a>, contains a tree of available material types and materials, i.e. material database, which is a multilevel directory. At the top of the tree is ***SOLIDWORKS Materials*** main folder, followed by subfolders, each containing materials belonging to the same family. In the properties tab, the names of material properties are either in black, blue, or red font color. In general, the material property names in red are the ones that are necessary for static analyses. A material failure criterion (***Max von Mises Stress***) and ***Linear Elastic Isotropic*** material model are pre-defined for the selected material.
 
 <center>
     <p>
@@ -208,6 +208,7 @@ The left side of the 'Material Dialog Box', <a href="#figure7">Figure 7</a>, con
 
 $\quad$ ***3. Changing from a beam element to a truss element***
 
+By default, SOLIDWORKS Simulation treats a structural member that is created using the weldment tool as a ***beam element*** during the analysis. However, in this case, a ***truss element*** is required. The difference is that a beam element resists axial, bending, and torsional loads, while a truss element can resist axial loads only. Therefore, all the structural members, that are under the subfolders in the 'Cut list' folder in the 'FeatureManager Design Tree' are converted from beams to trusses by editing their definition from beam to truss in the 'Edit Definition' option.
 
 
 <a id="subsubsection-d"></a>
