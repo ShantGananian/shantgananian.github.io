@@ -143,8 +143,7 @@ This created sketch is just a series of lines with no volume property. As such, 
 
 The next step is to convert the line sketches created in the preceding section into a structural model using a special functionality in SOLIDWORKS called the ***weldments*** tool, which facilitates the transformation of lines with no volume properties into structural members with volume properties that are suitable for realistic engineering simulation. This is done by prescribing the cross-sectional details for the sketched lines.
 
-To do this, ***Structural Member*** command is used from the Weldments toolbar and in the Structural
-Member property manager window the following options are selected:
+To do this, ***Structural Member*** command is used from the Weldments toolbar and in the Structural Member PropertyManager window the following options are selected:
 
 - Standard: iso
 - Type: pipe
@@ -161,7 +160,7 @@ Then, six groups of lines are selected (without applying corner treatment). The 
     </p>
 </center>
 
-On completing the above mentioned, the Feature Manager tree will appear with some additional items, like the item <code>Cut list (41)</code> showing that there are a total of $41$ weldment items that make up the crane structure, and the item <code>Pipe</code>, which is the main branch of the collection of extruded bodies representing the $41$ structural parts of the crane.
+On completing the above mentioned, the FeatureManager tree will appear with some additional items, like the item <code>Cut list (41)</code> showing that there are a total of $41$ weldment items that make up the crane structure, and the item <code>Pipe</code>, which is the main branch of the collection of extruded bodies representing the $41$ structural parts of the crane.
 
 The employed cross-section from the weldment library is not the same as that stated in the problem description. Thus, to change the dimension of this cross-section, the <code>Sketch</code> in the item <code>Pipe</code> in the Feature Manager tree is edited from <a href="#figure5">Figure 5a</a> to the desired dimensions, shown in <a href="#figure5">Figure 5b</a>.
 

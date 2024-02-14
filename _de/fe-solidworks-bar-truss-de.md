@@ -72,7 +72,7 @@ Bei der Analyse von Fachwerkstrukturen mit Hilfe der Finite-Elemente-Simulations
     <p>
     <figure id="figure1" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/fe-solidworks-bar-truss/Figure1.png" alt="Figure 1">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 1: Simple truss structure</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 1: Einfache Fachwerkstruktur</figcaption>
     </figure>
     </p>
 </center>
@@ -83,116 +83,111 @@ Die wichtigsten Schritte bei der statischen Analyse von Fachwerken sind:
 2. Umwandlung der Skelettstruktur in ein ***Schweißkonstruktionsprofil*** in der ***SOLIDWORKS-Modellierungsumgebung***, wobei das Schweißkonstruktionsmodell in ein Finite-Elemente-Modell umgewandelt wird (im ***SOLIDWORKS-Simulations-Fenster***).
 3. Durchführung der Analyse, um die Ergebnisse zu erhalten (im ***SOLIDWORKS Simulation-Fenster***).
 
-<a id="section-b"></a>
-## PROBLEM 1: Conducting static analysis on a crane
-
 <a id="subsection-a"></a>
-### Problem Description
+### PROBLEM 1: Durchführung einer statischen Analyse für einen Kran
 
-Analyzing the structural performance of a crane used in the spatial positioning of heavy objects on a mega building construction site. A 2D representation of the crane to be analyzed is shown in <a href="#figure2">Figure 2</a>, The crane is subjected to $1500 \ kN$ and $2000 \ kN$ weights at points $R$ and $W$, respectively.
+Analyse der strukturellen Leistung eines Krans, der für die räumliche Positionierung schwerer Objekte auf einer Mega-Baustelle verwendet wird. Eine 2D-Darstellung des zu untersuchenden Krans ist in <a href="#figure2">Abbildung 2</a> dargestellt. Der Kran wird an den Punkten $R$ und $W$ mit Gewichten von $1500 \ kN$ bzw. $2000 \ kN$ belastet.
 
-Considering that the members of the crane are derived from tubular alloy steel with its Young's modulus, $E$, to be $210 \ GPa$. The members have the same cross-sectional detail characterized by external and internal diameters $200 \ mm$ and $80 \ mm$, respectively.
+Es wird angenommen, dass die Teile des Krans aus legiertem Stahlrohr mit einem Elastizitätsmodul $E$ von $210 \ GPa$ bestehen. Die Stäbe haben den gleichen Querschnitt mit einem Außen- und Innendurchmesser von $200 \ mm$ bzw. $80 \ mm$.
 
 <center>
     <p>
     <figure id="figure2" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/fe-solidworks-bar-truss/Figure2.png" alt="Figure 2">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 2: 2D schematic of the crane</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 2: 2D-Darstellung des Krans</figcaption>
     </figure>
     </p>
 </center>
 
 <a id="subsection-b"></a>
-### Objectives
+### Ziele
 
-Answering the following questions by using SOLIDWORKS simulation:
+Beantwortung der folgenden Fragen mit Hilfe der SOLIDWORKS-Simulation:
 
-- What is the maximum resultant deformation of the truss upon the application of the loads?
-- What is the distribution of the factor of safety of the members of the crane upon loading?
-- What is the internal force/stress that developed in the member $IH$?
+- Wie groß ist die maximale resultierende Verformung des Fachwerks bei der Einwirkung der Lasten?
+- Wie ist die Verteilung des Sicherheitsfaktors der Stäbe des Krans bei Belastung?
+- Wie hoch ist die innere Kraft/Spannung, die sich im Stab $IH$ entwickelt?
 
 <a id="subsection-c"></a>
-### Solution
+### Lösung
 
 <ol>
-  <li><a href="#subsubsection-a">Part A – Creating the sketch of the geometric model</a></li>
-  <li><a href="#subsubsection-b">Part B – Converting the skeletal model into a structural profile</a></li>
-  <li><a href="#subsubsection-c">Part C – Creating the Simulation study</a></li>
-  <li><a href="#subsubsection-d">Part D – Scrutinizing the results</a></li>
+  <li><a href="#subsubsection-a">Teil A - Erstellung der Skizze des geometrischen Modells</a></li>
+  <li><a href="#subsubsection-b">Teil B - Umwandlung des Strukturskelettmodells in ein Strukturprofil</a></li>
+  <li><a href="#subsubsection-c">Teil C - Erstellung der Simulationsstudie</a></li>
+  <li><a href="#subsubsection-d">Teil D - Prüfung der Ergebnisse</a></li>
 </ol>
 
 <a id="subsubsection-a"></a>
-***Part A – Creating the sketch of the geometric model***
+***Teil A - Erstellung der Skizze des geometrischen Modells***
 
-First, a model of the crane structure (skeletal sketch of the model) is created by sketching the lines describing the geometry of the crane with the <code>line</code> sketching tool. The unit of measurement used is the ***MMGS (millimeter, gram, and second)*** system of units. The completed sketch looks like the screenshot shown in <a href="#figure3">Figure 3</a>.
+Zunächst wird ein Modell der Kranstruktur (Skelettskizze des Modells) erstellt, indem die Linien, die die Geometrie des Krans beschreiben, mit dem Skizzierwerkzeug <code>Linie</code> skizziert werden. Die verwendete Maßeinheit ist das ***MMGS (Millimeter, Gramm und Sekunde)***-Einheitensystem. Die fertige Skizze sieht aus wie der Screenshot in <a href="#figure3">Abbildung 3</a>.
 
-This created sketch is just a series of lines with no volume property. As such, it cannot be used for structural analyses. In the next step, the sketched line-based model is converted into a structural model with a volume property.
-
+Diese erstellte Skizze ist nur eine Reihe von Linien ohne Volumeneigenschaften. Als solche kann sie nicht für Strukturanalysen verwendet werden. Im nächsten Schritt wird das skizzierte linienbasierte Modell in ein Strukturmodell mit Volumeneigenschaft umgewandelt.
 
 <center>
     <p>
     <figure id="figure3" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/fe-solidworks-bar-truss/Figure3.png" alt="Figure 3">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 3: A line-based geometric model of the crane</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 3: Ein linienbasiertes geometrisches Modell des Krans</figcaption>
     </figure>
     </p>
 </center>
 
 <a id="subsubsection-b"></a>
-***Part B – Converting the skeletal model into a structural profile***
+***Teil B - Umwandlung des Strukturskelettmodells in ein Strukturprofil***
 
-The next step is to convert the line sketches created in the preceding section into a structural model using a special functionality in SOLIDWORKS called the ***weldments*** tool, which facilitates the transformation of lines with no volume properties into structural members with volume properties that are suitable for realistic engineering simulation. This is done by prescribing the cross-sectional details for the sketched lines.
+Der nächste Schritt besteht darin, die im vorangegangenen Abschnitt erstellten Linienskizzen in ein Strukturmodell umzuwandeln. Dies geschieht mit Hilfe einer speziellen Funktion in SOLIDWORKS, dem Werkzeug ***Schweißkonstruktionen***, das die Umwandlung von Linien ohne Volumeneigenschaften in Strukturelemente mit Volumeneigenschaften ermöglicht, die für eine realistische technische Simulation geeignet sind. Dies geschieht durch Vorgabe der Querschnittsdetails für die skizzierten Linien.
 
-To do this, ***Structural Member*** command is used from the Weldments toolbar and in the Structural
-Member property manager window the following options are selected:
+Dazu wird der Befehl ***Strukturbauteil*** aus der Symbolleiste Schweißkonstruktionen verwendet und im Fenster PropertyManager des Strukturbauteils werden die folgenden Optionen ausgewählt:
 
-- Standard: iso
-- Type: pipe
-- Size: $33.7 \times 4.0$, – which refers to a tube with an external diameter of $33.7 \ mm$ and a thickness of $4 \ mm$.
+- Norm: iso
+- Typ: Rohr
+- Größe: $33,7 \times 4,0$, - was sich auf ein Rohr mit einem Außendurchmesser von $33,7 \ mm$ und einer Dicke von $4 \ mm$ bezieht.
 
-Then, six groups of lines are selected (without applying corner treatment). The series of lines to be selected for each group are illustrated in <a href="#figure4">Figure 4 (a-f)</a>.
+Dann werden sechs Gruppen von Linien ausgewählt (ohne Anwendung der Eckenbehandlung). Die für jede Gruppe auszuwählenden Linienreihen sind in <a href="#figure4">Abbildung 4 (a-f)</a> dargestellt.
 
 <center>
     <p>
     <figure id="figure4" style='display: table; width: 100%; heighth: auto;'>
         <img src="/assets/img/fe-solidworks-bar-truss/Figure4.png" alt="Figure 4">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 4: Path segments for the weldment profiles</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 4: Pfadsegmente für die Schweißnahtkonstruktions-Profile</figcaption>
     </figure>
     </p>
 </center>
 
-On completing the above mentioned, the Feature Manager tree will appear with some additional items, like the item <code>Cut list (41)</code> showing that there are a total of $41$ weldment items that make up the crane structure, and the item <code>Pipe</code>, which is the main branch of the collection of extruded bodies representing the $41$ structural parts of the crane.
+Nach Abschluss der oben genannten Schritte erscheint der FeatureManager mit einigen zusätzlichen Elementen, wie z. B. dem Element <code>Zuschnittliste (41)</code>, das anzeigt, dass es insgesamt $41$ Schweißteile gibt, aus denen die Kranstruktur besteht, und dem Element <code>Rohr</code>, das der Hauptzweig der Sammlung von extrudierten Körpern ist, die die $41$ Strukturteile des Krans darstellen.
 
-The employed cross-section from the weldment library is not the same as that stated in the problem description. Thus, to change the dimension of this cross-section, the <code>Sketch</code> in the item <code>Pipe</code> in the Feature Manager tree is edited from <a href="#figure5">Figure 5a</a> to the desired dimensions, shown in <a href="#figure5">Figure 5b</a>.
+Der verwendete Querschnitt aus der Schweißkonstruktionsbibliothek entspricht nicht dem, der in der Problembeschreibung angegeben ist. Um die Abmessungen dieses Querschnitts zu ändern, wird die <code>Skizze</code> im Element <code>Rohr</code> im FeatureManager von <a href="#figure5">Abbildung 5a</a> auf die gewünschten Abmessungen (<a href="#figure5">Abbildung 5b</a>) geändert.
 
 <center>
     <p>
     <figure id="figure5" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/fe-solidworks-bar-truss/Figure5.png" alt="Figure 5">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 5: (a) The original cross-section of the tube; (b) the updated cross-section</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 5: (a) Der ursprüngliche Querschnitt des Rohrs; (b) der aktualisierte Querschnitt</figcaption>
     </figure>
     </p>
 </center>
 
 <a id="subsubsection-c"></a>
-***Part C – Creating the Simulation study***
+***Teil C - Erstellung der Simulationsstudie***
 
-In this section, static analysis is performed on the crane structure. For this, after activating the simulation tab and creating a new study, the material for the members is specified, the truss element, fixtures/loads are applied, and finally, the meshing process is initiated.
+In diesem Abschnitt wird eine statische Analyse der Kranstruktur durchgeführt. Dazu werden nach dem Aktivieren der Simulationsregisterkarte und dem Anlegen einer neuen Studie das Material für die Bauteile spezifiziert, das Stabelement, die Einspannungen/Lasten angewandt und schließlich der Vernetzungsprozess eingeleitet.
 
-$\quad$ ***1. Activating the Simulation tab and creating a new study***
+$\quad$ ***1. Aktivierung der Registerkarte Simulation und Erstellung einer neuen Studie***
 
-In this step, after activating the 'Simulation' tab, a new study is created, named "Crane Analysis", and the static analysis option is selected in the 'General Simulation' properties in the 'PropertyManager' panel. As a result, the 'Simulation' study tree is launched, joints are imposed at the connection points between the members of the truss, as well as 'Simulation' commands become available, as shown in <a href="#figure6">Figure 6</a>.
+In diesem Schritt wird nach dem Aktivieren der Registerkarte "Simulation" eine neue Studie mit dem Namen "Crane Analysis" (Krananalyse) erstellt und die Option "Statische Analyse" in den Eigenschaften von "Allgemeine Simulation" im Bereich "PropertyManager" ausgewählt. Daraufhin wird die Studien-Baumstruktur "Simulation" gestartet, Verbindungen werden an den Verbindungspunkten zwischen den Stäben des Fachwerks eingefügt und die Simulation-Befehle werden verfügbar, wie in <a href="#figure6">Abbildung 6</a> dargestellt.
 
 <center>
     <p>
     <figure id="figure6" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/fe-solidworks-bar-truss/Figure6.png" alt="Figure 6">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 6: Appearance of joints in the model with the 'Simulation' study tree</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 6: Darstellung der Verbindungen im Modell mit der Studien-Baumstruktur "Simulation"</figcaption>
     </figure>
     </p>
 </center>
 
-$\quad$ ***2. Adding a material property***
+$\quad$ ***2. Hinzufügung  einer Materialeigenschaft***
 
 It is assumed that each member of the crane is made of the same material. To apply the material to the members, the material database is launched and, in this case, 'alloy steel', located in the sub-folder 'Steel' is selected.
 
