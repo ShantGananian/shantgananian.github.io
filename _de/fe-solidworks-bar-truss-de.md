@@ -201,7 +201,7 @@ Ein Material wird als isotrop bezeichnet, wenn seine Eigenschaften nicht mit der
 <center>
     <p>
     <figure id="figure7" style='display: table; width: 75%; heighth: auto;'>
-        <img src="/assets/img/fe-solidworks-bar-truss/Figure7.png" alt="Figure 7">
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure7de.png" alt="Figure 7">
         <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 7: Darstellung des Dialogfelds "Material" und Auswahl eines Materials</figcaption>
     </figure>
     </p>
