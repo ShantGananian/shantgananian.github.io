@@ -31,6 +31,7 @@ header:
 <img align="right" width="25%" heighth="auto" src="/assets/img/laufende-arbeiten.png" alt="Figure">
 
 <br>
+
 Stabkonstruktionen werden in verschiedenen Formen überall eingesetzt. Typischerweise werden sie bei der Konstruktion von Kränen, Fachwerkauslegern, Fernmeldetürmen, Masten, Strommasten, Dächern, Brücken usw. eingesetzt.
 
 Aus der Sicht der technischen Leistungsanalyse werden statische Analysen von Balken und Stäben mit folgenden Zielen durchgeführt:
