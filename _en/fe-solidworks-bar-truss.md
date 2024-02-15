@@ -197,6 +197,8 @@ It is assumed that each member of the crane is made of the same material. To app
 
 The left side of the 'Material Dialog Box', <a href="#figure7">Figure 7</a>, contains a tree of available material types and materials, i.e. material database, which is a multilevel directory. At the top of the tree is ***SOLIDWORKS Materials*** main folder, followed by subfolders, each containing materials belonging to the same family. In the properties tab, the names of material properties are either in black, blue, or red font color. In general, the material property names in red are the ones that are necessary for static analyses. A material failure criterion (***Max von Mises Stress***) and ***Linear Elastic Isotropic*** material model are pre-defined for the selected material.
 
+A material is called isotropic if its properties do not vary with direction. Isotropic materials have identical elastic modulus, Poisson's ratio, coefficient of thermal expansion, thermal conductivity, etc. in all directions.
+
 <center>
     <p>
     <figure id="figure7" style='display: table; width: 75%; heighth: auto;'>

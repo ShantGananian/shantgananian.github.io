@@ -1,12 +1,12 @@
 ---
 layout: single # archive
 
-title: 'Statische Analysen von Stäben und Fachwerken mittels der Finite-Elemente-Simulationsmethode mit SOLIDWORKS'
+title: 'Statische Analysen von Balken und Stäben mittels der Finite-Elemente-Simulationsmethode mit SOLIDWORKS'
 excerpt: ""
 myLink: /en/fe-solidworks-bar-truss/ # Custom Variable
 # author_profile: true
-last_modified_at: 2024-02-13
-date: 2024-02-13
+last_modified_at: 2023-11-20
+date: 2023-11-20
 published: true
 tagsen:
   - SOLIDWORKS
@@ -31,55 +31,54 @@ header:
 <img align="right" width="25%" heighth="auto" src="/assets/img/laufende-arbeiten.png" alt="Figure">
 
 <br>
+Stabkonstruktionen werden in verschiedenen Formen überall eingesetzt. Typischerweise werden sie bei der Konstruktion von Kränen, Fachwerkauslegern, Fernmeldetürmen, Masten, Strommasten, Dächern, Brücken usw. eingesetzt.
 
-Fachwerkkonstruktionen werden in verschiedenen Formen überall eingesetzt. Typischerweise werden sie bei der Konstruktion von Kränen, Fachwerkauslegern, Fernmeldetürmen, Masten, Strommasten, Dächern, Brücken usw. eingesetzt.
-
-Aus der Sicht der technischen Leistungsanalyse werden statische Analysen von Stäben und Fachwerken mit folgenden Zielen durchgeführt:
+Aus der Sicht der technischen Leistungsanalyse werden statische Analysen von Balken und Stäben mit folgenden Zielen durchgeführt:
 
 - Bestimmung der Schnittgrößen und damit der Spannungen, die sich in den Stäben entwickeln.
 - Bewertung der axialen Verformung, die die Stäbe bei Belastung erfahren.
 
-Die folgenden technischen Punkte werden bei der Rechneranalyse von Fachwerkträgern häufig berücksichtigt:
+Die folgenden technischen Punkte werden bei der Rechneranalyse von Stäben häufig berücksichtigt:
 
 - Die Stäbe eines Fachwerks sind gerade und haben gleichmäßige Querschnitte.
 - Die Enden eines einzelnen Stabes des Fachwerks sind mit den Enden anderer Stäbe über reibungsfreie Stifte verbunden. In der Praxis können solche Verbindungen durch Nieten/Schrauben/Kugelgelenke oder durch Schweißen an ein Knotenblech hergestellt werden.
-- Kräfte und Stützen werden nur an den Verbindungsstellen eines Fachwerks eingeleitet.
+- Kräfte und Stützen werden nur an den Verbindungsstellen eines Stabes eingeleitet.
 
 <a id="section-a"></a>
-## Strategien für die Analyse von Fachwerkträgern
+## Strategien für die Analyse von Stäben
 
-In diesem Abschnitt werden die *strukturellen Details* und die *Modellierungsstrategien* für die Simulation von Fachwerkstrukturen beschrieben. Außerdem werden die wichtigsten Merkmale des ***Fachwerkelements*** innerhalb der SOLIDWORKS Simulation Bibliothek hervorgehoben.
+In diesem Abschnitt werden die *strukturellen Details* und die *Modellierungsstrategien* für die Simulation von Stabkonstruktionen beschrieben. Außerdem werden die wichtigsten Merkmale des ***Stabelement***s innerhalb der SOLIDWORKS Simulation Bibliothek hervorgehoben.
 
 <a id="subsection-a"></a>
 ### Strukturelle Einzelheiten
 
-Unabhängig davon, welche Form ein Fachwerk hat, wird ein einheitlicher Satz von Parametern für seine Analysen verwendet. Die folgenden technischen Informationen werden benötigt, bevor man sich an die Analyse wagt:
+Unabhängig davon, welche Form ein Stab hat, wird ein einheitlicher Satz von Parametern für seine Analysen verwendet. Die folgenden technischen Informationen werden benötigt, bevor man sich an die Analyse wagt:
 
-- Die Abmessungen des Fachwerks:
+- Die Abmessungen des Stabes:
     - Die Details des Querschnitts
     - Die geometrische Länge der einzelnen Stäbe
     - Die Orientierungswinkel der Stäbe
-- Die Materialeigenschaften der Fachwerkstäbe
-- die Lasten, die auf bestimmte Verbindungen des Fachwerks wirken
-- die Abstützung des Fachwerks zur Vermeidung von Starrkörperbewegungen
+- Die Materialeigenschaften der Stabelemente
+- die Lasten, die auf bestimmte Verbindungen des Stabes wirken
+- die Abstützung des Stabes zur Vermeidung von Starrkörperbewegungen
 
 <a id="subsection-b"></a>
 ### Modellierungsstrategie
 
-Bei der Analyse von Fachwerkstrukturen mit Hilfe der Finite-Elemente-Simulationsmethode besteht eine grundlegende Strategie darin, eine Struktur wie die in <a href="#figure1">Abbildung 1 (a)</a> dargestellte zu nehmen, sie in ihre einzelnen Elemente zu zerlegen (<a href="#figure1">Abbildung 1 (b)</a>) und dann jedes Element als Fachwerkelement zu behandeln. Auf diese Weise wird ein ganzes Tragwerk, das sich aus verschiedenen Stäben zusammensetzt, durch das kollektive Verhalten der einzelnen Fachwerkelemente dargestellt.
+Bei der Analyse von Stabkonstruktionen mit Hilfe der Finite-Elemente-Simulationsmethode besteht eine grundlegende Strategie darin, eine Struktur wie die in <a href="#figure1">Abbildung 1 (a)</a> dargestellte zu nehmen, sie in ihre einzelnen Elemente zu zerlegen (<a href="#figure1">Abbildung 1 (b)</a>) und dann jedes Element als Stabelement zu behandeln. Auf diese Weise wird ein ganzes Tragwerk, das sich aus verschiedenen Stäben zusammensetzt, durch das kollektive Verhalten der einzelnen Stabelemente dargestellt.
 
 <center>
     <p>
     <figure id="figure1" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/fe-solidworks-bar-truss/Figure1.png" alt="Figure 1">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 1: Einfache Fachwerkstruktur</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 1: Einfache Stabkonstruktion</figcaption>
     </figure>
     </p>
 </center>
 
-Die wichtigsten Schritte bei der statischen Analyse von Fachwerken sind:
+Die wichtigsten Schritte bei der statischen Analyse von Stäben sind:
 
-1. Modellierung der ***Skelettstruktur*** (Skelettanordnung) des Fachwerks oder einer Sammlung von Stäben in der ***SOLIDWORKS Modellierungsumgebung***.
+1. Modellierung der ***Skelettstruktur*** (Skelettanordnung) des Stabes oder einer Sammlung von Stäben in der ***SOLIDWORKS Modellierungsumgebung***.
 2. Umwandlung der Skelettstruktur in ein ***Schweißkonstruktionsprofil*** in der ***SOLIDWORKS-Modellierungsumgebung***, wobei das Schweißkonstruktionsmodell in ein Finite-Elemente-Modell umgewandelt wird (im ***SOLIDWORKS-Simulations-Fenster***).
 3. Durchführung der Analyse, um die Ergebnisse zu erhalten (im ***SOLIDWORKS Simulation-Fenster***).
 
@@ -107,7 +106,7 @@ Es wird angenommen, dass die Teile des Krans aus legiertem Stahlrohr mit einem E
 
 Beantwortung der folgenden Fragen mit Hilfe der SOLIDWORKS-Simulation:
 
-- Wie groß ist die maximale resultierende Verformung des Fachwerks bei der Einwirkung der Lasten?
+- Wie groß ist die maximale resultierende Verformung des Stabes bei der Einwirkung der Lasten?
 - Wie ist die Verteilung des Sicherheitsfaktors der Stäbe des Krans bei Belastung?
 - Wie hoch ist die innere Kraft/Spannung, die sich im Stab $IH$ entwickelt?
 
@@ -179,7 +178,7 @@ In diesem Abschnitt wird eine statische Analyse der Kranstruktur durchgeführt. 
 
 $\quad$ ***1. Aktivierung der Registerkarte Simulation und Erstellung einer neuen Studie***
 
-In diesem Schritt wird nach dem Aktivieren der Registerkarte "Simulation" eine neue Studie mit dem Namen "Crane Analysis" (Krananalyse) erstellt und die Option "Statische Analyse" in den Eigenschaften von "Allgemeine Simulation" im Bereich "PropertyManager" ausgewählt. Daraufhin wird die Studien-Baumstruktur "Simulation" gestartet, Verbindungen werden an den Verbindungspunkten zwischen den Stäben des Fachwerks eingefügt und die Simulation-Befehle werden verfügbar, wie in <a href="#figure6">Abbildung 6</a> dargestellt.
+In diesem Schritt wird nach dem Aktivieren der Registerkarte "Simulation" eine neue Studie mit dem Namen "Crane Analysis" (Krananalyse) erstellt und die Option "Statische Analyse" in den Eigenschaften von "Allgemeine Simulation" im Bereich "PropertyManager" ausgewählt. Daraufhin wird die Studien-Baumstruktur "Simulation" gestartet, Verbindungen werden an den Verbindungspunkten zwischen den Stabelementen eingefügt und die Simulation-Befehle werden verfügbar, wie in <a href="#figure6">Abbildung 6</a> dargestellt.
 
 <center>
     <p>
@@ -192,24 +191,24 @@ In diesem Schritt wird nach dem Aktivieren der Registerkarte "Simulation" eine n
 
 $\quad$ ***2. Hinzufügung  einer Materialeigenschaft***
 
-It is assumed that each member of the crane is made of the same material. To apply the material to the members, the material database is launched and, in this case, 'alloy steel', located in the sub-folder 'Steel' is selected.
+Es wird davon ausgegangen, dass jedes Element des Krans aus demselben Material besteht. Um das Material auf die Stäbe anzuwenden, wird die Materialdatenbank aufgerufen und in diesem Fall "legierter Stahl" aus dem Unterordner "Stahl" ausgewählt.
 
-The left side of the 'Material Dialog Box', <a href="#figure7">Figure 7</a>, contains a tree of available material types and materials, i.e. material database, which is a multilevel directory. At the top of the tree is ***SOLIDWORKS Materials*** main folder, followed by sub-folders, each containing materials belonging to the same family. In the properties tab, the names of material properties are either in black, blue, or red font color. In general, the material property names in red are the ones that are necessary for static analyses. A material failure criterion (***Max von Mises Stress***) and ***Linear Elastic Isotropic*** material model are pre-defined for the selected material.
+Die linke Seite des Dialogfelds "Material ", <a href="#figure7">Abbildung 7</a>, enthält eine Baumstruktur der verfügbaren Materialtypen und Materialien, d. h. eine Materialdatenbank, die ein mehrstufiges Verzeichnis ist. An der Spitze der Baumstruktur befindet sich der Hauptordner ***SOLIDWORKS Materialien***, gefolgt von Unterordnern, die jeweils Materialien enthalten, die zur gleichen Familie gehören. Auf der Registerkarte Eigenschaften sind die Namen der Materialeigenschaften entweder in schwarzer, blauer oder roter Schriftfarbe dargestellt. Im Allgemeinen sind die Namen der Materialeigenschaften in roter Farbe diejenigen, die für statische Analysen erforderlich sind. Ein Materialversagenskriterium (***Max von Mises Spannung***) und ein ***Linear elastisches isotropes*** Materialmodell sind für das ausgewählte Material vordefiniert.
+
+Ein Material wird als isotrop bezeichnet, wenn seine Eigenschaften nicht mit der Richtung variieren. Isotrope Materialien haben in allen Richtungen den gleichen Elastizitätsmodul, die gleiche Poissonzahl, den gleichen Wärmeausdehnungskoeffizienten, die gleiche Wärmeleitfähigkeit usw.
 
 <center>
     <p>
     <figure id="figure7" style='display: table; width: 75%; heighth: auto;'>
         <img src="/assets/img/fe-solidworks-bar-truss/Figure7.png" alt="Figure 7">
-        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 7: Displaying the material dialog box and choosing a material</figcaption>
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 7: Darstellung des Dialogfelds "Material" und Auswahl eines Materials</figcaption>
     </figure>
     </p>
 </center>
 
-$\quad$ ***3. Changing from a beam element to a truss element***
+$\quad$ ***3. Wechsel von einem Balkenelement zu einem Stabelement***
 
-By default, SOLIDWORKS Simulation treats a structural member that is created using the weldment tool as a ***beam element*** during the analysis. However, in this case, a ***truss element*** is required. Therefore, all the structural members, that are under the sub-folders in the 'Cut list' folder in the 'FeatureManager Design Tree' are converted from beams to trusses.
-
+Standardmäßig behandelt SOLIDWORKS Simulation ein Strukturbauteil, das mit dem Schweißkonstruktionswerkzeug erstellt wurde, während der Analyse als ***Balkenelement***. In diesem Fall ist jedoch ein ***Stabelement*** erforderlich. Der Unterschied besteht darin, dass ein Balkenelement axialen, Biege- und Torsionsbelastungen standhält, während ein Stabelement nur axialen Belastungen standhalten kann. Daher werden alle Strukturbauteile, die sich in den Unterordnern des Ordners "Schnittliste" im "FeatureManager" befinden, von Balken in Stäbe umgewandelt, indem ihre Definition mit der Option "Definition bearbeiten" von Balken in Stab umgewandelt wird.
 
 <a id="subsubsection-d"></a>
-***Part D – Scrutinizing the results***
-
+***Teil D - Prüfung der Ergebnisse***
