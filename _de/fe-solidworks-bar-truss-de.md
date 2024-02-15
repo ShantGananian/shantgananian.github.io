@@ -5,8 +5,8 @@ title: 'Statische Analysen von Balken und Stäben mittels der Finite-Elemente-Si
 excerpt: ""
 myLink: /en/fe-solidworks-bar-truss/ # Custom Variable
 # author_profile: true
-last_modified_at: 2023-11-20
-date: 2023-11-20
+last_modified_at: 2024-02-13
+date: 2024-02-13
 published: true
 tagsen:
   - SOLIDWORKS
