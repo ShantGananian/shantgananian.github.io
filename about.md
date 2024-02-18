@@ -27,7 +27,7 @@ With good leadership skills, programming knowledge, in-depth knowledge of the pr
 After completing my first degree; diploma in Mechanical engineering, majoring in Power Engineering, I built a successful career, 9+ years, in promoting and implementing management systems for production, quality, sustainability and safety, by holding highly responsible positions; Production Manager followed by (quality, health, safety and environment) QHSE Manager positions, in large corporate groups in various industries in the United Arab Emirates.
 
 <a id="section-b"></a>
-## My work philosophy
+## My work philosophy and ethics
 
 My work philosophy is integrated into of my way of life. That is, concentrating at every moment, insofar as I am able, firmly resolved, on accomplishing the work at hand with fitting and genuine seriousness, love for others, willingly, with justice, and on banishing from my thoughts all other distractions.
 

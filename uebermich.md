@@ -28,7 +28,7 @@ Nach meinem ersten Studienabschluss, dem Diplom in Maschinenbau mit Vertiefungsr
 
 
 <a id="section-b"></a>
-## Meine Arbeitsphilosophie
+## Meine Arbeitsphilosophie und -ethik
 
 Meine Arbeitsphilosophie ist in meine Lebensweise integriert. Nämlich sich in jedem Moment, soweit es mir möglich ist, fest entschlossen darauf zu konzentrieren, die anstehende Arbeit mit angemessener und echter Ernsthaftigkeit, mit Liebe zu den anderen, bereitwillig und mit Gerechtigkeit zu erledigen und dabei alle anderen Ablenkungen aus meinen Gedanken zu verbannen.
 
