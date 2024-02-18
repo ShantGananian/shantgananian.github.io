@@ -26,8 +26,8 @@ main:
     #  url: /pages/
     # - title: "Quick-Start Guide"
     #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-    #- title: "About"
-    #  url: /about/
+    - title: "About me"
+      url: /about/
     #- title: "Work"
    #   url: /works/
     #- title: "de"
@@ -69,8 +69,8 @@ main:
     #  url: /seiten/
     # - title: "Quick-Start Guide"
     #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-    #- title: "Über mich"
-    #  url: /uebermich/
+    - title: "Über mich"
+      url: /uebermich/
     #- title: "Arbeit"
     #  url: /works/
     #- title: "en"
