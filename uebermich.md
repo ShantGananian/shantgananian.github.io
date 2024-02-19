@@ -24,7 +24,7 @@ Am [Institut für Automation und Angewandte Informatik (IAI)](https://www.iai.ki
 
 Mit guten Führungsqualitäten, Programmierkenntnissen, fundierten Kenntnissen des Produktentwicklungsprozesses und Erfahrung bei der Suche nach kreativen Lösungen für komplexe technische Probleme habe ich nachweisliche Erfolge bei der Herstellung und Verbesserung von Produkten, Verfahren und Fertigungsprozessen erzielt.
 
-Nach meinem ersten Studienabschluss, dem Diplom in Maschinenbau mit Vertiefungsrichtung Energietechnik, habe ich über neun Jahre lang eine erfolgreiche Karriere in der Förderung und Umsetzung von Managementsystemen für Produktion, Qualität, Nachhaltigkeit und Sicherheit aufgebaut, indem ich sehr verantwortungsvolle Stellen besetzte: Produktionsleiter und anschließend QHSE-Manager (Qualität, Gesundheit, Sicherheit und Umwelt) in großen Unternehmensgruppen in verschiedenen Branchen in den Vereinigten Arabischen Emiraten (VAE).
+Nach meinem ersten Studienabschluss, dem Diplom in Maschinenbau mit Vertiefungsrichtung Energietechnik, habe ich über acht Jahre lang eine erfolgreiche Karriere in der Förderung und Umsetzung von Managementsystemen für Produktion, Qualität, Nachhaltigkeit und Sicherheit aufgebaut, indem ich sehr verantwortungsvolle Stellen besetzte: Produktionsleiter und anschließend QHSE-Manager (Qualität, Gesundheit, Sicherheit und Umwelt) in großen Unternehmensgruppen in verschiedenen Branchen in den Vereinigten Arabischen Emiraten (VAE).
 
 
 <a id="section-b"></a>

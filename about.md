@@ -24,7 +24,7 @@ At KIT's [Institute for Automation and Applied Computer Science (IAI)](https://w
 
 With good leadership skills, programming knowledge, in-depth knowledge of the product development process and experience in finding creative solutions to complex technical problems, I have a proven track record of producing and improving products, methods and manufacturing processes.
 
-After completing my first degree; diploma in Mechanical engineering, majoring in Power Engineering, I built a successful career, 9+ years, in promoting and implementing management systems for production, quality, sustainability and safety, by holding highly responsible positions; Production Manager followed by (quality, health, safety and environment) QHSE Manager positions, in large corporate groups in various industries in the United Arab Emirates.
+After completing my first degree; diploma in Mechanical engineering, majoring in Power Engineering, I built a successful career, 8+ years, in promoting and implementing management systems for production, quality, sustainability and safety, by holding highly responsible positions; Production Manager followed by (quality, health, safety and environment) QHSE Manager positions, in large corporate groups in various industries in the United Arab Emirates.
 
 <a id="section-b"></a>
 ## My work philosophy and ethics
