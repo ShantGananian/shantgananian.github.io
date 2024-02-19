@@ -29,7 +29,7 @@ After completing my first degree; diploma in Mechanical engineering, majoring in
 <a id="section-b"></a>
 ## My work philosophy and ethics
 
-My work philosophy is integrated into of my way of life. That is, concentrating at every moment, insofar as I am able, firmly resolved, on accomplishing the work at hand with fitting and genuine seriousness, love for others, willingly, with justice, and on banishing from my thoughts all other distractions.
+My work philosophy is integrated into of my way of life. That is, concentrating at every moment, insofar as I am able, firmly resolved, on accomplishing the work at hand with fitting and genuine seriousness, love for others, willingly, with justice, and banishing from my thoughts all other distractions.
 
 Being part of nature, I identify myself not only with my own immediate family, but with the broader rational community and environment, including the work environment, where I strive to contribute to the happiness and flourishing of humanity through duties (rational acts) performed with right disposition (correct understanding). In other words, contributing through virtuous acts that render me just (honest, fair), temperate (disciplined), courageous (industrious and endurant in the face of difficulties) and free (independent).
 
