@@ -416,6 +416,7 @@ defaults:
 
 # Generating feeds for collections by using Jekyll Feed "/feed/<COLLECTION>.xml"
 feed:
+  post_limit: 5000
   collections:
     - de
     - en
