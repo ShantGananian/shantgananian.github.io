@@ -2,11 +2,11 @@
 layout: single # archive
 
 title: 'Static Analyses of Bars and Trusses via the Finite Element Simulation Method with SOLIDWORKS'
-excerpt: ""
+excerpt: "Application of truss structures in various forms are found all around. Static analyses of such structures are conducted to determine the internal forces, stresses and to evaluate the axial deformations."
 myLink: /de/fe-solidworks-bar-truss-de/ # Custom Variable
 # author_profile: true
-last_modified_at: 2024-02-13
-date: 2024-02-13
+last_modified_at: 2023-11-20
+date: 2023-11-20
 published: true
 tagsen:
   - SOLIDWORKS
@@ -23,12 +23,9 @@ toc_icon: "cog"
 toc_sticky: true
 
 header:
-  #image: /assets/img/nn-parcel-rod/Figure28.jpg
-  #teaser: /assets/img/nn-parcel-rod/Figure28.jpg
+  image: /assets/img/fe-solidworks-bar-truss/Figure30.png
+  teaser: /assets/img/fe-solidworks-bar-truss/Figure30.png
 ---
-
-<img align="right" width="25%" heighth="auto" src="/assets/img/work_in_progress.png" alt="Figure">
-
 
 <br>
 
@@ -459,7 +456,7 @@ Using SOLIDWORKS Simulation to:
 <a id="subsubsection-c"></a>
 ***Part C – Creating the Simulation study***
 
-<a href="#figure21">Figure 21</a> shows the result of creating a new study, specifying the material for the members (Alloy Steel), changing from a beam element to a truss element, applying fixtures (A fix support at joint $A$) and loads, and initiating the meshing process.
+<a href="#figure21">Figure 21</a> shows the result of creating a new study, specifying the material for the members (Alloy Steel), changing from a beam element to a truss element, applying fixtures (fixed support at joint $A$) and the load, and initiating the meshing process.
 
 <center>
     <p>
@@ -502,6 +499,15 @@ Using SOLIDWORKS Simulation to:
 
 <a href="#figure24">Figure 24</a> shows a 2D plane truss representing a load-supporting mechanism. Components $CB$ and $AB$ are made of $ASTM \ A-36$ steel tubes with the same crosssection (external and internal diameters of $50 \ mm$ and $30 \ mm$, respectively).
 
+<center>
+    <p>
+    <figure id="figure24" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure24.png" alt="Figure 24">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 24: Plane truss, load-supporting mechanism</figcaption>
+    </figure>
+    </p>
+</center>
+
 <a id="subsection-b"></a>
 ### Objectives
 
@@ -513,3 +519,73 @@ Using SOLIDWORKS Simulation to :
 <a id="subsection-c"></a>
 ### Solution
 
+<ol>
+  <li><a href="#subsubsection-a">Part A – Creating the load-supporting mechanism's skeletal model</a></li>
+  <li><a href="#subsubsection-b">Part B – Converting the skeletal model into a structural profile</a></li>
+  <li><a href="#subsubsection-c">Part C – Creating the Simulation study</a></li>
+  <li><a href="#subsubsection-d">Part D – Scrutinizing the results</a></li>
+</ol>
+
+<a id="subsubsection-a"></a>
+***PART A-	Creating the load-supporting mechanism's skeletal model***
+
+<center>
+    <p>
+    <figure id="figure25" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure25.png" alt="Figure 25">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 25: A line-based geometric model of the load-supporting mechanism</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-b"></a>
+***Part B – Converting the skeletal model into a structural profile***
+
+<a href="#figure26">Figure 26</a> shows the structural model after adding structural properties to the skeletal model and editing the cross-section.
+
+<center>
+    <p>
+    <figure id="figure26" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure26.png" alt="Figure 26">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 26: The structural model of the load-supporting mechanism with a volume property</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-c"></a>
+***Part C – Creating the Simulation study***
+
+<a href="#figure27">Figure 27</a> shows the result of creating a new study, specifying the material for the members $(ASTM \ A-36 Steel)$, changing from a beam element to a truss element, applying fixtures (fixed supports at joints $A$ and $C$) and the load, and initiating the meshing process.
+
+<center>
+    <p>
+    <figure id="figure27" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure27.png" alt="Figure 27">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 27: The appearance of the model in the graphics window after applying the load/fixtures and meshing</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-d"></a>
+***Part D – Scrutinizing the results***
+
+- Resultant displacement of joint $B$: <a href="#figure28">Figure 28</a> shows the displacement plot and the maximum resultant displacement, which occurs at the joint $B$ $(34 \ \mu m)$.
+- Minimum factor of safety of the assembly: <a href="#figure29">Figure 29</a> shows the minimum factor of safety of the assembly $(Min FOS = 13.07)$, indicating that the chosen material of the components is safe.
+
+<center>
+    <p>
+    <figure id="figure28" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure28.png" alt="Figure 28">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 28: The displacement plot</figcaption>
+    </figure>
+    </p>
+</center>
+
+<center>
+    <p>
+    <figure id="figure29" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure29.png" alt="Figure 29">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 29: The minimum factor of safety of the assembly</figcaption>
+    </figure>
+    </p>
+</center>
