@@ -36,8 +36,8 @@ Application of truss structures in various forms are found all around. Typically
 
 From an engineering performance analysis point of view, static analyses of bars and trusses are conducted with the following objectives:
 
-- Determining the internal forces and consequently the stresses that developed in the members
-- Evaluating the axial deformation, the members experienced upon loading
+- Determining the internal forces and consequently the stresses that developed in the members.
+- Evaluating the axial deformation, the members experienced upon loading.
 
 The following technical points are frequently considered for the computer analysis of trusses:
 
@@ -162,7 +162,7 @@ Then, six groups of lines are selected (without applying corner treatment). The 
 
 On completing the above mentioned, the FeatureManager tree will appear with some additional items, like the item <code>Cut list (41)</code> showing that there are a total of $41$ weldment items that make up the crane structure, and the item <code>Pipe</code>, which is the main branch of the collection of extruded bodies representing the $41$ structural parts of the crane.
 
-The employed cross-section from the weldment library is not the same as that stated in the problem description. Thus, to change the dimension of this cross-section, the <code>Sketch</code> in the item <code>Pipe</code> in the Feature Manager tree is edited from <a href="#figure5">Figure 5a</a> to the desired dimensions, shown in <a href="#figure5">Figure 5b</a>.
+The employed cross-section from the weldment library is not the same as that stated in the problem description. Thus, to change the dimension of this cross-section, the <code>Sketch</code> in the item <code>Pipe</code> in the FeatureManager tree is edited from <a href="#figure5">Figure 5a</a> to the desired dimensions, shown in <a href="#figure5">Figure 5b</a>.
 
 <center>
     <p>
@@ -212,7 +212,304 @@ $\quad$ ***3. Changing from a beam element to a truss element***
 
 By default, SOLIDWORKS Simulation treats a structural member that is created using the weldment tool as a ***beam element*** during the analysis. However, in this case, a ***truss element*** is required. The difference is that a beam element resists axial, bending, and torsional loads, while a truss element can resist axial loads only. Therefore, all the structural members, that are under the subfolders in the 'Cut list' folder in the 'FeatureManager Design Tree' are converted from beams to trusses by editing their definition from beam to truss in the 'Edit Definition' option.
 
+$\quad$ ***4. Applying a fixture***
+
+A fixture is a constraint applied to structures to restrict the movement of its joint/segment when loads are applied. For this analysis, three sets of restraints are applied to the structural model of the crane:
+
+- A fixture that prevents the normal movement to the front view of all the joints (that is the vertices of the crane). This needs to be done because a planar (2D) analysis of the crane is being done in this case. However, in case of a 3D analysis, this is not necessary.
+- A fixture that prevents movements in the horizontal and vertical directions at joint $A$ (because joint $A$ has a fixed support).
+- A fixture that prevents the movement along the vertical direction at joint $B$ (because this joint is supported by a roller joint).
+
+For the first fixture, to restrain the $Z$ motion of all nodes, i.e. to impose a zero translational movement on all the nodes along the $Z$ axis, which will ensure conducting a plane analysis afterwards, in Simulation study tree the ***Fixtures*** option is right-clicked and ***Fixed Geometry*** is selected. Then, under ***Fixture*** PropertyManager and in the Standard section, ***Use Reference Geometry*** option is selected to apply restraints. All the joints in the graphic window are selected one by one. ***Front Plane*** is chosen from the FeatureManager tree to be the reference plane to apply restraints (noted inside the box regarding the reference plane). Then, under ***Translations*** section, the box for ***Normal to Plane*** is selected. These options are shown in <a href="#figure8">Figure 8</a>.
+
+<center>
+    <p>
+    <figure id="figure8" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure8.png" alt="Figure 8">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 8: Options for restraining the movements of all joints in the normal direction to the front plane</figcaption>
+    </figure>
+    </p>
+</center>
+
+Then, the restraints at joints $A$ and $B$, both located at the base of the crane, are applied, by applying fixture on nodes $A$ and $B$ in steps similar to the ones described in the previous paragraph, following the options shown in <a href="#figure9">Figure 9 (a-b)</a>.
+
+For joint $A$, it was also possible to use the fixture named ***Immovable (No translation)***; it performs the same function as what was done by using ***Use Reference Geometry***. For joint $B$, the movement was restrained along the vertical direction only, to replicate the behavior of a horizontal roller support.
+
+<center>
+    <p>
+    <figure id="figure9" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure9.png" alt="Figure 9">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 9: (a) Options for restraining vertical and horizontal movements of joint A; (b) options for restraining vertical movement of joint B</figcaption>
+    </figure>
+    </p>
+</center>
+
+$\quad$ ***5. Applying external loads***
+
+Different types of loads can be used in SOLIDWORKS Simulation. In this case, payload weights are required, represented by two vertical forces at joints $R$ and $W$. The loads are applied by using (right-click) the ***External Loads*** command under the simulation study tree and choosing ***Force***. Then, from the ***Force*** PropertyManager that appears, under ***Selection***, clicking on the ***Joints*** symbol followed by picking the joint (here: $R$ and then "W")  in the graphic window and selecting the options for the joint "R", as shown in <a href="#figure10">Figure 10</a>, where a force of $1500 \ kN$ is applied, and for the joint "W", <a href="#figure11">Figure 11</a>, where a force of $2000 \ kN$ is applied.
+
+<center>
+    <p>
+    <figure id="figure10" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure10.png" alt="Figure 10">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 10: Selecting the options for applying the force at joint R</figcaption>
+    </figure>
+    </p>
+</center>
+
+<center>
+    <p>
+    <figure id="figure11" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure11.png" alt="Figure 11">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 11: Selecting the options for applying the force at joint W</figcaption>
+    </figure>
+    </p>
+</center>
+
+After completing applying the forces, the appearance of the model in the graphics window will be as shown in <a href="#figure12">Figure 12</a>.
+
+<center>
+    <p>
+    <figure id="figure12" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure12.png" alt="Figure 12">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 12: The appearance of the model in the graphics window after applying loads and fixtures</figcaption>
+    </figure>
+    </p>
+</center>
+
+$\quad$ ***6. Meshing***
+
+The mesh is created by using the command ***Mesh and Run***, which combines the meshing and running of the analysis in a single step. After completing the meshing, the study tree will appear as shown in <a href="#figure13">Figure 13</a>.
+
+<center>
+    <p>
+    <figure id="figure13" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure13.png" alt="Figure 13">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 13: Changes in the study tree after the Mesh and Run command</figcaption>
+    </figure>
+    </p>
+</center>
+
 
 <a id="subsubsection-d"></a>
 ***Part D – Scrutinizing the results***
+
+When SOLIDWORKS is used for static studies, it generally computes, among others, the ***Displacements*** (<a href="#figure14">Figure 14</a>) at the joints or nodes of the structure, the ***Factor of safety*** (<a href="#figure15">Figure 15</a>), the ***Reaction forces*** at the points of supports, the ***Strains/Stresses*** on an element/at the nodes, and so on.
+
+***The maximum resultant deformation***
+
+<a href="#figure14">Figure 14</a> indicates that with a combined load of $3500 \ kN$ applied to the crane, the maximum deformation experienced by the joint $R$ is $39.097 \ mm$. Since a truss element has three translational displacement degrees of freedom at its node, the resultant displacement refers to the vectorial resultant displacement.
+
+<center>
+    <p>
+    <figure id="figure14" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure14.png" alt="Figure 14">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 14: The deformed shape of the crane and its maximum resultant displacement</figcaption>
+    </figure>
+    </p>
+</center>
+
+***The factor of safety***
+
+The calculation of the factor of safety is based on certain failure criteria. SOLIDWORKS Simulation offers four failure criteria:
+
+- Maximum von Mises Stress Criterion
+- Maximum Shear Stress Criterion
+- Mohr-Coulomb Stress Criterion
+- Maximum Normal Stress Criterion (for composite shells)
+
+Large factors of safety in a region indicate that material could be saved from that region. Many codes require a minimum factor of safety between $1.5$ and $3$.
+
+- A factor of safety less than $1$ at a location indicates that the material at that location has failed.
+- A factor of safety of $1$ at a location indicates that the material at that location has just started to fail.
+- A factor of safety larger than $1$ at a location indicates that the material at that location is safe.
+
+<a href="#figure15">Figure 15</a> shows the distribution of the FOS for the crane upon the application of the load. Here, the ***Maximum Von-Mises*** failure criterion, specified in the material property database, is used.
+
+<center>
+    <p>
+    <figure id="figure15" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure15.png" alt="Figure 15">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 15: Distribution of FOS over the crane</figcaption>
+    </figure>
+    </p>
+</center>
+
+***The axial force/stress for the member $IH$***
+
+the List Forces window allows to navigate through the values of the axial forces developed in different members of the structure. For example, $Beam-8$ is the element that corresponds to member $IH$, which experiences an internal axial force of approximately $688.7 \ kN$ (<a href="#figure16">Figure 16</a>).
+
+<center>
+    <p>
+    <figure id="figure16" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure16.png" alt="Figure 16">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 16: Distribution of FOS over the crane</figcaption>
+    </figure>
+    </p>
+</center>
+
+This value is approximately $3\%$ less than the value of the manual calculation $(707 \ kN)$ (tension) obtained in the following steps:
+
+Taking a section through $KI$, $IJ$, $JH$ and $HT$, as shown in <a href="#figure17">Figure 17(a)</a>.
+
+<center>
+    <p>
+    <figure id="figure17" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure17.png" alt="Figure 17">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 17: (a) Section through $KI$, $IJ$, $JH$ and $HT$;  (b) Section through $PI$, $PG$ and $MG$</figcaption>
+    </figure>
+    </p>
+</center>
+
+Taking moments about $J$:
+
+$$
+F_{HT} \times  3 + 2000 \times 6 = 0
+\\
+\Rightarrow F_{HT} = -4000 \ kN
+$$
+
+Resolving horizontally:
+
+$$
+F_{IJ} + F_{HT} = 0
+\\
+\Rightarrow F_{IJ} = +4000 \ kN
+$$
+
+By taking a section through $PI$, $PG$ and $MG$ as shown in <a href="#figure17">Figure 17(b)</a>, and taking moments about $G$:
+
+$$
+F_{PI} \times  3 - 1500 \times 9 = 0
+\\
+\Rightarrow F_{PI} = +4500 \ kN
+$$
+
+Resolving horizontally at $I$ in the complete truss:
+
+$$
+F_{IH} \times  cos45° + F_{IJ} - F_{IP} = 0
+\\
+\Rightarrow F_{IH} = +707 \ kN
+$$
+
+The small difference between the value from SOLIDWORKS and the manual calculation may be attributed to possible rounding-off errors.
+
+<a id="section-c"></a>
+## PROBLEM 2: Conducting static analysis on loaded two straight connected segments of a machine
+
+<a id="subsection-a"></a>
+### Problem Description
+
+<a href="#figure18">Figure 18</a> shows two straight segments of a machine loaded as illustrated. The segments are made of alloy steel and have a cross-sectional profile with an external and internal diameter of $40 \ mm$ and $20 \ mm$, respectively. The segments are treated as two connected bars.
+
+<center>
+    <p>
+    <figure id="figure18" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure18.png" alt="Figure 18">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 18: Loaded two straight segments of a machine</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsection-b"></a>
+### Objectives
+
+Using SOLIDWORKS Simulation to:
+
+- Determe the displacement of the end $C$.
+- Evaluate the axial stresses developed in the components upon loading.
+
+<a id="subsection-c"></a>
+### Solution
+
+<ol>
+  <li><a href="#subsubsection-a">Part A – Creating the bar's skeletal model</a></li>
+  <li><a href="#subsubsection-b">Part B – Converting the skeletal model into a structural profile</a></li>
+  <li><a href="#subsubsection-c">Part C – Creating the Simulation study</a></li>
+  <li><a href="#subsubsection-d">Part D – Scrutinizing the results</a></li>
+</ol>
+
+<a id="subsubsection-a"></a>
+***PART A-	Creating the bar's skeletal model***
+
+<center>
+    <p>
+    <figure id="figure19" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure19.png" alt="Figure 19">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 19: A line-based geometric model of the two segments</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-b"></a>
+***Part B – Converting the skeletal model into a structural profile***
+
+<a href="#figure20">Figure 20</a> shows the structural model after adding structural properties to the skeletal model and editing the cross-section.
+
+<center>
+    <p>
+    <figure id="figure20" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure20.png" alt="Figure 20">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 20: The structural model of the two segments with a volume property</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-c"></a>
+***Part C – Creating the Simulation study***
+
+<a href="#figure21">Figure 21</a> shows the result of creating a new study, specifying the material for the members (Alloy Steel), changing from a beam element to a truss element, applying fixtures (A fix support at joint $A$) and loads, and initiating the meshing process.
+
+<center>
+    <p>
+    <figure id="figure21" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure21.png" alt="Figure 21">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 21: The appearance of the model in the graphics window after applying the load/fixtures and meshing</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-d"></a>
+***Part D – Scrutinizing the results***
+
+- Maximum displacement of end $C$: <a href="#figure22">Figure 22</a> shows the displacement plot and the maximum resultant displacement, which occurs at the joint $B$ $(30 \ \mu m)$ and it equals to the displacement at the end $C$.
+- Retrieving the axial stresses: <a href="#figure23">Figure 23</a> shows the default display of axial stresses
+
+<center>
+    <p>
+    <figure id="figure22" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure22.png" alt="Figure 22">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 22: The displacement plot</figcaption>
+    </figure>
+    </p>
+</center>
+
+<center>
+    <p>
+    <figure id="figure23" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure23.png" alt="Figure 23">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 23: The default display of axial stresses</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="section-d"></a>
+## PROBLEM 3: Conducting static analysis on a load-supporting mechanism
+
+<a id="subsection-a"></a>
+### Problem Description
+
+<a href="#figure24">Figure 24</a> shows a 2D plane truss representing a load-supporting mechanism. Components $CB$ and $AB$ are made of $ASTM \ A-36$ steel tubes with the same crosssection (external and internal diameters of $50 \ mm$ and $30 \ mm$, respectively).
+
+<a id="subsection-b"></a>
+### Objectives
+
+Using SOLIDWORKS Simulation to :
+
+- Determine the resultant displacement of joint $B$
+- Determine the minimum factor of safety of the assembly
+
+<a id="subsection-c"></a>
+### Solution
 
