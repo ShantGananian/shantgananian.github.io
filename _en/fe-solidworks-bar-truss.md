@@ -250,7 +250,7 @@ Different types of loads can be used in SOLIDWORKS Simulation. In this case, pay
 
 <center>
     <p>
-    <figure id="figure10" style='display: table; width: 75%; heighth: auto;'>
+    <figure id="figure10" style='display: table; width: 100%; heighth: auto;'>
         <img src="/assets/img/fe-solidworks-bar-truss/Figure10.png" alt="Figure 10">
         <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 10: Selecting the options for applying the force at joint R</figcaption>
     </figure>
@@ -259,7 +259,7 @@ Different types of loads can be used in SOLIDWORKS Simulation. In this case, pay
 
 <center>
     <p>
-    <figure id="figure11" style='display: table; width: 75%; heighth: auto;'>
+    <figure id="figure11" style='display: table; width: 100%; heighth: auto;'>
         <img src="/assets/img/fe-solidworks-bar-truss/Figure11.png" alt="Figure 11">
         <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Figure 11: Selecting the options for applying the force at joint W</figcaption>
     </figure>
