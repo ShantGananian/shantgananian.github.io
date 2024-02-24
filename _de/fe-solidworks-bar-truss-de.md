@@ -2,11 +2,11 @@
 layout: single # archive
 
 title: 'Statische Analysen von Balken und Stäben mittels der Finite-Elemente-Simulationsmethode mit SOLIDWORKS'
-excerpt: ""
+excerpt: "Stabkonstruktionen werden in den verschiedensten Formen überall eingesetzt. Statische Analysen solcher Strukturen werden durchgeführt, um die inneren Kräfte und Spannungen zu bestimmen und die axialen Verformungen zu bewerten."
 myLink: /en/fe-solidworks-bar-truss/ # Custom Variable
 # author_profile: true
-last_modified_at: 2024-02-13
-date: 2024-02-13
+last_modified_at: 2023-11-20
+date: 2023-11-20
 published: true
 tagsen:
   - SOLIDWORKS
@@ -24,11 +24,9 @@ toc_icon: "cog"
 toc_sticky: true
 
 header:
-  #image: /assets/img/nn-parcel-rod/Figure28.jpg
-  #teaser: /assets/img/nn-parcel-rod/Figure28.jpg
+  image: /assets/img/fe-solidworks-bar-truss/Figure30.png
+  teaser: /assets/img/fe-solidworks-bar-truss/Figure30.png
 ---
-
-<img align="right" width="25%" heighth="auto" src="/assets/img/laufende-arbeiten.png" alt="Figure">
 
 <br>
 
@@ -211,5 +209,382 @@ $\quad$ ***3. Wechsel von einem Balkenelement zu einem Stabelement***
 
 Standardmäßig behandelt SOLIDWORKS Simulation ein Strukturbauteil, das mit dem Schweißkonstruktionswerkzeug erstellt wurde, während der Analyse als ***Balkenelement***. In diesem Fall ist jedoch ein ***Stabelement*** erforderlich. Der Unterschied besteht darin, dass ein Balkenelement axialen, Biege- und Torsionsbelastungen standhält, während ein Stabelement nur axialen Belastungen standhalten kann. Daher werden alle Strukturbauteile, die sich in den Unterordnern des Ordners "Schnittliste" im "FeatureManager" befinden, von Balken in Stäbe umgewandelt, indem ihre Definition mit der Option "Definition bearbeiten" von Balken in Stab umgewandelt wird.
 
+$\quad$ ***4. Anbringen einer Einspannung***
+
+Eine Einspannung ist eine Beschränkung, die auf Strukturen angewendet wird, um die Bewegung ihres Gelenks/Segments zu begrenzen, wenn Lasten aufgebracht werden. Für diese Analyse werden drei Sätze von Einspannungen auf das Strukturmodell des Krans angewendet:
+
+- Eine Einspannung, die die normale Bewegung aller Gelenke (d. h. der Eckpunkte des Krans) zur Vorderansicht verhindert. Dies ist notwendig, da in diesem Fall eine planare (2D) Analyse des Krans durchgeführt wird. Im Falle einer 3D-Analyse ist dies jedoch nicht erforderlich.
+- Eine Einspannung, die Bewegungen in horizontaler und vertikaler Richtung am Gelenk $A$ verhindert (da das Gelenk $A$ ein festes Auflager hat).
+- Eine Einspannung, die die Bewegung in vertikaler Richtung am Gelenk $B$ verhindert (da dieses Gelenk durch ein Rollengelenk abgestützt ist).
+
+Um die $Z$-Bewegung aller Knoten einzuschränken, d.h. allen Knoten entlang der $Z$-Achse eine Translationsbewegung von Null aufzuerlegen, was die spätere Durchführung einer ebenen Analyse gewährleistet, wird in der Studien-Baumstruktur "Simulation" die Option ***Einspannungen*** mit der rechten Maustaste angeklickt und ***Fixierte Geometrie*** ausgewählt. Dann wird unter ***Fixture*** PropertyManager und im Abschnitt Standard die Option ***Verwenden einer Referenzgeometrie*** gewählt, um die Einspannungen anzuwenden. Alle Verbindungen im Grafikfenster werden nacheinander ausgewählt. Die ***Ebene vorne*** wird aus dem FeatureManager als Bezugsebene für die Anwendung von Beschränkungen ausgewählt (im Feld für die Referenzebene vermerkt). Dann wird im Abschnitt ***Verschiebungen*** das Kästchen für ***Normal zur Ebene*** ausgewählt. Diese Optionen sind in <a href="#figure8">Abbildung 8</a> dargestellt.
+
+<center>
+    <p>
+    <figure id="figure8" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure8.png" alt="Figure 8">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 8: Optionen zur Begrenzung der Bewegungen aller Gelenke in normaler Richtung zur Ebene vorne</figcaption>
+    </figure>
+    </p>
+</center>
+
+Dann werden die Einspannungen an den Verbindungen $A$ und $B$, die sich beide am Fuß des Krans befinden, aufgebracht, indem die Einspannungen an den Knoten $A$ und $B$ in ähnlichen Schritten wie im vorigen Abschnitt beschrieben aufgebracht werden, entsprechend den in <a href="#figure9">Abbildung 9 (a-b)</a> gezeigten Einstellungen.
+
+Für die Verbindung $A$ konnte auch die Vorrichtung ***Nicht verschiebbar (keine Translation)*** verwendet werden; sie erfüllt die gleiche Funktion wie die ***Verwenden einer Referenzgeometrie***. Für die Verbindung $B$ wurde die Bewegung nur in der vertikalen Richtung eingeschränkt, um das Verhalten eines horizontalen Rollenträgers nachzubilden.
+
+<center>
+    <p>
+    <figure id="figure9" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure9.png" alt="Figure 9">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 9: (a) Einstellungen zur Begrenzung der vertikalen und horizontalen Bewegungen von Verbindung A; (b) Einstellungen zur Begrenzung der vertikalen Bewegung von Verbindung B</figcaption>
+    </figure>
+    </p>
+</center>
+
+$\quad$ ***5. Aufbringen externer Lasten***
+
+In SOLIDWORKS Simulation können verschiedene Arten von Lasten verwendet werden. In diesem Fall sind Nutzlastgewichte erforderlich, die durch zwei vertikale Kräfte an den Verbindungen $R$ und $W$ dargestellt werden. Die Lasten werden durch Klicken mit der rechten Maustaste auf den Befehl ***Externe Lasten*** in der Studien-Baumstruktur "Simulation" und Auswahl von ***Kraft*** angewendet. Dann im PropertyManager ***Kraft***, der unter ***Auswahl*** erscheint, auf das Symbol ***Verbindungen*** klicken und dann die Verbindung (hier: $R$ und dann "W") im Grafikfenster auswählen und die Optionen für die Verbindung "R", wie in <a href="#figure10">Abbildung 10</a> gezeigt, wo eine Kraft von $1500 \ kN$ aufgebracht wird, und für die Verbindung "W", <a href="#figure11">Abbildung 11</a>, wo eine Kraft von $2000 \ kN$ aufgebracht wird, auswählen.
+
+<center>
+    <p>
+    <figure id="figure10" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure10.png" alt="Figure 10">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 10: Auswahl der Optionen für das Aufbringen der Kraft an der Verbindung R</figcaption>
+    </figure>
+    </p>
+</center>
+
+<center>
+    <p>
+    <figure id="figure11" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure11.png" alt="Figure 11">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 11: Auswahl der Optionen für die Aufbringung der Kraft an der Verbindung W</figcaption>
+    </figure>
+    </p>
+</center>
+
+Nach der Anwendung der Kräfte sieht das Modell im Grafikfenster wie in <a href="#figure12">Abbildung 12</a> dargestellt aus.
+
+<center>
+    <p>
+    <figure id="figure12" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure12.png" alt="Figure 12">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 12: Das Aussehen des Modells im Grafikfenster nach der Anwendung von Lasten und Einspannungen</figcaption>
+    </figure>
+    </p>
+</center>
+
+$\quad$ ***6. Vernetzung***
+
+Die Vernetzung wird mit dem Befehl ***Vernetzen und Durchführen*** erstellt, der die Vernetzung und die Durchführung der Analyse in einem einzigen Schritt kombiniert. Nach Abschluss der Vernetzung erscheint der Studienbaum wie in <a href="#figure13">Abbildung 13</a> dargestellt.
+
+<center>
+    <p>
+    <figure id="figure13" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure13.png" alt="Figure 13">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 13: Änderungen in der Studien-Baumstruktur nach dem Befehl Vernetzen und Durchführen</figcaption>
+    </figure>
+    </p>
+</center>
+
 <a id="subsubsection-d"></a>
 ***Teil D - Prüfung der Ergebnisse***
+
+Wenn SOLIDWORKS für statische Studien verwendet wird, berechnet es im Allgemeinen unter anderem die ***Verschiebungen*** (<a href="#figur14">Abbildung 14</a>) an den Verbindungen oder Knoten der Struktur, den ***Sicherheitsfaktor*** (<a href="#figur15">Abbildung 15</a>), die ***Rückwirkungskräfte*** an den Auflagerpunkten, die ***Dehnungen/Spannungen*** an einem Element/Knoten usw.
+
+***Die maximale resultierende Verformung***
+
+<a href="#figur14">Abbildung 14</a> zeigt, dass bei einer kombinierten Last von $3500 \ kN$, die auf den Kran wirkt, die maximale Verformung des Gelenks $R$ $39.097 \ mm$ beträgt. Da ein Stabelement an seinem Knoten drei translatorische Verschiebungsfreiheitsgrade besitzt, bezieht sich die resultierende Verschiebung auf die vektorielle resultierende Verschiebung.
+
+<center>
+    <p>
+    <figure id="figure14" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure14.png" alt="Figure 14">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 14: Die verformte Form des Krans und seine maximale resultierende Verschiebung</figcaption>
+    </figure>
+    </p>
+</center>
+
+***Der Sicherheitsfaktor***
+
+Die Berechnung des Sicherheitsfaktors basiert auf bestimmten Versagenskriterien. SOLIDWORKS Simulation bietet vier Versagenskriterien:
+
+- Maximales von-Mises-Spannungskriterium
+- Maximales Schubspannungskriterium
+- Mohr-Coulomb-Spannungskriterium
+- Maximales Normalspannungskriterium (für Verbundstoff-Schalen)
+
+Hohe Sicherheitsfaktoren in einem Bereich zeigen an, dass Sie in diesem Bereich Materialeinsparungen vornehmen können. Viele Codes erfordern einen minimalen Sicherheitsfaktor zwischen $1,5$ und $3$.
+
+- Ein Sicherheitsfaktor unterhalb von $1$ an einer Position zeigt an, dass das Material an dieser Stelle versagt hat.
+- Ein Sicherheitsfaktor von $1$ an einer Position zeigt an, dass das Material an dieser Stelle gerade begonnen hat, zu versagen.
+- Ein Sicherheitsfaktor oberhalb von $1$ an einer Position zeigt an, dass das Material an dieser Stelle sicher ist.
+
+<a href="#figure15">Abbildung 15</a> zeigt die Verteilung des Sicherheitsfaktors für den Kran bei Aufbringung der Last. Hier wird das ***Maximum Von-Mises*** Versagenskriterium verwendet, das in der Datenbank der Materialeigenschaften angegeben ist.
+
+<center>
+    <p>
+    <figure id="figure15" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure15.png" alt="Figure 15">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 15: Verteilung des Sicherheitsfaktors über den Kran</figcaption>
+    </figure>
+    </p>
+</center>
+
+***Die Axialkraft/Spannung für den Stab $IH$***
+
+Das Fenster "Kräfte auflisten" ermöglicht es, durch die Werte der Axialkräfte zu navigieren, die in den verschiedenen Stäben der Struktur auftreten. Zum Beispiel ist $Beam-8$ das Element, das dem Stab $IH$ entspricht, der eine innere Axialkraft von ungefähr $688,7 kN$ erfährt (<a href="#figure16">Abbildung 16</a>).
+
+<center>
+    <p>
+    <figure id="figure16" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure16.png" alt="Figure 16">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 16: Verteilung des Sicherheitsfaktors über den Kran</figcaption>
+    </figure>
+    </p>
+</center>
+
+Dieser Wert ist etwa $3\%$ niedriger als der Wert der manuellen Berechnung $(707 \ kN)$ (Zugkraft), der in den folgenden Schritten ermittelt wird:
+
+Einen Schnitt durch $KI$, $IJ$, $JH$ und $HT$ machen, wie in <a href="#figure17">Abbildung 17(a)</a> gezeigt.
+
+<center>
+    <p>
+    <figure id="figure17" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure17.png" alt="Figure 17">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 17: (a) Schnitt durch $KI$, $IJ$, $JH$ und $HT$; (b) Schnitt durch $PI$, $PG$ und $MG$</figcaption>
+    </figure>
+    </p>
+</center>
+
+Momente um $J$ nehmen:
+
+$$
+F_{HT} \times  3 + 2000 \times 6 = 0
+\\
+\Rightarrow F_{HT} = -4000 \ kN
+$$
+
+Horizontal auflösen:
+
+$$
+F_{IJ} + F_{HT} = 0
+\\
+\Rightarrow F_{IJ} = +4000 \ kN
+$$
+
+Mit einem Schnitt durch $PI$, $PG$ und $MG$, wie in <a href="#figure17">Abbildung 17(b)</a> gezeigt, und mit Momenten um $G$:
+
+$$
+F_{PI} \times  3 - 1500 \times 9 = 0
+\\
+\Rightarrow F_{PI} = +4500 \ kN
+$$
+
+Horizontale Auflösung bei $I$ in der vollständigen Stabkonstruktion:
+
+$$
+F_{IH} \times  cos45° + F_{IJ} - F_{IP} = 0
+\\
+\Rightarrow F_{IH} = +707 \ kN
+$$
+
+Die geringe Differenz zwischen dem Wert aus SOLIDWORKS und der manuellen Berechnung kann auf mögliche Rundungsfehler zurückzuführen sein.
+
+<a id="section-c"></a>
+## PROBLEM 2: Durchführung einer statischen Analyse für zwei belastete, gerade verbundene Segmente einer Maschine
+
+<a id="subsection-a"></a>
+### Problembeschreibung
+
+<a href="#figure18">Abbildung 18</a> zeigt zwei gerade Segmente einer wie abgebildet beladenen Maschine. Die Segmente bestehen aus legiertem Stahl und haben ein Querschnittsprofil mit einem Außen- und Innendurchmesser von $40 \ mm$ bzw. $20 \ mm$. Die Segmente werden als zwei miteinander verbundene Stäbe behandelt.
+
+<center>
+    <p>
+    <figure id="figure18" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure18.png" alt="Figure 18">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 18: Beladene zwei gerade Segmente einer Maschine</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsection-b"></a>
+### Ziele
+
+Verwendung von SOLIDWORKS Simulation zur:
+
+- Bestimmung der Verschiebung des Endes $C$.
+- Bewertung der Axialspannungen, die sich bei der Belastung in den Bauteilen entwickeln.
+
+<a id="subsection-c"></a>
+### Lösung
+
+<ol>
+  <li><a href="#subsubsection-a">Teil A - Erstellung des Skelettmodells des Balkens</a></li>
+  <li><a href="#subsubsection-b">Teil B - Umwandlung des Skelettmodells in ein Strukturprofil</a></li>
+  <li><a href="#subsubsection-c">Teil C - Erstellung der Simulationsstudie</a></li>
+  <li><a href="#subsubsection-d">Teil D - Prüfung der Ergebnisse</a></li>
+</ol>
+
+<a id="subsubsection-a"></a>
+***Teil A - Erstellung des Skelettmodells des Balkens***
+
+<center>
+    <p>
+    <figure id="figure19" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure19.png" alt="Figure 19">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 19: Ein linienbasiertes geometrisches Modell der beiden Segmente</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-b"></a>
+***Teil B - Umwandlung des Skelettmodells in ein Strukturprofil***
+
+<a href="#figur20">Abbildung 20</a> zeigt das Strukturmodell nach dem Hinzufügen von Struktureigenschaften zum Skelettmodell und der Bearbeitung des Querschnitts.
+
+<center>
+    <p>
+    <figure id="figure20" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure20.png" alt="Figure 20">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 20: Das Strukturmodell der beiden Segmente mit einer Volumeneigenschaft</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-c"></a>
+***Teil C - Erstellung der Simulationsstudie***
+
+<a href=" #figure21">Abbildung 21</a> zeigt das Ergebnis der Erstellung einer neuen Studie, der Angabe des Materials für die Stäbe (legierter Stahl), des Wechsels von einem Balkenelement zu einem Stabelement, des Anbringens von Einspannungen (festes Auflager an der Verbindung $A$) und der Last sowie des Beginns des Vernetzungsvorgangs.
+
+<center>
+    <p>
+    <figure id="figure21" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure21.png" alt="Figure 21">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 21: Das Aussehen des Modells im Grafikfenster nach dem Aufbringen der Lasten/Einspannungen und der Vernetzung</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-d"></a>
+***Teil D - Prüfung der Ergebnisse***
+
+- Maximale Verschiebung des Endes $C$: <a href="#figure22">Abbildung 22</a> zeigt das Verschiebungsdiagramm und die maximale resultierende Verschiebung, die am Gelenk $B$ $(30 \ \mu m)$ auftritt und gleich der Verschiebung am Ende $C$ ist.
+- Abrufen der Axialspannungen: <a href="#figure23">Abbildung 23</a> zeigt die Standardanzeige der Axialspannungen.
+
+<center>
+    <p>
+    <figure id="figure22" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure22.png" alt="Figure 22">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 22: Das Verschiebungsdiagramm</figcaption>
+    </figure>
+    </p>
+</center>
+
+<center>
+    <p>
+    <figure id="figure23" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure23.png" alt="Figure 23">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 23: Die Standardanzeige der Axialspannungen</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="section-d"></a>
+## PROBLEM 3: Durchführung einer statischen Analyse eines lasttragenden Mechanismus
+
+<a id="subsection-a"></a>
+### Problembeschreibung
+
+<a href="#figur24">Abbildung 24</a> zeigt ein ebenes 2D-Fachwerk, das einen lasttragenden Mechanismus darstellt. Die Bauteile $CB$ und $AB$ bestehen aus $ASTM \ A-36$ Stahlrohren mit gleichem Querschnitt (Außen- und Innendurchmesser von $50 \ mm$ bzw. $30 \ mm$).
+
+<center>
+    <p>
+    <figure id="figure24" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure24.png" alt="Figure 24">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 24: Flaches Fachwerk, lastabtragendes Mechanismus</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsection-b"></a>
+### Ziele
+
+Verwendung von SOLIDWORKS Simulation zum :
+
+- Bestimmung der resultierenden Verschiebung der Verbindung $B$
+- Bestimmung des Mindestsicherheitsfaktors der Baugruppe
+
+<a id="subsection-c"></a>
+### Lösung
+
+<ol>
+  <li><a href="#subsubsection-a">Teil A - Erstellung des Skelettmodells des lasttragenden Mechanismus</a></li>
+  <li><a href="#subsubsection-b">Teil B - Umwandlung des Skelettmodells in ein Strukturprofil</a></li>
+  <li><a href="#subsubsection-c">Teil C - Erstellung der Simulationsstudie</a></li>
+  <li><a href="#subsubsection-d">Teil D - Prüfung der Ergebnisse</a></li>
+</ol>
+
+<a id="subsubsection-a"></a>
+***Teil A - Erstellung des Skelettmodells des lasttragenden Mechanismus***
+
+<center>
+    <p>
+    <figure id="figure25" style='display: table; width: 75%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure25.png" alt="Figure 25">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 25: Ein linienbasiertes geometrisches Modell des lasttragenden Mechanismus</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-b"></a>
+***Teil B - Umwandlung des Skelettmodells in ein Strukturprofil***
+
+<a href="#figur26">Abbildung 26</a> zeigt das Strukturmodell nach dem Hinzufügen von Struktureigenschaften zum Skelettmodell und der Bearbeitung des Querschnitts.
+
+<center>
+    <p>
+    <figure id="figure26" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure26.png" alt="Figure 26">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 26: Strukturmodell des lasttragenden Mechanismus mit einer Volumeneigenschaft</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-c"></a>
+***Teil C - Erstellung der Simulationsstudie***
+
+<a href="#figure27">Abbildung 27</a> zeigt das Ergebnis der Erstellung einer neuen Studie, der Angabe des Materials für die Stäbe $(ASTM A-36 Stahl)$, des Wechsels von einem Balkenelement zu einem Stabelement, des Anbringens von Einspannungen (feste Auflager an den Verbindungsstellen $A$ und $C$) und der Belastung sowie des Beginns des Vernetzungsvorgangs.
+
+<center>
+    <p>
+    <figure id="figure27" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure27.png" alt="Figure 27">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 27: Das Aussehen des Modells im Grafikfenster nach dem Aufbringen der Lasten/Einspannungen und der Vernetzung</figcaption>
+    </figure>
+    </p>
+</center>
+
+<a id="subsubsection-d"></a>
+***Teil D - Prüfung der Ergebnisse***
+
+- Resultierende Verschiebung des Gelenks $B$: <a href="#figure28">Abbildung 28</a> zeigt das Verschiebungsdiagramm und die maximale resultierende Verschiebung, die an der Verbindung $B$ $(34 \ \mu m)$ auftritt.
+- Minimaler Sicherheitsfaktor der Baugruppe: <a href="#figure29">Abbildung 29</a> zeigt den minimalen Sicherheitsfaktor der Baugruppe $(Min FOS = 13,07)$, was darauf hindeutet, dass das gewählte Material der Bauteile sicher ist.
+
+<center>
+    <p>
+    <figure id="figure28" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure28.png" alt="Figure 28">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 28: Das Verschiebungsdiagramm</figcaption>
+    </figure>
+    </p>
+</center>
+
+<center>
+    <p>
+    <figure id="figure29" style='display: table; width: 100%; heighth: auto;'>
+        <img src="/assets/img/fe-solidworks-bar-truss/Figure29.png" alt="Figure 29">
+        <figcaption style="text-align: left; display: table-caption; caption-side: bottom; font-size: 75%; font-style: normal;">Abbildung 29: Der Mindestsicherheitsfaktor der Baugruppe</figcaption>
+    </figure>
+    </p>
+</center>

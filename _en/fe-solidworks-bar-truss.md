@@ -334,7 +334,7 @@ Large factors of safety in a region indicate that material could be saved from t
 
 ***The axial force/stress for the member $IH$***
 
-the List Forces window allows to navigate through the values of the axial forces developed in different members of the structure. For example, $Beam-8$ is the element that corresponds to member $IH$, which experiences an internal axial force of approximately $688.7 \ kN$ (<a href="#figure16">Figure 16</a>).
+The List Forces window allows to navigate through the values of the axial forces developed in different members of the structure. For example, $Beam-8$ is the element that corresponds to member $IH$, which experiences an internal axial force of approximately $688.7 \ kN$ (<a href="#figure16">Figure 16</a>).
 
 <center>
     <p>
@@ -414,7 +414,7 @@ The small difference between the value from SOLIDWORKS and the manual calculatio
 
 Using SOLIDWORKS Simulation to:
 
-- Determe the displacement of the end $C$.
+- Determine the displacement of the end $C$.
 - Evaluate the axial stresses developed in the components upon loading.
 
 <a id="subsection-c"></a>
@@ -471,7 +471,7 @@ Using SOLIDWORKS Simulation to:
 ***Part D – Scrutinizing the results***
 
 - Maximum displacement of end $C$: <a href="#figure22">Figure 22</a> shows the displacement plot and the maximum resultant displacement, which occurs at the joint $B$ $(30 \ \mu m)$ and it equals to the displacement at the end $C$.
-- Retrieving the axial stresses: <a href="#figure23">Figure 23</a> shows the default display of axial stresses
+- Retrieving the axial stresses: <a href="#figure23">Figure 23</a> shows the default display of axial stresses.
 
 <center>
     <p>
