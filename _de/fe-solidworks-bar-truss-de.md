@@ -14,7 +14,7 @@ tagsen:
   - Simulation
   - Rechnergestützte Entwicklung
   - Rechnergestützte Konstruktion
-  - Spannungsanalyse
+  - Festigkeitsberechnung
   - Festigkeitslehre
 
 
