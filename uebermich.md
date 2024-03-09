@@ -26,7 +26,7 @@ Im Projektpraktikum über [Humanoide Roboter](https://h2t.iar.kit.edu/28_1709.ph
     <p>
         <video width="100%" height=auto poster="/assets/vid/about/Humanoide Roboter - Praktikum.png" controls>
         <source src="/assets/vid/about/Humanoide Roboter - Praktikum.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
+        <source src="/assets/vid/about/Humanoide Roboter - Praktikum.ogg" type="video/ogg">
         Your browser does not support the video tag.
         </video>
     </p>
@@ -36,8 +36,11 @@ Im Rahmen des [Virtual Reality-Praktikums](https://www.imi.kit.edu/208_623.php) 
 
 <center>
     <p>
-        <iframe src="http://www.youtube.com/embed/taBGNmG5PJ4"
-   width="400"  frameborder="0" allowfullscreen></iframe>
+        <video width="100%" height=auto poster="/assets/vid/about/Virtual Reality Practical Course - Winter Term 2017_18 - Cyberglove.jpg" controls>
+        <source src="/assets/vid/about/Virtual Reality Practical Course - Winter Term 2017_18 - Cyberglove.mp4" type="video/mp4">
+        <source src="/assets/vid/about/Virtual Reality Practical Course - Winter Term 2017_18 - Cyberglove.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+        </video>
     </p>
 </center>
 
