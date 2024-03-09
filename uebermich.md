@@ -32,7 +32,7 @@ Im Projektpraktikum über [Humanoide Roboter](https://h2t.iar.kit.edu/28_1709.ph
     </p>
 </center>
 
-Im Rahmen des [Virtual Reality-Praktikums](https://www.imi.kit.edu/208_623.php) am KIT-[Institut für Informationsmanagement im Ingenieurwesen (IMI)](https://www.imi.kit.edu/) gehörte es zu unseren Aufgaben, einen Cyber-Handschuh mit seiner Leiterplatte und seinem Gehäuse zu entwickeln, der mit Biegesensoren, einem Joystick und einem Tracking-System ausgestattet ist. Neben der Hardware haben wir das WLAN-Übertragungsprotokoll überarbeitet und neu gestaltet, den Arduino-Code modifiziert, angepasst und weitere Funktionen implementiert, um die neuen Sensorwerte zu übertragen und die Nutzung des Cyber-Handschuhs in der automatischen virtuellen Umgebung von Cave zu ermöglichen. Dann entwarfen wir neue Anwendungsfälle, um unseren entwickelten Cyber-Handschuh zu testen und zu präsentieren.
+Im Rahmen des [Virtual Reality-Praktikums](https://www.imi.kit.edu/208_623.php) am KIT-[Institut für Informationsmanagement im Ingenieurwesen (IMI)](https://www.imi.kit.edu/) gehörte es zu unseren Aufgaben, einen Cyber-Handschuh mit seiner Leiterplatte und seinem Gehäuse zu entwickeln, der mit Biegesensoren, einem Joystick und einem Tracking-System ausgestattet ist. Neben der Hardware überarbeiteten und gestalteten wir das WLAN-Übertragungsprotokoll neu, modifizierten, ergänzten und implementierten weitere Funktionen, indem wir den Arduino-Code anpassten, um die neuen Sensorwerte zu übertragen und die Nutzung des Cyber-Handschuhs in der automatischen virtuellen Umgebung von Cave zu ermöglichen. Dann entwarfen wir neue Anwendungsfälle, um unseren entwickelten Cyber-Handschuh zu testen und zu präsentieren.
 
 <center>
     <p>
