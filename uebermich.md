@@ -26,6 +26,7 @@ Im Projektpraktikum über [Humanoide Roboter](https://h2t.iar.kit.edu/28_1709.ph
     <p>
         <video width="100%" height=auto poster="/assets/vid/about/Humanoide Roboter - Praktikum.png" controls>
         <source src="/assets/vid/about/Humanoide Roboter - Praktikum.mp4" type="video/mp4">
+        <source src="/assets/vid/about/Humanoide Roboter - Praktikum.ogg" type="video/ogg">
         Your browser does not support the video tag.
         </video>
     </p>
