@@ -16,7 +16,30 @@ toc_sticky: true
 <a id="section-a"></a>
 ## Also, wer bin ich?
 
-Mein Name ist Shant Gananian. Maschinenbauingenieur, Enthusiast für intelligente mikro-mechatronische Systeme. Kürzlich habe ich mein zweites Studium abgeschlossen und einen Master-Abschluss in Maschinenbau mit der Vertiefung Mechatronik und Mikrosystemtechnik und den Schwerpunkten Robotik und Medizintechnik am [Karlsruher Institut für Technologie (KIT)](https://www.kit.edu/) in Deutschland erworben. Ein Studiengang, den ich angesichts der zunehmenden weltweiten Integration von mechanischen, elektronischen, rechnertechnischen und steuerungstechnischen Systemen für bestens geeignet hielt, um mich auf künftige Herausforderungen vorzubereiten, indem ich meine Kenntnisse und Fähigkeiten in den faszinierenden Bereichen der Automatisierung, Robotik und Mikrosystemtechnik erweiterte, die ich im Laufe der Jahre liebgewonnen habe.
+Mein Name ist Shant Gananian. Maschinenbauingenieur, Enthusiast für intelligente mikro-mechatronische Systeme. Kürzlich schloss ich mein zweites Studium ab und erwarb am [Karlsruher Institut für Technologie (KIT)](https://www.kit.edu/) in Deutschland einen Master-Abschluss in Maschinenbau mit der Vertiefung Mechatronik und Mikrosystemtechnik und den Schwerpunkten Robotik und Medizintechnik. Ein Studiengang, den ich angesichts der zunehmenden weltweiten Integration von mechanischen, elektronischen, rechnertechnischen und steuerungstechnischen Systemen für bestens geeignet hielt, um mich auf künftige Herausforderungen vorzubereiten, indem ich meine Kenntnisse und Fähigkeiten in den faszinierenden Bereichen der Automatisierung, Robotik und Mikrosystemtechnik, die ich im Laufe der Jahre liebgewonnen habe, erweiterte.
+
+Während meines Studiums am KIT investierte ich zusätzliche Zeit und Mühe, um praktische Kenntnisse in der Mechatronik und Mikrosystemtechnik zu erlangen und erwarb durch mehrere Praktika und Teamarbeit vertiefte Kenntnisse und Praxis in den Bereichen Robotik, Medizintechnik, Informatik und Mikrosystemtechnik.
+
+Im Projektpraktikum über [Humanoide Roboter](https://h2t.iar.kit.edu/28_1709.php) bestand die Aufgabe unseres Teams darin, den "Armar 6"-Roboter des KIT-[Instituts für Anthropomatik und Robotik (IAR)](https://www.informatik.kit.edu/5107.php) in C++ zu programmieren und mit Hilfe der Roboterentwicklungsumgebung Armarx mehrere Teile eines Produkts, die sich an verschiedenen Stellen in einer Fabrikhalle befanden, unter Vermeidung von Kollisionen einzusammeln und schließlich die Teile auf die richtige Weise zusammenzusetzen, nämlich durch Einsetzen von zwei Zahnrädern an ihren Plätzen in einem Kasten und Aufsetzen der Abdeckung darüber. Zu den Aufgaben gehörten unter anderem die Bewegungsplanung (Navigation, Kollisionserkennung und -vermeidung, Greifen, Platzieren) und visuelles Servoing.
+
+<center>
+    <p>
+        <video width="100%" height=auto poster="/assets/vid/about/Humanoide Roboter - Praktikum.png" controls>
+        <source src="/assets/vid/about/Humanoide Roboter - Praktikum.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+        </video>
+    </p>
+</center>
+
+Im Rahmen des [Virtual Reality-Praktikums](https://www.imi.kit.edu/208_623.php) am KIT-[Institut für Informationsmanagement im Ingenieurwesen (IMI)](https://www.imi.kit.edu/) gehörte es zu unseren Aufgaben, einen Cyber-Handschuh mit seiner Leiterplatte und seinem Gehäuse zu entwickeln, der mit Biegesensoren, einem Joystick und einem Tracking-System ausgestattet ist. Neben der Hardware haben wir das WLAN-Übertragungsprotokoll überarbeitet und neu gestaltet, den Arduino-Code modifiziert, angepasst und weitere Funktionen implementiert, um die neuen Sensorwerte zu übertragen und die Nutzung des Cyber-Handschuhs in der automatischen virtuellen Umgebung von Cave zu ermöglichen. Dann entwarfen wir neue Anwendungsfälle, um unseren entwickelten Cyber-Handschuh zu testen und zu präsentieren.
+
+<center>
+    <p>
+        <iframe src="http://www.youtube.com/embed/taBGNmG5PJ4"
+   width="400"  frameborder="0" allowfullscreen></iframe>
+    </p>
+</center>
 
 Während meines Studiums habe ich am <a href="https://www.elektronikforschung.de/foerderung/nachwuchsfoerderung/cosima" target="_blank">COSIMA</a>-Wettbewerb für Studenten mit Ideen und Erfindungen zu Mikrosystemen teilgenommen *(der <a href="/assets/pdf/about/COSIMA_2019_Flyer.pdf" target="_blank">Flyer</a>, <a href="/assets/pdf/about/COSIMA_Aufruf_2019.pdf" target="_blank">unsere Aufgaben und die Agenda</a> der Veranstaltung als pdf)*. Unser vierköpfiges Team mit dem Namen <a href="/assets/pdf/about/team-poced-beschreibung-data.pdf" target="_blank">POCED</a> entwickelte und baute ein kostengünstiges mikrofluidisches Point-of-Care-Testsystem (POCT), mit dem Patienten mit chronisch-entzündlichen Darmerkrankungen (CED) das Fortschreiten der Krankheit von zu Hause aus überwachen können *(unsere <a href="https://teampoced.wixsite.com/poced" target="_blank">Website</a> und das <a href="/assets/pdf/about/Flyer-Poster poced - COSIMA19.pdf" target="_blank">Plakat</a>)*. Wir wurden mit dem <a href="https://www.cosima-mems.de/de/preistraeger/sieger-2019" target="_blank">ersten Preis</a> ausgezeichnet *(die <a href="/assets/pdf/about/1. Platz COSIMA 2019.png" target="_blank">Preisurkunde</a>)*.
 
