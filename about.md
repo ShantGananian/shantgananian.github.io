@@ -20,11 +20,11 @@ My name is Shant Gananian. Mechanical engineer, enthusiast for smart micro-mecha
 
 To expand my academic career, I worked at the [Institute for Automation and Applied Computer Science (IAI)](https://www.iai.kit.edu/index.php) at KIT both during my studies and for a year after graduation as a research assistant in the field of identification, control and monitoring of multi-size systems and the application of automation technology for the circular economy.
 
-With good leadership skills, programming knowledge, in-depth knowledge of the product development process and experience in finding creative solutions to complex technical problems, I have a proven track record of producing and improving products, methods and manufacturing processes.
-
 After completing my first degree; diploma in Mechanical engineering, majoring in Power Engineering, I built a successful career, 8+ years, in promoting and implementing management systems for production, quality, sustainability and safety, by holding highly responsible positions; Production Manager followed by (quality, health, safety and environment) QHSE Manager positions, in large corporate groups in various industries in the United Arab Emirates.
 
-During my studies on KIT, I invested additional time and effort to gain practical knowledge in mechatronics and micro systems technology and acquired in-depth knowledge and practice in the fields of robotics, medical technology, computer science and micro systems technology through several internships, working in teams.
+With good leadership skills, programming knowledge, in-depth knowledge of the product development process and experience in finding creative solutions to complex technical problems, I have a proven track record of producing and improving products, methods and manufacturing processes.
+
+During my studies at KIT, I invested additional time and effort to gain practical knowledge in mechatronics and micro systems technology and acquired in-depth knowledge and practice in the fields of robotics, medical technology, computer science and micro systems technology through several internships, working in teams.
 
 In the internship about [humanoide robots](https://h2t.iar.kit.edu/28_1709.php), our team's task was to program the KIT [Anthropomatics and Robotics institute (IAR)](https://www.informatik.kit.edu/english/5107.php)'s "Armar 6" robot in C++ and by using the robot development environment Armarx software, to collect several parts of a product, situated in different places in a factory hall, while avoiding any collision, and finally, to assemble the parts together in the correct way, i.e. by putting two gears in their locations in a box and putting the cover above it. Tasks included motion planning (navigation, collision detection and avoidance, grasping, placing) and visual servoing among others.
 

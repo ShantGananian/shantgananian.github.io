@@ -20,9 +20,9 @@ Mein Name ist Shant Gananian. Maschinenbauingenieur, Enthusiast für intelligent
 
 Zur Erweiterung meines akademischen Werdegangs arbeitete ich während des Studiums und ein Jahr lang nach dem Abschluss am [Institut für Automation und Angewandte Informatik (IAI)](https://www.iai.kit.edu/index.php) des KIT als wissenschaftlicher Mitarbeiter auf dem Gebiet der Identifikation, Steuerung und Überwachung von Mehrgrößensystemen sowie der Anwendung von Automatisierungstechnik für die Kreislaufwirtschaft.
 
-Mit guten Führungsqualitäten, Programmierkenntnissen, fundierten Kenntnissen des Produktentwicklungsprozesses und Erfahrung bei der Suche nach kreativen Lösungen für komplexe technische Probleme habe ich nachweisliche Erfolge bei der Herstellung und Verbesserung von Produkten, Verfahren und Fertigungsprozessen erzielt.
-
 Nach meinem ersten Studienabschluss, dem Diplom in Maschinenbau mit Vertiefungsrichtung Energietechnik, habe ich über acht Jahre lang eine erfolgreiche Karriere in der Förderung und Umsetzung von Managementsystemen für Produktion, Qualität, Nachhaltigkeit und Sicherheit aufgebaut, indem ich sehr verantwortungsvolle Stellen besetzte: Produktionsleiter und anschließend QHSE-Manager (Qualität, Gesundheit, Sicherheit und Umwelt) in großen Unternehmensgruppen in verschiedenen Branchen in den Vereinigten Arabischen Emiraten (VAE).
+
+Mit guten Führungsqualitäten, Programmierkenntnissen, fundierten Kenntnissen des Produktentwicklungsprozesses und Erfahrung bei der Suche nach kreativen Lösungen für komplexe technische Probleme habe ich nachweisliche Erfolge bei der Herstellung und Verbesserung von Produkten, Verfahren und Fertigungsprozessen erzielt.
 
 Während meines Studiums am KIT investierte ich zusätzliche Zeit und Mühe, um praktische Kenntnisse in der Mechatronik und Mikrosystemtechnik zu erlangen und erwarb durch mehrere Praktika und Teamarbeit vertiefte Kenntnisse und Praxis in den Bereichen Robotik, Medizintechnik, Informatik und Mikrosystemtechnik.
 
