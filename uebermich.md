@@ -32,6 +32,18 @@ Im Projektpraktikum über [Humanoide Roboter](https://h2t.iar.kit.edu/28_1709.ph
     </p>
 </center>
 
+Im Praktikum [Projekt Mikrofabrikation: Entwicklung und Fertigung eines Mikrosystems](https://www.wbk.kit.edu/lehrveranstaltungen_2058.php) am [wbk Institut für Produktionstechnik](https://www.wbk.kit.edu/) am KIT entwickelten wir in einem Gemeinschaftsprojekt mit dem Industriepartner [ROSSWAG Engineering](https://rosswag-engineering.de) eine Lösung zur Steigerung der Effizienz eines generativ gefertigten Impellers durch Grenzschichtbeeinflussung, indem wir das Impeller mit longitudinalen Mikrokanälen von $1mm$ Durchmesser durch selektives Laserschmelzen (SLM) und Bohren von inneren Kanälen von $200 \mu m$ Durchmesser und $45°$ Bohrungswinkel mittels Mikrofräsen herstellten, die die longitudinalen Kanäle mit der Oberfläche der Schaufeln verbinden. Unser Konzept bestand darin, diese aktiven Mikrokanäle so zu gestalten, dass im turbulenten Bereich an den Impellerschaufeln durch versetzte Kanäle eine Mikroausblasung zur optimalen Beeinflussung der Grenzschicht der Strömung erreicht wird. Auf diese Weise stabilisierten wir die Strömung oberhalb der Impellerschaufeln, indem wir den Oberflächenwiderstand erfolgreich reduzierten und eine Kühlung und Selbstreinigung der Kanäle erreichten.
+
+<center>
+    <p>
+        <video width="100%" height=auto controls preload="metadata">
+        <source src="/assets/vid/about/Mikrofertigung Abschlusspräsentation.mp4#t=0.1" type="video/mp4">
+        <source src="/assets/vid/about/Mikrofertigung Abschlusspräsentation.ogg#t=0.1" type="video/ogg">
+        Ihr Browser unterstützt das Video-Tag nicht.
+        </video>
+    </p>
+</center>
+
 Im Rahmen des [Virtual Reality-Praktikums](https://www.imi.kit.edu/208_623.php) am KIT-[Institut für Informationsmanagement im Ingenieurwesen (IMI)](https://www.imi.kit.edu/) gehörte es zu unseren Aufgaben, einen Cyber-Handschuh mit seiner Leiterplatte und seinem Gehäuse zu entwickeln, der mit Biegesensoren, einem Joystick und einem Tracking-System ausgestattet ist. Neben der Hardware überarbeiteten und gestalteten wir das WLAN-Übertragungsprotokoll neu, modifizierten, ergänzten und implementierten weitere Funktionen, indem wir den Arduino-Code anpassten, um die neuen Sensorwerte zu übertragen und die Nutzung des Cyber-Handschuhs in der automatischen virtuellen Umgebung von Cave zu ermöglichen. Dann entwarfen wir neue Anwendungsfälle, um unseren entwickelten Cyber-Handschuh zu testen und zu präsentieren.
 
 <center>

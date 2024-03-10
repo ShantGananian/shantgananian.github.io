@@ -32,6 +32,18 @@ In the internship about [humanoide robots](https://h2t.iar.kit.edu/28_1709.php),
     </p>
 </center>
 
+In internship [Microfabrication project: Development and production of a microsystem](https://www.wbk.kit.edu/lehrveranstaltungen_2058.php) at [wbk Institute of Production Engineering](https://www.wbk.kit.edu/english/index.php) at KIT in a joint project with the industrial partner ROSSWAG Engineering, we developed a solution to increase the efficiency of a generatively manufactured impeller through boundary layer control by fabricating the impeller with longitudinal micro channels of $1mm$ diameter through selective laser melting (SLM) and drilling of inner channels of $200 \mu m$ diameter and $45°$ bore angle by means of micro-milling that connect the longitudinal channels to the surface of the blades. Our concept was designing these active micro channels in a way to achieve micro blow-out in the turbulent area on the impeller blades through staggered channels for optimally influencing the boundary layer of the flow. In this way we stabilized the flow above the impeller blades by successfully reducing the surface resistance and achieving cooling and self-cleaning of the channels.
+
+<center>
+    <p>
+        <video width="100%" height=auto controls preload="metadata">
+        <source src="/assets/vid/about/Mikrofertigung Abschlusspräsentation.mp4#t=0.1" type="video/mp4">
+        <source src="/assets/vid/about/Mikrofertigung Abschlusspräsentation.ogg#t=0.1" type="video/ogg">
+        Your browser does not support the video tag.
+        </video>
+    </p>
+</center>
+
 In [Virtual Reality internship](https://www.imi.kit.edu/208_623.php) at KIT-[Institute for Information Management in Engineering (IMI)](https://www.imi.kit.edu/english/index.php), our tasks included developing a Cyber-glove with its printed circuit board and its housing impaired with bending sensors, a joystick and tracking system. Next to the hardware, we revised and redesigned the WLAN transmission protocol, modified, customized and implemented more features by adapting the Arduino code to transmit the new sensor values and enable the usage of the Cyber-glove in the Cave automatic virtual environment. Then we designed new use cases to test and present our developed Cyber-glove.
 
 <center>
