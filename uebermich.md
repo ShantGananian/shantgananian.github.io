@@ -22,11 +22,23 @@ Zur Erweiterung meines akademischen Werdegangs arbeitete ich während des Studiu
 
 An dem Institut schrieb ich meine Masterarbeit, in der ich Materialien und Prozesse für lösungsbasierte Verkapselungen für gedruckte elektronische Geräte untersuchte. Ich konzipierte die Experimente, entwickelte und modifizierte den Water Vapour Transmission Rate (WVTR)-Test, führte die Experimente im Labor durch und wertete die Ergebnisse aus. Ich stellte Verkapselungsmembranen mit Polyvinylalkohol als Basispolymer und mit fünf verschiedenen Nanofüllstoffen her: zwei Arten von Tonen, Siliziumdioxid, Graphenoxid und Glasflocken. Ich testete diese Membranen sowohl mit meinem modifizierten WVTR-Test als auch durch Aufbringen dieser Membranen auf gedruckte Teststrukturen. Meine Ergebnisse bildeten die Grundlage für weitere Forschungen mit dieser Art von Materialsystemen zur Verkapselung und für eine Konferenzveröffentlichung zu diesem Thema, bei der ich Mitautor bin.
 
+<center>
+    <p>
+        <video width="100%" height=auto controls preload="metadata">
+        <source src="/assets/vid/about/Presentation_Masterthesis.mp4#t=0.1" type="video/mp4">
+        <source src="/assets/vid/about/Presentation_Masterthesis.ogg#t=0.1" type="video/ogg">
+        Ihr Browser unterstützt das Video-Tag nicht.
+        </video>
+    </p>
+</center>
+
 Nach meinem ersten Studienabschluss, dem Diplom in Maschinenbau mit Vertiefungsrichtung Energietechnik, habe ich über acht Jahre lang eine erfolgreiche Karriere in der Förderung und Umsetzung von Managementsystemen für Produktion, Qualität, Nachhaltigkeit und Sicherheit aufgebaut, indem ich sehr verantwortungsvolle Stellen besetzte: Produktionsleiter und anschließend QHSE-Manager (Qualität, Gesundheit, Sicherheit und Umwelt) in großen Unternehmensgruppen in verschiedenen Branchen in den Vereinigten Arabischen Emiraten (VAE).
 
 Mit guten Führungsqualitäten, Programmierkenntnissen, fundierten Kenntnissen des Produktentwicklungsprozesses und Erfahrung bei der Suche nach kreativen Lösungen für komplexe technische Probleme habe ich nachweisliche Erfolge bei der Herstellung und Verbesserung von Produkten, Verfahren und Fertigungsprozessen erzielt.
 
 Während meines Studiums am KIT investierte ich zusätzliche Zeit und Mühe, um praktische Kenntnisse in der Mechatronik und Mikrosystemtechnik zu erlangen und erwarb durch mehrere Praktika und Teamarbeit vertiefte Kenntnisse und Praxis in den Bereichen Robotik, Medizintechnik, Informatik und Mikrosystemtechnik.
+
+Während meines Studiums habe ich am <a href="https://www.elektronikforschung.de/foerderung/nachwuchsfoerderung/cosima" target="_blank">COSIMA</a>-Wettbewerb für Studenten mit Ideen und Erfindungen zu Mikrosystemen teilgenommen *(der <a href="/assets/pdf/about/COSIMA_2019_Flyer.pdf" target="_blank">Flyer</a>, <a href="/assets/pdf/about/COSIMA_Aufruf_2019.pdf" target="_blank">unsere Aufgaben und die Agenda</a> der Veranstaltung als pdf)*. Unser vierköpfiges Team mit dem Namen <a href="/assets/pdf/about/team-poced-beschreibung-data.pdf" target="_blank">POCED</a> entwickelte und baute ein kostengünstiges mikrofluidisches Point-of-Care-Testsystem (POCT), mit dem Patienten mit chronisch-entzündlichen Darmerkrankungen (CED) das Fortschreiten der Krankheit von zu Hause aus überwachen können *(unsere <a href="https://teampoced.wixsite.com/poced" target="_blank">Website</a> und das <a href="/assets/pdf/about/Flyer-Poster poced - COSIMA19.pdf" target="_blank">Plakat</a>)*. Wir wurden mit dem <a href="https://www.cosima-mems.de/de/preistraeger/sieger-2019" target="_blank">ersten Preis</a> ausgezeichnet *(die <a href="/assets/pdf/about/1. Platz COSIMA 2019.png" target="_blank">Preisurkunde</a>)*.
 
 Im Projektpraktikum über [Humanoide Roboter](https://h2t.iar.kit.edu/28_1709.php) bestand die Aufgabe unseres Teams darin, den "Armar 6"-Roboter des KIT-[Instituts für Anthropomatik und Robotik (IAR)](https://www.informatik.kit.edu/5107.php) in C++ zu programmieren und mit Hilfe der Roboterentwicklungsumgebung Armarx mehrere Teile eines Produkts, die sich an verschiedenen Stellen in einer Fabrikhalle befanden, unter Vermeidung von Kollisionen einzusammeln und schließlich die Teile auf die richtige Weise zusammenzusetzen, nämlich durch Einsetzen von zwei Zahnrädern an ihren Plätzen in einem Kasten und Aufsetzen der Abdeckung darüber. Zu den Aufgaben gehörten unter anderem die Bewegungsplanung (Navigation, Kollisionserkennung und -vermeidung, Greifen, Platzieren) und visuelles Servoing.
 
@@ -63,9 +75,6 @@ Im Rahmen des [Virtual Reality-Praktikums](https://www.imi.kit.edu/208_623.php) 
         </video>
     </p>
 </center>
-
-Während meines Studiums habe ich am <a href="https://www.elektronikforschung.de/foerderung/nachwuchsfoerderung/cosima" target="_blank">COSIMA</a>-Wettbewerb für Studenten mit Ideen und Erfindungen zu Mikrosystemen teilgenommen *(der <a href="/assets/pdf/about/COSIMA_2019_Flyer.pdf" target="_blank">Flyer</a>, <a href="/assets/pdf/about/COSIMA_Aufruf_2019.pdf" target="_blank">unsere Aufgaben und die Agenda</a> der Veranstaltung als pdf)*. Unser vierköpfiges Team mit dem Namen <a href="/assets/pdf/about/team-poced-beschreibung-data.pdf" target="_blank">POCED</a> entwickelte und baute ein kostengünstiges mikrofluidisches Point-of-Care-Testsystem (POCT), mit dem Patienten mit chronisch-entzündlichen Darmerkrankungen (CED) das Fortschreiten der Krankheit von zu Hause aus überwachen können *(unsere <a href="https://teampoced.wixsite.com/poced" target="_blank">Website</a> und das <a href="/assets/pdf/about/Flyer-Poster poced - COSIMA19.pdf" target="_blank">Plakat</a>)*. Wir wurden mit dem <a href="https://www.cosima-mems.de/de/preistraeger/sieger-2019" target="_blank">ersten Preis</a> ausgezeichnet *(die <a href="/assets/pdf/about/1. Platz COSIMA 2019.png" target="_blank">Preisurkunde</a>)*.
-
 
 <a id="section-b"></a>
 ## Meine Arbeitsphilosophie und -ethik
