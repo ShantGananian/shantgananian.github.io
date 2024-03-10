@@ -40,6 +40,16 @@ During my studies at KIT, I invested additional time and effort to gain practica
 
 During my study I have participated in <a href="https://www.elektronikforschung.de/foerderung/nachwuchsfoerderung/cosima" target="_blank">COSIMA</a> competition for students with ideas and inventions about microsystems *(the <a href="/assets/pdf/about/COSIMA_2019_Flyer.pdf" target="_blank">flyer</a>, <a href="/assets/pdf/about/COSIMA_Aufruf_2019.pdf" target="_blank">our tasks and the agenda</a> of the event as pdf)*. Our team of four, named <a href="/assets/pdf/about/team-poced-beschreibung-data.pdf" target="_blank">POCED</a>, developed and built affordable microfluidic point-of-care-testing (POCT) system to help patients with chronic inflammatory bowel disease (IBD) to monitor the progression of the disease from home *(our <a href="https://teampoced.wixsite.com/poced" target="_blank">website</a> and the <a href="/assets/pdf/about/Flyer-Poster poced - COSIMA19.pdf" target="_blank">poster</a>)*. We were awarded with the <a href="https://www.cosima-mems.de/de/preistraeger/sieger-2019" target="_blank">first prize</a> *(the <a href="/assets/pdf/about/1. Platz COSIMA 2019.png" target="_blank">prize certificate</a>)*.
 
+<center>
+    <p>
+        <video width="100%" height=auto controls preload="metadata">
+        <source src="/assets/vid/about/Abschlussvortrag_gesamt.mp4#t=0.1" type="video/mp4">
+        <source src="/assets/vid/about/Abschlussvortrag_gesamt.ogg#t=0.1" type="video/ogg">
+        Your browser does not support the video tag.
+        </video>
+    </p>
+</center>
+
 In the internship about [humanoide robots](https://h2t.iar.kit.edu/28_1709.php), our team's task was to program the KIT [Anthropomatics and Robotics institute (IAR)](https://www.informatik.kit.edu/english/5107.php)'s "Armar 6" robot in C++ and by using the robot development environment Armarx software, to collect several parts of a product, situated in different places in a factory hall, while avoiding any collision, and finally, to assemble the parts together in the correct way, i.e. by putting two gears in their locations in a box and putting the cover above it. Tasks included motion planning (navigation, collision detection and avoidance, grasping, placing) and visual servoing among others.
 
 <center>

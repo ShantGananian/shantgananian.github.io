@@ -40,6 +40,16 @@ Während meines Studiums am KIT investierte ich zusätzliche Zeit und Mühe, um 
 
 Während meines Studiums habe ich am <a href="https://www.elektronikforschung.de/foerderung/nachwuchsfoerderung/cosima" target="_blank">COSIMA</a>-Wettbewerb für Studenten mit Ideen und Erfindungen zu Mikrosystemen teilgenommen *(der <a href="/assets/pdf/about/COSIMA_2019_Flyer.pdf" target="_blank">Flyer</a>, <a href="/assets/pdf/about/COSIMA_Aufruf_2019.pdf" target="_blank">unsere Aufgaben und die Agenda</a> der Veranstaltung als pdf)*. Unser vierköpfiges Team mit dem Namen <a href="/assets/pdf/about/team-poced-beschreibung-data.pdf" target="_blank">POCED</a> entwickelte und baute ein kostengünstiges mikrofluidisches Point-of-Care-Testsystem (POCT), mit dem Patienten mit chronisch-entzündlichen Darmerkrankungen (CED) das Fortschreiten der Krankheit von zu Hause aus überwachen können *(unsere <a href="https://teampoced.wixsite.com/poced" target="_blank">Website</a> und das <a href="/assets/pdf/about/Flyer-Poster poced - COSIMA19.pdf" target="_blank">Plakat</a>)*. Wir wurden mit dem <a href="https://www.cosima-mems.de/de/preistraeger/sieger-2019" target="_blank">ersten Preis</a> ausgezeichnet *(die <a href="/assets/pdf/about/1. Platz COSIMA 2019.png" target="_blank">Preisurkunde</a>)*.
 
+<center>
+    <p>
+        <video width="100%" height=auto controls preload="metadata">
+        <source src="/assets/vid/about/Abschlussvortrag_gesamt.mp4#t=0.1" type="video/mp4">
+        <source src="/assets/vid/about/Abschlussvortrag_gesamt.ogg#t=0.1" type="video/ogg">
+        Ihr Browser unterstützt das Video-Tag nicht.
+        </video>
+    </p>
+</center>
+
 Im Projektpraktikum über [Humanoide Roboter](https://h2t.iar.kit.edu/28_1709.php) bestand die Aufgabe unseres Teams darin, den "Armar 6"-Roboter des KIT-[Instituts für Anthropomatik und Robotik (IAR)](https://www.informatik.kit.edu/5107.php) in C++ zu programmieren und mit Hilfe der Roboterentwicklungsumgebung Armarx mehrere Teile eines Produkts, die sich an verschiedenen Stellen in einer Fabrikhalle befanden, unter Vermeidung von Kollisionen einzusammeln und schließlich die Teile auf die richtige Weise zusammenzusetzen, nämlich durch Einsetzen von zwei Zahnrädern an ihren Plätzen in einem Kasten und Aufsetzen der Abdeckung darüber. Zu den Aufgaben gehörten unter anderem die Bewegungsplanung (Navigation, Kollisionserkennung und -vermeidung, Greifen, Platzieren) und visuelles Servoing.
 
 <center>
