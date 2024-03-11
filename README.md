@@ -13,8 +13,8 @@ At this institute I did my Master's thesis where I investigated materials and pr
 <center>
     <p>
         <video width="100%" height=auto controls preload="metadata">
-        <source src="/assets/vid/about/Presentation_Masterthesis.mp4#t=0.1" type="video/mp4">
-        <source src="/assets/vid/about/Presentation_Masterthesis.ogg#t=0.1" type="video/ogg">
+        <source src="https://shantgananian.github.io/assets/vid/about/Presentation_Masterthesis.mp4#t=0.1" type="video/mp4">
+        <source src="https://shantgananian.github.io/assets/vid/about/Presentation_Masterthesis.ogg#t=0.1" type="video/ogg">
         Your browser does not support the video tag.
         </video>
     </p>
@@ -43,8 +43,8 @@ In the internship about [humanoide robots](https://h2t.iar.kit.edu/28_1709.php),
 <center>
     <p>
         <video width="100%" height=auto poster="/assets/vid/about/Humanoide Roboter - Praktikum.png" controls>
-        <source src="/assets/vid/about/Humanoide Roboter - Praktikum.mp4" type="video/mp4">
-        <source src="/assets/vid/about/Humanoide Roboter - Praktikum.ogg" type="video/ogg">
+        <source src="https://shantgananian.github.io/assets/vid/about/Humanoide Roboter - Praktikum.mp4" type="video/mp4">
+        <source src="https://shantgananian.github.io/assets/vid/about/Humanoide Roboter - Praktikum.ogg" type="video/ogg">
         Your browser does not support the video tag.
         </video>
     </p>
@@ -55,8 +55,8 @@ In internship [Microfabrication project: Development and production of a microsy
 <center>
     <p>
         <video width="100%" height=auto controls preload="metadata">
-        <source src="/assets/vid/about/Mikrofertigung Abschlusspräsentation.mp4#t=0.1" type="video/mp4">
-        <source src="/assets/vid/about/Mikrofertigung Abschlusspräsentation.ogg#t=0.1" type="video/ogg">
+        <source src="https://shantgananian.github.io/assets/vid/about/Mikrofertigung Abschlusspräsentation.mp4#t=0.1" type="video/mp4">
+        <source src="https://shantgananian.github.io/assets/vid/about/Mikrofertigung Abschlusspräsentation.ogg#t=0.1" type="video/ogg">
         Your browser does not support the video tag.
         </video>
     </p>
@@ -67,8 +67,8 @@ In [Virtual Reality internship](https://www.imi.kit.edu/208_623.php) at KIT-[Ins
 <center>
     <p>
         <video width="100%" height=auto poster="/assets/vid/about/Virtual Reality Practical Course - Winter Term 2017_18 - Cyberglove.jpg" controls>
-        <source src="/assets/vid/about/Virtual Reality Practical Course - Winter Term 2017_18 - Cyberglove.mp4" type="video/mp4">
-        <source src="/assets/vid/about/Virtual Reality Practical Course - Winter Term 2017_18 - Cyberglove.ogg" type="video/ogg">
+        <source src="https://shantgananian.github.io/assets/vid/about/Virtual Reality Practical Course - Winter Term 2017_18 - Cyberglove.mp4" type="video/mp4">
+        <source src="https://shantgananian.github.io/assets/vid/about/Virtual Reality Practical Course - Winter Term 2017_18 - Cyberglove.ogg" type="video/ogg">
         Your browser does not support the video tag.
         </video>
     </p>
