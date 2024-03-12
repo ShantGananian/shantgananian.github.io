@@ -10,7 +10,7 @@ To expand my academic career, I worked at the [Institute for Automation and Appl
 
 At this institute I did my Master's thesis where I investigated materials and processes for solution based encapsulation for printed electronic devices. I designed the experiments, developed and modified Water Vapour Transmission Rate (WVTR) test, carried out the experiments in the lab and evaluated the results. I prepared encapsulation membranes with Polyvinylalcohol as a base polymer and with five different nanofiller materials; two type of clays, silica, graphene oxide and glass flakes. I tested these membranes both with my modified WVTR test and by applying these membranes on printed test structures. My results laid the grounds for further research with this type of material system for encapsulation and for a conference publication on this topic for which I am co-author (<a href="https://2024.ieee-fleps.org/" target="_blank">IEEE International Conference on Flexible Printable Sensors and Systems (IEEE FLEPS 2024)</a> in Tampere, Finland).
 
-[Video](https://shantgananian.github.io/assets/vid/about/Presentation_Masterthesis.mp4 'Master's thesis')
+[Video](https://shantgananian.github.io/assets/vid/about/Presentation_Masterthesis.mp4)
 
 <center>
     <p>
