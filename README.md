@@ -24,15 +24,15 @@ I participated in <a href="https://www.elektronikforschung.de/foerderung/nachwuc
 
 In the internship about [humanoide robots](https://h2t.iar.kit.edu/28_1709.php), our team's task was to program the KIT [Anthropomatics and Robotics institute (IAR)](https://www.informatik.kit.edu/english/5107.php)'s "Armar 6" robot in C++ and by using the robot development environment Armarx software, to collect several parts of a product, situated in different places in a factory hall, while avoiding any collision, and finally, to assemble the parts together in the correct way, i.e. by putting two gears in their locations in a box and putting the cover above it. Tasks included motion planning (navigation, collision detection and avoidance, grasping, placing) and visual servoing among others.
 
-[Video](https://shantgananian.github.io/assets/vid/about/Humanoide Roboter - Praktikum.mp4)
+[Video](https://shantgananian.github.io/assets/vid/about/Humanoide%20Roboter%20-%20Praktikum.mp4)
 
 In internship [Microfabrication project: Development and production of a microsystem](https://www.wbk.kit.edu/lehrveranstaltungen_2058.php) at [wbk Institute of Production Engineering](https://www.wbk.kit.edu/english/index.php) at KIT in a joint project with the industrial partner [ROSSWAG Engineering](https://rosswag-engineering.de), we developed a solution to increase the efficiency of a generatively manufactured impeller through boundary layer control by fabricating the impeller with longitudinal micro channels of $1mm$ diameter through selective laser melting (SLM) and drilling of inner channels of $200 \mu m$ diameter and $45°$ bore angle by means of micro-milling that connect the longitudinal channels to the surface of the blades. Our concept was designing these active micro channels in a way to achieve micro blow-out in the turbulent area on the impeller blades through staggered channels for optimally influencing the boundary layer of the flow. In this way we stabilized the flow above the impeller blades by successfully reducing the surface resistance and achieving cooling and self-cleaning of the channels.
 
-[Video](https://shantgananian.github.io/assets/vid/about/Mikrofertigung Abschlusspräsentation.mp4)
+[Video](https://shantgananian.github.io/assets/vid/about/Mikrofertigung%20Abschlusspr%C3%A4sentation.mp4)
 
 In [Virtual Reality internship](https://www.imi.kit.edu/208_623.php) at KIT-[Institute for Information Management in Engineering (IMI)](https://www.imi.kit.edu/english/index.php), our tasks included developing a Cyber-glove with its printed circuit board and its housing impaired with bending sensors, a joystick and tracking system. Next to the hardware, we revised and redesigned the WLAN transmission protocol, modified, customized and implemented more features by adapting the Arduino code to transmit the new sensor values and enable the usage of the Cyber-glove in the Cave automatic virtual environment. Then we designed new use cases to test and present our developed Cyber-glove.
 
-[Video](https://shantgananian.github.io/assets/vid/about/Virtual Reality Practical Course - Winter Term 2017_18 - Cyberglove.mp4)
+[Video](https://shantgananian.github.io/assets/vid/about/Virtual%20Reality%20Practical%20Course%20-%20Winter%20Term%202017_18%20-%20Cyberglove.mp4)
 
 <a id="section-b"></a>
 ## My work philosophy and ethics
