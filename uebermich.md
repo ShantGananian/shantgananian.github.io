@@ -38,7 +38,7 @@ Mit guten Führungsqualitäten, Programmierkenntnissen, fundierten Kenntnissen d
 
 Während meines Studiums am KIT investierte ich zusätzliche Zeit und Mühe, um praktische Kenntnisse in der Mechatronik und Mikrosystemtechnik zu erlangen und erwarb durch mehrere Praktika und Teamarbeit vertiefte Kenntnisse und Praxis in den Bereichen Robotik, Medizintechnik, Informatik und Mikrosystemtechnik.
 
-Ich nahm am <a href="https://www.elektronikforschung.de/foerderung/nachwuchsfoerderung/cosima" target="_blank">COSIMA</a>-Wettbewerb für Studenten mit Ideen und Erfindungen zu Mikrosystemen teil *(der <a href="/assets/pdf/about/COSIMA_2019_Flyer.pdf" target="_blank">Flyer</a>, <a href="/assets/pdf/about/COSIMA_Aufruf_2019.pdf" target="_blank">unsere Aufgaben und die Agenda</a> der Veranstaltung als pdf)*. Unser vierköpfiges Team mit dem Namen <a href="/assets/pdf/about/team-poced-beschreibung-data.pdf" target="_blank">POCED</a> entwickelte und baute ein kostengünstiges mikrofluidisches Point-of-Care-Testsystem (POCT), das wir im vorangegangenen Semester im Rahmen des Seminars "Hands on BioMEMS" am KIT - [Institut für Mikrostrukturtechnik (IMT)](https://www.imt.kit.edu/index.php){:target="_blank"} konzipiert hatten, mit dem Patienten mit chronisch-entzündlichen Darmerkrankungen (CED) das Fortschreiten der Krankheit von zu Hause aus überwachen können *(unsere <a href="https://teampoced.wixsite.com/poced" target="_blank">Website</a> und das <a href="/assets/pdf/about/Flyer-Poster poced - COSIMA19.pdf" target="_blank">Plakat</a>)*. Wir wurden mit dem <a href="https://www.cosima-mems.de/de/preistraeger/sieger-2019" target="_blank">ersten Preis</a> ausgezeichnet *(die <a href="/assets/pdf/about/1. Platz COSIMA 2019.png" target="_blank">Preisurkunde</a>)*.
+Ich nahm am <a href="https://www.elektronikforschung.de/foerderung/nachwuchsfoerderung/cosima" target="_blank">COSIMA</a>-Wettbewerb für Studenten mit Ideen und Erfindungen zu Mikrosystemen teil *(der <a href="/assets/pdf/about/COSIMA_2019_Flyer.pdf" target="_blank">Flyer</a>, <a href="/assets/pdf/about/COSIMA_Aufruf_2019.pdf" target="_blank">unsere Aufgaben und die Agenda</a> der Veranstaltung als pdf)*. Unser vierköpfiges Team mit dem Namen <a href="/assets/pdf/about/team-poced-beschreibung-data.pdf" target="_blank">POCED</a> entwickelte und baute ein kostengünstiges mikrofluidisches Point-of-Care-Testsystem (POCT), das wir im vorangegangenen Semester im Rahmen des Seminars "Hands on BioMEMS" am KIT - [Institut für Mikrostrukturtechnik (IMT)](https://www.imt.kit.edu/index.php){:target="_blank"} konzipiert hatten, mit dem Patienten mit entzündlichen Darmerkrankungen (CED) den Krankheitsverlauf von zu Hause aus überwachen können *(unsere <a href="https://teampoced.wixsite.com/poced" target="_blank">Website</a> und das <a href="/assets/pdf/about/Flyer-Poster poced - COSIMA19.pdf" target="_blank">Plakat</a>)*. Wir wurden mit dem ersten Preis ausgezeichnet *(die <a href="/assets/pdf/about/1. Platz COSIMA 2019.png" target="_blank">Preisurkunde</a>)*.
 
 <center>
     <p>
@@ -87,6 +87,19 @@ Im Rahmen des [Virtual Reality-Praktikums](https://www.imi.kit.edu/208_623.php){
 </center>
 
 <a id="section-b"></a>
+## Aktuelle Tätigkeit
+
+Derzeit arbeite ich als **Mechatronik-Ingenieur** in der Abteilung **Qualitätsmanagement und -sicherung (QMS)** am KIT, innerhalb der Dienstleistungseinheit **Projekt-, Prozess- und Qualitätsmanagement (PPQ)**.
+Mein Verantwortungsbereich umfasst die **Qualitätssicherung und technische Unterstützung** bei **inter- und transdisziplinären Großinvestitionsprojekten** (Investitionsvolumen > 2,5 Mio. €) über den gesamten Projektverlauf hinweg:
+<ul>
+  <li><strong>Projektinitiierung:</strong> Unterstützung bei der Qualitätsplanung, Definition von Anforderungen und Einhaltung gesetzlicher Vorgaben.</li>
+  <li><strong>Planungsphase:</strong> Mitarbeit an technischen Spezifikationen, Leistungsbeschreibungen und Qualitätsstandards.</li>
+  <li><strong>Ausführung:</strong> Qualitätssicherung durch Lieferantenaudits, Designprüfung, technische Abnahmen (FAT/SAT) und Dokumentationskontrolle.</li>
+  <li><strong>Projektabschluss:</strong> Unterstützung bei der Fertigstellung der Betriebsdokumentation und Inbetriebnahme.</li>
+</ul>
+In dieser Rolle agiere ich an der Schnittstelle zwischen Technik, Beschaffung und Projektsteuerung – mit dem Ziel, nachhaltige und qualitativ hochwertige Projektergebnisse sicherzustellen.
+
+<a id="section-c"></a>
 ## Meine Arbeitsphilosophie und -ethik
 
 Meine Arbeitsphilosophie ist in meine Lebensweise integriert. Nämlich sich in jedem Moment, soweit es mir möglich ist, fest entschlossen darauf zu konzentrieren, die anstehende Arbeit mit angemessener und echter Ernsthaftigkeit, mit Liebe zu den anderen, bereitwillig und mit Gerechtigkeit zu erledigen und dabei alle anderen Ablenkungen aus meinen Gedanken zu verbannen.
@@ -95,7 +108,7 @@ Als Teil der Natur identifiziere ich mich nicht nur mit meiner eigenen unmittelb
 
 Ich begrüße jeden Tag als eine neue Chance für mich, zu wachsen, indem ich meinen Tag in die Hand nehme und meine Unzulänglichkeiten durch Selbstreflexion, sorgfältige Beurteilung, Training und Anwendung überwinde. Dieser Kampf um die Erfüllung meiner rechtmäßigen Pflichten, indem ich mein Bestes unter den gegebenen Umständen gebe, reicht aus, um mich glücklich zu machen.
 
-<a id="section-c"></a>
+<a id="section-d"></a>
 ## Warum habe ich diese Website erstellt?
 
 Nach meinem Master-Abschluss und um potenziellen Arbeitgebern einen größeren Wert durch meine Fähigkeiten zu bieten, habe ich Monate damit verbracht, mein Wissen und meine Ausbildung an der Universität auszubauen und meine Fähigkeiten in den Bereichen rechnergestütztes Konstruieren (CAD), rechnergestützte Entwicklung (CAE) für Simulation und Analyse sowie Programmentwicklung für die Analyse einfacher bis komplexer Systeme durch die Erforschung und Umsetzung vieler praktischer Projekte und typischer technischer Probleme weiterzuentwickeln. Um all dies mitzuteilen, habe ich beschlossen, diese Portfolio-Website zu erstellen.

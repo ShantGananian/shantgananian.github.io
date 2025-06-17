@@ -35,6 +35,19 @@ In [Virtual Reality internship](https://www.imi.kit.edu/208_623.php) at KIT-[Ins
 [Video](https://shantgananian.github.io/assets/vid/about/Virtual%20Reality%20Practical%20Course%20-%20Winter%20Term%202017_18%20-%20Cyberglove.mp4)
 
 <a id="section-b"></a>
+## Current Role
+
+I currently work as a **Mechatronics Engineer** in the **Quality Management and Assurance (QMS)** department at KIT, within the **Project, Process, and Quality Management (PPQ)** service unit.
+My role focuses on **quality assurance and technical support** for **large-scale, interdisciplinary investment projects** (each exceeding €2.5 million). I support these projects throughout all major phases:
+<ul>
+  <li><strong>Initiation Phase:</strong> Helping define quality requirements and ensuring compliance with relevant standards, laws, and regulations.</li>
+  <li><strong>Planning Phase:</strong> Assisting in the specification of technical and quality requirements, and supporting procurement documents.</li>
+  <li><strong>Execution Phase:</strong> Overseeing implementation through supplier audits, design reviews, and factory/site acceptance testing (FAT/SAT).</li>
+  <li><strong>Final Phase:</strong> Ensuring comprehensive technical documentation and supporting commissioning.</li>
+</ul>
+Through this role, I work closely with engineering, procurement, and compliance teams, bridging disciplines to ensure technically sound and quality-driven project execution.
+
+<a id="section-c"></a>
 ## My work philosophy and ethics
 
 My work philosophy is integrated into of my way of life. That is, concentrating at every moment, insofar as I am able, firmly resolved, on accomplishing the work at hand with fitting and genuine seriousness, love for others, willingly, with justice, and banishing from my thoughts all other distractions.
@@ -43,7 +56,7 @@ Being part of nature, I identify myself not only with my own immediate family, b
 
 Each day is a new chance for me to grow by taking ownership of my day, overcoming my shortcomings through self-reflection, careful judgements, training and applying. This struggle toward fulfilling my rightful duties by trying my utmost under the circumstances, is enough to fill my heart with happiness.
 
-<a id="section-c"></a>
+<a id="section-d"></a>
 ## Why did I build this website?
 
 After obtaining my master’s degree, and to provide potential employers greater value through my skills, I dedicated months building upon my knowledge and training at the university and further developing my skills in computer-aided design (CAD), computer-aided engineering (CAE) for simulation and analysis, and program development for analyzing simple to complex systems through researching and implementing many hands-on projects and typical technical problems. To share all that, I decided to build this portfolio website.
