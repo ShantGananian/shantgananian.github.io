@@ -55,7 +55,7 @@ en: &DEFAULT_EN
   back_to_top                : "Back to top"
   author_location            : "Karlsruhe, Germany"
   author_name                : "Shant Gananian, M.Sc."
-  author_bio                 : "10+ yrs in Production & QHSE-Management. Tech. Expertise, incl. Design, Systems Integration & Electronic Packaging of BioMEMS & Robotics. Skills, incl. Automation, Programming, CAD, Simulation & Analysis"
+  author_bio                 : "Mechatronics Engineer with 10+ years of experience in production, quality, and safety management (QHSE) across industry and research. Currently responsible for quality assurance of interdisciplinary large-scale investment projects at KIT. Technical expertise in design, system integration, BioMEMS, robotics, automation, CAD, simulation, and programming. Passionate about systems thinking and meaningful engineering work."
   author_title               : "Mechanical Engineer"
   author_subtitle            : "Smart Micro-Mechatronic Systems Enthusiast"
 en-US:
@@ -542,7 +542,7 @@ de: &DEFAULT_DE
   back_to_top                : "Zurück nach oben"
   author_location            : "Karlsruhe, Deutschland"
   author_name                : "Shant Gananian, M.Sc."
-  author_bio                 : "10+ Jahre Produktions- & QHSE-Management. Tech. Kompetenz, u.a. Konstruktion, Systemintegration & Electronic Packaging von BioMEMS & Robotik. Fähigkeiten, u.a. Automatisierung, Programmierung, CAD, Simulation & Analyse"
+  author_bio                 : "Mechatronik-Ingenieur mit über 10 Jahren Erfahrung in Produktion, Qualitäts- und Sicherheitsmanagement (QHSE) in Industrie und Forschung. Aktuell verantwortlich für die Qualitätssicherung interdisziplinärer Großinvestitionsprojekte am KIT. Technische Kompetenz in Konstruktion, Systemintegration, BioMEMS, Robotik, Automatisierung, CAD, Simulation und Programmierung. Begeistert von systemischem Denken und sinnstiftender Ingenieursarbeit."
   author_title               : "Maschinenbauingenieur"
   author_subtitle            : "Enthusiast für Intelligente Mikro-Mechatronische Systeme"
 de-DE:
