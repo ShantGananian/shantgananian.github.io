@@ -32,7 +32,7 @@ I:
   <li>Designed and modified a <strong>Water Vapour Transmission Rate (WVTR) test</strong>,</li>
   <li>Developed encapsulation membranes using <strong>Polyvinylalcohol (PVA)</strong> and five different <strong>nanofillers</strong> (clays, silica, graphene oxide, and glass flakes),</li>
   <li>Tested them on printed electronic structures,</li>
-  <li>And co-authored a paper presented at the <a href="https://2024.ieee-fleps.org/" target="_blank"><strong>IEEE FLEPS 2024 Conference</strong></a> in Tampere, Finland.</li>
+  <li>And co-authored a paper presented at the <a href="https://2024.ieee-fleps.org/" target="_blank"><strong>IEEE FLEPS 2024 Conference</strong></a> in Tampere, Finland (more on this under <a href="#Publications">Publications</a>).</li>
 </ul>
 
 <center>
@@ -186,4 +186,16 @@ My hope is that this site can serve as a bridge:
 <ul>
   <li>For employers and collaborators to learn more about me and my capabilities,</li>
   <li>And for fellow learners to find insights or inspiration through the projects I’ve shared.</li>
+</ul>
+
+<a id="section-e"></a>
+## Publications
+
+<ul>
+  <li>
+    Chen, Zehua, Ulrich Gengenbach, Shant Gananian, Daniel Moser, Klaus-Martin Reichert, Liyu Huang, and Liane Koker. <a href="https://ieeexplore.ieee.org/abstract/document/10778432" target="_blank"><strong>"Solution Processable Barrier Films Using A Filled Polymer to Encapsulate Flexible Printed Electronics."</strong></a> <i>IEEE Journal on Flexible Electronics</i> (2024).
+  </li>
+  <li>
+    Chen, Zehua, Ulrich Gengenbach, Shant Gananian, Daniel Moser, Klaus-Martin Reichert, and Liane Koker. <a href="https://ieeexplore.ieee.org/abstract/document/10603898" target="_blank"><strong>"Investigation of solution processable moisture barrier films based on a polymer and filler materials."</strong></a> In <i>2024 IEEE International Conference on Flexible and Printable Sensors and Systems (FLEPS)</i>, pp. 1-4. IEEE, 2024.  
+  </li>
 </ul>

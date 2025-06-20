@@ -34,7 +34,7 @@ Ich:
   <li>testete die Materialien sowohl mit dem WVTR-Test als auch direkt auf gedruckten Teststrukturen.</li>
 </ul>
 
-Die Ergebnisse legten die Grundlage für weitere Forschung und führten zu einer Konferenzveröffentlichung, bei der ich Mitautor bin: </strong>IEEE FLEPS 2024 in Tampere, Finnland.
+Die Ergebnisse legten die Grundlage für weitere Forschung und führten zu einer Konferenzveröffentlichung, bei der ich Mitautor bin: <a href="https://2024.ieee-fleps.org/" target="_blank"><strong>IEEE FLEPS 2024</strong></a> in Tampere, Finnland (mehr dazu unter <a href="#Publikationen">Publikationen</a>).
 
 <center>
     <p>
@@ -193,4 +193,16 @@ Sie soll:
   <li>meine Fähigkeiten und Denkweise zeigen,</li>
   <li>als Plattform für den Austausch dienen,</li>
   <li>und vielleicht anderen helfen, die ähnliche Interessen verfolgen.</li>
+</ul>
+
+<a id="section-e"></a>
+## Publikationen
+
+<ul>
+  <li>
+    Chen, Zehua, Ulrich Gengenbach, Shant Gananian, Daniel Moser, Klaus-Martin Reichert, Liyu Huang, and Liane Koker. <a href="https://ieeexplore.ieee.org/abstract/document/10778432" target="_blank"><strong>"Solution Processable Barrier Films Using A Filled Polymer to Encapsulate Flexible Printed Electronics."</strong></a> <i>IEEE Journal on Flexible Electronics</i> (2024).
+  </li>
+  <li>
+    Chen, Zehua, Ulrich Gengenbach, Shant Gananian, Daniel Moser, Klaus-Martin Reichert, and Liane Koker. <a href="https://ieeexplore.ieee.org/abstract/document/10603898" target="_blank"><strong>"Investigation of solution processable moisture barrier films based on a polymer and filler materials."</strong></a> In <i>2024 IEEE International Conference on Flexible and Printable Sensors and Systems (FLEPS)</i>, pp. 1-4. IEEE, 2024.  
+  </li>
 </ul>
