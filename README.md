@@ -6,12 +6,12 @@
 
 My name is **Shant Gananian**—a mechanical engineer with a strong passion for smart micro-mechatronic systems and a deep curiosity for innovation at the intersection of mechanics, electronics, and computing.
 
-I recently completed my second degree: a **Master’s in Mechanical Engineering** from the **[Karlsruhe Institute of Technology (KIT)](https://www.kit.edu/){:target="_blank"}** in Germany, majoring in **Mechatronics and Microsystems Technology** with minors in **Robotics** and **Medical Engineering**. This course of study was the natural next step in preparing for the future of engineering—where automation, robotics, and integrated systems play a central role.
+I recently completed my second degree: a **Master’s in Mechanical Engineering** from the **[Karlsruhe Institute of Technology (KIT)](https://www.kit.edu/)** in Germany, majoring in **Mechatronics and Microsystems Technology** with minors in **Robotics** and **Medical Engineering**. This course of study was the natural next step in preparing for the future of engineering—where automation, robotics, and integrated systems play a central role.
 
 <a id="subsection-a"></a>
 ### Academic and Research Experience
 
-To strengthen my academic path, I worked at KIT’s **[Institute for Automation and Applied Computer Science (IAI)](https://www.iai.kit.edu/index.php){:target="_blank"}** both during and after my studies. There, I contributed to research in the **identification, control, and monitoring of multi-size systems**, as well as the **application of automation in the circular economy**.
+To strengthen my academic path, I worked at KIT’s **[Institute for Automation and Applied Computer Science (IAI)](https://www.iai.kit.edu/index.php)** both during and after my studies. There, I contributed to research in the **identification, control, and monitoring of multi-size systems**, as well as the **application of automation in the circular economy**.
 
 For my **Master’s thesis**, I explored new materials and methods for **solution-based encapsulation of printed electronic devices**. I:
 <ul>
@@ -48,14 +48,14 @@ Throughout my studies, I actively pursued hands-on learning and research opportu
 
 With a <a href="/assets/pdf/about/team-poced-beschreibung-data.pdf" target="_blank">team of four</a>, I developed a **low-cost microfluidic point-of-care testing (POCT) device** for at-home monitoring of **chronic inflammatory bowel disease (IBD)** patients.
 
-This was conceptualized during the “Hands-on BioMEMS” seminar and later realized at KIT’s **[Institute of Microstructure Technology (IMT)](https://www.imt.kit.edu/index.php){:target="_blank"}**.
+This was conceptualized during the “Hands-on BioMEMS” seminar and later realized at KIT’s **[Institute of Microstructure Technology (IMT)](https://www.imt.kit.edu/index.php)**.
 
 *(<a href="/assets/pdf/about/Flyer-Poster poced - COSIMA19.pdf" target="_blank">Project Poster</a>, <a href="https://teampoced.wixsite.com/poced" target="_blank">Website</a>, <a href="/assets/pdf/about/1. Platz COSIMA 2019.png" target="_blank">Award Certificate</a>, <a href="/assets/pdf/about/COSIMA_2019_Flyer.pdf" target="_blank">COSIMA19 Flyer</a>)*
 
 [Video](https://shantgananian.github.io/assets/vid/about/Abschlussvortrag_gesamt.mp4)
 
 <a id="subsubsection-b"></a>
-#### Internship – [Humanoid Robotics](https://h2t.iar.kit.edu/28_1709.php){:target="_blank"} (KIT [IAR](https://www.informatik.kit.edu/english/5107.php){:target="_blank"})
+#### Internship – [Humanoid Robotics](https://h2t.iar.kit.edu/28_1709.php) (KIT [IAR](https://www.informatik.kit.edu/english/5107.php))
 
 Our team programmed **Armar-6**, a humanoid robot, using **C++** and the **ArmarX** framework. The robot was trained to:
 <ul>
@@ -70,7 +70,7 @@ Our team programmed **Armar-6**, a humanoid robot, using **C++** and the **Armar
 <a id="subsubsection-c"></a>
 #### Internship – [Microfabrication project: Development and production of a microsystem](https://www.wbk.kit.edu/lehrveranstaltungen_2058.php)
 
-At KIT’s **[wbk Institute of Production Engineering](https://www.wbk.kit.edu/english/index.php){:target="_blank"}**, and in collaboration with **[ROSSWAG Engineering](https://rosswag-engineering.de){:target="_blank"}**, we developed and implemented a concept to improve the efficiency of a generatively manufactured **impeller**. The approach involved **boundary layer control** using **micro-blowout channels** to reduce surface resistance, and was realized within the scope of a microfabrication project, involving:
+At KIT’s **[wbk Institute of Production Engineering](https://www.wbk.kit.edu/english/index.php)**, and in collaboration with **[ROSSWAG Engineering](https://rosswag-engineering.de)**, we developed and implemented a concept to improve the efficiency of a generatively manufactured **impeller**. The approach involved **boundary layer control** using **micro-blowout channels** to reduce surface resistance, and was realized within the scope of a microfabrication project, involving:
 <ul>
   <li>Combination of <strong>Selective Laser Melting (SLM)</strong> and <strong>micro-milling</strong>,</li>
   <li>Micro-blowout channels for flow stabilization,</li>
@@ -80,7 +80,7 @@ At KIT’s **[wbk Institute of Production Engineering](https://www.wbk.kit.edu/e
 [Video](https://shantgananian.github.io/assets/vid/about/Mikrofertigung%20Abschlusspr%C3%A4sentation.mp4)
 
 <a id="subsubsection-d"></a>
-#### Cyber-Glove Development ([Virtual Reality internship](https://www.imi.kit.edu/208_623.php){:target="_blank"} – KIT-[IMI](https://www.imi.kit.edu/english/index.php){:target="_blank"})
+#### Cyber-Glove Development ([Virtual Reality internship](https://www.imi.kit.edu/208_623.php) – KIT-[IMI](https://www.imi.kit.edu/english/index.php))
 
 We developed a **sensor-equipped cyber-glove** with custom-built electronics and transmission protocols to work inside a **CAVE (Cave Automatic Virtual Environment)**.
 
