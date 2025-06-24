@@ -25,9 +25,7 @@ Kürzlich habe ich mein zweites Studium abgeschlossen: einen **Masterabschluss i
 
 Zur Vertiefung meiner akademischen Laufbahn arbeitete ich während und nach meinem Studium am **[Institut für Automation und Angewandte Informatik (IAI)](https://www.iai.kit.edu/index.php){:target="_blank"}** des KIT. Dort war ich in Forschungsprojekten zur **Identifikation, Regelung und Überwachung von Systemen unterschiedlicher Größenordnungen** sowie zur **Anwendung von Automatisierungstechnologien in der Kreislaufwirtschaft** tätig.
 
-Meine **Masterarbeit** führte ich ebenfalls am IAI durch. Dabei untersuchte ich neue Materialien und Verfahren für die **lösungsmittelbasierte Verkapselung von gedruckten elektronischen Bauteilen**.
-
-Ich:
+Meine **Masterarbeit** führte ich ebenfalls am IAI durch. Dabei untersuchte ich neue Materialien und Verfahren für die **lösungsmittelbasierte Verkapselung von gedruckten elektronischen Bauteilen**. Ich:
 <ul>
   <li>entwarf und modifizierte einen <strong>Water Vapour Transmission Rate (WVTR)</strong>-Test,</li>
   <li>entwickelte Verkapselungsmembranen auf Basis von <strong>Polyvinylalkohol (PVA)</strong> mit fünf verschiedenen <strong>Nanofüllstoffen</strong> (zwei Tonerden, Silica, Graphenoxid, Glasflakes),</li>

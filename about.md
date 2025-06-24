@@ -25,9 +25,7 @@ I recently completed my second degree: a **Master’s in Mechanical Engineering*
 
 To strengthen my academic path, I worked at KIT’s **[Institute for Automation and Applied Computer Science (IAI)](https://www.iai.kit.edu/index.php){:target="_blank"}** both during and after my studies. There, I contributed to research in the **identification, control, and monitoring of multi-size systems**, as well as the **application of automation in the circular economy**.
 
-For my **Master’s thesis**, I explored new materials and methods for **solution-based encapsulation of printed electronic devices**.
-
-I:
+For my **Master’s thesis**, I explored new materials and methods for **solution-based encapsulation of printed electronic devices**. I:
 <ul>
   <li>Designed and modified a <strong>Water Vapour Transmission Rate (WVTR) test</strong>,</li>
   <li>Developed encapsulation membranes using <strong>Polyvinylalcohol (PVA)</strong> and five different <strong>nanofillers</strong> (clays, silica, graphene oxide, and glass flakes),</li>
