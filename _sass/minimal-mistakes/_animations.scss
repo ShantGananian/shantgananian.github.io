@@ -1,0 +1,92 @@
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+
+@-webkit-keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes intro {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* -------------------------------------------------------- */
+/* Back to top button */
+
+/* remove the next lines if you don't want smooth scrolling */
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+/* back to top button */
+.back2top {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden; /* hidden until scrolled down a distance defined in  backToTop.js after which it turns visible */
+  bottom: 45px; /* position of the button relative to the bottom edge of the page */
+  right: 5px; /* position of the button relative to the right edge of the page */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+
+/* visual style */
+  text-decoration: none;
+  transition: 0.2s ease-out; 
+  height: 40px; aspect-ratio: 1; /* same result with: height: 40px; width: 40px; */
+  background: rgba(203, 49, 49, 0.5); /* #000; */
+  border-radius: 4px; /* 100px; */
+  opacity: 0.5;
+}
+
+/* to add two upward angles in the button */
+.back2top:before {
+  content:"";
+  position:absolute;
+  inset:30%; /* if you make this smaller the angle edges will get longer */
+  transform:translateY(0%) rotate(-45deg); /* vertical position of the first angle */
+  border-top:5px solid #fff; /* the thickness of left side */
+  border-right:5px solid #fff; /* the thickness of the right side */
+  opacity: 0.5;
+}
+
+.back2top:after {
+  content:"";
+  position:absolute;
+  inset:30%;
+  transform:translateY(70%) rotate(-45deg); /* vertical position of the second angle */
+  border-top:5px solid #fff;
+  border-right:5px solid #fff;
+  opacity: 0.5;
+}
+
+.back2top.active {
+  opacity: 1; /* the button appears after scrolling a distance defined in backToTop.js */
+  visibility: visible; /* button is visible with its defined visual style properties */
+}
+
+/* hovering over the button effect */
+.back2top:hover {
+  background-color: #CB3131;
+  opacity: 1;
+  &:before {
+    opacity: 1;
+  }
+  &:after {
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1); //this makes the button larger when the mouse pointer is above it
+  }  
+}
