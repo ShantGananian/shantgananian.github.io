@@ -13,7 +13,7 @@ body {
   padding: 0;
   color: $text-color;
   font-family: $global-font-family;  /* the font of the body section of posts defined in _variables.scss */
-  line-height: 1.75; /* 1.5; //line height of the text in the body of the posts */
+  line-height: 1.75; /* 1.6; 1.25; line height of the text in the body of the posts. I chose 1.75 */
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
@@ -35,7 +35,7 @@ h6 {
 
 h1 {
   margin-top: 0;
-  font-size: $h-size-1;
+  font-size: $h-size-1; /* article title font size */
 }
 
 h2 {
@@ -107,15 +107,22 @@ abbr[data-original-title] {
 /* blockquotes */
 
 blockquote {
-  margin: 2em 1em 2em 0;
-  padding-left: 1em;
-  padding-right: 1em;
+  // margin: 2em 1em 2em 0;
+  // padding-left: 1em;
+  // padding-right: 1em;
   font-style: italic;
-  border-left: 0.25em solid $primary-color;
+  // border-left: 0.25em solid $primary-color; /* did it when added below */
+
+  /* mine */
+  background-color: #f4f4f4;
+  border-left: 5px solid #635dff;
+  line-height: 1.75; /*1.6em; */
+  margin: 40px 0px;
+  padding: 1px 30px;
 
   cite {
     font-style: italic;
-
+    font-size: 0.9em; /* font size of the author in the quote */
     &:before {
       content: "\2014";
       padding-right: 5px;

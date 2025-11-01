@@ -1,7 +1,8 @@
 ---
 layout: single # archive
 
-title: 'Static Analyses of Bars and Trusses via the Finite Element Simulation Method with SOLIDWORKS'
+title: 'Static Analyses of Bars and Trusses'
+subtitle: "via the Finite Element Simulation Method with SOLIDWORKS"
 excerpt: "Application of truss structures in various forms are found all around. Static analyses of such structures are conducted to determine the internal forces, stresses and to evaluate the axial deformations."
 myLink: /de/fe-solidworks-bar-truss-de/ # Custom Variable
 # author_profile: true
@@ -23,7 +24,7 @@ toc_icon: "cog"
 toc_sticky: true
 
 header:
-  image: /assets/img/fe-solidworks-bar-truss/Figure30.png
+  #image: /assets/img/fe-solidworks-bar-truss/Figure30.png
   teaser: /assets/img/fe-solidworks-bar-truss/Figure30.png
 ---
 

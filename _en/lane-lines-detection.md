@@ -23,7 +23,7 @@ toc_icon: "cog"
 toc_sticky: true
 
 header:
-  image: /assets/img/lane-line-detection/Figure15.gif
+  #image: /assets/img/lane-line-detection/Figure15.gif
   teaser: assets/img/lane-line-detection/Figure15.gif
 ---
 

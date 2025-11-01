@@ -1,22 +1,47 @@
 ---
 ---
+<!--  Getting the URL of the page in the other language version.
+I used location.hostname instead of site.url to avoid going to
+localhost instead of 127.0.0.1-->
 {% assign myaddress = location.hostname | append: page.myLink %} 
 <script language="javaScript">
-    var myVar = "{{myaddress}}"; 
-
+    var myVar = "{{myaddress}}"; // Using Liquid variable in JavaScript a set of quotation marks is required
+// function getLink() {
+//   location.assign(myVar);
+// }
 </script>
+<!-- end -->
 
 
 
 
 <!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<!-- Always use a language attribute '<html lang = ' on the html tag to declare the
+  default language of the text in the page. This is inherited by
+  all other elements. -->
+
+<!-- Using 'page.lang' instead of 'site.locale' Every post and page
+  located inside each folder has a 'lang' value defined by me as
+  default in config.yml . In case the post/page is not in one of the
+  language subdirectories, then I will need to specify its language
+  in the front matter of the post/page. -->
+<!-- <html lang="{{ site.locale | slice: 0,2 | default: 'en' }}" class="no-js"> -->
 <html lang="{{ page.lang | slice: 0,2 | default: 'en' }}" class="no-js">
   <head>
     {% include head.html %}
     {% include head/custom.html %}
 
+    <!-- Jekyll Feed plugin: Meta Tags: expose the appropriate meta tags to support automated discovery of your feed -->
     {% feed_meta %}
 
+    <!-- enable the $ … $-style inline mode for Mathjax -->
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
           tex2jax: {
@@ -34,7 +59,13 @@
 
   <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
     {% include_cached skip-links.html %}
-  
+    <!-- {% include_cached masthead.html %} -->
+    <!-- Instead of 'include_cached' (as above) I used 'include' (as below). Although, 'include_cached' 
+      renders the 'include' once, and then reuses the output any time that 'include' is 
+      called with the same arguments, potentially speeding up the site's build significantly 
+      but I need the 'masthead.html' to change based on the 'page.lang' (the page's custom 
+      variable 'lang' defined in the frontmatter of the page or as default). 
+      Reference: https://github.com/benbalter/jekyll-include-cache-->
     {% include masthead2.html %}
 
     <div class="initial-content">
@@ -56,8 +87,10 @@
 
     {% include scripts.html %}
 
+    <!-- back to the top button on all pages -->
     <a id="idbackTotop" class="back2top" href="#"></a>
     <script src="/assets/js/backToTop.js"></script>
+    <!-- end -->
   </body>
 
 
@@ -84,12 +117,42 @@ a {
     -o-transition: all .3s ease;
     transition: all .3s ease;
 }
+/* OPEN / CLOSE BTNS */
 .menu-btn {
-
+    /* position: fixed; */
+    /* top: 6px; */
+    /* right: 20px; */
     z-index: 999;
-
+    /* display: inline; */
+    /* font-size: 32px; */
 }
 
+
+/* .btn-open:after {
+    color: #333;
+    content: "\f394";
+    font-family: "Ionicons";
+    -webkit-transition: all .2s linear 0s;
+    -moz-transition: all .2s linear 0s;
+    -o-transition: all .2s linear 0s;
+    transition-property: all .2s linear 0s;
+} */
+/* .btn-open:hover:after {
+    color: #34B484;
+}
+.btn-close:after {
+    color: #fff;
+    content: "\f2d7";
+    font-family: "Ionicons";
+    -webkit-transition: all .2s linear 0s;
+    -moz-transition: all .2s linear 0s;
+    -o-transition: all .2s linear 0s;
+    transition-property: all .2s linear 0s;
+} */
+/* .btn-close:hover:after {
+    color: #34B484;
+} */
+/* OVERLAY */
 .overlay {
     position: fixed;
     top: 0;
@@ -98,10 +161,13 @@ a {
     overflow: auto;
     width: 100%;
     height: 100%;
-    background: #fff;
+    /* border-color:  mix(#fff, gray, 90%);
+    background: rgba(255,255,255, 0.9);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 10px rgba(0,0,0,0.1); */
+    background: #fff; /* #333; */
 }
 .overlay .menu {
-    margin: 5% auto; 
+    margin: 5% auto; /* the margin between the top of the screen and the first line */
     width: 80%;
 }
 .overlay .menu ul {
@@ -111,7 +177,7 @@ a {
 }
 .overlay .menu ul li {
     float: left;
-    padding: 15px 0; 
+    padding: 15px 0; /* the vertical distance between the list items */
     width: 25%;
     list-style: none;
     text-align: center;
@@ -135,7 +201,8 @@ a {
 .overlay .menu ul ul li a {
     color: #000;
     text-transform: capitalize;
-    font-size: 18px; 
+    /* font-weight: bold; */
+    font-size: 18px; /* 14px; */
     -webkit-animation: intro 0.3s both;
     animation: intro 0.3s both;
     -webkit-animation-delay: 0.15s;
@@ -145,17 +212,22 @@ a {
     color: #CB3131;
 }
 
+/* Added the next section for the x sign 'closbtn' on the overlay */
 .overlay .closebtn {
-
+  /* position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px; */
 
   position: absolute;
-  top: 0;
-  right: 25px;
+  top: 0; /* 10px; */
+  right: 25px; /* 25px; */
   font-size: 48px;
   margin-left: 50px;
-  text-decoration: none;
+  text-decoration: none; /* if you remove this a line will appear under the 'x' close sign */
 }
 
+/* RESPONSIVE */
 @media screen and (max-width: 768px) {
     nav {
         display: none;
@@ -170,9 +242,13 @@ a {
         border: 0;
     }
     .overlay .menu ul ul {
+        margin-top: 20px; /* between each list title and its first item */
     }
+    /* .menu-btn {
+        right: 25px;
+    } */
 
-
+    /* Added the next section for the x sign 'closbtn' on the overlay */
     .overlay .closebtn {
         font-size: 40px;
         top: 0px;
@@ -180,7 +256,21 @@ a {
   }
 }
 
-
+/* .allexamples{
+  position:absolute;
+  bottom:0;
+  font-size:18px;
+  font-weight:bold;
+  width:100%;
+  text-align:center;
+  background:#e9e9e9;
+  padding:20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color:#333;
+  position:fixed;
+}  */
 
 
   </style>
@@ -188,6 +278,7 @@ a {
 <body>
 
 <div class="overlay">
+  <!-- Added the next line line to include x sign at the corner -->
   <a href="javascript:void(0)" class="closebtn">&times;</a>
     <div class="menu">
         <ul>

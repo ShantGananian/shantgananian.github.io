@@ -1,7 +1,8 @@
 ---
 layout: single # archive
 
-title: Analytische und numerische Analyse und Lösung von Spannungs- und Durchbiegungsaufgaben mithilfe von MATLAB
+title: "Analytische und numerische Analyse und Lösung"
+subtitle: "von Spannungs- und Durchbiegungsaufgaben mithilfe von MATLAB"
 excerpt: "Einsatz von MATLAB als symbolisches und numerisches Werkzeug zur Analyse und Lösung von Spannungs- und Durchbiegungsaufgaben durch Erstellung spezifischer Funktionen für die Konstruktion von Maschinenkomponenten."
 myLink: /en/mca-stress-deflection/ # Custom Variable
 # author_profile: true
@@ -21,9 +22,11 @@ toc_icon: "cog"
 toc_sticky: true
 
 header:
-  image: /assets/img/mca-stress-deflection/Figure6.jpg
+  #image: /assets/img/mca-stress-deflection/Figure6.jpg
   teaser: assets/img/mca-stress-deflection/Figure6.jpg
 ---
+
+<!-- <img align="right" width="25%" heighth="auto" src="/assets/img/laufende-arbeiten.png" alt="Figure"> -->
 
 <br>
 

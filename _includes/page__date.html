@@ -1,6 +1,26 @@
-{% assign date_format = site.date_format | default: "%-d.%m.%Y" %}
+<!-- {% assign date_format = site.date_format | default: "%m %-d, %Y" %} -->
+<!-- {% assign date_format = site.date_format | default: "%-d.%m.%Y" %}
 {% if page.last_modified_at %}
   <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[page.lang].date_label | default: "Updated:" }}</strong> <time class="dt-published" datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: date_format }}</time></p>
 {% elsif page.date %}
   <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[page.lang].date_label | default: "Updated:" }}</strong> <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: date_format }}</time></p>
+{% endif %} -->
+
+<!-- Mine -->
+
+{% assign date_format = "%B %-d, %Y" %}
+{% if page.last_modified_at %}
+  <p class="page__date">
+    <i class="" aria-hidden="true"></i>
+    <time class="dt-published" datetime="{{ page.last_modified_at | date_to_xmlschema }}">
+      {{ page.last_modified_at | date: date_format }}
+    </time>
+  </p>
+{% elsif page.date %}
+  <p class="page__date">
+    <i class="" aria-hidden="true"></i>
+    <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">
+      {{ page.date | date: date_format }}
+    </time>
+  </p>
 {% endif %}

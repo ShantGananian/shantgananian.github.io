@@ -6,6 +6,7 @@
   {% if author.avatar %}
     <div class="author__avatar">
       <a href="{{ author.home | default: '/' | absolute_url }}">
+        <!--  -->
         <img src="{{ author.avatar | relative_url }}" alt="{{ site.data.ui-text[page.lang].author_name }}" itemprop="image" class="u-photo">
       </a>
     </div>
@@ -13,6 +14,7 @@
 
   <div class="author__content">
     <h3 class="author__name p-name" itemprop="name">
+      <!--  -->
       <a class="u-url" rel="me" href="{{ author.home | default: '/' | absolute_url }}" itemprop="url">{{ site.data.ui-text[page.lang].author_name }}</a>
     </h3>
     {% if author.bio %}
@@ -27,8 +29,11 @@
     <ul class="author__urls social-icons">
       {% if author.location %}
         <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <!-- gg -->
           <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">{{ site.data.ui-text[page.lang].author_location }}</span>
         </li>
+        <!-- Added a single line break after the location item in the sidebar -->
+        <!-- <br> -->
       {% endif %}
   
       {% if author.links %}

@@ -23,7 +23,7 @@ toc_icon: "cog"
 toc_sticky: true
 
 header:
-  image: /assets/img/lane-line-detection/Figure15.gif
+  #image: /assets/img/lane-line-detection/Figure15.gif
   teaser: assets/img/lane-line-detection/Figure15.gif
 ---
 
@@ -50,7 +50,7 @@ Erstellung eines Programms in Python zur Erkennung von Straßen- oder Wegspuren 
 - Optimierung der extrahierten Merkmale durch Mittelwertbildung.
 
 
-<a id="schritte "></a>
+<a id="schritte"></a>
 ## SCHRITTE
 
 Die hier beschriebene Pipeline zur Fahrspurerkennung ist wie folgt aufgebaut:

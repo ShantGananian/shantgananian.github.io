@@ -1,7 +1,8 @@
 ---
 layout: single # archive
 
-title: 'Artificial Neural Networks and its Application to Industrial Fault Diagnosis of Connecting Rods in Compressors: Introduction and Applications'
+title: 'Artificial Neural Networks and its Application'
+subtitle: "to Industrial Fault Diagnosis of Connecting Rods in Compressors: Introduction and Applications"
 excerpt: "Creating neural networks by using MATLAB and applying it to solve technical problems such as pattern recognition for correct sorting of parcels and classification for fault diagnosis of compressor connecting rods."
 myLink: /de/nn-parcel-rod-de/ # Custom Variable
 # author_profile: true
@@ -23,8 +24,8 @@ toc_icon: "cog"
 toc_sticky: true
 
 header:
-  image: /assets/img/nn-parcel-rod/Figure28.jpg
-  teaser: assets/img/nn-parcel-rod/Figure28.jpg
+  #image: /assets/img/nn-parcel-rod/Figure28.jpg
+  teaser: /assets/img/nn-parcel-rod/Figure28.jpg
 ---
 
 <br>
@@ -193,12 +194,10 @@ In the case of single neuron, the scalar net input $n$ to the tranfer function $
     </li>
 </ul>
 
-
 <a id="subsubsection-b"></a>
 **2. Defining the input vector**
 
 {% include codes/nn-parcel-rod/m3.html %}
-
 
 <a id="subsubsection-c"></a>
 **3. Calculating neuron output**
