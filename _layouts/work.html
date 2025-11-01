@@ -3,9 +3,7 @@ layout: archive
 ---
 {{ content }}
 
-<!-- <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3> -->
 
-<!-- This section will show the year number and next to it the number of posts in that year-->
 <ul class="taxonomy__index">
   {% assign postsInYear = site.works | where_exp: "item", "item.hidden != true" | group_by_exp: 'work', 'work.date | date: "%Y"' %}
   {% for year in postsInYear %}
@@ -18,7 +16,6 @@ layout: archive
 </ul>
 
 
-<!-- This section creates the list grouped by post year-->
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 {% assign postsByYear = site.works | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
 {% for year in postsByYear %}
