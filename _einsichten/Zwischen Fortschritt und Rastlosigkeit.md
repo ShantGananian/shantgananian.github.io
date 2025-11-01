@@ -201,3 +201,7 @@ Mit anderen Worten: Es fordert das, was **Carl Jung** als **Erreichung der Pers�
 <blockquote class="blockquote">
 <p>„Solche Probleme werden nie durch Gesetze oder Tricks gelöst. Sie werden nur durch eine allgemeine Einstellungsänderung gelöst. Und die Veränderung beginnt nicht mit Propaganda, Massenversammlungen oder Gewalt. Sie beginnt mit einer Veränderung des Individuums. Sie wird sich fortsetzen als Transformation ihrer persönlichen Vorlieben und Abneigungen, ihres Lebensblicks und ihrer Werte, und nur die Summe dieser individuellen Veränderungen wird eine kollektive Lösung hervorbringen.“&nbsp;</p>
 <cite>Carl Jung, Psychologie und Religion (1938)</cite></blockquote>
+
+
+<p class="article-note">Hinweis: Alle englischen Zitate wurden für diesen Artikel vom Autor ins Deutsche übertragen.</p>
+
