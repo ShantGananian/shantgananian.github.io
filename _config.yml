@@ -11,7 +11,7 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
+remote_theme             : "mmistakes/minimal-mistakes"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
@@ -28,7 +28,7 @@ teaser                   : "" # path of fallback teaser image, e.g. "/assets/ima
 logo                     : "/assets/img/sg-CB3131-dillario-font.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : ""  # overrides the website title displayed in the masthead, use " " for no title
 breadcrumbs              : false # true, false (default)
-words_per_minute         : 161
+words_per_minute         : 160
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
