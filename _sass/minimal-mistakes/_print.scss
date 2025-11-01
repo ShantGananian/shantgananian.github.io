@@ -4,19 +4,6 @@
 
 @media print {
 
-  /* Mine */
-  /* Remove grey background in print */
-  html, body {
-    background: #fff !important;
-  }
-
-  /* Also clear any background colors from containers */
-  .site, .page, .main, .wrapper, .layout, .page__content {
-    background: #fff !important;
-    box-shadow: none !important;
-  }
-  /* End Mine */
-
   [hidden] {
     display: none;
   }
@@ -263,86 +250,4 @@
     display: none !important;
     height: 1px !important;
   }
-
-  /*Mine*/ 
-  /* === IMPROVED PRINT LAYOUT === */
-
-  /* Better use of page space */
-  body {
-    font-size: 12pt;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1cm;
-  }
-
-  #main, .page__content {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  /* Ensure headers are clear and separated */
-  h1, h2, h3 {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 0.2em;
-    margin-top: 1.5em;
-  }
-
-  /* Make paragraphs readable */
-  p {
-    font-size: 11pt;
-    line-height: 1.6;
-    margin-bottom: 0.8em;
-  }
-
-  /* Prevent orphans/widows more effectively */
-  p, blockquote, li {
-    orphans: 4;
-    widows: 4;
-  }
-
-  /* Avoid ugly link URLs in print */
-  a[href]:after {
-    content: "";
-  }
-
-  /* Optional: keep internal anchors clean */
-  a[href^="#"]:after {
-    content: "";
-  }
-
-  /* Ensure code and preformatted text wrap properly */
-  code, pre {
-    font-family: "Courier New", monospace;
-    font-size: 10pt;
-    white-space: pre-wrap !important;
-    word-wrap: break-word;
-    background: #f7f7f7;
-    border: 1px solid #ddd;
-    padding: 3px 5px;
-  }
-
-  /* Make images scale well */
-  img {
-    display: block;
-    margin: 1em auto;
-    page-break-inside: avoid;
-    max-width: 90% !important;
-  }
-
-  /* Add page margins for print */
-  @page {
-    margin: 1cm;
-  }
-
-  // /* Optional: small, clean footer text */
-  // footer::after {
-  //   content: "Generated from {{ site.url | default: 'yourwebsite.com' }}";
-  //   display: block;
-  //   text-align: center;
-  //   font-size: 9pt;
-  //   color: #555;
-  //   margin-top: 1cm;
-  // }
-
 }

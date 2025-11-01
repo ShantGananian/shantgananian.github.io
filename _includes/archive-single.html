@@ -17,16 +17,13 @@
         <img src="{{ teaser | relative_url }}" alt="">
       </div>
     {% endif %}
-    <h1 class="archive__item-title no_toc" itemprop="headline">
+    <h2 class="archive__item-title no_toc" itemprop="headline">
       {% if post.link %}
         <a href="{{ post.link }}">{{ title }}</a> <a href="{{ post.url | relative_url }}" rel="permalink"><i class="fas fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
         <a href="{{ post.url | relative_url }}" rel="permalink">{{ title }}</a>
       {% endif %}
-    </h1>
-    {% if post.subtitle %}
-      <p class="archive__item-subtitle">{{ post.subtitle }}</p>
-    {% endif %}
+    </h2>
     {% include page__meta.html type=include.type %}
 
     <!-- Adding teaser images to the “Recent posts” list -->
@@ -36,8 +33,7 @@
     </div>
     {% endif %}
 
-    <!-- Excerpt has 300 words. I changed to 400 -->
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 400 }}</p>
+    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 300 }}</p>
     {% endif %}
   </article>
 </div>

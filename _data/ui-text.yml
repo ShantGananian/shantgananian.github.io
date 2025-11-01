@@ -55,12 +55,9 @@ en: &DEFAULT_EN
   back_to_top                : "Back to top"
   author_location            : "Karlsruhe, Germany"
   author_name                : "Shant Gananian, M.Sc."
-  author_bio                 : "Is a mechanical engineer working in quality management and assurance at the Karlsruhe Institute of Technology (KIT). Outside of work, he engages with literature, philosophy, and questions of human experience – exploring how ideas shape our thinking and actions." 
-  #"Mechatronics Engineer with 10+ years of experience in production, quality, and safety management (QHSE) across industry and research. Currently responsible for quality assurance of interdisciplinary large-scale investment projects at KIT. Technical expertise in design, system integration, BioMEMS, robotics, automation, CAD, simulation, and programming. Passionate about systems thinking and meaningful engineering work."
-  author_title               : "Mechanical Engineer" 
-  #"Mechanical Engineer"
-  author_subtitle            : "Reflecting on ideas and human experience" 
-  #"Smart Micro-Mechatronic Systems Enthusiast"
+  author_bio                 : "Multidisciplinary technical competence; BioMEMS & robotics design, system integration & computer science skills along with several years of industrial experience in production & QHSE management"
+  author_title               : "Mechanical Engineer"
+  author_subtitle            : "Enthusiast for smart micro-mechatronic systems"
 en-US:
   <<: *DEFAULT_EN
 en-CA:
@@ -545,11 +542,9 @@ de: &DEFAULT_DE
   back_to_top                : "Zurück nach oben"
   author_location            : "Karlsruhe, Deutschland"
   author_name                : "Shant Gananian, M.Sc."
-  author_bio                 : "Ist Maschinenbauingenieur im Bereich Qualitätsmanagement und -sicherung am Karlsruher Institut für Technologie (KIT). Außerhalb der Arbeit beschäftigt er sich mit Literatur, Philosophie und Fragen der menschlichen Erfahrung – insbesondere damit, wie Ideen unser Denken und Handeln prägen." 
-  #"Mechatronik-Ingenieur mit über 10 Jahren Erfahrung in Produktion, Qualitäts- und Sicherheitsmanagement (QHSE) in Industrie und Forschung. Aktuell verantwortlich für die Qualitätssicherung interdisziplinärer Großinvestitionsprojekte am KIT. Technische Kompetenz in Konstruktion, Systemintegration, BioMEMS, Robotik, Automatisierung, CAD, Simulation und Programmierung. Begeistert von systemischem Denken und sinnstiftender Ingenieursarbeit."
+  author_bio                 : "Multidisziplinäre technische Kompetenz; BioMEMS- & Robotik-Design, Systemintegration & Informatikkenntnisse sowie mehrjährige industrielle Erfahrung in Produktions- & QHSE-Management"
   author_title               : "Maschinenbauingenieur"
-  author_subtitle            : "Gedanken und menschliche Erfahrung<br>im Spiegel der Ideen" 
-  #"Enthusiast für Intelligente Mikro-Mechatronische Systeme"
+  author_subtitle            : "Enthusiast für intelligente mikromechatronische Systeme"
 de-DE:
   <<: *DEFAULT_DE
 de-AT:

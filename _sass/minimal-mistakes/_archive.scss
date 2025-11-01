@@ -22,32 +22,17 @@
 /* This section is for defining the style of an archive item (the boxes) */
 .archive__item {
   position: relative;
+
   /* mine */
-  margin-bottom: 2em;  // space between each post box
-  //border-bottom: 1px solid #e0e0e0; // optional, subtle separation
-  
-  background-color: #fafafa; /* #f4f4f4; is darker grey #fff; is white */
-  //padding: 1em;         // optional, if you want inner padding
-  padding: 1em 1em 1px 1em; //top right bottom left
-  box-shadow:1px 1px 2px rgba(0, 0, 0, 0.45);
-  //box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.35); //0 4px 10px rgba(0,0,0,0.05), 0 0 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 10px rgba(0,0,0,0.1);
   // border-style: solid;
   // border-color: red;
   // height: 400px;
   // overflow: hidden;
+  /* end of mine */
+  
 
-  /* Added to lift the box (archive item)  (to give a 3D “raised card” effect) when user hovers over the it
-   transition: makes the shadow and color animate smoothly.
-   box-shadow: expands and softens the shadow when hovered.
-   transform: translateY(-3px) gives a little “lift” motion (optional but looks great).*/
-  transition: box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease; // smooth effect
-    
-  &:hover {
-    background-color: #fff;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); // bigger, softer shadow. box-shadow: expands and softens the shadow when hovered
-    transform: translateY(-3px); // optional: lift effect. transform: translateY(-3px) gives a little “lift” motion (optional but looks great)
-  }
-/* end of mine */
 
   a {
     position: relative;
@@ -74,14 +59,11 @@
 }
 
 .archive__item-title {
-  // font-weight: bold; // not necessary here
-  margin-bottom: 0.25em;  /* It was 0.35em; distance between the title of the item and the line below it (date and time length for reading) */
+  margin-bottom: 0.25em;  /* distance between the title of the item and the line below it (date and time length for reading) */
   font-family: $sans-serif-narrow;
   line-height: initial;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: $type-size-5; /* equals 1em, I added this to define font size of the title of a post in list of posts. 6 is smaller than 5 */
-  //margin-top: 0.35em; /* I added this but removed it. It reduces the distance between the listed items */ 
   
 
   a[rel="permalink"]::before {
@@ -98,19 +80,6 @@
   }
 }
 
-/* Mine: to design the subtitle in the list of posts that have subtite tag in the YAML */
-.archive__item-subtitle {
-  font-weight: 400;
-  font-size: 0.9em;
-  color: #444;
-  margin-top: 0.2rem;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-  font-style:italic;
-}
-/*end of Mine */
-
-
 /* remove border*/
 .page__content {
   .archive__item-title {
@@ -121,10 +90,8 @@
 
 .archive__item-excerpt {
   margin-top: 0;      /* margin of the excerpt in each item, originally 0. You can change it to margin: 10px 10px 0px; */
-  font-size: $type-size-6; /* $type-size-6; equals to 0.75em or 16pxl, Size of the excerpt of a post in list of posts. 6 is smaller than 5 */
-  font-weight: 400;
-  line-height: 1.6;
-  
+  font-size: $type-size-5; /* $type-size-6; */
+
   & + p {
     text-indent: 0;
   }
@@ -518,6 +485,6 @@
   margin-bottom: 25px;
 }
 .thumbnail-container img {
-  margin-top: -4%; //-11.5%;
-  margin-bottom: -4%; //-11.5%;
+  margin-top: -11.5%;
+  margin-bottom: -11.5%;
 }

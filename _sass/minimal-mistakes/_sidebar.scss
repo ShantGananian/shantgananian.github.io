@@ -9,17 +9,15 @@
 
 .sidebar {
   @include clearfix();
-  // @include breakpoint(max-width $large) {
-  //   /* fix z-index order of follow links */
-  //   position: relative;
-  //   z-index: 10;
-  //   -webkit-transform: translate3d(0, 0, 0);
-  //   transform: translate3d(0, 0, 0);
-  // }
-  
+  /* @include breakpoint(max-width $large) { */
+     /* fix z-index order of follow links */
+  /*   position: relative;
+     z-index: 10;
+     -webkit-transform: translate3d(0, 0, 0);
+     transform: translate3d(0, 0, 0);
+   } */
   background-color: #fff;
-  /* box-shadow:1px 1px 2px rgba(0, 0, 0, 0.45); I removed the shadow to merge the sidebar in the background */
-  /* box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 10px rgba(0,0,0,0.1); */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05), 0 0 10px rgba(0,0,0,0.1);
 
   @include breakpoint($large) {
     float: left;
@@ -46,7 +44,7 @@
   }
 
   > * {
-    margin-top: 3em; // 1em; gap between the author picture and the top of the sidebar
+    margin-top: 1em; // gap between the author picture and the top of the sidebar
     margin-bottom: 1em;
   }
 
@@ -56,13 +54,13 @@
   h5,
   h6 {
     margin-bottom: 0;
-    font-family: $sans-serif-narrow; /*$minion; */
+    font-family: $minion; //$sans-serif-narrow;
   }
 
   p,
   li {
-    font-family: $sans-serif; /* $minion; */
-    font-size: $type-size-6; //for smaller I used $type-size-7; for share button texts in the sidebar
+    font-family: $minion; //$sans-serif;
+    font-size: $type-size-7; //$type-size-6; for share button texts in the sidebar
     line-height: 1.5;
   }
 
@@ -181,18 +179,17 @@
   }
 }
 .sidebar .author__name {
-  font-family: $sans-serif; /* I used before $minion; */
+  font-family: $minion; /* $sans-serif; */
   font-size: $type-size-6; // $type-size-5;  Author name font size
 }
 
 .author__bio {
   margin: 10px; //10px; 0; default
-  text-align: left; //center; left;
+  text-align: left; //center;
   hyphens: auto; // I added this to enable hyphenation
-  font-style: italic;
 
-  font-family: $sans-serif; /* I used before $minion; */
-  font-size: $type-size-5; // $type-size-5; default author bio font size 
+  font-family: $minion; /* $sans-serif; */
+  font-size: $type-size-6; // $type-size-5; default author bio font size 
 
   @include breakpoint($large) {
     margin-top: 10px;  // gap between the author bio and the author name
@@ -205,7 +202,7 @@
   position: relative;
   display: table-cell;
   vertical-align: middle;
-  font-family: $sans-serif;/* I used before $minion;  */
+  font-family: $minion; /* $sans-serif; */
   z-index: 20;
   cursor: pointer;
 

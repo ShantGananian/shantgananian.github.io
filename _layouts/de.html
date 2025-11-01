@@ -23,18 +23,18 @@ layout: archive
 <!-- This section creates the list of posts within 'de' collection grouped by post year-->
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 {% assign postsByYear = site.de | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-{% for year in postsByYear reversed %}
-  <!-- <section id="{{ year.name }}" class="taxonomy__section"> -->
+{% for year in postsByYear %}
+  <section id="{{ year.name }}" class="taxonomy__section">
     <!-- Commented the next line to remove the year number from showing as subtitle -->
     <!-- <h2 class="archive__subtitle">{{ year.name }}</h2> -->
     <div class="entries-{{ entries_layout }}">
-      {% for post in year.items reversed %}
+      {% for post in year.items %}
         {% include archive-single.html type=entries_layout %}
       {% endfor %}
     </div>
 
-  <!-- </section> -->
-{% endfor %}
+  </section>
+  {% endfor %}
 
 
 

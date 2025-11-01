@@ -1,13 +1,12 @@
 ---
 layout: single # archive
 
-title: "JavaScript-Webanwendung zur Messung der Höhe eines Objekts"
-subtitle: "mit Hilfe der Triangulation und des Orientierungssensors des Geräts"
+title: JavaScript-Webanwendung zur Messung der Höhe eines Objekts mit Hilfe der Triangulation und des Orientierungssensors des Geräts
 excerpt: "Mobile App in JavaScript, um die ungefähre Höhe eines Objekts mit Hilfe des Triangulationsprinzips, des Orientierungssensors des Geräts und des Streams seiner Rückseitenkamera zu messen."
 myLink: /en/javascript-height-measure-triangulation/ # Custom Variable
 # author_profile: true
-last_modified_at: 2023-11-01
-date: 2023-11-01
+last_modified_at: 2023-12-20
+date: 2023-12-20
 published: true
 tagsen:
   - Triangulation
@@ -20,7 +19,7 @@ tagsen:
   #- Sensoren
 
 toc: true
-toc_label: "Inhaltsverzeichnis"
+toc_label: "Inhaltsübersicht"
 toc_icon: "cog"
 toc_sticky: true
 
@@ -58,13 +57,13 @@ Der Neigungsmesser misst den Winkel zwischen einer horizontalen Linie und der Si
 
 Die in diesem Artikel beschriebene Web-App verwendet dasselbe Triangulationsprinzip wie oben beschrieben, aber anstelle eines Neigungsmessers wird ein Smartphone zur Messung und Berechnung verwendet.
 
-
+<br>
 <a id="ziele"></a>
 ## ZIELE
 
 Erstellung einer mobilen Webanwendung unter Verwendung der Programmiersprache JavaScript, um die ungefähre Höhe eines Objekts mit Hilfe des Triangulationsprinzips, des Orientierungssensors des Geräts und des Streams seiner Rückseitenkamera zu messen.
 
-
+<br>
 <a id="erworbene-fähigkeiten"></a>
 ## ERWORBENE FÄHIGKEITEN
 
@@ -73,8 +72,7 @@ Erstellung einer mobilen Webanwendung unter Verwendung der Programmiersprache Ja
 - Interpretieren und Verwenden der Eingabedaten des Orientierungssensors eines Geräts.
 - Zugriff auf den Stream der Rückseitenkamera eines Geräts.
 - Anwendung des Triangulationsprinzips zur Messung.
-
-
+<br>
 <a id="kodierung"></a>
 ## KODIERUNG
 
@@ -115,7 +113,7 @@ function onOrientationChange(event){
 
 Die statische Methode <code>console.log()</code>, die eine Meldung an die Konsole ausgibt, wird verwendet, um die mit dem Ereignis verbundenen Informationen zu protokollieren. Ein Laptop oder ein PC sind jedoch nicht mit einem Orientierungssensor ausgestattet, der die Ausrichtung eines Geräts relativ zu einem orthogonalen Koordinatensystem $X$, $Y$ und $Z$ misst, so dass ein Kippen des Laptops oder PCs das Ereignis nicht auslösen kann. Wie man ein Gerät, das keinen Orientierungssensor hat, debuggt, wird im nächsten Abschnitt erklärt.
 
-
+<br>
 <a id=" debuggen"></a>
 ## DEBUGGEN
 
@@ -309,9 +307,9 @@ Wenn man den Schieberegler in seiner aktuellen Position bewegt, wird der Wert da
 
 Im nächsten Abschnitt wird die Kameraeingabe von der Rückseitenkamera des Geräts hinzugefügt, die es dem Benutzer ermöglicht, das Gerät richtig auf die Oberseite (oder Unterseite) des Objekts auszurichten.
 
-
+<br>
 <a id="kamerastream"></a>
-## KAMERA-STREAM
+## Kamera-Stream
 
 Eine neue Funktion wurde hinzugefügt: die Kameraeingabe von der Rückseitenkamera des Geräts, die es dem Benutzer ermöglicht, das Gerät an der Oberseite (oder Unterseite) des Objekts auszurichten. Dazu wird auf die Eigenschaft <code>navigator.mediaDevices</code> zugegriffen, die verschiedene Methoden für den Zugriff auf die Kamera, das Mikrofon und die Bildschirmfreigabe bietet, und die Methode <code>getUserMedia()</code> mit der auf <code>true</code> gesetzten Eigenschaft <code>video</code> aufgerufen.
 
@@ -384,7 +382,7 @@ function onOrientationChange(event){
 
 Der nächste Schritt ist die Gestaltung der Anwendung in der Datei <code>style.css</code>.
 
-
+<br>
 <a id=" gestaltung "></a>
 ## GESTALTUNG
 
