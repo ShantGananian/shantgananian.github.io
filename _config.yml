@@ -286,6 +286,9 @@ tag_archive:
 tagen_archive:
   type: liquid #jekyll-archives
   path: /tagsdir/
+categen_archive:
+  type: liquid #jekyll-archives
+  path: /categdir/
 # https://github.com/jekyll/jekyll-archives
 # jekyll-archives:
 #    enabled:
@@ -339,6 +342,9 @@ collections:
     output: true
     permalink: /:collection/:path/
   mainpagede:
+    output: true
+    permalink: /:collection/:path/
+  categdir:
     output: true
     permalink: /:collection/:path/
 
@@ -429,6 +435,12 @@ defaults:
     values:
       # permalink: 'custom/:title'
       lang: de
+  # _categdir
+  - scope:
+      path: '_categdir'
+    values:
+      # permalink:
+      lang: en
 
   # tag archives and category archives
   - scope:
@@ -458,3 +470,4 @@ feed:
     - tagsdir
     - insights
     - einsichten
+    - categdir

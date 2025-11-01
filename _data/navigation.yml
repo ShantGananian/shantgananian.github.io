@@ -154,7 +154,11 @@ main2:
     #- title: "Themes"
     #  url: /themes/     
     - title: "Portfolio"
-      url: /en/      
+      url: /en/
+      description: "A selection of engineering and programming projects" 
+    - title: "In Conversation with Books"
+      url: /insights/
+      description: "Reflections on ideas and human experience through books"   
     #- title: "Blog Posts"
     #  url: /posts/posts/
     #- title: "Projects"
@@ -197,7 +201,11 @@ main2:
     #- title: "Themen"
     #  url: /themen/       
     - title: "Portfolio"
-      url: /de/       
+      url: /de/
+      description: "Eine Auswahl an Ingenieur- und Programmierprojekten"
+    - title: "Im Gespräch mit Büchern"
+      url: /einsichten/
+      description: "Reflexionen über Ideen und menschliche Erfahrungen anhand von Büchern"      
     #- title: "Blogbeitrag"
     #  url: /Blogbeitrag/  
     #- title: "Projekte"

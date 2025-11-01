@@ -9,7 +9,7 @@ myLink: /insights/Between Progress and Restlessness/ # Custom Variable
 last_modified_at: 2025-11-01
 date: 2025-10-26
 published: true
-categories:
+categsen:
   - Menschlichkeit
   - Philosophie der Technologie
 toc: true

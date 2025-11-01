@@ -9,7 +9,7 @@ myLink: /einsichten/Zwischen Fortschritt und Rastlosigkeit/ # Custom Variable
 last_modified_at: 2025-11-01
 date: 2025-10-26
 published: true
-categories:
+categsen:
   - Philosophy of Technology
   - Humanity
 toc: true
