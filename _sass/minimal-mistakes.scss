@@ -42,24 +42,33 @@
 /* Mine: include here your custom .scss files */
 
 /* === Mine: Custom Social Icons Style === */
+/* Default (mobile): keep original behavior */
 .author__urls.social-icons {
-  display: flex;
-  justify-content: center; /* or flex-start / flex-end */
-  gap: 12px;
   list-style: none;
   padding: 0;
   margin: 10px 0;
 }
 
-.author__urls.social-icons li {
-  display: inline-flex;
-  align-items: center;
+/* Only show icons horizontally on wider screens */
+@media (min-width: 768px) {
+  .author__urls.social-icons {
+    display: flex;
+    justify-content: center; /* or flex-start / flex-end */
+    gap: 12px;
+  }
+
+  .author__urls.social-icons li {
+    display: inline-flex;
+    align-items: center;
+  }
 }
 
+/* Hide labels always (desktop + mobile) */
 .author__urls.social-icons .label {
   display: none;
 }
 
+/* Icon styles */
 .author__urls.social-icons a i {
   font-size: 1.5em;
   color: inherit;
@@ -72,18 +81,19 @@
   transform: scale(1.1);
 }
 
-/* --- Platform-specific hover colors --- */
+/* Platform-specific hover colors */
 .author__urls.social-icons a[href*="linkedin.com"]:hover i {
-  color: #0077b5; /* LinkedIn blue */
+  color: #0077b5;
 }
 
 .author__urls.social-icons a[href*="github.com"]:hover i {
-  color: #333; /* GitHub dark */
+  color: #333;
 }
 
 .author__urls.social-icons a[href^="mailto:"]:hover i {
-  color: #d93025; /* Email red */
+  color: #d93025;
 }
+
 
 /* === End of Mine: Custom Social Icons Style === */
 
