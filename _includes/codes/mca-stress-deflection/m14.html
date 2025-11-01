@@ -1,0 +1,34 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB 2023b"><title>Untitled</title><style type="text/css">.rtcContent { padding: 0px; } .CodeBlock { background-color: #F5F5F5; margin: 10px 0 10px 0; overflow-x:auto; }
+.S0 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 1px solid rgb(217, 217, 217); border-bottom: 0px none rgb(33, 33, 33); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S1 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 0px none rgb(33, 33, 33); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S2 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 1px solid rgb(217, 217, 217); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }</style><div class = rtcContent><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre"><span style="color: #0e00ff;">function </span><span >[]=ForceDdraw(F1A,F2A,l1,l2,l3,l4)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >xlabel(</span><span style="color: #a709f5;">'Bar Length (mm)'</span><span >), ylabel(</span><span style="color: #a709f5;">'Force (kN)'</span><span >)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >title(</span><span style="color: #a709f5;">'Force Diagram'</span><span >)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >hold </span><span style="color: #a709f5;">on</span><span >; grid </span><span style="color: #a709f5;">on</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >axis </span><span style="color: #a709f5;">equal</span><span >; axis </span><span style="color: #a709f5;">on</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >axis([-100 700 -200 200 ])</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >hold </span><span style="color: #a709f5;">on</span><span >;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >scale_F=1000;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >hold </span><span style="color: #a709f5;">on</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >l=line([0 (l1+l2+l3)], [0 0]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >l=line([(l1+l2+l3) (l1+l2+l3)], [0 F1A/scale_F]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >l=line([(l1+l2+l3) (l1+l2+l3)-(l3)],</span><span style="color: #0e00ff;">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >[F1A/scale_F F1A/scale_F]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >l=line([(l1+l2+l3)-l3 (l1+l2+l3)-(l3)],</span><span style="color: #0e00ff;">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >[F1A/scale_F F1A/scale_F]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >l=line([(l1+l2+l3)-l3 (l1+l2+l3)-(l2+l3)],</span><span style="color: #0e00ff;">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >[F1A/scale_F F1A/scale_F]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >l=line([(l1+l2+l3)-(l2+l3) (l1+l2+l3)-(l2+l3)],</span><span style="color: #0e00ff;">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >[F1A/scale_F F2A/scale_F]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >l=line([0 (l1+l2+l3)-(l2+l3)],</span><span style="color: #0e00ff;">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >[F2A/scale_F F2A/scale_F]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >l=line([0 0], [F2A/scale_F 0]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >set(l,</span><span style="color: #a709f5;">'Color'</span><span >,</span><span style="color: #a709f5;">'blue'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre"><span style="color: #0e00ff;">end</span></span></div></div></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+function []=ForceDdraw(F1A,F2A,l1,l2,l3,l4)
+xlabel('Bar Length (mm)'), ylabel('Force (kN)')
+title('Force Diagram')
+hold on; grid on
+axis equal; axis on
+axis([-100 700 -200 200 ])
+hold on;
+scale_F=1000;
+hold on
+l=line([0 (l1+l2+l3)], [0 0]);
+l=line([(l1+l2+l3) (l1+l2+l3)], [0 F1A/scale_F]);
+l=line([(l1+l2+l3) (l1+l2+l3)-(l3)],...
+[F1A/scale_F F1A/scale_F]);
+l=line([(l1+l2+l3)-l3 (l1+l2+l3)-(l3)],...
+[F1A/scale_F F1A/scale_F]);
+l=line([(l1+l2+l3)-l3 (l1+l2+l3)-(l2+l3)],...
+[F1A/scale_F F1A/scale_F]);
+l=line([(l1+l2+l3)-(l2+l3) (l1+l2+l3)-(l2+l3)],...
+[F1A/scale_F F2A/scale_F]);
+l=line([0 (l1+l2+l3)-(l2+l3)],...
+[F2A/scale_F F2A/scale_F]);
+l=line([0 0], [F2A/scale_F 0]);
+set(l,'Color','blue');
+end
+##### SOURCE END #####
+-->
+</div>

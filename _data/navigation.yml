@@ -13,7 +13,11 @@ main:
     #- title: "Themes"
     #  url: /themes/     
     - title: "Portfolio"
-      url: /en/      
+      url: /en/
+      description: "A selection of engineering and programming projects" 
+    - title: "In Conversation with Books"
+      url: /insights/
+      description: "Reflections on ideas and human experience through books"
     #- title: "Blog Posts"
     #  url: /posts/posts/
     #- title: "Projects"
@@ -26,8 +30,9 @@ main:
     #  url: /pages/
     # - title: "Quick-Start Guide"
     #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-    #- title: "About"
-    #  url: /about/
+    - title: "About me"
+      url: /about/
+      description: "Insights into my background, values, and approach to engineering and work"
     #- title: "Work"
    #   url: /works/
     #- title: "de"
@@ -56,7 +61,11 @@ main:
     #- title: "Themen"
     #  url: /themen/       
     - title: "Portfolio"
-      url: /de/       
+      url: /de/
+      description: "Eine Auswahl an Ingenieur- und Programmierprojekten"
+    - title: "Im Gespräch mit Büchern"
+      url: /einsichten/
+      description: "Reflexionen über Ideen und menschliche Erfahrungen anhand von Büchern"
     #- title: "Blogbeitrag"
     #  url: /Blogbeitrag/  
     #- title: "Projekte"
@@ -69,8 +78,9 @@ main:
     #  url: /seiten/
     # - title: "Quick-Start Guide"
     #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-    #- title: "Über mich"
-    #  url: /uebermich/
+    - title: "Über mich"
+      url: /uebermich/
+      description: "Einblicke in meinen Werdegang, meine Werte und meinen Ansatz zu Technik und Arbeit"
     #- title: "Arbeit"
     #  url: /works/
     #- title: "en"
@@ -81,6 +91,7 @@ main:
     #   url: /collection-archive/
     #- title: "Sitemap"
     #  url: /sitemap/
+
 
 
 # sidebar navigation list sample

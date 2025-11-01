@@ -38,6 +38,9 @@ localhost instead of 127.0.0.1-->
     {% include head.html %}
     {% include head/custom.html %}
 
+    <!-- Jekyll Feed plugin: Meta Tags: expose the appropriate meta tags to support automated discovery of your feed -->
+    {% feed_meta %}
+
     <!-- enable the $ … $-style inline mode for Mathjax -->
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -269,6 +272,14 @@ a {
   position:fixed;
 }  */
 
+/* Archive page link overrides */
+.archive a {
+  color: #CB3131;
+}
+
+.archive a:hover {
+  color: #A62121;
+}
 
   </style>
 

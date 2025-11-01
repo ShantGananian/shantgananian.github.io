@@ -5,8 +5,8 @@ title: Lane Lines Detection using Real-Time Machine Vision for Seeing Vehicles
 excerpt: "Python pipeline for identifying road lane boundaries, first in an image, then applying the pipeline to a video stream."
 myLink: /de/lane-lines-detection-de/ # Custom Variable
 # author_profile: true
-last_modified_at: 2023-11-01
-date: 2023-11-01
+last_modified_at: 2023-12-20
+date: 2023-12-20
 published: true
 tagsen:
   - Machine Vision
@@ -23,20 +23,20 @@ toc_icon: "cog"
 toc_sticky: true
 
 header:
-  image: /assets/img/lane-line-detection/Figure15.gif
+  #image: /assets/img/lane-line-detection/Figure15.gif
   teaser: assets/img/lane-line-detection/Figure15.gif
 ---
 
 <br>
 Line detection plays a crucial role in machine vision applications, as in automated detection of lane lines in autonomous (self-driving) seeing vehicles and mobile machines. The task being to piece together a pipeline to detect line segments in driving lanes from an image of the road or path then applying the working pipeline on a video stream.
 
-<br>
+
 <a id="objectives"></a>
 ## OBJECTIVES
 
 Building a program in Python to identify road or path lanes in an image, then applying this pipeline to a video stream, recorded by a camera placed on a vehicle, to identify road lane boundaries in it.
 
-<br>
+
 <a id="aquired-skills"></a>
 ## AQUIRED SKILLS
 
@@ -49,7 +49,7 @@ Building a program in Python to identify road or path lanes in an image, then ap
 - Feature extraction by using the Hough transform technique.
 - Optimization of extracted features by averaging.
 
-<br>
+
 <a id="steps"></a>
 ## STEPS
 
@@ -70,7 +70,7 @@ The lane detection pipeline described here has the following structure:
 - [5. Optimization](#5-optimization)
 - [6. Identifying Lane Lines in a Video](#6-identifying-lane-lines-in-a-video)
 
-<br>
+
 <a id="subsection-a"></a>
 ### 1. Loading the Image
 
@@ -141,7 +141,7 @@ Edge detection methods rely on the computation of image gradients, which is the 
 
 There are many edge-detection methods, including Canny, Sobel, Laplacian, and Prewitt. These can be grouped into two categories, *gradient* and *Laplacian*. The gradient method (Canny, Sobel) detects the edges by looking for the maximum and minimum in the first derivative of the image. The Laplacian method (Laplacian, Prewitt) searches for zero-crossings in the second derivative of the image to find edges. However, the *Canny edge detector* is arguably the most commonly used edge detector in the field as its algorithm is one of the most strictly defined methods that provides good and reliable detection.
 
-<br>
+
 <a id="subsubsection-a"></a>
 #### Grayscale conversion
 
@@ -223,7 +223,7 @@ Rather, each channel is weighted differently to account for human vision. The co
 
 $$C_{i} = 0.299 \times R_{i} + 0.587 \times G_{i} + 0.114 \times B_{i}$$
 
-<br>
+
 <a id="subsubsection-b"></a>
 #### Canny edge-detection algorithm
 
@@ -235,7 +235,7 @@ The process of Canny edge-detection algorithm can be broken down to five differe
 4. Applying [**double threshold**](#subsubsubsection-d) to determine potential edges
 5. [**Edge tracking by hysteresis**](#subsubsubsection-e): Finalizing the detection of edges by suppressing all the other edges that are weak and not connected to strong edges.
 
-<br>
+
 <a id="subsubsubsection-a"></a>
 ##### Step 1: Smoothing with Gaussian filter
 
@@ -274,7 +274,7 @@ cv2.waitKey(0)
 
 After grayscale conversion and blurring are done, Canny edge detector is applied now directly to the blurred image by calling the function <code>cv2.Canny()</code> in the code.
 
-<br>
+
 <a id="subsubsubsection-b"></a>
 ##### Step 2: Calculating the intensity gradients
 
@@ -282,7 +282,7 @@ An image can be considered to be an array of samples of some continuous function
 
 The Sobel operator is an edge detection operator used to find the gradient, or the rate of change, in both the horizontal (from left to right) and vertical (from top to bottom) directions of an image. It returns a value for the first derivative of the continuous function of image intensity in both horizontal and vertical directions. This results in two separate gradient images. Combining these two gradient images, edges and boundaries are identified in the original image. From this the intensity gradient *magnitude* and *direction* are calculated for each pixel, thereby measuring the change in intensity with respect to adjacent pixels.
 
-<br>
+
 <a id="subsubsubsection-c"></a>
 ##### Step 3: Applying non-maximum suppression
 
@@ -290,7 +290,7 @@ After reducing noise and calculating the intensity gradient (getting gradient ma
 
 To accomplish this, each pixel is compared to its neighboring pixels in the positive and negative gradient direction. If the gradient magnitude of the current pixel is greater than its neighboring pixels, it is left unchanged. Otherwise, the magnitude of the current pixel is set to zero. This step ensures that only the edges with maximum intensity are retained, and the other edges are suppressed (put to zero).
 
-<br>
+
 <a id="subsubsubsection-d"></a>
 ##### Step 4: Applying double threshold
 
@@ -300,7 +300,7 @@ After application of non-maximum suppression, the remaining edge pixels provide 
 - Edge pixels with gradient magnitudes between the low threshold and the high threshold values are marked as weak edge pixels. These weak edge pixels may come from true edge pixels or noise/color variations; they need further verification, which is done as described in the next step.
 - Edge pixels with gradient values smaller than the low threshold value are suppressed. 
 
-<br>
+
 <a id="subsubsubsection-e"></a>
 ##### Step 5: Edge tracking by hysteresis
 
@@ -332,7 +332,7 @@ After importing the required Python packages, the image is loaded and preprocess
     </p>
 </center>
 
-<br>
+
 <a id="subsubsection-c"></a>
 ### 3. Region of Interest
 
@@ -478,7 +478,7 @@ This displays <a href="#figure10">Figure 10</a> representing the isolated region
 
 The final step of lane lines detection will be to apply the Hough transform algorithm to detect straight lines in the region of interest and thus identify the lane lines.
 
-<br>
+
 <a id="subsubsection-d"></a>
 ### 4. Hough Transform
 
@@ -679,7 +679,7 @@ cv2.waitKey(0)
     </p>
 </center>
 
-<br>
+
 <a id="subsubsection-e"></a>
 ### 5. Optimization
 
@@ -808,7 +808,7 @@ cv2.imshow("result", blended_image)
 cv2.waitKey(0)
 ```
 
-<br>
+
 <a id="subsubsection-f"></a>
 ### 6. Identifying Lane Lines in a Video
 
@@ -826,7 +826,7 @@ The <code>waitKey()</code> function's parameter is also changed from $0$ to $1$ 
 
 The <code>waitKey()</code> returns a $32$-bit integer value of the pressed key. This value is compared to the numeric encoding of the keyboard's <code>q</code> Unicode character, which corresponds to the key to be pressed to <code>break</code> the loop. The integer value of the Unicode character <code>q</code> is obtained from the built-in function <code>ord()</code>. The bitwise AND operation <code>& 0xFF</code> is added to effectively mask the integer value returned by <code>waitKey()</code>.
 
-In hexadecimal (base $16$), <code>F</code> is equivalent to $1111$ in the binary numeral system. Python uses the prefix $0x$ for numeric constants represented in hexadecimal. So, <code>0xFF</code> is $11111111$ in binary, which represents the decimal value $255$. Thus, <code>0xFF</code> is an identity element for the bitwise AND operation. So, if the pressed key's decimal value is larger than $255$, i.e. its binary representation is longer than $8$-bits it takes only the last $8$ bits from the returned value of <code>waitKey()</code> and compares it with the integer value of the Unicode character <code>q</code>. In other words, if this returned value is less than $255$, it won't be changed. Otherwise, it will be the last $8$ bits of the returned value. This is done to insure cross-platform compatibility when doing the comparison.
+In hexadecimal (base $16$), <code>F</code> is equivalent to $1111$ in the binary numeral system. Python uses the prefix <code>0x</code> for numeric constants represented in hexadecimal. So, <code>0xFF</code> is $11111111$ in binary, which represents the decimal value $255$. Thus, <code>0xFF</code> is an identity element for the bitwise AND operation. So, if the pressed key's decimal value is larger than $255$, i.e. its binary representation is longer than $8$-bits it takes only the last $8$ bits from the returned value of <code>waitKey()</code> and compares it with the integer value of the Unicode character <code>q</code>. In other words, if this returned value is less than $255$, it won't be changed. Otherwise, it will be the last $8$ bits of the returned value. This is done to insure cross-platform compatibility when doing the comparison.
 
 After the loop is broken, the video file is closed by calling <code>cap.release()</code> and all windows that were created while running this program are destroyed by calling <code>cv2.destroyAllWindows()</code>.
 

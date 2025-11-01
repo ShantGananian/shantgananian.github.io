@@ -29,11 +29,45 @@ layout: default
 
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
+      
         <header>
-          {% if page.title %}<h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
-          </h1>{% endif %}
+          {% if page.title %}
+            <h1 id="page-title" class="page__title p-name" itemprop="headline">
+              <a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.title | markdownify | remove: "<p>" | remove: "</p>" }}</a>
+            </h1>{% endif %}
+
+                {% comment %} I added the page.subtitle and its CSS class in _page.scss {% endcomment %}
+                {% if page.subtitle %}
+                <h1 id="page-subtitle" class="page__subtitle" itemprop="headline">
+                  <a href="{{ page.url | absolute_url }}" class="u-url" itemprop="url">{{ page.subtitle | markdownify | remove: "<p>" | remove: "</p>" }}</a>
+                </h1>
+                {% endif %}
+
+                {% comment %} If you want the subtitle without link
+                {% if page.subtitle %}
+                <span class="page__subtitle">{{ page.subtitle }}</span>
+                {% endif %}
+                {% endcomment %}
+
           {% include page__meta.html %}
+
+          {% comment %}
+           The next line is the tags and categories taxonomy, was in the footer section below, I brought it to the header section of the page
+           {% include page__taxonomy.html %}
+           To change the look of the tags or categories and date I removed the above line and added the next lines and relevant CSS in minimal-mistakes.css
+          {% endcomment %}
+
+           <div class="meta-bar">
+              <div class="meta-left">
+                {% include page__taxonomy.html %}
+              </div>
+              <div class="meta-right">
+                {% include page__date.html %}
+              </div>
+            </div>
+
+            {% comment %} end of mine {% endcomment %}
+
         </header>
       {% endunless %}
 
@@ -54,8 +88,10 @@ layout: default
         {% if site.data.ui-text[page.lang].meta_label %}
           <h4 class="page__meta-title">{{ site.data.ui-text[page.lang].meta_label }}</h4>
         {% endif %}
-        {% include page__taxonomy.html %}
-        {% include page__date.html %}
+
+        {% comment %} {% include page__taxonomy.html %} 
+         {% include page__date.html %} {% endcomment %}
+
       </footer>
 
       {% if page.share %}{% include social-share.html %}{% endif %}
@@ -68,7 +104,7 @@ layout: default
     {% endif %}
   </article>
 
-  {% comment %}<!-- only show related on a post page when `related: true` -->{% endcomment %}
+  {% comment %} only show related on a post page when `related: true` {% endcomment %}
   {% if page.id and page.related and site.related_posts.size > 0 %}
     <div class="page__related">
       <h2 class="page__related-title">{{ site.data.ui-text[page.lang].related_label | default: "You May Also Enjoy" }}</h2>

@@ -1,0 +1,23 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB 2023b"><title>Untitled</title><style type="text/css">.rtcContent { padding: 0px; } .CodeBlock { background-color: #F5F5F5; margin: 10px 0 10px 0; overflow-x:auto; }
+.S0 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 1px solid rgb(217, 217, 217); border-bottom: 0px none rgb(33, 33, 33); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S1 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 0px none rgb(33, 33, 33); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S2 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 1px solid rgb(217, 217, 217); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }</style><div class = rtcContent><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre"><span >d_An=subs(d_A,lists,listn);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >d_Cn=subs(d_C,lists,listn);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >d_Dn=subs(d_D,lists,listn);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >A_An=subs(A_A,lists,listn);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >A_Cn=subs(A_C,lists,listn);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >A_Dn=subs(A_D,lists,listn);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'d_A = %s (mm)\n'</span><span >,char(d_An))</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'d_C = %s (mm)\n'</span><span >,char(d_Cn))</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'d_D = %s (mm)\n'</span><span >,char(d_Dn))</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'A_A = %s (mm^2)\n'</span><span >,eval(char(A_An)))</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'A_C = %s (mm^2)\n'</span><span >,eval(char(A_Cn)))</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'A_D = %s (mm^2)\n'</span><span >,eval(char(A_Dn)))</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre"><span >fprintf(</span><span style="color: #a709f5;">'\n'</span><span >)</span></span></div></div></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+d_An=subs(d_A,lists,listn);
+d_Cn=subs(d_C,lists,listn);
+d_Dn=subs(d_D,lists,listn);
+A_An=subs(A_A,lists,listn);
+A_Cn=subs(A_C,lists,listn);
+A_Dn=subs(A_D,lists,listn);
+fprintf('d_A = %s (mm)\n',char(d_An))
+fprintf('d_C = %s (mm)\n',char(d_Cn))
+fprintf('d_D = %s (mm)\n',char(d_Dn))
+fprintf('A_A = %s (mm^2)\n',eval(char(A_An)))
+fprintf('A_C = %s (mm^2)\n',eval(char(A_Cn)))
+fprintf('A_D = %s (mm^2)\n',eval(char(A_Dn)))
+fprintf('\n')
+##### SOURCE END #####
+-->
+</div>

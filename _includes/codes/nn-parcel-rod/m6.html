@@ -1,0 +1,29 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB 2023b"><title>Untitled</title><style type="text/css">.rtcContent { padding: 0px; } .CodeBlock { background-color: #F5F5F5; margin: 10px 0 10px 0; overflow-x:auto; }
+.S0 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 1px solid rgb(217, 217, 217); border-bottom: 0px none rgb(33, 33, 33); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S1 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 0px none rgb(33, 33, 33); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S2 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 1px solid rgb(217, 217, 217); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }</style><div class = rtcContent><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre"><span style="color: #008013;">% Plotting the input-output space</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >figure(1) </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >[p1,p2] = meshgrid(-5:.1:5); </span><span style="color: #008013;">% range of inputs</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >a = feval(</span><span style="color: #a709f5;">'tansig'</span><span >, [p1(:) p2(:)]*W'+b );</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >a = reshape(a,length(p1),length(p2));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >plot3(p1,p2,a) </span><span style="color: #008013;">% 3-D point or line plot</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >hold </span><span style="color: #a709f5;">on</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: #008013;">% Plotting the decision boundary in the input-ouput space </span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >z=zeros(101); </span><span style="color: #008013;">% zeros matrix 101x101</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >plot3(p1,p2,z,</span><span style="color: #a709f5;">'color'</span><span >,</span><span style="color: #a709f5;">'blue'</span><span >)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >grid </span><span style="color: #a709f5;">on</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >xticks(-5:1:5);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >yticks(-5:1:5);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >xlabel(</span><span style="color: #a709f5;">'Input 1'</span><span >)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >ylabel(</span><span style="color: #a709f5;">'Input 2'</span><span >)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >zlabel(</span><span style="color: #a709f5;">'Neuron output'</span><span >)</span></span></div></div><div class="inlineWrapper"><div  class = 'S2'><span style="white-space: pre"><span >hold </span><span style="color: #a709f5;">off</span></span></div></div></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+% Plotting the input-output space
+figure(1) 
+[p1,p2] = meshgrid(-5:.1:5); % range of inputs
+a = feval('tansig', [p1(:) p2(:)]*W'+b );
+a = reshape(a,length(p1),length(p2));
+
+plot3(p1,p2,a) % 3-D point or line plot
+hold on
+
+% Plotting the decision boundary in the input-ouput space 
+z=zeros(101); % zeros matrix 101x101
+plot3(p1,p2,z,'color','blue')
+grid on
+xticks(-5:1:5);
+yticks(-5:1:5);
+xlabel('Input 1')
+ylabel('Input 2')
+zlabel('Neuron output')
+hold off
+##### SOURCE END #####
+-->
+</div>

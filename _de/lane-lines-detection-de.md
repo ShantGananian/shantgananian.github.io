@@ -5,8 +5,8 @@ title: Erkennung von Fahrspurlinien mit Hilfe von Echtzeit-Machine-Vision für d
 excerpt: "Python-Pipeline zur Identifizierung von Fahrbahnbegrenzungen, zunächst in einem Bild, dann Anwendung der Pipeline auf einen Videostream."
 myLink: /en/lane-lines-detection/ # Custom Variable
 # author_profile: true
-last_modified_at: 2023-11-01
-date: 2023-11-01
+last_modified_at: 2023-12-20
+date: 2023-12-20
 published: true
 tagsen:
   - Maschinelles Sehen
@@ -18,25 +18,25 @@ tagsen:
   - Python
 
 toc: true
-toc_label: "Inhaltsübersicht"
+toc_label: "Inhaltsverzeichnis"
 toc_icon: "cog"
 toc_sticky: true
 
 header:
-  image: /assets/img/lane-line-detection/Figure15.gif
+  #image: /assets/img/lane-line-detection/Figure15.gif
   teaser: assets/img/lane-line-detection/Figure15.gif
 ---
 
 <br>
 Die Erkennung von Linien spielt eine entscheidende Rolle bei Anwendungen der maschinellen Bildverarbeitung, z. B. bei der automatischen Erkennung von Fahrspurlinien in autonomen (selbstfahrenden) Fahrzeugen und mobilen Maschinen. Die Aufgabe besteht darin, eine Pipeline zur Erkennung von Liniensegmenten in Fahrspuren aus einem Bild der Straße oder des Weges zusammenzustellen und die funktionierende Pipeline auf einen Videostream anzuwenden.
 
-<br>
+
 <a id="ziele "></a>
 ## ZIELE
 
 Erstellung eines Programms in Python zur Erkennung von Straßen- oder Wegspuren in einem Bild und anschließende Anwendung dieser Pipeline auf einen Videostream, der von einer an einem Fahrzeug angebrachten Kamera aufgezeichnet wurde, um darin die Fahrbahngrenzen zu erkennen.
 
-<br>
+
 <a id="erworbene-fähigkeiten "></a>
 ## ERWORBENE FÄHIGKEITEN
 
@@ -49,8 +49,8 @@ Erstellung eines Programms in Python zur Erkennung von Straßen- oder Wegspuren 
 - Merkmalsextraktion mit Hilfe der Hough-Transformationstechnik.
 - Optimierung der extrahierten Merkmale durch Mittelwertbildung.
 
-<br>
-<a id="schritte "></a>
+
+<a id="schritte"></a>
 ## SCHRITTE
 
 Die hier beschriebene Pipeline zur Fahrspurerkennung ist wie folgt aufgebaut:
@@ -70,7 +70,7 @@ Die hier beschriebene Pipeline zur Fahrspurerkennung ist wie folgt aufgebaut:
 - [5. Optimierung](#subsubsection-e)
 - [6. Identifizierung von Fahrspurlinien in einem Video](#subsubsection-f)
 
-<br>
+
 <a id="subsection-a"></a>
 ### 1. Laden des Bildes
 
@@ -140,7 +140,7 @@ Methoden zur Erkennung von Kanten beruhen auf der Berechnung von Bildgradienten,
 
 Es gibt viele Methoden zur Erkennung von Kanten, darunter Canny, Sobel, Laplacian und Prewitt. Diese lassen sich in zwei Kategorien einteilen: *Gradient* und *Laplacian*. Die Gradientenmethode (Canny, Sobel) erkennt die Kanten, indem sie nach dem Maximum und Minimum der ersten Ableitung des Bildes sucht. Die Laplacian-Methode (Laplacian, Prewitt) sucht nach Nulldurchgängen in der zweiten Ableitung des Bildes, um Kanten zu finden. Der * Canny-Algorithmus* (Canny edge detector) ist jedoch der wohl am häufigsten verwendete Kantendetektor in diesem Bereich, da sein Algorithmus eine der am strengsten definierten Methoden ist, die eine gute und zuverlässige Erkennung ermöglicht.
 
-<br>
+
 <a id="subsubsection-a"></a>
 #### Graustufen-Konvertierung
 
@@ -222,7 +222,7 @@ Vielmehr wird jeder Kanal unterschiedlich gewichtet, um dem menschlichen Sehverm
 
 $$C_{i} = 0.299 \times R_{i} + 0.587 \times G_{i} + 0.114 \times B_{i}$$
 
-<br>
+
 <a id="subsubsection-b"></a>
 #### Canny-Algorithmus zur Kantenerkennung
 
@@ -234,7 +234,7 @@ Der Prozess des Canny-Algorithmus zur Erkennung von Kanten kann in fünf verschi
 4. Anwendung des [**Doppelschwellenwerts**](#subsubsubsection-d) zur Ermittlung potenzieller Kanten
 5. [**Kantenverfolgung durch Hysterese**](#subsubsubsection-e): Abschluss der Erkennung von Kanten durch Unterdrückung aller anderen Kanten, die schwach sind und nicht mit starken Kanten verbunden sind.
 
-<br>
+
 <a id="subsubsubsection-a"></a>
 ##### Schritt 1: Glättung mit Gauß-Filter
 
@@ -273,7 +273,7 @@ cv2.waitKey(0)
 
 Nach der Graustufenkonvertierung und dem Weichzeichnen wird der Canny-Algorithmus nun direkt auf das unscharfe Bild angewendet, indem die Funktion <code>cv2.Canny()</code> im Code aufgerufen wird.
 
-<br>
+
 <a id="subsubsubsection-b"></a>
 ##### Schritt 2: Berechnung der Intensitätsgradienten
 
@@ -281,7 +281,7 @@ Ein Bild kann als ein Array von Stichproben einer kontinuierlichen Funktion der 
 
 Der Sobel-Operator ist ein Operator zur Erkennung von Kanten, der verwendet wird, um den Gradienten oder die Änderungsrate sowohl in der horizontalen (von links nach rechts) als auch in der vertikalen (von oben nach unten) Richtung eines Bildes zu ermitteln. Er gibt einen Wert für die erste Ableitung der kontinuierlichen Funktion der Bildintensität in horizontaler und vertikaler Richtung zurück. Das Ergebnis sind zwei getrennte Gradientenbilder. Durch die Kombination dieser beiden Gradientenbilder werden Kanten und Grenzen im Originalbild identifiziert. Daraus werden für jedes Pixel der Intensitätsgradient * Größe* und *Richtung* berechnet, wodurch die Intensitätsänderung in Bezug auf benachbarte Pixel gemessen wird.
 
-<br>
+
 <a id="subsubsubsection-c"></a>
 ##### Schritt 3: Anwenden der Non-maximum suppression
 
@@ -289,7 +289,7 @@ Nach der Rauschunterdrückung und der Berechnung des Intensitätsgradienten (Erm
 
 Zu diesem Zweck wird jedes Pixel mit seinen Nachbarpixeln in positiver und negativer Gradientenrichtung verglichen. Ist der Gradientenwert des aktuellen Pixels größer als der seiner Nachbarpixel, wird er unverändert gelassen. Andernfalls wird die Größe des aktuellen Pixels auf Null gesetzt. Dieser Schritt stellt sicher, dass nur die Kanten mit maximaler Intensität erhalten bleiben und die anderen Kanten unterdrückt (auf Null gesetzt) werden.
 
-<br>
+
 <a id="subsubsubsection-d"></a>
 ##### Schritt 4: Anwendung der doppelten Schwelle
 
@@ -299,7 +299,7 @@ Nach Anwendung der Non-Maximum-Suppression liefern die verbleibenden Kantenpixel
 - Kantenpixel, deren Gradient zwischen dem niedrigen und dem hohen Schwellenwert liegt, werden als schwache Kantenpixel gekennzeichnet. Bei diesen schwachen Kantenpixeln kann es sich um echte Kantenpixel oder um Rauschen/Farbvariationen handeln; sie müssen weiter überprüft werden, was wie im nächsten Schritt beschrieben geschieht.
 - Kantenpixel mit Gradientenwerten, die kleiner als der niedrige Schwellenwert sind, werden unterdrückt.
 
-<br>
+
 <a id="subsubsubsection-e"></a>
 ##### Schritt 5: Kantenverfolgung durch Hysterese
 
@@ -331,7 +331,7 @@ Nach dem Importieren der erforderlichen Python-Pakete wird das Bild geladen und 
     </p>
 </center>
 
-<br>
+
 <a id="subsubsection-c"></a>
 ### 3. Region of Interest
 
@@ -477,7 +477,7 @@ Dies zeigt <a href="#figure10">Abbildung 10</a>, die die isolierte "Region of In
 
 Der letzte Schritt der Fahrspurerkennung besteht in der Anwendung des Hough-Transformationsalgorithmus, um gerade Linien in der "Region of Interest" zu erkennen und somit die Fahrspur zu identifizieren.
 
-<br>
+
 <a id="subsubsection-d"></a>
 ### 4. Hough-Transformation
 
@@ -678,7 +678,7 @@ cv2.waitKey(0)
     </p>
 </center>
 
-<br>
+
 <a id="subsubsection-e"></a>
 ### 5. Optimierung
 
@@ -807,7 +807,7 @@ cv2.imshow("result", blended_image)
 cv2.waitKey(0)
 ```
 
-<br>
+
 <a id="subsubsection-f"></a>
 ### 6. Identifizierung von Fahrspurlinien in einem Video
 
@@ -825,7 +825,7 @@ Der Parameter der Funktion <code>waitKey()</code> wird ebenfalls von $0$ auf $1$
 
 Die Funktion <code>waitKey()</code> gibt einen $32$-Bit-Ganzzahlwert der gedrückten Taste zurück. Dieser Wert wird mit der numerischen Kodierung des Unicode-Zeichens <code>q</code> auf der Tastatur verglichen, das der Taste entspricht, die gedrückt werden muss, um die Schleife zu unterbrechen (<code>break</code>). Der ganzzahlige Wert des Unicode-Zeichens <code>q</code> wird mit der eingebauten Funktion <code>ord()</code> ermittelt. Die bitweise UND-Verknüpfung <code>& 0xFF</code> wird hinzugefügt, um den von <code>waitKey()</code> zurückgegebenen Integer-Wert effektiv zu maskieren.
 
-In hexadezimaler Darstellung (Basis $16$) entspricht <code>F</code> dem Wert $1111$ im binären Zahlensystem. Python verwendet das Präfix $0x$ für numerische Konstanten in hexadezimaler Darstellung. $0xFF$ ist also $11111111$ im Binärsystem, was dem Dezimalwert $255$ entspricht. Somit ist $0xFF$ ein Identitätselement für die bitweise UND-Verknüpfung. Wenn also der Dezimalwert der gedrückten Taste größer als $255$ ist, d.h. seine binäre Darstellung länger als $8$-Bits ist, werden nur die letzten $8$-Bits aus dem von <code>waitKey()</code> zurückgegebenen Wert genommen und mit dem Integer-Wert des Unicode-Zeichens <code>q </code> verglichen. Mit anderen Worten: Wenn dieser zurückgegebene Wert kleiner als $255$ ist, wird er nicht verändert. Andernfalls werden die letzten $8$-Bits des zurückgegebenen Wertes übernommen. Dies geschieht, um die plattformübergreifende Kompatibilität beim Vergleich zu gewährleisten.
+In hexadezimaler Darstellung (Basis $16$) entspricht <code>F</code> dem Wert $1111$ im binären Zahlensystem. Python verwendet das Präfix <code>0x</code> für numerische Konstanten in hexadezimaler Darstellung. <code>0xFF</code> ist also $11111111$ im Binärsystem, was dem Dezimalwert $255$ entspricht. Somit ist <code>0xFF</code> ein Identitätselement für die bitweise UND-Verknüpfung. Wenn also der Dezimalwert der gedrückten Taste größer als $255$ ist, d.h. seine binäre Darstellung länger als $8$-Bits ist, werden nur die letzten $8$-Bits aus dem von <code>waitKey()</code> zurückgegebenen Wert genommen und mit dem Integer-Wert des Unicode-Zeichens <code>q</code> verglichen. Mit anderen Worten: Wenn dieser zurückgegebene Wert kleiner als $255$ ist, wird er nicht verändert. Andernfalls werden die letzten $8$-Bits des zurückgegebenen Wertes übernommen. Dies geschieht, um die plattformübergreifende Kompatibilität beim Vergleich zu gewährleisten.
 
 Nachdem die Schleife unterbrochen wurde, wird die Videodatei durch den Aufruf von <code>cap.release()</code> geschlossen und alle Fenster, die während der Ausführung dieses Programms erstellt wurden, werden durch den Aufruf von <code>cv2.destroyAllWindows()</code> gelöscht.
 
