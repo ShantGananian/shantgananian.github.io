@@ -10,23 +10,19 @@
 # Review documentation to determine if you should use `theme` or `remote_theme`
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
-# Build settings
-theme: minimal-mistakes-jekyll
-
+# theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-
-# Skin
-minimal_mistakes_skin: "default" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en" #"de" "en-US"
 title                    : "Shant Gananian"
 title_separator          : "-"
 subtitle                 : "" # site tagline that appears below site title in masthead
-name                     : &name "Shant Gananian"
+name                     : &name "Shant Gananian" # &name is a YAML anchor which can be *referenced later
 description              : &description "Portfolio"
 url                      : "https://shantgananian.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/" # the subpath of your site, e.g. "/blog"
+# baseurl                  : "/" # the subpath of your site, e.g. "/blog"
 repository               : "shantgananian/shantgananian" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : "/assets/img/sg-CB3131-dillario-font.png" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
@@ -74,7 +70,7 @@ algolia:
   search_only_api_key    : "05941a9c1d8d6854f90503c993afa714" # YOUR_SEARCH_ONLY_API_KEY
   powered_by             :  true # (default), false
 google:
-  search_engine_id       : b71ef5c90f8604db0 # YOUR_SEARCH_ENGINE_ID
+  search_engine_id       : "b71ef5c90f8604db0" # YOUR_SEARCH_ENGINE_ID
   instant_search         : # false (default), true
 # SEO Related
 google_site_verification : googlef2f58dcd1ff3004c.html
@@ -116,7 +112,7 @@ author:
             
             # <p style="margin-bottom:0; font-size:13px">multidisziplinäres technisches Wissen; BioMEMS, Robotik, Systemintegration und Informatik, sowie mehrjährige Industrieerfahrung im Produktions- u. QHSE-Management</p>
             # <p style="margin:0; padding-top:0;">You can read more about me in the <a href= "/about/" style="color:#0000EE;">About me</a> section.</p>
-  #location: "Karlsruhe, Germany"
+  # location: "Karlsruhe, Germany"
   email:
   links:
     - #label: "Website"
@@ -155,7 +151,7 @@ footer:
       url: "https://github.com/shantgananian"
     - label: "LinkedIn"
       icon: "fab fa-linkedin"
-      url: "https://linkedin.com/in/shant-gananian-8a935230"
+      url: "https://linkedin.com/in/shant-gananian"
     - #label: "Twitter"
       #icon: "fab fa-fw fa-twitter-square"
       #url: "https://twitter.com/Kralizek"
@@ -321,7 +317,7 @@ collections:
   #portfolio:
   #  output: true
   #  permalink: /:collection/:path/
- # works:
+  # works:
   #  output: true # Set to render files in _pages folder for example: example.com/works/
   #  permalink: /:collection/:path/ # Set the format of the permalink by default
   de:
@@ -380,13 +376,29 @@ defaults:
   - scope:
       path: '_de'
     values:
-      # permalink: ''
+      # permalink: 'maatwerk/:title'
       lang: de
   # _tagsdir
   - scope:
       path: '_tagsdir'
     values:
       # permalink:
+      lang: en
+  # _works
+  - scope:
+      path: '_works'
+    values:
+      # permalink: 'maatwerk/:title'
+      lang: en
+  # sub-de:
+  - scope:
+      path: '_de/sub-de/'
+    values:
+      lang: de
+  # sub-en:
+  - scope:
+      path: '_en/sub-en/'
+    values:
       lang: en
   # categories
   - scope:
@@ -417,7 +429,6 @@ defaults:
     values:
       # permalink: 'custom/:title'
       lang: de
-
 
   # tag archives and category archives
   - scope:
