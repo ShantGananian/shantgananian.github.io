@@ -334,6 +334,82 @@
 
 
 /* MINE language button style: Flex layout: logo left, nav center, lang toggle right */
+// .masthead__inner-wrap {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between; /* distributes space */
+//   position: relative;
+// }
+
+// .masthead__branding {
+//   display: flex;
+//   align-items: center;
+//   gap: 0.5rem; /* spacing between logo and title */
+// }
+
+// .site-nav {
+//   flex: 1; /* nav takes remaining horizontal space */
+//   margin-left: 2rem;
+// }
+
+// .lang-switch-wrapper {
+//   flex-shrink: 0; /* don’t shrink on small screens */
+//   display: flex;
+//   align-items: center;
+// }
+
+// .lang-switch {
+//   font-size: 0.85rem;
+//   text-transform: uppercase;
+//   display: inline-flex;
+//   align-items: center;
+// }
+
+// .lang-switch .separator {
+//   margin: 0 6px;
+//   color: #aaa;
+// }
+
+// .lang-switch a {
+//   color: #cb3131;
+//   text-decoration: none;
+//   font-weight: 600;
+//   line-height: 1;
+// }
+
+// .lang-switch a:hover {
+//   text-decoration: underline;
+// }
+
+// .lang-switch .inactive {
+//   color: #999;
+//   font-weight: 500;
+// }
+
+// @include breakpoint(max-width $small) {
+//   .lang-switch-wrapper {
+//     position: absolute;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     right: 5rem;          /* adjust based on width of search + hamburger */
+//     z-index: 10000;       /* above search and menu toggles */
+//   }
+
+//   /* Optional: slightly smaller text for mobile */
+//   .lang-switch {
+//     font-size: 0.7rem;
+//   }
+
+//   .lang-switch a, .lang-switch .inactive {
+//     font-size: 0.7rem;
+//     padding: 0 2px;
+//   }
+
+//   .lang-switch .separator {
+//     margin: 0 3px;
+//   }
+// }
+
 .masthead__inner-wrap {
   display: flex;
   align-items: center;
@@ -386,22 +462,23 @@
   font-weight: 500;
 }
 
+/* Mobile: under hamburger menu */
 @include breakpoint(max-width $small) {
-  .lang-switch-wrapper {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 5rem;          /* adjust based on width of search + hamburger */
-    z-index: 10000;       /* above search and menu toggles */
+  .lang-switch-wrapper.mobile-toggle {
+    position: relative;  /* normal flow under menu */
+    right: auto;
+    top: auto;
+    margin-top: 0.5rem;  /* small spacing below hamburger */
+    // margin-right: 0.5rem;
+    text-align: center;
   }
 
-  /* Optional: slightly smaller text for mobile */
   .lang-switch {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
 
   .lang-switch a, .lang-switch .inactive {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     padding: 0 2px;
   }
 
