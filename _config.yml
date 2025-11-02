@@ -378,12 +378,14 @@ defaults:
     values:
       # permalink: 'custom/:title'
       lang: en
+      lang_toggle_url: /de/
   # _de
   - scope:
       path: '_de'
     values:
       # permalink: 'maatwerk/:title'
       lang: de
+      lang_toggle_url: /en/
   # _tagsdir
   - scope:
       path: '_tagsdir'
@@ -417,24 +419,28 @@ defaults:
     values:
       # permalink: ''
       lang: de
+      lang_toggle_url: /insights/
   # insights
   - scope:
       path: '_insights'
     values:
       # permalink: ''
       lang: en
+      lang_toggle_url: /einsichten/
   # _home
   - scope:
       path: '_mainpageen'
     values:
       # permalink: 'custom/:title'
       lang: en
+      lang_toggle_url: /mainpagede/
   # _homede
   - scope:
       path: '_mainpagede'
     values:
       # permalink: 'custom/:title'
       lang: de
+      lang_toggle_url: /mainpageen/
   # _categdir
   - scope:
       path: '_categdir'
