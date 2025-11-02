@@ -389,16 +389,26 @@
 @include breakpoint(max-width $small) {
   .lang-switch-wrapper {
     position: absolute;
-    top: 50%;                /* vertically center relative to header */
+    top: 50%;
     transform: translateY(-50%);
-    right: 3.5rem;           /* shift left from far right to avoid hamburger */
-    z-index: 9999;           /* above everything, including menu */
+    right: 5rem;          /* adjust based on width of search + hamburger */
+    z-index: 10000;       /* above search and menu toggles */
   }
 
-  /* Optional: reduce font size slightly for small screens */
+  /* Optional: slightly smaller text for mobile */
   .lang-switch {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+  }
+
+  .lang-switch a, .lang-switch .inactive {
+    font-size: 0.7rem;
+    padding: 0 2px;
+  }
+
+  .lang-switch .separator {
+    margin: 0 3px;
   }
 }
+
 
 /* end of MINE */
