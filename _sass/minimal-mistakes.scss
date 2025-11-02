@@ -42,6 +42,25 @@
 /* Mine: include here your custom .scss files */
 
 /* === Mine: Custom Social Icons Style === */
+
+/* Desktop: icons visible horizontally */
+.author__urls.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+/* Hide small-screen labels */
+.author__urls.social-icons .label { display: none; }
+
+/* Hover colors */
+.author__urls.social-icons a[href*="linkedin.com"]:hover i { color: #0077b5; }
+.author__urls.social-icons a[href*="github.com"]:hover i { color: #333; }
+.author__urls.social-icons a[href^="mailto:"]:hover i { color: #d93025; }
+
 /* Mobile & tablet: hide icons by default, show when .is--visible is on the UL */
 @media screen and (max-width: 1024px) {
   .author__urls.social-icons {
