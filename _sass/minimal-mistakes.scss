@@ -389,13 +389,15 @@
 @include breakpoint(max-width $small) {
   .lang-switch-wrapper {
     position: absolute;
-    right: 1rem;  /* far right */
-    top: 1rem;    /* vertically aligned with header */
-    z-index: 999; /* above menu */
+    top: 50%;                /* vertically center relative to header */
+    transform: translateY(-50%);
+    right: 3.5rem;           /* shift left from far right to avoid hamburger */
+    z-index: 9999;           /* above everything, including menu */
   }
 
-  .site-nav {
-    margin-left: 0;
+  /* Optional: reduce font size slightly for small screens */
+  .lang-switch {
+    font-size: 0.75rem;
   }
 }
 
