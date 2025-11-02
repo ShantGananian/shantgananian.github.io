@@ -334,120 +334,80 @@
 
 
 /* MINE language button style: Flex layout: logo left, nav center, lang toggle right */
-// .masthead__inner-wrap {
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-between; /* distributes space */
-//   position: relative;
-// }
-
-// .masthead__branding {
-//   display: flex;
-//   align-items: center;
-//   gap: 0.5rem; /* spacing between logo and title */
-// }
-
-// .site-nav {
-//   flex: 1; /* nav takes remaining horizontal space */
-//   margin-left: 2rem;
-// }
-
-// .lang-switch-wrapper {
-//   flex-shrink: 0; /* don’t shrink on small screens */
-//   display: flex;
-//   align-items: center;
-// }
-
-// .lang-switch {
-//   font-size: 0.85rem;
-//   text-transform: uppercase;
-//   display: inline-flex;
-//   align-items: center;
-// }
-
-// .lang-switch .separator {
-//   margin: 0 6px;
-//   color: #aaa;
-// }
-
-// .lang-switch a {
-//   color: #cb3131;
-//   text-decoration: none;
-//   font-weight: 600;
-//   line-height: 1;
-// }
-
-// .lang-switch a:hover {
-//   text-decoration: underline;
-// }
-
-// .lang-switch .inactive {
-//   color: #999;
-//   font-weight: 500;
-// }
-
-// @include breakpoint(max-width $small) {
-//   .lang-switch-wrapper {
-//     position: absolute;
-//     top: 50%;
-//     transform: translateY(-50%);
-//     right: 5rem;          /* adjust based on width of search + hamburger */
-//     z-index: 10000;       /* above search and menu toggles */
-//   }
-
-//   /* Optional: slightly smaller text for mobile */
-//   .lang-switch {
-//     font-size: 0.7rem;
-//   }
-
-//   .lang-switch a, .lang-switch .inactive {
-//     font-size: 0.7rem;
-//     padding: 0 2px;
-//   }
-
-//   .lang-switch .separator {
-//     margin: 0 3px;
-//   }
-// }
-
-/* Language switch styling */
-.lang-switch {
+.masthead__inner-wrap {
   display: flex;
   align-items: center;
-  margin-left: 0.75rem;
-  font-size: 0.9rem;
-  white-space: nowrap;
+  justify-content: space-between; /* distributes space */
+  position: relative;
+}
+
+.masthead__branding {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* spacing between logo and title */
+}
+
+.site-nav {
+  flex: 1; /* nav takes remaining horizontal space */
+  margin-left: 2rem;
+}
+
+.lang-switch-wrapper {
+  flex-shrink: 0; /* don’t shrink on small screens */
+  display: flex;
+  align-items: center;
+}
+
+.lang-switch {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+}
+
+.lang-switch .separator {
+  margin: 0 6px;
+  color: #aaa;
 }
 
 .lang-switch a {
+  color: #cb3131;
   text-decoration: none;
-  color: #555;
   font-weight: 600;
-  transition: color 0.2s ease;
+  line-height: 1;
 }
 
 .lang-switch a:hover {
-  color: #000;
+  text-decoration: underline;
 }
 
 .lang-switch .inactive {
-  color: #bbb;
+  color: #999;
+  font-weight: 500;
 }
 
-/* Always visible — even on mobile */
-.greedy-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+@include breakpoint(max-width $small) {
+  .lang-switch-wrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5rem;          /* adjust based on width of search + hamburger */
+    z-index: 10000;       /* above search and menu toggles */
+  }
 
-.greedy-nav .lang-switch {
-  margin-left: 1rem;
-  order: 3; /* ensure it appears after search and before hamburger */
-}
+  /* Optional: slightly smaller text for mobile */
+  .lang-switch {
+    font-size: 0.7rem;
+  }
 
-.greedy-nav__toggle {
-  order: 4;
+  .lang-switch a, .lang-switch .inactive {
+    font-size: 0.7rem;
+    padding: 0 2px;
+  }
+
+  .lang-switch .separator {
+    margin: 0 3px;
+  }
 }
 
 
