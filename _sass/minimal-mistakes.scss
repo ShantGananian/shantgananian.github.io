@@ -42,57 +42,47 @@
 /* Mine: include here your custom .scss files */
 
 /* === Mine: Custom Social Icons Style === */
-/* Default (mobile): keep original behavior */
-.author__urls.social-icons {
-  list-style: none;
-  padding: 0;
-  margin: 10px 0;
-}
-
-/* Only show icons horizontally on wider screens */
-@media (min-width: 768px) {
+/* Mobile & tablet: hide icons by default, show when .is--visible is on the UL */
+@media screen and (max-width: 1024px) {
   .author__urls.social-icons {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 8px;
+    overflow: hidden;          /* for smooth height animations */
+    transition: max-height .28s ease, opacity .2s ease;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  /* makes the UL visible (and allow animation) */
+  .author__urls.social-icons.is--visible {
     display: flex;
-    justify-content: center; /* or flex-start / flex-end */
-    gap: 12px;
+    max-height: 400px; /* large enough to contain the stacked list */
+    opacity: 1;
   }
 
-  .author__urls.social-icons li {
-    display: inline-flex;
-    align-items: center;
+  /* ensure button is shown on narrow screens */
+  .author__urls-wrapper > button {
+    display: inline-block;
+    margin-bottom: 8px;
   }
 }
 
-/* Hide labels always (desktop + mobile) */
-.author__urls.social-icons .label {
-  display: none;
-}
-
-/* Icon styles */
+/* Hover/interaction polish */
 .author__urls.social-icons a i {
-  font-size: 1.5em;
-  color: inherit;
-  transition: color 0.2s ease, transform 0.2s ease;
-  opacity: 0.85;
+  font-size: 1.4rem;
+  opacity: 0.9;
+  transition: transform .12s ease, color .12s ease;
+}
+.author__urls.social-icons a:hover i { transform: scale(1.08); }
+
+/* Optional small tweak so the UL is visually centered when opened on mobile */
+@media screen and (max-width: 480px) {
+  .author__urls.social-icons.is--visible { align-items: center; }
 }
 
-.author__urls.social-icons a:hover i {
-  opacity: 1;
-  transform: scale(1.1);
-}
-
-/* Platform-specific hover colors */
-.author__urls.social-icons a[href*="linkedin.com"]:hover i {
-  color: #0077b5;
-}
-
-.author__urls.social-icons a[href*="github.com"]:hover i {
-  color: #333;
-}
-
-.author__urls.social-icons a[href^="mailto:"]:hover i {
-  color: #d93025;
-}
 
 
 /* === End of Mine: Custom Social Icons Style === */

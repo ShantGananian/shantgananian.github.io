@@ -28,10 +28,32 @@ $(function() {
   });
 
   // Follow menu drop down
-  $(".author__urls-wrapper").find("button").on("click", function() {
-    $(".author__urls").toggleClass("is--visible");
-    $(".author__urls-wrapper").find("button").toggleClass("open");
-  });
+  // $(".author__urls-wrapper").find("button").on("click", function() {
+  //   $(".author__urls").toggleClass("is--visible");
+  //   $(".author__urls-wrapper").find("button").toggleClass("open");
+  // });
+
+   // -- Mine instead of the above original : Follow menu drop down (improved for responsive behavior) --
+// Follow menu drop down (toggle class on the UL so CSS can target it)
+$(".author__urls-wrapper").find("button").on("click", function(e) {
+  e.preventDefault();
+
+  var $wrapper = $(this).closest(".author__urls-wrapper");
+  var $ul = $wrapper.find(".author__urls.social-icons");
+
+  // toggle UL class that CSS listens to
+  $ul.toggleClass("is--visible");
+  // visual state on the button
+  $(this).toggleClass("open");
+
+  // accessibility: reflect the expanded state
+  var expanded = $ul.hasClass("is--visible");
+  $(this).attr("aria-expanded", expanded ? "true" : "false");
+  $ul.attr("aria-hidden", expanded ? "false" : "true");
+});
+
+// -- End of mine --
+
 
   // Close search screen with Esc key
   $(document).keyup(function(e) {
