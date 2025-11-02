@@ -39,41 +39,9 @@
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
 
-/* Mine: include here your custom .scss files */
+/* MINE: include here your custom .scss files */
 
 /* === Mine: Custom Social Icons Style === */
-
-/* --- Desktop layout (icons visible, side by side) --- */
-// .author__urls.social-icons {
-//   display: flex;
-//   justify-content: center;
-//   gap: 12px;
-//   list-style: none;
-//   padding: 0;
-//   margin: 10px 0;
-// }
-
-// .author__urls.social-icons li {
-//   display: inline-flex;
-//   align-items: center;
-// }
-
-// .author__urls.social-icons .label {
-//   display: none;
-// }
-
-// .author__urls.social-icons a i {
-//   font-size: 1.5em;
-//   color: inherit;
-//   transition: color 0.2s ease, transform 0.2s ease;
-//   opacity: 0.85;
-// }
-
-// .author__urls.social-icons a:hover i {
-//   opacity: 1;
-//   transform: scale(1.1);
-// }
-
 /* Desktop: icons visible horizontally */
 .author__urls.social-icons {
   display: flex;
@@ -91,21 +59,6 @@
 .author__urls.social-icons a[href*="linkedin.com"]:hover i { color: #0077b5; }
 .author__urls.social-icons a[href*="github.com"]:hover i { color: #333; }
 .author__urls.social-icons a[href^="mailto:"]:hover i { color: #d93025; }
-
-/* --- Mobile: hide icons initially, show only when active --- */
-// @media screen and (max-width: 1024px) {
-//   .author__urls.social-icons {
-//     display: none;
-//     flex-direction: column;
-//     align-items: flex-start;
-//     gap: 8px;
-//     margin-top: 8px;
-//   }
-
-//     .author__urls.social-icons.is--visible {
-//     display: flex;
-//   }
-// }
 
 /* Mobile & tablet: hide icons by default, show when .is--visible is on the UL */
 @media screen and (max-width: 1024px) {
@@ -147,10 +100,6 @@
 @media screen and (max-width: 480px) {
   .author__urls.social-icons.is--visible { align-items: center; }
 }
-
-
-
-
 
 /* === End of Mine: Custom Social Icons Style === */
 
