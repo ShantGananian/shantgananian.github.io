@@ -4,7 +4,9 @@ layout: single # archive
 title: "Künstliche Neuronale Netze und ihre Anwendung"
 subtitle: "auf die industrielle Fehlerdiagnose von Pleuelstangen in Kompressoren: Einführung und Anwendungen"
 excerpt: "Erstellung neuronaler Netze mit MATLAB und Anwendung zur Lösung technischer Probleme wie Mustererkennung zur korrekten Sortierung von Paketen und Klassifizierung zur Fehlerdiagnose von Kompressorpleueln."
-myLink: /en/nn-parcel-rod/ # Custom Variable
+# myLink: /en/nn-parcel-rod/ # Custom Variable with JS use
+lang_toggle_url: /en/nn-parcel-rod/ # Custom Variable Custom Variable without need for JS
+
 # author_profile: true
 last_modified_at: 2024-01-15
 date: 2024-01-15

@@ -4,7 +4,9 @@ layout: single # archive
 title: 'Statische Analysen von Balken und Stäben"
 subtitle: "mittels der Finite-Elemente-Simulationsmethode mit SOLIDWORKS'
 excerpt: "Stabkonstruktionen werden in den verschiedensten Formen überall eingesetzt. Statische Analysen solcher Strukturen werden durchgeführt, um die inneren Kräfte und Spannungen zu bestimmen und die axialen Verformungen zu bewerten."
-myLink: /en/fe-solidworks-bar-truss/ # Custom Variable
+# myLink: /en/fe-solidworks-bar-truss/ # Custom Variable with JS use
+lang_toggle_url: /en/fe-solidworks-bar-truss/ # Custom Variable without need for JS
+
 # author_profile: true
 last_modified_at: 2023-11-20
 date: 2023-11-20

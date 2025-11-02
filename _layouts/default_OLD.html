@@ -1,5 +1,18 @@
 ---
 ---
+<!--  Getting the URL of the page in the other language version.
+I used location.hostname instead of site.url to avoid going to
+localhost instead of 127.0.0.1-->
+{% assign myaddress = location.hostname | append: page.myLink %} 
+<script language="javaScript">
+    var myVar = "{{myaddress}}"; // Using Liquid variable in JavaScript a set of quotation marks is required
+// function getLink() {
+//   location.assign(myVar);
+// }
+</script>
+<!-- end -->
+
+
 
 
 <!doctype html>

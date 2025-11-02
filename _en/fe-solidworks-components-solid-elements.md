@@ -4,7 +4,9 @@ layout: single # archive
 title: 'Static Analyses of Components with Solid Elements'
 subtitle: "via the Finite Element Simulation Method with SOLIDWORKS"
 excerpt: "Application of truss structures in various forms are found all around. Static analyses of such structures are conducted to determine the internal forces, stresses and to evaluate the axial deformations."
-myLink: /de/fe-solidworks-components-solid-elements-de/ # Custom Variable
+# myLink: /de/fe-solidworks-components-solid-elements-de/ # Custom Variable with JS use
+lang_toggle_url: /de/fe-solidworks-components-solid-elements-de/ # Custom Variable without need for JS
+
 # author_profile: true
 last_modified_at: 2023-11-20
 date: 2023-11-20

@@ -27,13 +27,13 @@ $(function() {
     stickySideBar();
   });
 
-  // Follow menu drop down
+  // Follow menu drop down (original)
   // $(".author__urls-wrapper").find("button").on("click", function() {
   //   $(".author__urls").toggleClass("is--visible");
   //   $(".author__urls-wrapper").find("button").toggleClass("open");
   // });
 
-   // -- Mine instead of the above original : Follow menu drop down (improved for responsive behavior) --
+  // -- Mine instead of the above original : Follow menu drop down (improved for responsive behavior) --
 // Follow menu drop down (toggle class on the UL so CSS can target it)
 $(".author__urls-wrapper").find("button").on("click", function(e) {
   e.preventDefault();

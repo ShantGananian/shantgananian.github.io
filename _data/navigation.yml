@@ -1,7 +1,10 @@
 # main links links
 main:
   en:
-    - title: <a href = "javascript:location.assign(myVar)" class="btn" style="color:blue;">Deutsche Version</a>
+    # - title: "Language toggle"    # placeholder
+    #   url: "#"                    # will be replaced dynamically
+    #   class: "btn lang-toggle"
+      # <a href = "javascript:location.assign(myVar)" class="btn" style="color:blue;">Deutsche Version</a>
       # <a><button type="button" onclick="window.location.href='de'">Deutsche Version</button></a>
       # url: /de/
     # - title: "Publications"
@@ -44,7 +47,10 @@ main:
    # - title: "Sitemap"
     #  url: /sitemap/
   de:
-    - title: <a href = "javascript:location.assign(myVar)" class="btn" style="color:blue;">English version</a>
+    # - title: "Language toggle"    # placeholder (same as English)
+    #   url: "#"
+    #   class: "btn lang-toggle"         
+      # <a href = "javascript:location.assign(myVar)" class="btn" style="color:blue;">English version</a>
       # url: /de/
     #- title: <div class="menu-btn"><a class="btn-open" style="cursor:pointer">Open &#x25BE;</a></div>
     # <a id="open" onclick="openNav()" style="cursor:pointer">Open &#878;</a>
