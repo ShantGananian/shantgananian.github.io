@@ -9,6 +9,5 @@ subtitle: "Gedanken und Projekte an der Schnittstelle von Ideen, Technik und men
 hidden: true # So that this file won't show in any list
 # entries_layout: grid
 myLink: /mainpageen/ # Custom Variable
+lang_toggle_url: /mainpageen/ # Custom Variable to change language without javascript
 ---
-
- 
