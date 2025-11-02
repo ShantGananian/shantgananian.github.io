@@ -91,3 +91,36 @@
     font-weight: 700;
   }
 }
+
+/* MINE: Language toggle alignment fix for Minimal Mistakes masthead */
+.masthead__menu-item .lang-switch {
+  display: inline-flex !important; /* keeps DE | EN on one line, evenly spaced */
+  align-items: center;
+  padding: 0 !important; /* remove any nav link padding */
+  margin: 0 !important;
+  line-height: 1; /* prevent extra vertical spacing */
+}
+
+.masthead__menu-item .lang-switch .separator {
+  margin: 0 4px; /* equal spacing both sides */
+  color: #aaa;
+}
+
+.masthead__menu-item .lang-switch a,
+.masthead__menu-item .lang-switch .inactive {
+  display: inline-block;
+  padding: 0 !important;
+  margin: 0 !important;
+  line-height: 1;
+}
+
+.masthead__menu-item .lang-switch a {
+  text-decoration: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.masthead__menu-item .lang-switch a:hover {
+  opacity: 0.8; /* subtle visual cue instead of underline */
+  text-decoration: none;
+}

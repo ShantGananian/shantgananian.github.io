@@ -43,6 +43,37 @@
 
 /* === Mine: Custom Social Icons Style === */
 
+/* --- Desktop layout (icons visible, side by side) --- */
+// .author__urls.social-icons {
+//   display: flex;
+//   justify-content: center;
+//   gap: 12px;
+//   list-style: none;
+//   padding: 0;
+//   margin: 10px 0;
+// }
+
+// .author__urls.social-icons li {
+//   display: inline-flex;
+//   align-items: center;
+// }
+
+// .author__urls.social-icons .label {
+//   display: none;
+// }
+
+// .author__urls.social-icons a i {
+//   font-size: 1.5em;
+//   color: inherit;
+//   transition: color 0.2s ease, transform 0.2s ease;
+//   opacity: 0.85;
+// }
+
+// .author__urls.social-icons a:hover i {
+//   opacity: 1;
+//   transform: scale(1.1);
+// }
+
 /* Desktop: icons visible horizontally */
 .author__urls.social-icons {
   display: flex;
@@ -60,6 +91,21 @@
 .author__urls.social-icons a[href*="linkedin.com"]:hover i { color: #0077b5; }
 .author__urls.social-icons a[href*="github.com"]:hover i { color: #333; }
 .author__urls.social-icons a[href^="mailto:"]:hover i { color: #d93025; }
+
+/* --- Mobile: hide icons initially, show only when active --- */
+// @media screen and (max-width: 1024px) {
+//   .author__urls.social-icons {
+//     display: none;
+//     flex-direction: column;
+//     align-items: flex-start;
+//     gap: 8px;
+//     margin-top: 8px;
+//   }
+
+//     .author__urls.social-icons.is--visible {
+//     display: flex;
+//   }
+// }
 
 /* Mobile & tablet: hide icons by default, show when .is--visible is on the UL */
 @media screen and (max-width: 1024px) {
@@ -101,6 +147,8 @@
 @media screen and (max-width: 480px) {
   .author__urls.social-icons.is--visible { align-items: center; }
 }
+
+
 
 
 
@@ -180,3 +228,175 @@
   padding-top: 1em;
 }
 /* end of mine */
+
+
+/* Language Toggle Button in navigation (Option I didn't use I used the one below)*/
+// .lang-toggle-btn {
+//   display: inline-block;
+//   background: var(--mm-accent-color, #cb3131);
+//   color: #fff !important;
+//   font-size: 0.9rem;
+//   font-weight: 600;
+//   padding: 6px 14px;
+//   border-radius: 20px;
+//   text-decoration: none;
+//   transition: all 0.25s ease;
+//   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+//   line-height: 1;
+// }
+
+// /* Hover + focus states */
+// .lang-toggle-btn:hover,
+// .lang-toggle-btn:focus {
+//   background: #b12a2a;
+//   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+//   transform: translateY(-1px);
+// }
+
+// /* Focus accessibility */
+// .lang-toggle-btn:focus-visible {
+//   outline: 2px solid #cb3131;
+//   outline-offset: 2px;
+// }
+
+// /* Dark mode (Minimal Mistakes supports prefers-color-scheme) */
+// @media (prefers-color-scheme: dark) {
+//   .lang-toggle-btn {
+//     background: #e74c3c;
+//     color: #fff !important;
+//   }
+//   .lang-toggle-btn:hover {
+//     background: #c0392b;
+//   }
+// }
+
+// /* Small, subtle language toggle link */
+// .lang-toggle-link {
+//   font-size: 0.85rem;
+//   font-weight: 500;
+//   color: #666;
+//   padding: 0 0.4rem;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   letter-spacing: 0.03em;
+//   border-left: 1px solid #ddd;
+//   margin-left: 0.5rem;
+//   transition: color 0.2s ease;
+// }
+
+// .lang-toggle-link:hover {
+//   color: #cb3131; /* subtle brand accent */
+// }
+
+// @media (prefers-color-scheme: dark) {
+//   .lang-toggle-link {
+//     color: #bbb;
+//     border-color: #555;
+//   }
+//   .lang-toggle-link:hover {
+//     color: #ff6b6b;
+//   }
+// }
+
+/* Language Toggle Button in navigation (Option I prefer)*/
+
+// .lang-switch {
+//   font-size: 0.85rem;
+//   color: #666;
+//   text-transform: uppercase;
+//   letter-spacing: 0.03em;
+//   display: inline-flex;
+//   align-items: center;
+// }
+
+// .lang-switch .separator {
+//   margin: 0 6px; /* equal spacing around | */
+//   color: #aaa;   /* slightly lighter for subtlety */
+// }
+
+// .lang-switch a {
+//   color: #cb3131;
+//   text-decoration: none;
+//   font-weight: 600;
+//   line-height: 1;
+// }
+
+// // .lang-switch a:hover {
+// //   text-decoration: underline;
+// // }
+
+// .lang-switch .inactive {
+//   color: #999;
+//   font-weight: 500;
+//   cursor: default;
+//   line-height: 1;
+// }
+
+
+/* MINE language button style: Flex layout: logo left, nav center, lang toggle right */
+.masthead__inner-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* distributes space */
+  position: relative;
+}
+
+.masthead__branding {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* spacing between logo and title */
+}
+
+.site-nav {
+  flex: 1; /* nav takes remaining horizontal space */
+  margin-left: 2rem;
+}
+
+.lang-switch-wrapper {
+  flex-shrink: 0; /* don’t shrink on small screens */
+  display: flex;
+  align-items: center;
+}
+
+.lang-switch {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+}
+
+.lang-switch .separator {
+  margin: 0 6px;
+  color: #aaa;
+}
+
+.lang-switch a {
+  color: #cb3131;
+  text-decoration: none;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.lang-switch a:hover {
+  text-decoration: underline;
+}
+
+.lang-switch .inactive {
+  color: #999;
+  font-weight: 500;
+}
+
+@include breakpoint(max-width $small) {
+  .lang-switch-wrapper {
+    position: absolute;
+    right: 1rem;  /* far right */
+    top: 1rem;    /* vertically aligned with header */
+    z-index: 999; /* above menu */
+  }
+
+  .site-nav {
+    margin-left: 0;
+  }
+}
+
+/* end of MINE */
