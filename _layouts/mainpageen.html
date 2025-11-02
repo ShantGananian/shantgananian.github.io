@@ -40,8 +40,23 @@ layout: archive
   font-size: 2.2rem;
   font-weight: 700;
   text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 0.3rem;
+  margin-top: 1rem 0 0.3rem;
+  color: #222;
+  line-height: 1.2;
+  /* margin-bottom: 0.3rem; */
+  text-shadow: 0 1px 0 rgba(0,0,0,0.05);
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+.page__title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: #cb3131;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
 }
 
 .page__subtitle {
