@@ -6,7 +6,7 @@ layout: archive
 
 <!-- ====== Insights Section ====== -->
 <h2 class="page__section-title">
-  <a href="{{ '/einsichten/' | relative_url }}">In Conversation with Books</a>
+  <a href="{{ '/insights/' | relative_url }}">In Conversation with Books</a>
 </h2>
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 {% assign insights = site.insights | where_exp: "item", "item.hidden != true" | sort: "date" | reverse %}
@@ -21,7 +21,7 @@ layout: archive
 
 <!-- ====== Portfolio Section ====== -->
 <h2 class="page__section-title">
-  <a href="{{ '/de/' | relative_url }}">Engineering Projects</a>
+  <a href="{{ '/en/' | relative_url }}">Engineering Projects</a>
 </h2>
 {% assign portfolio = site.en | where_exp: "item", "item.hidden != true" | sort: "date" | reverse %}
 <div class="entries-{{ entries_layout }}">
