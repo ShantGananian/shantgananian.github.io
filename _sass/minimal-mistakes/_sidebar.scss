@@ -172,7 +172,7 @@
 }
 
 .author__name {
-  margin: 0; //10px; 0;
+  margin: 10px; //10px; 0; keep it 10px as otherwise on mobile the name will stick to the top of the box
   text-align: center;  //
 
   @include breakpoint($large) {
