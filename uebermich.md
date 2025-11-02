@@ -3,7 +3,9 @@ layout: single
 title: Über mich
 permalink: /uebermich/
 lang: de
-myLink: /about/ # Custom Variable
+myLink: /about/ # Custom Variable with JS use
+lang_toggle_url: /about/ # Custom Variable without need for JS
+
 published: true
 toc: true
 toc_label: "Inhaltsverzeichnis"
