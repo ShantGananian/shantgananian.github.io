@@ -35,24 +35,25 @@ layout: archive
 
 
 <style>
-/* Page Title Styling */
+/* -----------------------------
+   Homepage Title & Subtitle
+   ----------------------------- */
 .page__title {
   font-size: 2.2rem;
   font-weight: 700;
   text-align: center;
-  margin-top: 1rem 0 0.3rem;
+  margin: 1rem 0 0.3rem;
   color: #222;
   line-height: 1.2;
-  /* margin-bottom: 0.3rem; */
-  text-shadow: 0 1px 0 rgba(0,0,0,0.05);
   letter-spacing: -0.5px;
   position: relative;
 }
 
+/* Optional decorative underline (non-clickable) */
 .page__title::after {
   content: "";
   display: block;
-  width: 50px;
+  width: 60px;
   height: 2px;
   background: #cb3131;
   margin: 0.5rem auto 0;
@@ -61,24 +62,22 @@ layout: archive
 
 .page__subtitle {
   font-size: 1.1rem;
-  font-weight: 400; /* keeps it readable but distinct from the title */
+  font-weight: 400;
   text-align: center;
   color: #444;
   margin-bottom: 2rem;
   line-height: 1.5;
-
 }
 
-/* End of Page Title Styling */
-
+/* -----------------------------
+   Section Titles (clickable)
+   ----------------------------- */
 .page__section-title {
   font-size: 1.8rem;
-  /* margin: 2rem 0 1rem; */
   font-weight: 600;
   display: inline-block;
-  margin-top: 3rem;
+  margin: 3rem 0 1rem;
   border-bottom: 1.5px solid #cb3131;
-
 }
 
 .page__section-title a {
@@ -91,10 +90,12 @@ layout: archive
   color: #cb3131;
 }
 
-
+/* -----------------------------
+   "More" Button
+   ----------------------------- */
 .more-button {
   position: relative;
-  z-index: 9999; /* bring it above everything */
+  z-index: 9999;
   text-align: right;
   margin: 1rem 0 2rem !important;
   background: none !important;
@@ -106,26 +107,30 @@ layout: archive
   background-color: #cb3131 !important;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   color: #fff !important;
-  padding: 8px 16px; /* 6px 14px; */
-  border-radius: 6px; /* 4px; */
+  padding: 8px 16px;
+  border-radius: 6px;
   font-size: 0.9rem;
-  text-transform: none;
   font-weight: 500;
   text-decoration: none;
-  transition: all 0.3s ease, transform 0.2s ease; /* all 0.3s ease; */
+  transition: all 0.3s ease, transform 0.2s ease;
 }
 
 .more-button a:hover {
-  background-color: #b12a2a !important; /* #a62121 */
+  background-color: #b12a2a !important;
   box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
 }
 
+/* -----------------------------
+   Article Fade-In Animation
+   ----------------------------- */
 .entries-list > article {
   opacity: 0;
   transform: translateY(10px);
   animation: fadeInUp 0.6s ease forwards;
 }
 
+/* Optional staggered effect for smooth reveal */
 .entries-list > article:nth-child(1) { animation-delay: 0.1s; }
 .entries-list > article:nth-child(2) { animation-delay: 0.2s; }
 .entries-list > article:nth-child(3) { animation-delay: 0.3s; }
@@ -137,6 +142,9 @@ layout: archive
   }
 }
 
+/* -----------------------------
+   Responsive Adjustments
+   ----------------------------- */
 @media (max-width: 600px) {
   .page__title {
     font-size: 1.8rem;
@@ -146,6 +154,9 @@ layout: archive
   }
   .page__section-title {
     font-size: 1.5rem;
+  }
+  .more-button a {
+    padding: 6px 12px;
   }
 }
 
