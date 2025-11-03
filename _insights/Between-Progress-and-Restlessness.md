@@ -201,8 +201,7 @@ As AI becomes an **autonomous, deterministic force** shaping every aspect of hum
 
 A force through which AI, by its own internal logic, shapes our **thinking**, **values**, and **way of life**, often without our awareness. **True freedom**, then, begins with **awareness** — with the **courage to see the constraints of our time clearly** and to **act responsibly within them**, reintroducing a **conscious, human element** into a world that is becoming increasingly **automated and dehumanized**.
 
-This represents a **powerful form of self-governed action**, a **higher degree of freedom** that **generates change from within**. In other words, it calls for what **Carl Jung** described as the **achievement of personality**:
-
+In the end, this movement toward inner awareness represents perhaps the most meaningful response we can offer — a form of **self-governed action**, a **higher degree of freedom** that **generates change from within**. It leads, finally, to what **Carl Jung** described as the **achievement of personality**:
 
 <blockquote class="blockquote">
 <p>“Such problems are never solved by legislation or by tricks. They are solved only by a general change of attitude. And the change does not begin with propaganda and mass meetings, or with violence. It begins with a change in individuals. It will continue as a transformation of their personal likes and dislikes, of their outlook on life and of their values, and only the accumulation of these individual changes will produce a collective solution.”&nbsp;</p>

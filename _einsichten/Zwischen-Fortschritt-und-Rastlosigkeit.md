@@ -196,9 +196,9 @@ Während KI zu einer **autonomen, deterministischen Kraft** wird, die jeden Aspe
 
 Einer Kraft, durch die KI mit ihrer eigenen inneren Logik unser **Denken**, unsere **Werte** und unsere **Lebensweise** formt, oft ohne dass wir es bemerken. **Wahre Freiheit** beginnt also mit **Bewusstsein** – mit dem **Mut, die Zwänge unserer Zeit klar zu erkennen** und **verantwortungsvoll innerhalb dieser zu handeln**, indem wir dem zunehmend **automatisierten und entmenschlichten Leben** ein **bewusstes, menschliches Element** zurückgeben.
 
-Dies stellt eine **kraftvolle Form selbstbestimmten Handelns** dar – ein **höheres Maß an Freiheit**, das **Veränderung von innen heraus** erzeugt.
+Letztlich stellt diese Bewegung hin zu einem inneren Bewusstsein vielleicht die bedeutsamste Antwort dar, die wir geben können – eine **kraftvolle Form selbstbestimmten Handelns**, ein **höheres Maß an Freiheit**, das **Veränderung von innen heraus** erzeugt.
 
-Mit anderen Worten: Es fordert das, was **Carl Jung** als **Erreichung der Persönlichkeit** bezeichnete:
+Sie führt schließlich zu dem, was **Carl Jung** als die **Erreichung der Persönlichkeit** bezeichnete:
 
 <blockquote class="blockquote">
 <p>„Solche Probleme werden nie durch Gesetze oder Tricks gelöst. Sie werden nur durch eine allgemeine Einstellungsänderung gelöst. Und die Veränderung beginnt nicht mit Propaganda, Massenversammlungen oder Gewalt. Sie beginnt mit einer Veränderung des Individuums. Sie wird sich fortsetzen als Transformation ihrer persönlichen Vorlieben und Abneigungen, ihres Lebensblicks und ihrer Werte, und nur die Summe dieser individuellen Veränderungen wird eine kollektive Lösung hervorbringen.“&nbsp;</p>
