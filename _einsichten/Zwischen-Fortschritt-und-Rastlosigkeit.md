@@ -70,7 +70,7 @@ Doch sollten wir besorgt sein? Die Frage wirkt einfach, doch sie berührt den **
     </figure>
 </div>
 
-**Generative KI (GenAI)** und **Künstliche Allgemeine Intelligenz (AGI)** unterscheiden sich vor allem in **Reichweite**, **Fähigkeiten** und **Entwicklungsstadium**.
+**Generative KI (GenAI)** und **Allgemeine Künstliche Intelligenz (AGI)** unterscheiden sich vor allem in **Reichweite**, **Fähigkeiten** und **Entwicklungsstadium**.
 
 Während **GenAI** aktuelle Technologie darstellt, die **neue Inhalte durch Mustererkennung** erstellt, ist **AGI** ein hypothetisches System, das **menschliche kognitive Fähigkeiten** in allen Aufgabenbereichen erreichen oder übertreffen kann – auch in neuen, unbekannten Aufgaben – ohne erneutes Training, und das zu **echter Kreativität** fähig ist.
 
