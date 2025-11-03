@@ -11,7 +11,7 @@
   {% assign categsen_sorted = page.categsen | sort_natural %}
 
   <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].categs_label | default: "Categories:" }} </strong>
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].categories_label | default: "Kategorien:" }} </strong>
     <span itemprop="keywords">
     {% for categ_word in categsen_sorted %}
       <a href="{{ categ_word | slugify | prepend: path_type | prepend: site.categen_archive.path | relative_url }}" class="page__taxonomy-item p-category" rel="categ">{{ categ_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
@@ -34,7 +34,7 @@
   {% assign categsen_sorted = page.categsen | sort_natural %}
 
   <p class="page__taxonomy">
-    <strong>{{ site.data.ui-text[page.lang].categs_label | default: "Categories:" }}</strong>
+    <strong>{{ site.data.ui-text[page.lang].categories_label | default: "Kategorien:" }}</strong>
     <span itemprop="keywords">
     {% for categ_word in categsen_sorted %}
       <a href="{{ categ_word | slugify | prepend: path_type | prepend: site.categen_archive.path | relative_url }}" class="page__taxonomy-item p-category" rel="categ">{{ categ_word }}</a>{% unless forloop.last %}<span class="sep">, </span>{% endunless %}
