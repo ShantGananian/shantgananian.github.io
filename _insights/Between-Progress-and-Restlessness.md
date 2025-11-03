@@ -42,13 +42,13 @@ header:
     </figure>
 </div>
 
-In January 2025, a letter from **OpenAI**, the creators of **ChatGPT**, addressing **Stargate**—a **$500 billion artificial intelligence infrastructure project** deemed necessary to enable **Artificial General Intelligence (AGI)**—stated:
+In January 2025, **OpenAI**, the creators of **ChatGPT**, published a letter introducing the **Stargate** Project—a **$500 billion artificial intelligence infrastructure initiative** described as a necessary step toward the development of **Artificial General Intelligence (AGI)**:
 
 <blockquote class="blockquote">
 <p>“All of us look forward to continuing to build and develop AI… for the benefit of all of humanity. We believe that this new step is critical on the path, and will enable creative people to figure out how to use AI to elevate humanity.”</p>
 <cite>OpenAI, Announcing the Stargate Project</cite></blockquote>
 
-With this, **artificial intelligence** today is no longer merely the subject of theoretical speculation; it has moved to a **plausible mid-term objective**.
+This marked a turning point: **artificial intelligence** was no longer seen merely as a subject of theoretical speculation, but as a **plausible mid-term goal** in the pursuit of **AGI**.
 
 But **should we be worried?** The question seems simple, but it touches on the **core of our times**.
 

@@ -39,13 +39,13 @@ header:
     </figure>
 </div>
 
-Im Januar 2025 veröffentlichte **OpenAI**, die Schöpfer von **ChatGPT**, ein Schreiben zum **Stargate-Projekt** – einem **500-Milliarden-Dollar-Infrastrukturprojekt** für Künstliche Intelligenz, das notwendig sein soll, um **Künstliche Allgemeine Intelligenz (AGI)** zu ermöglichen:
+Im Januar 2025 veröffentlichte **OpenAI**, die Schöpfer von **ChatGPT**, ein Schreiben zum sogenannten **Stargate-Projekt** – einem **500-Milliarden-Dollar-Infrastrukturvorhaben** für Künstliche Intelligenz, das als notwendiger Schritt zur Entwicklung **Allgemeiner Künstlicher Intelligenz (AGI)** gilt:
 
 <blockquote class="blockquote">
 <p>„Alle von uns freuen sich darauf, KI weiter aufzubauen und zu entwickeln… zum Wohle der gesamten Menschheit. Wir glauben, dass dieser Schritt entscheidend auf dem Weg ist und es kreativen Menschen ermöglichen wird herauszufinden, wie sie KI nutzen können, um die Menschheit zu erheben.“&nbsp;</p>
 <cite>OpenAI, Ankündigung des Stargate-Projekts</cite></blockquote>
 
-Damit ist **Künstliche Intelligenz** heute nicht mehr nur Gegenstand theoretischer Spekulation, sondern ein **plausibles mittelfristiges Ziel**.
+Damit wird deutlich, dass **Künstliche Intelligenz** heute nicht mehr bloß ein theoretisches Gedankenexperiment ist, sondern in der Entwicklung Allgemeiner Künstlicher Intelligenz (AGI) bereits ein **plausibles mittelfristiges Ziel** verfolgt.
 
 Doch sollten wir besorgt sein? Die Frage wirkt einfach, doch sie berührt den **Kern unserer Zeit**.
 
