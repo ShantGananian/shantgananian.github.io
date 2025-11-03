@@ -45,7 +45,7 @@ Im Januar 2025 veröffentlichte **OpenAI**, die Schöpfer von **ChatGPT**, ein S
 <p>„Alle von uns freuen sich darauf, KI weiter aufzubauen und zu entwickeln… zum Wohle der gesamten Menschheit. Wir glauben, dass dieser Schritt entscheidend auf dem Weg ist und es kreativen Menschen ermöglichen wird herauszufinden, wie sie KI nutzen können, um die Menschheit zu erheben.“&nbsp;</p>
 <cite>OpenAI, Ankündigung des Stargate-Projekts</cite></blockquote>
 
-Damit wird deutlich, dass **Künstliche Intelligenz** heute nicht mehr bloß ein theoretisches Gedankenexperiment ist, sondern in der Entwicklung Allgemeiner Künstlicher Intelligenz (AGI) bereits ein **plausibles mittelfristiges Ziel** verfolgt.
+Damit wird deutlich, dass **Künstliche Intelligenz** heute nicht mehr bloß ein theoretisches Gedankenexperiment ist, sondern in der Entwicklung **Allgemeiner Künstlicher Intelligenz (AGI)** bereits ein **plausibles mittelfristiges Ziel** verfolgt.
 
 Doch sollten wir besorgt sein? Die Frage wirkt einfach, doch sie berührt den **Kern unserer Zeit**.
 
