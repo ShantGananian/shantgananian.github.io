@@ -5,7 +5,7 @@ layout: splash
 {{ content }}
 
 <!-- This section creates the list of posts within 'categsdir' collection grouped by the category-->
-{% assign postsByCategsen = site.categsdir | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.categsen' %}
+{% assign postsByCategsen = site.categdir | where_exp: "item", "item.hidden != true" | group_by_exp: 'post', 'post.categsen' %}
 {% for categ in postsByCategsen %}
   <section id="{{ categ.name }}">
       {% for post in categ.items %}
