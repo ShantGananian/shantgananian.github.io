@@ -21,6 +21,7 @@ toc_sticky: true
 # comments: true
 # share: true
 # related: true
+description: "Reflecting on AI, GenAI, and AGI, this essay explores humanity, technology, and meaning in an age of automation." # 1-sentence meta description for search engines and social previews. Coded in seo.html file. Search engines (like Google) will truncate it themselves at around 155–160 characters in search results, but your HTML will contain the full text.
 
 header:
   # image: /assets/img/Between Progress and Restlessness/0_La_Grâce_divine_et_le_Travail_humain_-_Galleria_dei_Candelabri_-_L._Seitz.png

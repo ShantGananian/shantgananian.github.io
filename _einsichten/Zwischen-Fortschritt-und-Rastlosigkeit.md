@@ -18,6 +18,7 @@ toc: true
 toc_label: "Inhaltsverzeichnis"
 toc_icon: "cog"
 toc_sticky: true
+description: "Eine Reflexion über KI, Generative KI und AGI: Mensch, Technologie und Sinn in Zeiten der Automatisierung." # 1-sentence meta description for search engines and social previews. Coded in seo.html file. Search engines (like Google) will truncate it themselves at around 155–160 characters in search results, but your HTML will contain the full text.
 
 header:
   #image: /assets/img/Between Progress and Restlessness/0_La_Grâce_divine_et_le_Travail_humain_-_Galleria_dei_Candelabri_-_L._Seitz.png
