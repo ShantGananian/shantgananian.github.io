@@ -511,13 +511,32 @@
 }
 
 /* Mine: To crop teaser images at the top and the bottom to save vertical space in the blog post list */
+// .thumbnail-container {
+//   max-width: 100%;
+//   overflow: hidden;
+//   border-radius: 5px;
+//   margin-bottom: 25px;
+// }
+// .thumbnail-container img {
+//   margin-top: -4%; //-11.5%;
+//   margin-bottom: -4%; //-11.5%;
+// }
+
+/* Updated the above for:
+A consistent image height for all teasers (so the list layout stays balanced).
+The image to fill the container, cropping gracefully rather than stretching. */
 .thumbnail-container {
-  max-width: 100%;
+  width: 100%;
+  height: 200px; /* Adjust this value to your preferred preview height */
   overflow: hidden;
   border-radius: 5px;
   margin-bottom: 25px;
+  position: relative;
 }
+
 .thumbnail-container img {
-  margin-top: -4%; //-11.5%;
-  margin-bottom: -4%; //-11.5%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This keeps the image proportional but crops edges */
+  display: block;
 }
