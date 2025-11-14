@@ -52,7 +52,7 @@
     {% endif %}
 
     <!-- Excerpt has 300 words. I changed to 400 -->
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 400 }}</p>
+    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 500 }}</p>
     {% endif %}
   </article>
 </div>
