@@ -13,9 +13,17 @@
 <div class="{{ include.type | default: 'list' }}__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
+        {% comment %} Changed the below to make the teaser images clickable
       <div class="archive__item-teaser">
         <img src="{{ teaser | relative_url }}" alt="">
+      </div>{% endcomment %}
+
+      <div class="archive__item-teaser">
+        <a href="{{ post.url | relative_url }}" rel="permalink">
+          <img src="{{ teaser | relative_url }}" alt="">
+        </a>
       </div>
+{% endif %}
     {% endif %}
     <h1 class="archive__item-title no_toc" itemprop="headline">
       {% if post.link %}
@@ -31,18 +39,20 @@
 
     <!-- Adding teaser images to the “Recent posts” list -->
     {% if include.type == "list" and teaser %}
-    {% comment %}<div class="thumbnail-container">
+    {% comment %} Changed the below to make the teaser images clickable
+    <div class="thumbnail-container">
       <img src="{{ teaser | relative_url }}" alt="">
-    </div>{% endcomment %}
+    </div> {% endcomment %}
+
     <div class="thumbnail-container">
       <a href="{{ post.url | relative_url }}" rel="permalink">
-       <img src="{{ teaser | relative_url }}" alt="">
+        <img src="{{ teaser | relative_url }}" alt="">
       </a>
     </div>
     {% endif %}
 
     <!-- Excerpt has 300 words. I changed to 400 -->
-    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 500 }}</p>
+    {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 400 }}</p>
     {% endif %}
   </article>
 </div>
