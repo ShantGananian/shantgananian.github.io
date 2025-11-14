@@ -23,7 +23,6 @@
           <img src="{{ teaser | relative_url }}" alt="">
         </a>
       </div>
-{% endif %}
     {% endif %}
     <h1 class="archive__item-title no_toc" itemprop="headline">
       {% if post.link %}
@@ -51,7 +50,7 @@
     </div>
     {% endif %}
 
-    <!-- Excerpt has 300 words. I changed to 400 -->
+    <!-- Excerpt has 300 words. I changed to 500 -->
     {% if post.excerpt %}<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify | strip_html | truncate: 500 }}</p>
     {% endif %}
   </article>
