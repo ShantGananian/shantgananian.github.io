@@ -31,8 +31,13 @@
 
     <!-- Adding teaser images to the “Recent posts” list -->
     {% if include.type == "list" and teaser %}
-    <div class="thumbnail-container">
+    {% comment %}<div class="thumbnail-container">
       <img src="{{ teaser | relative_url }}" alt="">
+    </div>{% endcomment %}
+    <div class="thumbnail-container">
+      <a href="{{ post.url | relative_url }}" rel="permalink">
+       <img src="{{ teaser | relative_url }}" alt="">
+      </a>
     </div>
     {% endif %}
 
