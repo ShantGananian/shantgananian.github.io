@@ -23,7 +23,7 @@ toc_sticky: true
 # share: true
 # related: true
 description: "Finding meaning in an uncertain world starts with clarity, responsibility, and quiet strength." # 1-sentence meta description for search engines and social previews. Coded in seo.html file. Search engines (like Google) will truncate it themselves at around 155–160 characters in search results, but your HTML will contain the full text.
-comments: true
+
 header:
   # image: /assets/img/Pushing-the-Stone-with-Open-Eyes/Joseph_Mallord_William_Turner_(1775-1851)_-_Shade_and_Darkness_-_the_Evening_of_the_Deluge_-_N00531_-_National_Gallery.jpg
   teaser: /assets/img/Pushing-the-Stone-with-Open-Eyes/Joseph_Mallord_William_Turner_(1775-1851)_-_Shade_and_Darkness_-_the_Evening_of_the_Deluge_-_N00531_-_National_Gallery.jpg
