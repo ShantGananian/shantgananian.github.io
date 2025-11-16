@@ -107,103 +107,48 @@ layout: default
     {% endcomment %}
 
     {% if page.comments %}
-      <div id="comments-wrapper">
-        <h3>{{ site.data.ui-text[page.lang].comments_title | default: "Kommentare" }}</h3>
-      </div>
 
-      <form id="comment-form">
-        <input type="hidden" id="slug" value="{{ page.slug }}">
-        <input type="hidden" id="parent-index" value="">
-        <div id="replying-to" style="display:none;">
-          {{ site.data.ui-text[page.lang].replying_to_label | default: "Replying to" }} <span id="replying-to-name"></span>
-          <button type="button" id="cancel-reply">{{ site.data.ui-text[page.lang].comment_btn_cancel | default: "Cancel" }}</button>
-        </div>
+          <!-- comment form + comment wrapper -->
+          <div id="comments-wrapper">
+            <h3>{{ site.data.ui-text[page.lang].comments_title | default: "Kommentare" }}</h3>
+          </div>
 
-        <label>{{ site.data.ui-text[page.lang].comment_form_name_label }}<br><input id="name" required></label><br><br>
-        <label>{{ site.data.ui-text[page.lang].comment_form_comment_label }}<br><textarea id="message" required></textarea></label><br><br>
-        <label>{{ site.data.ui-text[page.lang].comment_form_email_label }} (optional)<br><input id="email"></label><br><br>
-        <button type="submit">{{ site.data.ui-text[page.lang].comment_btn_submit }}</button>
-        <div id="comment-status"></div>
-      </form>
+          <form id="comment-form">
+            <input type="hidden" id="slug" value="{{ page.slug }}">
+            <input type="hidden" id="parent-index">
+            
+            <div id="replying-to" style="display:none;">
+              {{ site.data.ui-text[page.lang].replying_to_label | default: "Replying to" }}
+              <span id="replying-to-name"></span>
+              <button type="button" id="cancel-reply">
+                {{ site.data.ui-text[page.lang].comment_btn_cancel | default: "Cancel" }}
+              </button>
+            </div>
 
-      <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-      <script>
-      const commentForm = document.getElementById("comment-form");
-      const parentInput = document.getElementById("parent-index");
-      const messageField = document.getElementById("message");
-      const replyIndicator = document.getElementById("replying-to");
-      const replyingToName = document.getElementById("replying-to-name");
-      const cancelReplyBtn = document.getElementById("cancel-reply");
+            <label>{{ site.data.ui-text[page.lang].comment_form_name_label }}<br>
+              <input id="name" required>
+            </label><br><br>
 
-      function setupReplyButton(btn, comment) {
-        btn.addEventListener("click", () => {
-          parentInput.value = comment.index;
-          replyingToName.innerText = comment.name;
-          replyIndicator.style.display = "flex";
-          commentForm.scrollIntoView({ behavior: "smooth", block: "start" });
-          setTimeout(() => messageField.focus(), 300);
-        });
-      }
+            <label>{{ site.data.ui-text[page.lang].comment_form_comment_label }}<br>
+              <textarea id="message" required></textarea>
+            </label><br><br>
 
-      function appendComment(comment) {
-        const div = document.createElement("div");
-        div.className = "comment h-cite new-comment";
-        div.dataset.index = comment.index;
-        const htmlMessage = marked.parse(comment.message);
-        div.innerHTML = `
-          <p><strong>${comment.name}</strong> <small>${comment.date}</small></p>
-          <div class="comment-text">${htmlMessage}</div>
-          <button class="reply-btn" data-index="${comment.index}">{{ site.data.ui-text[page.lang].reply_label | default: "Reply" }}</button>
-          <div class="replies"></div>
-        `;
-        if (comment.parentIndex) {
-          const parent = document.querySelector(`.comment[data-index="${comment.parentIndex}"] .replies`);
-          if (parent) parent.appendChild(div);
-        } else {
-          document.getElementById("comments-wrapper").appendChild(div);
-        }
-        setupReplyButton(div.querySelector(".reply-btn"), comment);
-        setTimeout(() => div.classList.add("fade-out"), 50);
-        setTimeout(() => div.classList.remove("new-comment", "fade-out"), 2050);
-      }
+            <label>{{ site.data.ui-text[page.lang].comment_form_email_label }} (optional)<br>
+              <input id="email">
+            </label><br><br>
 
-      cancelReplyBtn.addEventListener("click", () => {
-        parentInput.value = "";
-        replyIndicator.style.display = "none";
-      });
+            <button type="submit">{{ site.data.ui-text[page.lang].comment_btn_submit }}</button>
+            <div id="comment-status"></div>
+          </form>
 
-      commentForm.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const slug = document.getElementById("slug").value;
-        const name = document.getElementById("name").value;
-        const message = messageField.value;
-        const email = document.getElementById("email")?.value || "";
-        const parentIndex = parentInput.value;
+          <!-- Your final script -->
+          <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+          <script>
 
-        const res = await fetch("https://comment-worker.shant-ga.workers.dev", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ slug, name, message, email, parentIndex })
-        });
+          // your entire JavaScript here (exactly as you pasted)
 
-        const statusEl = document.getElementById("comment-status");
+          </script>
 
-        if (res.ok) {
-          const savedComment = await res.json();
-          appendComment(savedComment);
-          statusEl.innerText = "{{ site.data.ui-text[page.lang].comment_success_msg }}";
-          commentForm.reset();
-          parentInput.value = "";
-          replyIndicator.style.display = "none";
-        } else {
-          statusEl.innerHTML = "{{ site.data.ui-text[page.lang].comment_error_msg }}";
-        }
-      });
-      </script>
-
-
-
-        
     {% endif %}
   </article>
 
