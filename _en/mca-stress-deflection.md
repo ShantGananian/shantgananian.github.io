@@ -20,7 +20,7 @@ tagsen:
 
 toc: true
 toc_label: "Table of contents"
-toc_icon: "cog"
+toc_icon: "book-open" #"cog"
 toc_sticky: true
 
 header:

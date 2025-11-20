@@ -17,7 +17,7 @@ categsen:
   - Ethik
 toc: true
 toc_label: "Inhaltsverzeichnis"
-toc_icon: "cog"
+toc_icon: "book-open" #"cog"
 toc_sticky: true
 description: "Sinn in einer unsicheren Welt zu finden, beginnt mit Klarheit, Verantwortung und stiller Stärke." # 1-sentence meta description for search engines and social previews. Coded in seo.html file. Search engines (like Google) will truncate it themselves at around 155–160 characters in search results, but your HTML will contain the full text.
 

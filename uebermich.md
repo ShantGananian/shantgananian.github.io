@@ -9,7 +9,7 @@ lang_toggle_url: /about/ # Custom Variable without need for JS
 published: true
 toc: true
 toc_label: "Inhaltsverzeichnis"
-toc_icon: "cog"
+toc_icon: "book-open" #"cog"
 toc_sticky: true
 ---
 

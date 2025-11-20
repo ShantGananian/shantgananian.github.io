@@ -15,7 +15,7 @@ categsen:
   - Humanity
 toc: true
 toc_label: "Table of contents"
-toc_icon: "cog"
+toc_icon: "book-open" #"cog"
 toc_sticky: true
 # read_time: true
 # comments: true

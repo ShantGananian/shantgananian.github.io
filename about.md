@@ -9,7 +9,7 @@ lang_toggle_url: /uebermich/ # Custom Variable without need for JS
 published: true
 toc: true
 toc_label: "Table of contents"
-toc_icon: "cog"
+toc_icon: "book-open" #"cog"
 toc_sticky: true
 ---
 
