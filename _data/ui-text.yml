@@ -70,6 +70,64 @@ en-GB:
 en-AU:
   <<: *DEFAULT_EN
 
+# Western Armenian
+# -----------------
+hyw:
+  skip_links                 : "Բաց թողնել յղումները"
+  skip_primary_nav           : "Անցնիլ հիմնական նաւարկումին"
+  skip_content               : "Անցնիլ բովանդակութեան"
+  skip_footer                : "Անցնիլ էջատակի"
+  page                       : "Էջ"
+  pagination_previous        : "Նախորդ"
+  pagination_next            : "Յաջորդ"
+  breadcrumb_home_label      : "Գլխաւոր էջ"
+  breadcrumb_separator       : "/"
+  menu_label                 : "Բացել / փակել ցանկը"
+  search_label               : "Բացել / փակել որոնումը"
+  toc_label                  : "Այս էջին մէջ"
+  ext_link_label             : "Ուղիղ յղում"
+  less_than                  : "աւելի քիչ քան"
+  minute_read                : "րոպէ ընթերցում"
+  share_on_label             : "Կիսուիլ"
+  meta_label                 :
+  tags_label                 : "Պիտակներ՝"
+  categories_label           : "Բաժիններ՝"
+  date_label                 : "Թարմացուած՝"
+  comments_label             : "Թողնել մեկնաբանութիւն"
+  comments_title             : "Մեկնաբանութիւններ"
+  more_label                 : "Իմանալ աւելին"
+  related_label              : "Կարելի է նաեւ հետաքրքրէ"
+  follow_label               : "Հետեւիլ՝"
+  feed_label                 : "Լրահոս"
+  powered_by                 : "Աջակցուած է"
+  website_label              : "Կայք"
+  email_label                : "Էլ-փոստ"
+  recent_posts               : "Վերջին գրառումները"
+  undefined_wpm              : "words_per_minute պարամետրը սահմանուած չէ _config.yml-ին մէջ"
+  comment_form_info          : "Ձեր էլ-փոստի հասցէն չի հրապարակուիր։ Պարտադիր դաշտերը նշուած են"
+  comment_form_comment_label : "Մեկնաբանութիւն"
+  comment_form_md_info       : "Markdown-ը աջակցուած է։"
+  comment_form_name_label    : "Անուն"
+  comment_form_email_label   : "Էլ-փոստի հասցէ"
+  comment_form_website_label : "Կայք (ըստ ցանկութեան)"
+  comment_btn_submit         : "Ուղարկել մեկնաբանութիւնը"
+  comment_btn_submitted      : "Ուղարկուած է"
+  comment_success_msg        : "Շնորհակալութիւն ձեր մեկնաբանութեան համար։ Այն կը ցուցադրուի կայքին վրայ՝ հաստատումէն ետք։"
+  comment_error_msg          : <h1>404 – Էջը չի գտնուիր</h1>
+                               <p>Ցաւօք, ձեր փնտռած էջը գոյութիւն չունի։</p>
+                               <p>Խնդրեմ անցէք <strong><a href="https://shantgananian.github.io">գլխաւոր էջը</a></strong> եւ շարունակէք ձեր որոնումը։</p>
+  loading_label              : "Բեռնուում է…"
+  search_label_text          : "Մուտքագրէք որոնման բառը…"
+  search_placeholder_text    : "Մուտքագրէք որոնման բառը…"
+  search_algolia_no_results  : "Արդիւնք չկայ"
+  results_found              : "Արդիւնք(ներ) գտնուեցան"
+  back_to_top                : "Վերադառնալ վերեւ"
+  author_location            : "Քարլսրուեհ, Գերմանիա"
+  author_name                : "Շանթ կանանեան, Գիտութիւններու Մագիստրոս (M.Sc.)"
+  author_bio                 : "Մեքենագէտ երկրաչափ է, որ կ՛աշխատի որակի կառավարման եւ ապահովման ոլորտին մէջ՝ Քարլսրուեհի Տեխնիկական Համալսարանին (KIT) մէջ։ Աշխատանքէն դուրս կը զբաղի գրականութեամբ, փիլիսոփայութեամբ եւ մարդկային փորձառութեան հարցերով՝ ուսումնասիրելով, թէ ինչպէս գաղափարները կը ձեւաւորեն մեր մտածողութիւնն ու գործողութիւնները։"
+  author_title               : "Մեքենագէտ Երկրաչափ"
+  author_subtitle            : "Խոհեր գաղափարներու եւ մարդկային փորձառութեան մասին"
+
 # Spanish
 # -------
 es: &DEFAULT_ES

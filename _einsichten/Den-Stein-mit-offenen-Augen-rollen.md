@@ -5,8 +5,8 @@ title: "Den Stein mit offenen Augen rollen"
 subtitle: "Wie können wir weitermachen, wenn das Leben keinen Sinn zu haben scheint?"
 excerpt: "Wir leben in einer Zeit stiller Erschöpfung – immer strebend, selten zufrieden und oft unsicher, warum wir überhaupt weitermachen. Was, wenn das Leben uns keine klare Antwort gibt? Zwischen dem Schweigen der Welt und unserer Sehnsucht nach Sinn begegnen wir dem Absurden. Doch in diesem Raum – durch Bewusstsein, Verantwortung und leise Auflehnung – können wir etwas Echtes finden: nicht Verzweiflung, sondern die stille Stärke, neu zu beginnen."
 # myLink: /insights/Pushing-the-Stone-with-Open-Eyes/ # Custom Variable for language change with JS
-lang_toggle_url: /insights/Pushing-the-Stone-with-Open-Eyes/ # Custom Variable for language change without JS
-
+lang_toggle_url_en: /insights/Pushing-the-Stone-with-Open-Eyes/ # Custom Variable for language change without JS
+lang_toggle_url_hyw: /khoher/Բաց-աչքերով-քարը-մղել/
 # author_profile: true
 last_modified_at: 2025-11-13
 date: 2025-11-06

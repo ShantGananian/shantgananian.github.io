@@ -329,6 +329,9 @@ collections:
   en:
     output: true
     permalink: /:collection/:path/
+  hyw:
+    output: true
+    permalink: /:collection/:path/
   tagsdir:
     output: true
     permalink: /:collection/:path/
@@ -338,10 +341,16 @@ collections:
   einsichten:
     output: true
     permalink: /:collection/:path/
+  khoher:
+    output: true
+    permalink: /:collection/:path/ 
   mainpageen:
     output: true
     permalink: /:collection/:path/
   mainpagede:
+    output: true
+    permalink: /:collection/:path/
+  mainpagehyw:
     output: true
     permalink: /:collection/:path/
   categdir:
@@ -378,14 +387,21 @@ defaults:
     values:
       # permalink: 'custom/:title'
       lang: en
-      lang_toggle_url: /de/
+      lang_toggle_url_de: /de/
   # _de
   - scope:
       path: '_de'
     values:
       # permalink: 'maatwerk/:title'
       lang: de
-      lang_toggle_url: /en/
+      lang_toggle_url_en: /en/
+  # _hyw
+  - scope:
+      path: '_hyw'
+    values:
+      # permalink: ''
+      lang: hyw
+      lang_toggle_url_hyw: /hyw/
   # _tagsdir
   - scope:
       path: '_tagsdir'
@@ -419,28 +435,49 @@ defaults:
     values:
       # permalink: ''
       lang: de
-      lang_toggle_url: /insights/
+      lang_toggle_url_en: /insights/
+      lang_toggle_url_hyw: /khoher/
   # insights
   - scope:
       path: '_insights'
     values:
       # permalink: ''
       lang: en
-      lang_toggle_url: /einsichten/
+      lang_toggle_url_de: /einsichten/
+      lang_toggle_url_hyw: /khoher/
+  # khoher
+  - scope:
+      path: '_khoher'
+    values:
+      # permalink: ''
+      lang: hyw
+      lang_toggle_url_hyw: /khoher/
+      lang_toggle_url_en: /insights/
+      lang_toggle_url_de: /einsichten/
   # _home
   - scope:
       path: '_mainpageen'
     values:
       # permalink: 'custom/:title'
       lang: en
-      lang_toggle_url: /mainpagede/
+      lang_toggle_url_de: /mainpagede/
+      lang_toggle_url_hyw: /mainpagehyw/
   # _homede
   - scope:
       path: '_mainpagede'
     values:
       # permalink: 'custom/:title'
       lang: de
-      lang_toggle_url: /mainpageen/
+      lang_toggle_url_en: /mainpageen/
+      lang_toggle_url_hyw: /mainpagehyw/
+  # _homehyw
+  - scope:
+      path: '_mainpagehyw'
+    values:
+      # permalink: 'custom/:title'
+      lang: hyw
+      lang_toggle_url_en: /mainpageen/
+      lang_toggle_url_de: /mainpagede/
   # _categdir
   - scope:
       path: '_categdir'
@@ -473,7 +510,9 @@ feed:
   collections:
     - de
     - en
+    - hyw
     - tagsdir
     - insights
     - einsichten
+    - khoher
     - categdir

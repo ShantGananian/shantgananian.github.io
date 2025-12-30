@@ -5,7 +5,7 @@ title: "Zwischen Fortschritt und Unruhe:"
 subtitle: "Künstliche Intelligenz und die Suche nach dem Menschlichen"
 excerpt: "Der Aufstieg der KI verspricht Fortschritt – und weckt zugleich eine leise Unruhe. Getrieben von einem sich selbst verstärkenden Imperativ, Effizienz und Produktivität zu maximieren, schreitet die Technologie ohne Besinnung voran und droht, den menschlichen Geist selbst zu normieren. Wo liegt der Weg, ihren entmenschlichenden Wirkungen zu widerstehen und die Freiheit zu bewahren?"
 # myLink: /insights/Between-Progress-and-Restlessness/ # Custom Variable for language change with JS
-lang_toggle_url: /insights/Between-Progress-and-Restlessness/ # Custom Variable for language change without JS
+lang_toggle_url_en: /insights/Between-Progress-and-Restlessness/ # Custom Variable for language change without JS
 
 # author_profile: true
 last_modified_at: 2025-11-01

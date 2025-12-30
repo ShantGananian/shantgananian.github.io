@@ -4,7 +4,7 @@ layout: single # archive
 title: Lane Lines Detection using Real-Time Machine Vision for Seeing Vehicles
 excerpt: "Python pipeline for identifying road lane boundaries, first in an image, then applying the pipeline to a video stream."
 # myLink: /de/lane-lines-detection-de/ # Custom Variable with JS use
-lang_toggle_url: /de/lane-lines-detection-de/ # Custom Variable without need for JS
+lang_toggle_url_de: /de/lane-lines-detection-de/ # Custom Variable without need for JS
 
 # author_profile: true
 last_modified_at: 2023-12-20

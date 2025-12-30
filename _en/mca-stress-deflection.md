@@ -5,7 +5,7 @@ title: "Analyzing and Solving Stress and Deflection Problems,"
 subtitle: "Analytically and Numerically, by Using MATLAB"
 excerpt: "Using symbolical and numerical MATLAB as a tool to analyze and solve stress and deflection problems through creating specific functions dealing with machine components design."
 # myLink: /de/mca-stress-deflection-de/ # Custom Variable with JS use
-lang_toggle_url: /de/mca-stress-deflection-de/ # Custom Variable without need for JS
+lang_toggle_url_de: /de/mca-stress-deflection-de/ # Custom Variable without need for JS
 
 # author_profile: true
 last_modified_at: 2024-01-01

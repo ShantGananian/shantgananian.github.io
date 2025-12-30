@@ -4,7 +4,7 @@ title: "About Me"
 permalink: /about/
 lang: en
 # myLink: /uebermich/ # Custom Variable with JS use
-lang_toggle_url: /uebermich/ # Custom Variable without need for JS
+lang_toggle_url_de: /uebermich/ # Custom Variable without need for JS
 
 published: true
 toc: true

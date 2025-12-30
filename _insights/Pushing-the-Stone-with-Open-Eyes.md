@@ -5,7 +5,8 @@ title: "Pushing the Stone with Open Eyes"
 subtitle: "How do we keep going when life refuses to make sense?"
 excerpt: "We live in a time of quiet exhaustion — always striving, rarely satisfied, and often unsure why we keep moving forward. What if life refuses to give us a clear answer? Between the silence of the world and our longing for meaning, we face the absurd. Yet within that space — through awareness, responsibility, and quiet defiance — we can find something real: not despair, but the quiet strength to begin again."
 # myLink: /einsichten/Den-Stein-mit-offenen-Augen-rollen/ # Custom Variable for language change with Javascript
-lang_toggle_url: /einsichten/Den-Stein-mit-offenen-Augen-rollen/ # Custom Variable for language change without JS
+lang_toggle_url_de: /einsichten/Den-Stein-mit-offenen-Augen-rollen/ # Custom Variable for language change without JS
+lang_toggle_url_hyw: /khoher/Բաց-աչքերով-քարը-մղել/
 # author_profile: true
 last_modified_at: 2025-11-13
 date: 2025-11-06

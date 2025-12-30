@@ -8,6 +8,8 @@ title: "Zwischen Denken und Machen"
 subtitle: "Gedanken und Projekte an der Schnittstelle von Ideen, Technik und menschlicher Erfahrung."
 hidden: true # So that this file won't show in any list
 # entries_layout: grid
-myLink: /mainpageen/ # Custom Variable
-lang_toggle_url: /mainpageen/ # Custom Variable to change language without javascript
+# myLink: /mainpageen/ # Custom Variable
+lang_toggle_url_en: /mainpageen/ # Custom Variable to change language without javascript
+lang_toggle_url_hyw: /mainpagehyw/
+
 ---

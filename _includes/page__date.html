@@ -1,26 +1,23 @@
-<!-- {% assign date_format = site.date_format | default: "%m %-d, %Y" %} -->
-<!-- {% assign date_format = site.date_format | default: "%-d.%m.%Y" %}
-{% if page.last_modified_at %}
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[page.lang].date_label | default: "Updated:" }}</strong> <time class="dt-published" datetime="{{ page.last_modified_at | date: "%Y-%m-%d" }}">{{ page.last_modified_at | date: date_format }}</time></p>
-{% elsif page.date %}
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> {{ site.data.ui-text[page.lang].date_label | default: "Updated:" }}</strong> <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: date_format }}</time></p>
-{% endif %} -->
+{% comment %} Mine: Changed to show dates in the language of the page itself {% endcomment %}
 
-<!-- Mine -->
+{% assign months_en = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," %}
+{% assign months_de = "Januar,Februar,März,April,Mai,Juni,Juli,August,September,Oktober,November,Dezember" | split: "," %}
+{% assign months_hyw = "Յունուար,Փետրուար,Մարտ,Ապրիլ,Մայիս,Յունիս,Յուլիս,Օգոստոս,Սեպտեմբեր,Հոկտեմբեր,Նոյեմբեր,Դեկտեմբեր" | split: "," %}
 
-{% assign date_format = "%B %-d, %Y" %}
-{% if page.last_modified_at %}
-  <p class="page__date">
-    <i class="" aria-hidden="true"></i>
-    <time class="dt-published" datetime="{{ page.last_modified_at | date_to_xmlschema }}">
-      {{ page.last_modified_at | date: date_format }}
-    </time>
-  </p>
-{% elsif page.date %}
-  <p class="page__date">
-    <i class="" aria-hidden="true"></i>
-    <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}">
-      {{ page.date | date: date_format }}
-    </time>
-  </p>
-{% endif %}
+{% assign date_value = page.last_modified_at | default: page.date %}
+
+{% assign month_index = date_value | date: "%-m" | minus: 1 %}
+{% assign day = date_value | date: "%-d" %}
+{% assign year = date_value | date: "%Y" %}
+
+<p class="page__date">
+  <time class="dt-published" datetime="{{ date_value | date_to_xmlschema }}">
+    {% if page.lang == 'de' %}
+      {{ day }}. {{ months_de[month_index] }} {{ year }}
+    {% elsif page.lang == 'hyw' %}
+      {{ day }} {{ months_hyw[month_index] }} {{ year }}
+    {% else %}
+      {{ months_en[month_index] }} {{ day }}, {{ year }}
+    {% endif %}
+  </time>
+</p>
