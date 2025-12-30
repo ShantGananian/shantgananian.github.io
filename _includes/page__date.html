@@ -1,23 +1,26 @@
 {% comment %} Mine: Changed to show dates in the language of the page itself {% endcomment %}
 
-{% assign months_en = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," %}
-{% assign months_de = "Januar,Februar,März,April,Mai,Juni,Juli,August,September,Oktober,November,Dezember" | split: "," %}
-{% assign months_hyw = "Յունուար,Փետրուար,Մարտ,Ապրիլ,Մայիս,Յունիս,Յուլիս,Օգոստոս,Սեպտեմբեր,Հոկտեմբեր,Նոյեմբեր,Դեկտեմբեր" | split: "," %}
+{% if page.last_modified_at or page.date %}
 
-{% assign date_value = page.last_modified_at | default: page.date %}
+  {% assign months_en = "January,February,March,April,May,June,July,August,September,October,November,December" | split: "," %}
+  {% assign months_de = "Januar,Februar,März,April,Mai,Juni,Juli,August,September,Oktober,November,Dezember" | split: "," %}
+  {% assign months_hyw = "Յունուար,Փետրուար,Մարտ,Ապրիլ,Մայիս,Յունիս,Յուլիս,Օգոստոս,Սեպտեմբեր,Հոկտեմբեր,Նոյեմբեր,Դեկտեմբեր" | split: "," %}
 
-{% assign month_index = date_value | date: "%-m" | minus: 1 %}
-{% assign day = date_value | date: "%-d" %}
-{% assign year = date_value | date: "%Y" %}
+  {% assign date_value = page.last_modified_at | default: page.date %}
+  {% assign month_index = date_value | date: "%-m" | minus: 1 %}
+  {% assign day = date_value | date: "%-d" %}
+  {% assign year = date_value | date: "%Y" %}
 
-<p class="page__date">
-  <time class="dt-published" datetime="{{ date_value | date_to_xmlschema }}">
-    {% if page.lang == 'de' %}
-      {{ day }}. {{ months_de[month_index] }} {{ year }}
-    {% elsif page.lang == 'hyw' %}
-      {{ day }} {{ months_hyw[month_index] }} {{ year }}
-    {% else %}
-      {{ months_en[month_index] }} {{ day }}, {{ year }}
-    {% endif %}
-  </time>
-</p>
+  <p class="page__date">
+    <time class="dt-published" datetime="{{ date_value | date_to_xmlschema }}">
+      {% if page.lang == 'de' %}
+        {{ day }}. {{ months_de[month_index] }} {{ year }}
+      {% elsif page.lang == 'hyw' %}
+        {{ day }} {{ months_hyw[month_index] }} {{ year }}
+      {% else %}
+        {{ months_en[month_index] }} {{ day }}, {{ year }}
+      {% endif %}
+    </time>
+  </p>
+
+{% endif %}
