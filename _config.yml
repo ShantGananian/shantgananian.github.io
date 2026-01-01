@@ -388,20 +388,23 @@ defaults:
       # permalink: 'custom/:title'
       lang: en
       lang_toggle_url_de: /de/
+      lang_toggle_url_hyw: /hyw/
   # _de
   - scope:
       path: '_de'
     values:
-      # permalink: 'maatwerk/:title'
+      # permalink: ''
       lang: de
       lang_toggle_url_en: /en/
+      lang_toggle_url_hyw: /hyw/
   # _hyw
   - scope:
       path: '_hyw'
     values:
       # permalink: ''
       lang: hyw
-      lang_toggle_url_hyw: /hyw/
+      lang_toggle_url_de: /de/
+      lang_toggle_url_en: /en/
   # _tagsdir
   - scope:
       path: '_tagsdir'
