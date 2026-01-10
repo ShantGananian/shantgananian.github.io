@@ -6,6 +6,7 @@ subtitle: "Artificial Intelligence and the Search for the Human"
 excerpt: "The rise of AI promises progress — yet stirs a quiet unease. Driven by a self-perpetuating imperative to maximize efficiency and productivity, technology advances without reflection, threatening to standardize the human spirit itself. Where lies the path to resist its dehumanizing effects and preserve freedom?"
 # myLink: /einsichten/Zwischen-Fortschritt-und-Rastlosigkeit/ # Custom Variable for language change with Javascript
 lang_toggle_url_de: /einsichten/Zwischen-Fortschritt-und-Rastlosigkeit/ # Custom Variable for language change without JS
+lang_toggle_url_hyw: /khoher/Յառաջդիմութեան-եւ-անհանգստութեան-միջեւ/
 # author_profile: true
 last_modified_at: 2025-11-01
 date: 2025-10-26
