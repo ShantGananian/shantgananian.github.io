@@ -194,7 +194,9 @@ Doch die **Angst und Unruhe**, die wir empfinden, können dennoch zu einer **Kra
 Während KI zu einer **autonomen, deterministischen Kraft** wird, die jeden Aspekt des menschlichen Lebens prägt, gewinnt **Jacques Elluls** Beobachtung neue Aktualität:
 
 <blockquote class="blockquote">
-<p style="margin: 0;">„Der erste Schritt auf der Suche, die erste Handlung der Freiheit, besteht darin, sich der [technologischen] Notwendigkeit bewusst zu werden“&nbsp;</p></blockquote>
+<p style="margin: 0;">„Der erste Schritt auf der Suche, die erste Handlung der Freiheit, besteht darin, sich der [technologischen] Notwendigkeit bewusst zu werden.“&nbsp;</p>
+<cite>Jacques Ellul, The Technological Society (franz. La Technique ou l'Enjeu du siècle) (1954)</cite></blockquote>
+
 
 Einer Kraft, durch die KI mit ihrer eigenen inneren Logik unser **Denken**, unsere **Werte** und unsere **Lebensweise** formt, oft ohne dass wir es bemerken. **Wahre Freiheit** beginnt also mit **Bewusstsein** – mit dem **Mut, die Zwänge unserer Zeit klar zu erkennen** und **verantwortungsvoll innerhalb dieser zu handeln**, indem wir dem zunehmend **automatisierten und entmenschlichten Leben** ein **bewusstes, menschliches Element** zurückgeben.
 

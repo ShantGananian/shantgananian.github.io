@@ -83,7 +83,6 @@ The **dreams of AI enthusiasts**, like all technology, carry the potential for b
 
 **Dario Amodei**, co-founder and CEO of **Anthropic** and a leading AI researcher, posed a haunting thought experiment in an interview with The Economist’s editor-in-chief, Zanny Minton Beddoes: 
 
-
 <blockquote class="blockquote">
 <p>“If someone dropped a new country into the world—ten million people smarter than any human alive today—you know, you'd ask the question, 'What is their intent? What are they actually going to do in the world, particularly if they're able to act autonomously?'”&nbsp;</p>
 <cite>Dario Amodei, interview with The Economist editor-in-chief Zanny Minton Beddoes</cite></blockquote>
@@ -199,7 +198,9 @@ Yet, the **anxiety and restlessness** we feel may still become a **force for ren
 As AI becomes an **autonomous, deterministic force** shaping every aspect of human life, **Jacques Ellul’s** observation gains new relevance:
 
 <blockquote class="blockquote">
-<p style="margin: 0;">“The first step in the quest, the first act of freedom, is to become aware of the [technological] necessity”</p></blockquote>
+<p style="margin: 0;">“The first step in the quest, the first act of freedom, is to become aware of the [technological] necessity.”&nbsp;</p>
+<cite>Jacques Ellul, The Technological Society (La Technique ou l'Enjeu du siècle) (1954)</cite></blockquote>
+
 
 A force through which AI, by its own internal logic, shapes our **thinking**, **values**, and **way of life**, often without our awareness. **True freedom**, then, begins with **awareness** — with the **courage to see the constraints of our time clearly** and to **act responsibly within them**, reintroducing a **conscious, human element** into a world that is becoming increasingly **automated and dehumanized**.
 
@@ -208,5 +209,3 @@ In the end, this movement toward inner awareness represents perhaps the most mea
 <blockquote class="blockquote">
 <p>“Such problems are never solved by legislation or by tricks. They are solved only by a general change of attitude. And the change does not begin with propaganda and mass meetings, or with violence. It begins with a change in individuals. It will continue as a transformation of their personal likes and dislikes, of their outlook on life and of their values, and only the accumulation of these individual changes will produce a collective solution.”&nbsp;</p>
 <cite>Carl Jung, Psychology and Religion (1938)</cite></blockquote>
-
-
