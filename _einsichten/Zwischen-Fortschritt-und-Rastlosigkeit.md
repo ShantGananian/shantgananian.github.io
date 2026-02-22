@@ -194,7 +194,7 @@ Doch die **Angst und Unruhe**, die wir empfinden, können dennoch zu einer **Kra
 Während KI zu einer **autonomen, deterministischen Kraft** wird, die jeden Aspekt des menschlichen Lebens prägt, gewinnt **Jacques Elluls** Beobachtung neue Aktualität:
 
 <blockquote class="blockquote">
-<p style="margin: 0;">„Der erste Schritt auf der Suche, die erste Handlung der Freiheit, besteht darin, sich der [technologischen] Notwendigkeit bewusst zu werden.“&nbsp;</p>
+<p>„Der erste Schritt auf der Suche, die erste Handlung der Freiheit, besteht darin, sich der [technologischen] Notwendigkeit bewusst zu werden.“&nbsp;</p>
 <cite>Jacques Ellul, The Technological Society (franz. La Technique ou l'Enjeu du siècle) (1954)</cite></blockquote>
 
 

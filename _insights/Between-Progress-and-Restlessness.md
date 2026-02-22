@@ -198,7 +198,7 @@ Yet, the **anxiety and restlessness** we feel may still become a **force for ren
 As AI becomes an **autonomous, deterministic force** shaping every aspect of human life, **Jacques Ellul’s** observation gains new relevance:
 
 <blockquote class="blockquote">
-<p style="margin: 0;">“The first step in the quest, the first act of freedom, is to become aware of the [technological] necessity.”&nbsp;</p>
+<p>“The first step in the quest, the first act of freedom, is to become aware of the [technological] necessity.”&nbsp;</p>
 <cite>Jacques Ellul, The Technological Society (La Technique ou l'Enjeu du siècle) (1954)</cite></blockquote>
 
 
